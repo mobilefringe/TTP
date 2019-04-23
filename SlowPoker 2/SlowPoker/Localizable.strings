@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  SlowPoker
+
+  Created by Jamie Simpson on 12-03-22.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+"fold" = "Fold";
+"check" = "Check";
+"raise" = "Raise";
+"call" = "Call";
+"dealer" = "Dealer";
+"smallBlind" = "Small";
+"bigBlind" = "Big";
+
+"sitout" = "Sitting out";
+"pending" = "Pending";
+"buyin" = "Buy In";
+"playing" = "Playing";
+"active" = "Active";
+"out" = "Out";
+
+"USER_FOLD" = "Table Folded";
+"HIGH_CARD" = "High Card";
+"ROYAL_FLUSH" = "Royal Flush";
+"STRAIGHT_FLUSH" = "Straight Flush";
+"FOUR_OF_A_KIND" = "Four of a kind";
+"FULL_HOUSE" = "Full House";
+"FLUSH" = "Flush";
+"STRAIGHT" = "Straight";
+"THREE_OF_A_KIND" = "Three of a kind";
+"TWO_PAIRS" = "Two Pairs";
+"ONE_PAIR" = "Pair";
+
+"FLOP" = "Flop";
+"TURN" = "Turn";
+"RIVER" = "River";
+
+"cash" = "Cash Game";
+"tournament" = "Tournament";

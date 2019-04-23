@@ -1,0 +1,3014 @@
+TSlowPoker
+v4
+r1
+cCheck dependencies
+cProcessInfoPlistFile "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Info.plist" SlowPoker/SlowPoker-Info.plist
+cProcessPCH /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk
+c000000004EB3DEC50000000000000110
+t1320410821
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Accounts.framework/Accounts
+c000000004E72F3CA000000000001EB80
+t1316156362
+s125824
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004E72F1F200000000002F4210
+t1316155890
+s3097104
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004E72F1CC0000000000245480
+t1316155852
+s2380928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004E72F2960000000000353830
+t1316156054
+s3487792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/MessageUI.framework/MessageUI
+c000000004E78081300000000000CA7C0
+t1316489235
+s829376
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004E72F69C00000000001A9D20
+t1316157084
+s1744160
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Twitter.framework/Twitter
+c000000004E78084F000000000003A350
+t1316489295
+s238416
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004E7806AB00000000008F7390
+t1316488875
+s9401232
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/2C.png
+c000000004F7BB0080000000000000EBD
+t1333506056
+s3773
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/2D.png
+c000000004F7BB25B0000000000000DF6
+t1333506651
+s3574
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/2H.png
+c000000004F7BAEE00000000000000EC8
+t1333505760
+s3784
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/2S.png
+c000000004F7BB09E000000000000099E
+t1333506206
+s2462
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/3C.png
+c000000004F7BB01E0000000000000EBD
+t1333506078
+s3773
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/3D.png
+c000000004F7BB26D0000000000000E36
+t1333506669
+s3638
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/3H.png
+c000000004F7BAD710000000000000F15
+t1333505393
+s3861
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/3S.png
+c000000004F7BB0AF00000000000009CF
+t1333506223
+s2511
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/4C.png
+c000000004F7BAF130000000000000E02
+t1333505811
+s3586
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/4D.png
+c000000004F7BB27E0000000000000D72
+t1333506686
+s3442
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/4H.png
+c000000004F7BADA20000000000000E36
+t1333505442
+s3638
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/4S.png
+c000000004F7BB0C20000000000000941
+t1333506242
+s2369
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/5C.png
+c000000004F7BAF2D0000000000000E89
+t1333505837
+s3721
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/5D.png
+c000000004F7BB2920000000000000DEF
+t1333506706
+s3567
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/5H.png
+c000000004F7BADCD0000000000000EDF
+t1333505485
+s3807
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/5S.png
+c000000004F7BB0D40000000000000979
+t1333506260
+s2425
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/6C.png
+c000000004F7BAF430000000000000F06
+t1333505859
+s3846
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/6D.png
+c000000004F7BB1890000000000000E36
+t1333506441
+s3638
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/6H.png
+c000000004F7BADF40000000000000F37
+t1333505524
+s3895
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/6S.png
+c000000004F7BB0FD00000000000009D6
+t1333506301
+s2518
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/7C.png
+c000000004F7BAF590000000000000E17
+t1333505881
+s3607
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/7D.png
+c000000004F7BB1990000000000000D17
+t1333506457
+s3351
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/7H.png
+c000000004F7BAE0F0000000000000DF7
+t1333505551
+s3575
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/7S.png
+c000000004F7BB10E0000000000000904
+t1333506318
+s2308
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/8C.png
+c000000004F7BAF740000000000000EE8
+t1333505908
+s3816
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/8D.png
+c000000004F7BB1A90000000000000E49
+t1333506473
+s3657
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/8H.png
+c000000004F7BAE280000000000000F1B
+t1333505576
+s3867
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/8S.png
+c000000004F7BB12100000000000009D0
+t1333506337
+s2512
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/9C.png
+c000000004F7BAF840000000000000F05
+t1333505924
+s3845
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/9D.png
+c000000004F7BB1B80000000000000E65
+t1333506488
+s3685
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/9H.png
+c000000004F7BAE400000000000000F3B
+t1333505600
+s3899
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/9S.png
+c000000004F7BB13000000000000009D1
+t1333506352
+s2513
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/AC.png
+c000000004F7BAFF30000000000000EA6
+t1333506035
+s3750
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/AD.png
+c000000004F7BB23B0000000000000DCE
+t1333506619
+s3534
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/AH.png
+c000000004F7BAEC60000000000000F05
+t1333505734
+s3845
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/AS.png
+c000000004F7BB08E0000000000000980
+t1333506190
+s2432
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/Default.png
+c000000004F8C25A10000000000020F3F
+t1334584737
+s134975
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/JC.png
+c000000004F7BAFA30000000000000CDE
+t1333505955
+s3294
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/JD.png
+c000000004F7BB1F10000000000000C64
+t1333506545
+s3172
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/JH.png
+c000000004F7BAE750000000000000D3A
+t1333505653
+s3386
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/JS.png
+c000000004F7BB15B0000000000000878
+t1333506395
+s2168
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/KC.png
+c000000004F7BAFE20000000000000E97
+t1333506018
+s3735
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/KD.png
+c000000004F7BB2260000000000000DE9
+t1333506598
+s3561
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/KH.png
+c000000004F7BAEAD0000000000000EF7
+t1333505709
+s3831
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/KS.png
+c000000004F7BB07B00000000000009A3
+t1333506171
+s2467
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/QC.png
+c000000004F7BAFB40000000000000F39
+t1333505972
+s3897
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/QD.png
+c000000004F7BB2170000000000000EE6
+t1333506583
+s3814
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/QH.png
+c000000004F7BAE950000000000000FB9
+t1333505685
+s4025
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/QS.png
+c000000004F7BB0680000000000000A1D
+t1333506152
+s2589
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/APIDataManager.m
+c000000004FB65DC300000000000047F8
+t1337351619
+s18424
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementEarnedView.m
+c000000004FB66D5D00000000000014B5
+t1337355613
+s5301
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementHeaderView.m
+c000000004FB459C90000000000000EB0
+t1337219529
+s3760
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementIcon.m
+c000000004FB6504C0000000000000C59
+t1337348172
+s3161
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementsTableViewCell.m
+c000000004FB2D3B80000000000000904
+t1337119672
+s2308
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementsViewController.m
+c000000004FB459AA0000000000002B8C
+t1337219498
+s11148
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AppDelegate.m
+c000000004FB66BDA00000000000040F2
+t1337355226
+s16626
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Avatar.m
+c000000004FB66CE40000000000000B37
+t1337355492
+s2871
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Base64.m
+c000000004FA2ED2F0000000000000B47
+t1336077615
+s2887
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/BetViewController.m
+c000000004FA165C9000000000000371C
+t1335977417
+s14108
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Button.m
+c000000004F92D66A0000000000002476
+t1335023210
+s9334
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Card.m
+c000000004F8F7E73000000000000064B
+t1334804083
+s1611
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/CardButton.m
+c000000004F7B453F0000000000000220
+t1333478719
+s544
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/CardsSelectorViewController.m
+c000000004F7BB90E000000000000156D
+t1333508366
+s5485
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ChatButton.m
+c000000004F9258A00000000000000F7F
+t1334991008
+s3967
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DEEmbossedLabel.m
+c000000004FA95F3D0000000000001CE3
+t1336500029
+s7395
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m
+c000000004FA95F3D0000000000000E00
+t1336500029
+s3584
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetAccountSelectorViewController.m
+c000000004FA95F3D00000000000012CC
+t1336500029
+s4812
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetComposeView.xib
+c000000004FA95F3D0000000000007C3D
+t1336500029
+s31805
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetComposeViewController.m
+c000000004FA95F3D000000000000A112
+t1336500029
+s41234
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetGradientView.m
+c000000004FA95F3D0000000000000E51
+t1336500029
+s3665
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetPoster.m
+c000000004FA95F3D0000000000002AA8
+t1336500029
+s10920
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetSheetCardView.m
+c000000004FA95F3D0000000000000E1B
+t1336500029
+s3611
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetTextView.m
+c000000004FA95F3D0000000000001E2B
+t1336500029
+s7723
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/OAuth+DEExtensions.m
+c000000004FA95F3D0000000000000930
+t1336500029
+s2352
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/OAuth+DEUserDefaults.m
+c000000004FA95F3D0000000000000F0E
+t1336500029
+s3854
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetAttachmentFrame.png
+c000000004FA95F3D00000000000003DC
+t1336500029
+s988
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetAttachmentFrame@2x.png
+c000000004FA95F3D00000000000007ED
+t1336500029
+s2029
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonLandscape.png
+c000000004FA95F3D00000000000001ED
+t1336500029
+s493
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonLandscape@2x.png
+c000000004FA95F3D00000000000003A8
+t1336500029
+s936
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonPortrait.png
+c000000004FA95F3D0000000000000266
+t1336500029
+s614
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonPortrait@2x.png
+c000000004FA95F3D00000000000004D9
+t1336500029
+s1241
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCardAccountLine.png
+c000000004FA95F3D000000000000014F
+t1336500029
+s335
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCardAccountLine@2x.png
+c000000004FA95F3D0000000000000529
+t1336500029
+s1321
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCardBackground.png
+c000000004FA95F3D000000000000162D
+t1336500029
+s5677
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCardBackground@2x.png
+c000000004FA95F3D0000000000005103
+t1336500029
+s20739
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCardHeaderLine.png
+c000000004FA95F3D0000000000000094
+t1336500029
+s148
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetCardHeaderLine@2x.png
+c000000004FA95F3D00000000000000EC
+t1336500029
+s236
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetPaperClip.png
+c000000004FA95F3D0000000000000B0B
+t1336500029
+s2827
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetPaperClip@2x.png
+c000000004FA95F3D0000000000001B56
+t1336500029
+s6998
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonLandscape.png
+c000000004FA95F3D0000000000000215
+t1336500029
+s533
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonLandscape@2x.png
+c000000004FA95F3D000000000000040B
+t1336500029
+s1035
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonPortrait.png
+c000000004FA95F3D00000000000002ED
+t1336500029
+s749
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonPortrait@2x.png
+c000000004FA95F3D0000000000000583
+t1336500029
+s1411
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetURLAttachment.png
+c000000004FA95F3D000000000000184E
+t1336500029
+s6222
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/Resources/DETweetURLAttachment@2x.png
+c000000004FA95F3D0000000000004012
+t1336500029
+s16402
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/UIApplication+DETweetComposeViewController.m
+c000000004FA95F3D0000000000000711
+t1336500029
+s1809
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m
+c000000004FA95F3D0000000000000911
+t1336500029
+s2321
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DataManager.m
+c000000004FB6763A00000000000223A0
+t1337357882
+s140192
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/FBDialog.bundle
+c000000004FA7D0D50000000000000066
+t1336398037
+s102
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameDetailsViewController.m
+c000000004F9486320000000000002BCB
+t1335133746
+s11211
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameSettingsViewController.m
+c000000004FB674F30000000000004773
+t1337357555
+s18291
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameTableViewCell.m
+c000000004FB66EA0000000000000311C
+t1337355936
+s12572
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GamesViewController.m
+c000000004FB65C0C0000000000003B0C
+t1337351180
+s15116
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Hand.m
+c000000004FADB4E000000000000026F1
+t1336784096
+s9969
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandEvaluator.m
+c000000004F7B5B3B00000000000000FC
+t1333484347
+s252
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandEvaluatorViewController.m
+c000000004FADB4E80000000000001726
+t1336784104
+s5926
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandManager.m
+c000000004F7B017A00000000000007A1
+t1333461370
+s1953
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandTableCell.m
+c000000004F7BBC040000000000000DE0
+t1333509124
+s3552
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HomeViewController.m
+c000000004FB66AAE000000000000200E
+t1337354926
+s8206
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/InvitePlayersViewController.m
+c000000004FB57F270000000000003304
+t1337294631
+s13060
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/NSObject+SBJSON.m
+c000000004FA95F68000000000000089E
+t1336500072
+s2206
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/NSString+SBJSON.m
+c000000004FA95F68000000000000087D
+t1336500072
+s2173
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJSON.m
+c000000004FA95F680000000000001ABC
+t1336500072
+s6844
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonBase.m
+c000000004FA95F680000000000000AC1
+t1336500072
+s2753
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonParser.m
+c000000004FA95F6800000000000036D0
+t1336500072
+s14032
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonWriter.m
+c000000004FA95F680000000000001F26
+t1336500072
+s7974
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Localizable.strings
+c000000004FB5AC7300000000000053E6
+t1337306227
+s21478
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MFButton.m
+c000000004F7B3E0500000000000000C7
+t1333476869
+s199
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MessageBubblesViewController.m
+c000000004F9B6997000000000000193F
+t1335585175
+s6463
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MyFriendsTableCellCell.m
+c000000004FB5A7E000000000000010E2
+t1337305056
+s4322
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MyFriendsViewController.m
+c000000004FB5C151000000000000167E
+t1337311569
+s5758
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/NewGameSelectionViewController.m
+c000000004FB6749600000000000019E8
+t1337357462
+s6632
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c
+c000000004FA95F68000000000000244A
+t1336500072
+s9290
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/OAHMAC_SHA1SignatureProvider.m
+c000000004FA95F6800000000000008C5
+t1336500072
+s2245
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c
+c000000004FA95F680000000000000B84
+t1336500072
+s2948
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c
+c000000004FA95F680000000000001752
+t1336500072
+s5970
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/DEHTTPRequest.m
+c000000004FA95F6800000000000013DA
+t1336500072
+s5082
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/NSString+URLEncoding.m
+c000000004FA95F680000000000000C5E
+t1336500072
+s3166
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/OAuth.m
+c000000004FA95F680000000000003BA8
+t1336500072
+s15272
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerBraceletsTableViewCell.m
+c000000004FB45E4600000000000013A3
+t1337220678
+s5027
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerProfileTableViewCell.m
+c000000004FB5AF1E0000000000001357
+t1337306910
+s4951
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerProfileViewController.m
+c000000004FB666300000000000003C5B
+t1337353776
+s15451
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatTableViewCell1.m
+c000000004FB275500000000000001577
+t1337095504
+s5495
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatTableViewCell2.m
+c000000004FB27A6F00000000000017BE
+t1337096815
+s6078
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatsTableViewCell.m
+c000000004FB02C610000000000001A75
+t1336945761
+s6773
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatsViewController.m
+c000000004FB28DA700000000000033B6
+t1337101735
+s13238
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerView.m
+c000000004FB667670000000000003058
+t1337354087
+s12376
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PokerTableView.m
+c000000004FB5AA630000000000004374
+t1337305699
+s17268
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ProChipsViewController.m
+c000000004FB5D18B0000000000000DAA
+t1337315723
+s3498
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PullRefreshTableViewController.m
+c000000004F7CB0390000000000001A25
+t1333571641
+s6693
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/RegisterLoginViewController.m
+c000000004FB667C50000000000001EE4
+t1337354181
+s7908
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Settings.m
+c000000004FB58246000000000000069B
+t1337295430
+s1691
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SettingsViewController.m
+c000000004FB5CEB600000000000017CB
+t1337314998
+s6091
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SlowPoker-Prefix.pch
+c000000004F7B6EAF000000000000036D
+t1333489327
+s877
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SocialManager.m
+c000000004FB4FF970000000000000F47
+t1337261975
+s3911
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTArrayFormatter.m
+c000000004F8EDEFB0000000000001E6C
+t1334763259
+s7788
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTHoursOfOperation.m
+c000000004F8EDECA0000000000003804
+t1334763210
+s14340
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTLocationFormatter.m
+c000000004F8EDEE00000000000003809
+t1334763232
+s14345
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTOrdinalNumberFormatter.m
+c000000004F8EDE5600000000000021DE
+t1334763094
+s8670
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTTimeIntervalFormatter.m
+c000000004F8EDE710000000000003173
+t1334763121
+s12659
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTUnitOfInformationFormatter.m
+c000000004F8EDE6500000000000022BC
+t1334763109
+s8892
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ThreadCell.m
+c000000004F8F392B0000000000000E5F
+t1334786347
+s3679
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnSectionHeader.m
+c000000004FB577C100000000000020FD
+t1337292737
+s8445
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnTableViewCell.m
+c000000004FB575AE0000000000002ECE
+t1337292206
+s11982
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnsViewController.m
+c000000004FB66CF2000000000000D0B2
+t1337355506
+s53426
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TwitterDialog.m
+c000000004FA95F680000000000005A0C
+t1336500072
+s23052
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/UIWebViewController.m
+c000000004FB5C6F20000000000001825
+t1337313010
+s6181
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Utils.m
+c000000004FA83F730000000000000810
+t1336426355
+s2064
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/achievements.json
+c000000004FB5AC350000000000003878
+t1337306165
+s14456
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/en.lproj/InfoPlist.strings
+c000000004F679BEA000000000000002D
+t1332190186
+s45
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/gameDetails.json
+c000000004FA007F600000000000033C3
+t1335887862
+s13251
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/games.json
+c000000004F70803B0000000000001E63
+t1332772923
+s7779
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/libfacebook_ios_sdk.a
+c000000004FA7D0D5000000000014431C
+t1336398037
+s1327900
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m
+c000000004F679BEA000000000000015B
+t1332190186
+s347
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/tclose.png
+c000000004FA95F6800000000000004C1
+t1336500072
+s1217
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ticon.png
+c000000004FA95F6800000000000002CE
+t1336500072
+s718
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/TC.png
+c000000004F7BAF940000000000000CBF
+t1333505940
+s3263
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/TD.png
+c000000004F7BB1CB0000000000000C11
+t1333506507
+s3089
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/TH.png
+c000000004F7BAE5C0000000000000CC7
+t1333505628
+s3271
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/TS.png
+c000000004F7BB141000000000000085F
+t1333506369
+s2143
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/aqua.png
+c000000004F2BA6F8000000000000054B
+t1328260856
+s1355
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/aqua_button.png
+c000000004F92324E00000000000018A7
+t1334981198
+s6311
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/arrow.png
+c000000004F0337160000000000000F9E
+t1325610774
+s3998
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/back.png
+c000000004F7BB3C9000000000000181C
+t1333507017
+s6172
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/back_disabled.png
+c000000004B59A35C0000000000001224
+t1264165724
+s4644
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/back_enabled.png
+c000000004B59A35C00000000000012B4
+t1264165724
+s4788
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/background_black.png
+c000000004F8C29AE000000000001AE85
+t1334585774
+s110213
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/background_black2.png
+c000000004F8C3546000000000001A675
+t1334588742
+s108149
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/bar_graph.png
+c000000004FADE32500000000000000D7
+t1336795941
+s215
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/bar_graph_background.png
+c000000004FADE198000000000000020E
+t1336795544
+s526
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/black_bracelet.png
+c000000004FB432DD000000000000F2E8
+t1337209565
+s62184
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/black_sample_card.png
+c000000004FB2D4E50000000000018AFD
+t1337119973
+s101117
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/bronze_bracelet.png
+c000000004FB433760000000000010157
+t1337209718
+s65879
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/bronze_sample_card.png
+c000000004FB2D496000000000001B0AA
+t1337119894
+s110762
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app.dSYM
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/2C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/2D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/2H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/2S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/3C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/3D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/3H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/3S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/4C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/4D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/4H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/4S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/5C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/5D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/5H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/5S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/6C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/6D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/6H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/6S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/7C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/7D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/7H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/7S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/8C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/8D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/8H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/8S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/9C.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/9D.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/9H.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/9S.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/AC.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/AD.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/AH.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/AS.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetAttachmentFrame.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetAttachmentFrame@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonLandscape.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonLandscape@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonPortrait.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonPortrait@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCardAccountLine.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCardAccountLine@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCardBackground.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCardBackground@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCardHeaderLine.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetCardHeaderLine@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetComposeView.nib
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetPaperClip.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetPaperClip@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonLandscape.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonLandscape@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonPortrait.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonPortrait@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetURLAttachment.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/DETweetURLAttachment@2x.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Default.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/FBDialog.bundle
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Info.plist
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/JC.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/JD.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/JH.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/JS.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/KC.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/KD.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/KH.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/KS.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Localizable.strings
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/PkgInfo
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/QC.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/QD.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/QH.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/QS.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/SlowPoker
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/TC.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/TD.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/TH.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/TS.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/achievements.json
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/aqua.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/aqua_button.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/arrow.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/back.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/back_disabled.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/back_enabled.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/background_black.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/background_black2.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/bar_graph.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/bar_graph_background.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/black_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/black_sample_card.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/bronze_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/bronze_sample_card.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/cell_corner.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/dealer_button.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/dummy_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/empty_avatar.jpg.gif
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/favourites_message.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/felt_full.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/felt_header_backgrond.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/forward_disabled.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/forward_enabled.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/gameDetails.json
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/games.json
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/gold_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/gold_sample_card.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/green_felt_background.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/heart_store.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/heart_unselected.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/icon_114.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/icon_57.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/lock_icon.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/locked_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/locked_sample_card.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/platinum_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/platinum_sample_card.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/poker_table.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/purple.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/shuffle.wav
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/silver_bracelet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/silver_sample_card.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/tclose.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/ticon.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/timer_icon.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/your_bet.png
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/APIDataManager.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementEarnedView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementHeaderView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementIcon.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementsTableViewCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AppDelegate.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Avatar.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/BetViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Button.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Card.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/CardButton.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/CardsSelectorViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/ChatButton.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DEEmbossedLabel.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DEHTTPRequest.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetAccountSelectorViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetComposeViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetGradientView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetPoster.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetSheetCardView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetTextView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DataManager.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GameDetailsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GameSettingsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GameTableViewCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GamesViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Hand.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandEvaluator.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandEvaluatorViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandManager.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandTableCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HomeViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/InvitePlayersViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MFButton.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MessageBubblesViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MyFriendsTableCellCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MyFriendsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NSObject+SBJSON.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NSString+SBJSON.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NSString+URLEncoding.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NewGameSelectionViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAuth+DEExtensions.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAuth+DEUserDefaults.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAuth.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerBraceletsTableViewCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerProfileTableViewCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerProfileViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatTableViewCell1.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatTableViewCell2.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatsTableViewCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PokerTableView.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/ProChipsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PullRefreshTableViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/RegisterLoginViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJSON.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJsonBase.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJsonParser.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJsonWriter.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Settings.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SettingsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SlowPoker.LinkFileList
+c000000004FB6829C000000000000355F
+t1337361052
+s13663
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SocialManager.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTArrayFormatter.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTHoursOfOperation.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTLocationFormatter.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTOrdinalNumberFormatter.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTTimeIntervalFormatter.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTUnitOfInformationFormatter.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/ThreadCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TurnSectionHeader.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TurnTableViewCell.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TurnsViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TwitterDialog.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/UIApplication+DETweetComposeViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/UIDevice+DETweetComposeViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/UIWebViewController.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Utils.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.o
+t2
+s0
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/cell_corner.png
+c000000004F8F56CF00000000000002EA
+t1334793935
+s746
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/dealer_button.png
+c000000004FA026770000000000000687
+t1335895671
+s1671
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/dummy_bracelet.png
+c000000004FA6EC600000000000001A69
+t1336339552
+s6761
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/empty_avatar.jpg.gif
+c000000004F9F570900000000000011EE
+t1335842569
+s4590
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/favourites_message.png
+c000000004B1AD6540000000000001CC1
+t1260050004
+s7361
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/felt_full.png
+c000000004F6BAEB900000000000B0643
+t1332457145
+s722499
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/felt_header_backgrond.png
+c000000004F6BB28E000000000000BC24
+t1332458126
+s48164
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/forward_disabled.png
+c000000004B59A35C0000000000001193
+t1264165724
+s4499
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/forward_enabled.png
+c000000004B59A35C0000000000001231
+t1264165724
+s4657
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/gold_bracelet.png
+c000000004FB4341A000000000000FE27
+t1337209882
+s65063
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/gold_sample_card.png
+c000000004FB2D4CF000000000001B053
+t1337119951
+s110675
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/green_felt_background.png
+c000000004FA0A971000000000011FC65
+t1335929201
+s1178725
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/heart_store.png
+c000000004B9549FE0000000000000EAA
+t1268075006
+s3754
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/heart_unselected.png
+c000000004B954A5A0000000000000F9A
+t1268075098
+s3994
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/icon_114.png
+c000000004F84D95000000000000039F4
+t1334106448
+s14836
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/icon_57.png
+c000000004F84DA250000000000001612
+t1334106661
+s5650
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/lock_icon.png
+c000000004FB273A60000000000000DFC
+t1337095078
+s3580
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/locked_bracelet.png
+c000000004FB43565000000000000C45B
+t1337210213
+s50267
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/locked_sample_card.png
+c000000004FB2D0720000000000013D9A
+t1337118834
+s81306
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/platinum_bracelet.png
+c000000004FB4349A000000000000F933
+t1337210010
+s63795
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/platinum_sample_card.png
+c000000004FB2D47600000000000189CE
+t1337119862
+s100814
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/poker_table.png
+c000000004F9F611B00000000000BC0EA
+t1335845147
+s770282
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/purple.png
+c000000004F2BA6F800000000000004F2
+t1328260856
+s1266
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/shuffle.wav
+c000000004DD78CB80000000000010C2C
+t1305971896
+s68652
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/silver_bracelet.png
+c000000004FB43357000000000000FB7B
+t1337209687
+s64379
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/silver_sample_card.png
+c000000004FB2D4B40000000000019338
+t1337119924
+s103224
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/timer_icon.png
+c000000004F92E4250000000000000572
+t1335026725
+s1394
+
+N/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/your_bet.png
+c000000004F8C3405000000000000150A
+t1334588421
+s5386
+
+N/var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.pth
+t2
+s0
+
+N/var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.pth
+t2
+s0
+
+NSlowPoker/SlowPoker-Info.plist
+c000000004FB662BF0000000000000500
+t1337352895
+s1280
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/APIDataManager.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementEarnedView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementHeaderView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementIcon.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementsTableViewCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AppDelegate.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Avatar.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Base64.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/BetViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Button.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Card.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/CardButton.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/CardsSelectorViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ChatButton.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DEEmbossedLabel.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetAccountSelectorViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetComposeViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetGradientView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetPoster.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetSheetCardView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetTextView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/OAuth+DEExtensions.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/OAuth+DEUserDefaults.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/UIApplication+DETweetComposeViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DataManager.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameDetailsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameSettingsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameTableViewCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GamesViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Hand.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandEvaluator.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandEvaluatorViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandManager.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandTableCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HomeViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/InvitePlayersViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/NSObject+SBJSON.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/NSString+SBJSON.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJSON.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonBase.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonParser.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonWriter.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MFButton.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MessageBubblesViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MyFriendsTableCellCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MyFriendsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/NewGameSelectionViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/OAHMAC_SHA1SignatureProvider.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/DEHTTPRequest.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/NSString+URLEncoding.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/OAuth.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerBraceletsTableViewCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerProfileTableViewCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerProfileViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatTableViewCell1.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatTableViewCell2.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatsTableViewCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PokerTableView.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ProChipsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PullRefreshTableViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/RegisterLoginViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Settings.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SettingsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SocialManager.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTArrayFormatter.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTHoursOfOperation.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTLocationFormatter.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTOrdinalNumberFormatter.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTTimeIntervalFormatter.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTUnitOfInformationFormatter.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ThreadCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnSectionHeader.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnTableViewCell.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnsViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TwitterDialog.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/UIWebViewController.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Utils.m"
+r0
+
+CBuild AST from "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m"
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesffb0c91bba66b541^4358011dba66b541^-167"[WARN]Warning: Multiple build commands for output file /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Default.png1(21%IDEActivityLogMessage2@160"Warning: Multiple build commands for output file /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Default.png-359053852#18446744073709551615#0#-1#-----0#1#0#--18"Check dependencies36"25918ED3-D92C-4466-9CEC-8B33FBA8415F-
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/APIDataManager.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/APIDataManager.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementEarnedView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementEarnedView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementHeaderView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementHeaderView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementIcon.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementIcon.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementsTableViewCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementsTableViewCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AchievementsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AchievementsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/AppDelegate.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/AppDelegate.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Avatar.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Avatar.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Base64.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s359053855.407657
+e359053857.376625
+r1
+xCompileC
+xbuild/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.o
+x/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c8883681fba66b541^2d796021ba66b541^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c0000000000000000^2789"CompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.o SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -include /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch -MMD -MT dependencies -MF "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.d" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/Base64Transcoder.c" -o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Base64Transcoder.o"36"684B0651-8D0E-48E1-9A08-CCD5DAF2F2FD-
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/BetViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/BetViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Button.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Button.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Card.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Card.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/CardButton.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/CardButton.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/CardsSelectorViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/CardsSelectorViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/ChatButton.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ChatButton.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DEEmbossedLabel.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DEEmbossedLabel.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DEHTTPRequest.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/DEHTTPRequest.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s359053860.406613
+e359053860.587077
+r0
+xCompileC
+xbuild/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.o
+x/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:68:19: error: 'retain' is unavailable: not available in automatic reference counting mode [3]
+o     _lineColor = [[UIColor colorWithWhite:0.5f alpha:0.15f] retain];
+o                   ^
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:35:1: note: declaration has been explicitly marked unavailable here [3]
+o - (id)retain NS_AUTOMATED_REFCOUNT_UNAVAILABLE;
+o ^
+o/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:68:19:{68:61-68:67}: error: ARC forbids explicit message send of 'retain' [4]
+o     _lineColor = [[UIColor colorWithWhite:0.5f alpha:0.15f] retain];
+o                   ^                                         ~~~~~~
+o/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:74:6: error: 'release' is unavailable: not available in automatic reference counting mode [3]
+o     [_lineColor release], _lineColor = nil;
+o      ^
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:36:1: note: declaration has been explicitly marked unavailable here [3]
+o - (oneway void)release NS_AUTOMATED_REFCOUNT_UNAVAILABLE;
+o ^
+o/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:74:6:{74:17-74:24}: error: ARC forbids explicit message send of 'release' [4]
+o     [_lineColor release], _lineColor = nil;
+o      ^          ~~~~~~~
+o/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:76:6:{76:12-76:19}: error: ARC forbids explicit message send of 'dealloc' [4]
+o     [super dealloc];
+o      ^     ~~~~~~~
+o5 errors generated.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection118"Compile /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.mb7466824ba66b541^02289624ba66b541^-1949"/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:68:19: error: 'retain' is unavailable: not available in automatic reference counting mode [3]     _lineColor = [[UIColor colorWithWhite:0.5f alpha:0.15f] retain];                   ^/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:35:1: note: declaration has been explicitly marked unavailable here [3] - (id)retain NS_AUTOMATED_REFCOUNT_UNAVAILABLE; ^/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:68:19:{68:61-68:67}: error: ARC forbids explicit message send of 'retain' [4]     _lineColor = [[UIColor colorWithWhite:0.5f alpha:0.15f] retain];                   ^                                         ~~~~~~/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:74:6: error: 'release' is unavailable: not available in automatic reference counting mode [3]     [_lineColor release], _lineColor = nil;      ^/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h:36:1: note: declaration has been explicitly marked unavailable here [3] - (oneway void)release NS_AUTOMATED_REFCOUNT_UNAVAILABLE; ^/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:74:6:{74:17-74:24}: error: ARC forbids explicit message send of 'release' [4]     [_lineColor release], _lineColor = nil;      ^          ~~~~~~~/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m:76:6:{76:12-76:19}: error: ARC forbids explicit message send of 'dealloc' [4]     [super dealloc];      ^     ~~~~~~~5 errors generated.7(21%IDEActivityLogMessage2@75"'retain' is unavailable: not available in automatic reference counting mode-359053860#0#205#-2#-23%DVTTextDocumentLocation3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^67#18#67#18#18446744073709551615#0#14"Semantic Issue--2@55"Declaration has been explicitly marked unavailable here-359053860#296#222#-0#-3@165"file://localhost/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h0000000000000000^34#0#34#0#18446744073709551615#0#14"Semantic Issue--2@45"ARC forbids explicit message send of 'retain'-359053860#570#189#-2#-3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^67#18#67#18#18446744073709551615#0#34"Automatic Reference Counting Issue1(3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^67#60#67#66#18446744073709551615#0#-2@76"'release' is unavailable: not available in automatic reference counting mode-359053860#897#205#-2#-3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^73#5#73#5#18446744073709551615#0#14"Semantic Issue--2@55"Declaration has been explicitly marked unavailable here-359053860#1155#222#-0#-3@165"file://localhost/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h0000000000000000^35#0#35#0#18446744073709551615#0#14"Semantic Issue--2@46"ARC forbids explicit message send of 'release'-359053860#1439#189#-2#-3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^73#5#73#5#18446744073709551615#0#34"Automatic Reference Counting Issue1(3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^73#16#73#23#18446744073709551615#0#-2@46"ARC forbids explicit message send of 'dealloc'-359053860#1698#189#-2#-3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^75#5#75#5#18446744073709551615#0#34"Automatic Reference Counting Issue1(3@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^75#11#75#18#18446744073709551615#0#-0#0#0#-19%DVTDocumentLocation4@128"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m0000000000000000^3024"CompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.o SlowPoker/DETweetComposeViewController/DERuledView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -include /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch -MMD -MT dependencies -MF "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.d" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DERuledView.m" -o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DERuledView.o"36"2ECF74D4-40F3-4AA8-834D-E48782C46000-
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetAccountSelectorViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetAccountSelectorViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetComposeViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetComposeViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetGradientView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetGradientView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetPoster.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetPoster.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetSheetCardView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetSheetCardView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DETweetTextView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetTextView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/DataManager.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DataManager.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GameDetailsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameDetailsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GameSettingsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameSettingsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GameTableViewCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GameTableViewCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/GamesViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/GamesViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Hand.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Hand.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandEvaluator.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandEvaluator.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandEvaluatorViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandEvaluatorViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandManager.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandManager.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HandTableCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HandTableCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/HomeViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/HomeViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/InvitePlayersViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/InvitePlayersViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MFButton.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MFButton.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MessageBubblesViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MessageBubblesViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MyFriendsTableCellCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MyFriendsTableCellCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/MyFriendsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/MyFriendsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NSObject+SBJSON.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/NSObject+SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NSString+SBJSON.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/NSString+SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NSString+URLEncoding.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/NSString+URLEncoding.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/NewGameSelectionViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/NewGameSelectionViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAHMAC_SHA1SignatureProvider.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/OAHMAC_SHA1SignatureProvider.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAuth+DEExtensions.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/OAuth+DEExtensions.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAuth+DEUserDefaults.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/OAuth+DEUserDefaults.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/OAuth.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/OAuth.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerBraceletsTableViewCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerBraceletsTableViewCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerProfileTableViewCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerProfileTableViewCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerProfileViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerProfileViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatTableViewCell1.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatTableViewCell1.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatTableViewCell2.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatTableViewCell2.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatsTableViewCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatsTableViewCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerStatsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerStatsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PlayerView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PlayerView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PokerTableView.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PokerTableView.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/ProChipsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ProChipsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/PullRefreshTableViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/PullRefreshTableViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/RegisterLoginViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/RegisterLoginViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJSON.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJSON.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJsonBase.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonBase.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJsonParser.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonParser.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SBJsonWriter.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/JSON/SBJsonWriter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Settings.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Settings.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SettingsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SettingsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/SocialManager.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SocialManager.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTArrayFormatter.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTArrayFormatter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTHoursOfOperation.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTHoursOfOperation.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTLocationFormatter.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTLocationFormatter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTOrdinalNumberFormatter.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTOrdinalNumberFormatter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTTimeIntervalFormatter.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTTimeIntervalFormatter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TTTUnitOfInformationFormatter.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TTTUnitOfInformationFormatter.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/ThreadCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/ThreadCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TurnSectionHeader.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnSectionHeader.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TurnTableViewCell.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnTableViewCell.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TurnsViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TurnsViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/TwitterDialog.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/TwitterDialog.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/UIApplication+DETweetComposeViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/UIApplication+DETweetComposeViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/UIDevice+DETweetComposeViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/UIDevice+DETweetComposeViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/UIWebViewController.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/UIWebViewController.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/Utils.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/Utils.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+r0
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s359053857.377903
+e359053857.815448
+r1
+xCompileC
+xbuild/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.o
+x/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c:36:6: warning: no previous prototype for function 'hmac_sha1' [-Wmissing-prototypes,3]
+o void hmac_sha1(const unsigned char *inText, size_t inTextLength, unsigned char* inKey, size_t inKeyLength, unsigned char *outDigest)
+o      ^
+o1 warning generated.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c76e06021ba66b541^ddeed121ba66b541^-343"/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c:36:6: warning: no previous prototype for function 'hmac_sha1' [-Wmissing-prototypes,3] void hmac_sha1(const unsigned char *inText, size_t inTextLength, unsigned char* inKey, size_t inKeyLength, unsigned char *outDigest)      ^1 warning generated.1(21%IDEActivityLogMessage2@46"No previous prototype for function 'hmac_sha1'-359053857#0#180#-1#-23%DVTTextDocumentLocation3@110"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c0000000000000000^35#5#35#5#18446744073709551615#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@110"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c0000000000000000^2729"CompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.o SlowPoker/OAuth/Guts/Crypto/hmac.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -include /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch -MMD -MT dependencies -MF "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.d" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/hmac.c" -o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/hmac.o"36"5ED09370-FA8C-4072-AC17-7503415C7642-
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m" normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s359053860.407819
+e359053860.687323
+r1
+xCompileC
+xbuild/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.o
+x/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m29956824ba66b541^4dbeb124ba66b541^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/main.m0000000000000000^2931"CompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.o SlowPoker/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -include /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch -MMD -MT dependencies -MF "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.d" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/main.m" -o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/main.o"36"3CC69188-6A79-4ABC-9E90-B6F8EEE76C5F-
+
+CCompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s359053857.817671
+e359053857.898423
+r1
+xCompileC
+xbuild/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.o
+x/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c6876d121ba66b541^cb47e621ba66b541^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c0000000000000000^2729"CompileC build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.o SlowPoker/OAuth/Guts/Crypto/sha1.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -include /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch -MMD -MT dependencies -MF "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.d" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/OAuth/Guts/Crypto/sha1.c" -o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/Objects-normal/i386/sha1.o"36"5C622015-BFE9-42E1-A759-3AD85BDAAB4C-
+
+CCompileXIB "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/DETweetComposeViewController/DETweetComposeView.xib"
+r0
+
+CCopyStringsFile "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Localizable.strings" SlowPoker/Localizable.strings
+r0
+
+CCopyStringsFile "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/en.lproj/InfoPlist.strings" SlowPoker/en.lproj/InfoPlist.strings
+r0
+
+CCpResource 2C.png build/Debug-iphonesimulator/SlowPoker.app/2C.png
+r0
+
+CCpResource 2D.png build/Debug-iphonesimulator/SlowPoker.app/2D.png
+r0
+
+CCpResource 2H.png build/Debug-iphonesimulator/SlowPoker.app/2H.png
+r0
+
+CCpResource 2S.png build/Debug-iphonesimulator/SlowPoker.app/2S.png
+r0
+
+CCpResource 3C.png build/Debug-iphonesimulator/SlowPoker.app/3C.png
+r0
+
+CCpResource 3D.png build/Debug-iphonesimulator/SlowPoker.app/3D.png
+r0
+
+CCpResource 3H.png build/Debug-iphonesimulator/SlowPoker.app/3H.png
+r0
+
+CCpResource 3S.png build/Debug-iphonesimulator/SlowPoker.app/3S.png
+r0
+
+CCpResource 4C.png build/Debug-iphonesimulator/SlowPoker.app/4C.png
+r0
+
+CCpResource 4D.png build/Debug-iphonesimulator/SlowPoker.app/4D.png
+r0
+
+CCpResource 4H.png build/Debug-iphonesimulator/SlowPoker.app/4H.png
+r0
+
+CCpResource 4S.png build/Debug-iphonesimulator/SlowPoker.app/4S.png
+r0
+
+CCpResource 5C.png build/Debug-iphonesimulator/SlowPoker.app/5C.png
+r0
+
+CCpResource 5D.png build/Debug-iphonesimulator/SlowPoker.app/5D.png
+r0
+
+CCpResource 5H.png build/Debug-iphonesimulator/SlowPoker.app/5H.png
+r0
+
+CCpResource 5S.png build/Debug-iphonesimulator/SlowPoker.app/5S.png
+r0
+
+CCpResource 6C.png build/Debug-iphonesimulator/SlowPoker.app/6C.png
+r0
+
+CCpResource 6D.png build/Debug-iphonesimulator/SlowPoker.app/6D.png
+r0
+
+CCpResource 6H.png build/Debug-iphonesimulator/SlowPoker.app/6H.png
+r0
+
+CCpResource 6S.png build/Debug-iphonesimulator/SlowPoker.app/6S.png
+r0
+
+CCpResource 7C.png build/Debug-iphonesimulator/SlowPoker.app/7C.png
+r0
+
+CCpResource 7D.png build/Debug-iphonesimulator/SlowPoker.app/7D.png
+r0
+
+CCpResource 7H.png build/Debug-iphonesimulator/SlowPoker.app/7H.png
+r0
+
+CCpResource 7S.png build/Debug-iphonesimulator/SlowPoker.app/7S.png
+r0
+
+CCpResource 8C.png build/Debug-iphonesimulator/SlowPoker.app/8C.png
+r0
+
+CCpResource 8D.png build/Debug-iphonesimulator/SlowPoker.app/8D.png
+r0
+
+CCpResource 8H.png build/Debug-iphonesimulator/SlowPoker.app/8H.png
+r0
+
+CCpResource 8S.png build/Debug-iphonesimulator/SlowPoker.app/8S.png
+r0
+
+CCpResource 9C.png build/Debug-iphonesimulator/SlowPoker.app/9C.png
+r0
+
+CCpResource 9D.png build/Debug-iphonesimulator/SlowPoker.app/9D.png
+r0
+
+CCpResource 9H.png build/Debug-iphonesimulator/SlowPoker.app/9H.png
+r0
+
+CCpResource 9S.png build/Debug-iphonesimulator/SlowPoker.app/9S.png
+r0
+
+CCpResource AC.png build/Debug-iphonesimulator/SlowPoker.app/AC.png
+r0
+
+CCpResource AD.png build/Debug-iphonesimulator/SlowPoker.app/AD.png
+r0
+
+CCpResource AH.png build/Debug-iphonesimulator/SlowPoker.app/AH.png
+r0
+
+CCpResource AS.png build/Debug-iphonesimulator/SlowPoker.app/AS.png
+r0
+
+CCpResource Default.png build/Debug-iphonesimulator/SlowPoker.app/Default.png
+r0
+
+CCpResource JC.png build/Debug-iphonesimulator/SlowPoker.app/JC.png
+r0
+
+CCpResource JD.png build/Debug-iphonesimulator/SlowPoker.app/JD.png
+r0
+
+CCpResource JH.png build/Debug-iphonesimulator/SlowPoker.app/JH.png
+r0
+
+CCpResource JS.png build/Debug-iphonesimulator/SlowPoker.app/JS.png
+r0
+
+CCpResource KC.png build/Debug-iphonesimulator/SlowPoker.app/KC.png
+r0
+
+CCpResource KD.png build/Debug-iphonesimulator/SlowPoker.app/KD.png
+r0
+
+CCpResource KH.png build/Debug-iphonesimulator/SlowPoker.app/KH.png
+r0
+
+CCpResource KS.png build/Debug-iphonesimulator/SlowPoker.app/KS.png
+r0
+
+CCpResource QC.png build/Debug-iphonesimulator/SlowPoker.app/QC.png
+r0
+
+CCpResource QD.png build/Debug-iphonesimulator/SlowPoker.app/QD.png
+r0
+
+CCpResource QH.png build/Debug-iphonesimulator/SlowPoker.app/QH.png
+r0
+
+CCpResource QS.png build/Debug-iphonesimulator/SlowPoker.app/QS.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetAttachmentFrame.png build/Debug-iphonesimulator/SlowPoker.app/DETweetAttachmentFrame.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetAttachmentFrame@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetAttachmentFrame@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonLandscape.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonLandscape.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonLandscape@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonLandscape@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonPortrait.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonPortrait.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCancelButtonPortrait@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCancelButtonPortrait@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCardAccountLine.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCardAccountLine.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCardAccountLine@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCardAccountLine@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCardBackground.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCardBackground.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCardBackground@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCardBackground@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCardHeaderLine.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCardHeaderLine.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetCardHeaderLine@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetCardHeaderLine@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetPaperClip.png build/Debug-iphonesimulator/SlowPoker.app/DETweetPaperClip.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetPaperClip@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetPaperClip@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonLandscape.png build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonLandscape.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonLandscape@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonLandscape@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonPortrait.png build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonPortrait.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetSendButtonPortrait@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetSendButtonPortrait@2x.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetURLAttachment.png build/Debug-iphonesimulator/SlowPoker.app/DETweetURLAttachment.png
+r0
+
+CCpResource SlowPoker/DETweetComposeViewController/Resources/DETweetURLAttachment@2x.png build/Debug-iphonesimulator/SlowPoker.app/DETweetURLAttachment@2x.png
+r0
+
+CCpResource SlowPoker/FBDialog.bundle build/Debug-iphonesimulator/SlowPoker.app/FBDialog.bundle
+r0
+
+CCpResource SlowPoker/achievements.json build/Debug-iphonesimulator/SlowPoker.app/achievements.json
+r0
+
+CCpResource SlowPoker/gameDetails.json build/Debug-iphonesimulator/SlowPoker.app/gameDetails.json
+r0
+
+CCpResource SlowPoker/games.json build/Debug-iphonesimulator/SlowPoker.app/games.json
+r0
+
+CCpResource SlowPoker/tclose.png build/Debug-iphonesimulator/SlowPoker.app/tclose.png
+r0
+
+CCpResource SlowPoker/ticon.png build/Debug-iphonesimulator/SlowPoker.app/ticon.png
+r0
+
+CCpResource TC.png build/Debug-iphonesimulator/SlowPoker.app/TC.png
+r0
+
+CCpResource TD.png build/Debug-iphonesimulator/SlowPoker.app/TD.png
+r0
+
+CCpResource TH.png build/Debug-iphonesimulator/SlowPoker.app/TH.png
+r0
+
+CCpResource TS.png build/Debug-iphonesimulator/SlowPoker.app/TS.png
+r0
+
+CCpResource aqua.png build/Debug-iphonesimulator/SlowPoker.app/aqua.png
+r0
+
+CCpResource aqua_button.png build/Debug-iphonesimulator/SlowPoker.app/aqua_button.png
+r0
+
+CCpResource arrow.png build/Debug-iphonesimulator/SlowPoker.app/arrow.png
+r0
+
+CCpResource back.png build/Debug-iphonesimulator/SlowPoker.app/back.png
+r0
+
+CCpResource back_disabled.png build/Debug-iphonesimulator/SlowPoker.app/back_disabled.png
+r0
+
+CCpResource back_enabled.png build/Debug-iphonesimulator/SlowPoker.app/back_enabled.png
+r0
+
+CCpResource background_black.png build/Debug-iphonesimulator/SlowPoker.app/background_black.png
+r0
+
+CCpResource background_black2.png build/Debug-iphonesimulator/SlowPoker.app/background_black2.png
+r0
+
+CCpResource bar_graph.png build/Debug-iphonesimulator/SlowPoker.app/bar_graph.png
+r0
+
+CCpResource bar_graph_background.png build/Debug-iphonesimulator/SlowPoker.app/bar_graph_background.png
+r0
+
+CCpResource black_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/black_bracelet.png
+r0
+
+CCpResource black_sample_card.png build/Debug-iphonesimulator/SlowPoker.app/black_sample_card.png
+r0
+
+CCpResource bronze_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/bronze_bracelet.png
+r0
+
+CCpResource bronze_sample_card.png build/Debug-iphonesimulator/SlowPoker.app/bronze_sample_card.png
+r0
+
+CCpResource cell_corner.png build/Debug-iphonesimulator/SlowPoker.app/cell_corner.png
+r0
+
+CCpResource dealer_button.png build/Debug-iphonesimulator/SlowPoker.app/dealer_button.png
+r0
+
+CCpResource dummy_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/dummy_bracelet.png
+r0
+
+CCpResource empty_avatar.jpg.gif build/Debug-iphonesimulator/SlowPoker.app/empty_avatar.jpg.gif
+r0
+
+CCpResource favourites_message.png build/Debug-iphonesimulator/SlowPoker.app/favourites_message.png
+r0
+
+CCpResource felt_full.png build/Debug-iphonesimulator/SlowPoker.app/felt_full.png
+r0
+
+CCpResource felt_header_backgrond.png build/Debug-iphonesimulator/SlowPoker.app/felt_header_backgrond.png
+r0
+
+CCpResource forward_disabled.png build/Debug-iphonesimulator/SlowPoker.app/forward_disabled.png
+r0
+
+CCpResource forward_enabled.png build/Debug-iphonesimulator/SlowPoker.app/forward_enabled.png
+r0
+
+CCpResource gold_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/gold_bracelet.png
+r0
+
+CCpResource gold_sample_card.png build/Debug-iphonesimulator/SlowPoker.app/gold_sample_card.png
+r0
+
+CCpResource green_felt_background.png build/Debug-iphonesimulator/SlowPoker.app/green_felt_background.png
+r0
+
+CCpResource heart_store.png build/Debug-iphonesimulator/SlowPoker.app/heart_store.png
+r0
+
+CCpResource heart_unselected.png build/Debug-iphonesimulator/SlowPoker.app/heart_unselected.png
+r0
+
+CCpResource icon_114.png build/Debug-iphonesimulator/SlowPoker.app/icon_114.png
+r0
+
+CCpResource icon_57.png build/Debug-iphonesimulator/SlowPoker.app/icon_57.png
+r0
+
+CCpResource lock_icon.png build/Debug-iphonesimulator/SlowPoker.app/lock_icon.png
+r0
+
+CCpResource locked_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/locked_bracelet.png
+r0
+
+CCpResource locked_sample_card.png build/Debug-iphonesimulator/SlowPoker.app/locked_sample_card.png
+r0
+
+CCpResource platinum_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/platinum_bracelet.png
+r0
+
+CCpResource platinum_sample_card.png build/Debug-iphonesimulator/SlowPoker.app/platinum_sample_card.png
+r0
+
+CCpResource poker_table.png build/Debug-iphonesimulator/SlowPoker.app/poker_table.png
+r0
+
+CCpResource purple.png build/Debug-iphonesimulator/SlowPoker.app/purple.png
+r0
+
+CCpResource shuffle.wav build/Debug-iphonesimulator/SlowPoker.app/shuffle.wav
+r0
+
+CCpResource silver_bracelet.png build/Debug-iphonesimulator/SlowPoker.app/silver_bracelet.png
+r0
+
+CCpResource silver_sample_card.png build/Debug-iphonesimulator/SlowPoker.app/silver_sample_card.png
+r0
+
+CCpResource timer_icon.png build/Debug-iphonesimulator/SlowPoker.app/timer_icon.png
+r0
+
+CCpResource your_bet.png build/Debug-iphonesimulator/SlowPoker.app/your_bet.png
+r0
+
+CGenerateDSYMFile "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app.dSYM" "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/SlowPoker"
+r0
+
+CLd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/SlowPoker" normal i386
+r0
+
+CProcessInfoPlistFile "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Info.plist" SlowPoker/SlowPoker-Info.plist
+s359053853.100606
+e359053853.140394
+r1
+xProcessInfoPlistFile
+x/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Info.plist
+xSlowPoker/SlowPoker-Info.plist
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process SlowPoker/SlowPoker-Info.plist0ed8191dba66b541^172d241dba66b541^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/SlowPoker-Info.plist0000000000000000^663"ProcessInfoPlistFile build/Debug-iphonesimulator/SlowPoker.app/Info.plist SlowPoker/SlowPoker-Info.plist    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility SlowPoker/SlowPoker-Info.plist -genpkginfo "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app/Info.plist"36"5EF1E5D7-2DC6-4D2E-BA22-B1C0DEEB46CB-
+
+CProcessPCH /Users/mobilefringe/Library/Developer/Xcode/DerivedData/SlowPoker-heuhkokpboyealcwpcjthrsqjvrx/Index/PrecompiledHeaders/SlowPoker-Prefix-ghftdyegfilkfucgiuudvopxmyfh_ast/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /Users/mobilefringe/Library/Developer/Xcode/DerivedData/SlowPoker-heuhkokpboyealcwpcjthrsqjvrx/Index/PrecompiledHeaders/SlowPoker-Prefix-hjnfbkfsypumhbguitvwyaaxrhqx_ast/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s359053853.148781
+e359053860.401909
+r1
+xProcessPCH
+x/var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.pth
+xSlowPoker/SlowPoker-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile SlowPoker/SlowPoker-Prefix.pcha1d8261dba66b541^03b66724ba66b541^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/SlowPoker-Prefix.pch0000000000000000^2918"ProcessPCH /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SlowPoker-Prefix.pch" -o /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-avuibjgaufxuwnbnezkmzgzufhwg/SlowPoker-Prefix.pch.d36"35E3ECF6-7290-421B-A3C8-89768BF7C300-
+
+CProcessPCH /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s359053853.154881
+e359053855.405243
+r1
+xProcessPCH
+x/var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.pth
+xSlowPoker/SlowPoker-Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile SlowPoker/SlowPoker-Prefix.pch08c8271dba66b541^e0bd671fba66b541^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/mobilefringe/Desktop/newslowpoker/SlowPoker%200.5.18/SlowPoker/SlowPoker-Prefix.pch0000000000000000^2680"ProcessPCH /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.pth SlowPoker/SlowPoker-Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wreturn-type -Wparentheses -Wswitch -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-shorten-64-to-32 -DDEBUG=1 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk -fexceptions -fasm-blocks -mmacosx-version-min=10.6 -gdwarf-2 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-generated-files.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-own-target-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-all-target-headers.hmap" -iquote "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/SlowPoker-project-headers.hmap" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/include" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources/i386" "-I/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/SlowPoker.build/Debug-iphonesimulator/SlowPoker.build/DerivedSources" "-F/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator" -c "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/SlowPoker/SlowPoker-Prefix.pch" -o /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/KE/KEDVP9u5ElmcRDFeLDG0oE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/SlowPoker-Prefix-cavcjamntvtremaqfrlqisqcbpkl/SlowPoker-Prefix.pch.d36"B2A39626-FD34-4D5E-A009-15163FDB8459-
+
+CTouch "/Users/mobilefringe/Desktop/newslowpoker/SlowPoker 0.5.18/build/Debug-iphonesimulator/SlowPoker.app"
+r0
+

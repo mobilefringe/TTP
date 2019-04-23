@@ -1,0 +1,464 @@
+/* 
+  Localizable.strings
+  SlowPoker
+
+  Created by Jamie Simpson on 12-03-22.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+"fold" = "Fold";
+"check" = "Check";
+"raise" = "Raise";
+"call" = "Call";
+"dealer" = "Dealer";
+"smallBlind" = "Small";
+"bigBlind" = "Big";
+
+"sitout" = "Sitting out";
+"pending" = "Invited";
+"buyin" = "Waiting";
+"playing" = "Playing";
+"active" = "Active";
+"out" = "Out";
+
+"USER_FOLD" = "Table Folded";
+"HIGH_CARD" = "High Card";
+"ROYAL_FLUSH" = "Royal Flush";
+"STRAIGHT_FLUSH" = "Straight Flush";
+"FOUR_OF_A_KIND" = "Four of a kind";
+"FULL_HOUSE" = "Full House";
+"FLUSH" = "Flush";
+"STRAIGHT" = "Straight";
+"THREE_OF_A_KIND" = "Three of a kind";
+"TWO_PAIRS" = "Two Pairs";
+"ONE_PAIR" = "Pair";
+
+"FLOP" = "Flop";
+"TURN" = "Turn";
+"RIVER" = "River";
+
+"cash" = "Cash Game";
+"tournament" = "Tournament";
+
+"PLATINUM" = "Platinum";
+"GOLD" = "Gold";
+"SILVER" = "Silver";
+"BRONZE" = "Bronze";
+"BLACK" = "Black";
+
+
+//achievements
+
+
+//platinum
+"achievement.PLATINUM_BRACELET.title" = "Platinum Bracelets";
+"achievement.PLATINUM_BRACELET.description" = "Unlock all platinum cards to unlock a platinum bracelet";
+"achievement.PLATINUM_BRACELET.imageLocked" = "locked_bracelet.png";
+"achievement.PLATINUM_BRACELET.imageUnLocked" = "platinum_bracelet.png";
+
+"achievement.ROYAL_FLUSH.title" = "Royal Flush";
+"achievement.ROYAL_FLUSH.description" = "Win a hand with a Royal FLush";
+"achievement.ROYAL_FLUSH.imageLocked" = "locked_sample_card.png";
+"achievement.ROYAL_FLUSH.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.STRAIGHT_FLUSH.title" = "Straight Flush";
+"achievement.STRAIGHT_FLUSH.description" = "Win a hand with a Straight Flush";
+"achievement.STRAIGHT_FLUSH.imageLocked" = "locked_sample_card.png";
+"achievement.STRAIGHT_FLUSH.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.FOUR_OF_A_KIND.title" = "Four of a Kind";
+"achievement.FOUR_OF_A_KIND.description" = "Win a hand with four of a Kind";
+"achievement.FOUR_OF_A_KIND.imageLocked" = "locked_sample_card.png";
+"achievement.FOUR_OF_A_KIND.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.BIG_POT_4.title" = "Big Pot 4x";
+"achievement.BIG_POT_4.description" = "Win a pot worth at least the 4x size of the max buy-in amount";
+"achievement.BIG_POT_4.imageLocked" = "locked_sample_card.png";
+"achievement.BIG_POT_4.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.HAND_STREAK_10.title" = "Win Streak 10x";
+"achievement.HAND_STREAK_10.description" = "Win 10 hands in a row within the same game";
+"achievement.HAND_STREAK_10.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_STREAK_10.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.LOGIN_STREAK_40.title" = "Login Streak 40x";
+"achievement.LOGIN_STREAK_40.description" = "Login in and play for 40 consecutive days";
+"achievement.LOGIN_STREAK_40.imageLocked" = "locked_sample_card.png";
+"achievement.LOGIN_STREAK_40.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.CHATTER_BOX_30.title" = "Chatter Box 30x";
+"achievement.CHATTER_BOX_30.description" = "Send 30 chat messages in one game";
+"achievement.CHATTER_BOX_30.imageLocked" = "locked_sample_card.png";
+"achievement.CHATTER_BOX_30.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.ALL_IN_5.title" = "All-In 5x";
+"achievement.ALL_IN_5.description" = "Go 'All-In' 5 times in one game";
+"achievement.ALL_IN_5.imageLocked" = "locked_sample_card.png";
+"achievement.ALL_IN_5.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.HAND_WIN_TOTAL_500.title" = "Win 500 Hands";
+"achievement.HAND_WIN_TOTAL_500.description" = "Win 500 hands in your career";
+"achievement.HAND_WIN_TOTAL_500.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_WIN_TOTAL_500.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.BUDDIES_15.title" = "Get Around 15x";
+"achievement.BUDDIES_15.description" = "Play with at least 15 different people in your career";
+"achievement.BUDDIES_15.imageLocked" = "locked_sample_card.png";
+"achievement.BUDDIES_15.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.KO_4.title" = "Knock Out 4x";
+"achievement.KO_4.description" = "Knock out 4 players from a game";
+"achievement.KO_4.imageLocked" = "locked_sample_card.png";
+"achievement.KO_4.imageUnLocked" = "platinum_sample_card.png";
+
+"achievement.GAME_WIN_TOTAL_100.title" = "Win 100 Games";
+"achievement.GAME_WIN_TOTAL_100.description" = "Win 100 games in you career";
+"achievement.GAME_WIN_TOTAL_100.imageLocked" = "locked_sample_card.png";
+"achievement.GAME_WIN_TOTAL_100.imageUnLocked" = "platinum_sample_card.png";
+
+
+
+
+//gold
+"achievement.GOLD_BRACELET.title" = "Gold Bracelets";
+"achievement.GOLD_BRACELET.description" = "Unlock all gold cards to unlock a gold bracelet";
+"achievement.GOLD_BRACELET.imageLocked" = "locked_bracelet.png";
+"achievement.GOLD_BRACELET.imageUnLocked" = "gold_bracelet.png";
+
+"achievement.STRAIGHT.title" = "Straight";
+"achievement.STRAIGHT.description" = "Win a hand with a Straight";
+"achievement.STRAIGHT.imageLocked" = "locked_sample_card.png";
+"achievement.STRAIGHT.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.FLUSH.title" = "Flush";
+"achievement.FLUSH.description" = "Win a hand with Flush";
+"achievement.FLUSH.imageLocked" = "locked_sample_card.png";
+"achievement.FLUSH.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.FULL_HOUSE.title" = "Full House";
+"achievement.FULL_HOUSE.description" = "Win a hand with a Flush";
+"achievement.FULL_HOUSE.imageLocked" = "locked_sample_card.png";
+"achievement.FULL_HOUSE.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.BIG_POT_3.title" = "Big Pot 3x";
+"achievement.BIG_POT_3.description" = "Win a pot worth at least the 3x size of the max buy-in amount";
+"achievement.BIG_POT_3.imageLocked" = "locked_sample_card.png";
+"achievement.BIG_POT_3.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.HAND_STREAK_7.title" = "Win Streak 7x";
+"achievement.HAND_STREAK_7.description" = "Win 7 hands in a row within the same game";
+"achievement.HAND_STREAK_7.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_STREAK_7.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.LOGIN_STREAK_20.title" = "Login Streak 20x";
+"achievement.LOGIN_STREAK_20.description" = "Login in and play for 20 consecutive days";
+"achievement.LOGIN_STREAK_20.imageLocked" = "locked_sample_card.png";
+"achievement.LOGIN_STREAK_20.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.CHATTER_BOX_20.title" = "Chatter Box 20x";
+"achievement.CHATTER_BOX_20.description" = "Send 20 chat messages in one game";
+"achievement.CHATTER_BOX_20.imageLocked" = "locked_sample_card.png";
+"achievement.CHATTER_BOX_20.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.ALL_IN_4.title" = "All-In 4x";
+"achievement.ALL_IN_4.description" = "Go 'All-In' 4 times in one game";
+"achievement.ALL_IN_4.imageLocked" = "locked_sample_card.png";
+"achievement.ALL_IN_4.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.HAND_WIN_TOTAL_100.title" = "Win 100 Hands";
+"achievement.HAND_WIN_TOTAL_100.description" = "Win 100 hands in your career";
+"achievement.HAND_WIN_TOTAL_100.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_WIN_TOTAL_100.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.BUDDIES_10.title" = "Get Around 10x";
+"achievement.BUDDIES_10.description" = "Play with at least 10 different people in your career";
+"achievement.BUDDIES_10.imageLocked" = "locked_sample_card.png";
+"achievement.BUDDIES_10.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.KO_3.title" = "Knock Out 3x";
+"achievement.KO_3.description" = "Knock out three players from a game";
+"achievement.KO_3.imageLocked" = "locked_sample_card.png";
+"achievement.KO_3.imageUnLocked" = "gold_sample_card.png";
+
+"achievement.GAME_WIN_TOTAL_25.title" = "Win 5 Games";
+"achievement.GAME_WIN_TOTAL_25.description" = "Win 5 games in you career";
+"achievement.GAME_WIN_TOTAL_25.imageLocked" = "locked_sample_card.png";
+"achievement.GAME_WIN_TOTAL_25.imageUnLocked" = "gold_sample_card.png";
+
+
+
+
+
+//silver
+"achievement.SILVER_BRACELET.title" = "Silver Bracelets";
+"achievement.SILVER_BRACELET.description" = "Unlock all silver cards to unlock a silver bracelet";
+"achievement.SILVER_BRACELET.imageLocked" = "locked_bracelet.png";
+"achievement.SILVER_BRACELET.imageUnLocked" = "silver_bracelet.png";
+
+"achievement.TRIPS.title" = "Trips";
+"achievement.TRIPS.description" = "Win a hand with a 'Three of a Kind'";
+"achievement.TRIPS.imageLocked" = "locked_sample_card.png";
+"achievement.TRIPS.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.TWO_PAIR.title" = "Big Slick";
+"achievement.TWO_PAIR.description" = "Win a hand with 'Ace / King'";
+"achievement.TWO_PAIR.imageLocked" = "locked_sample_card.png";
+"achievement.TWO_PAIR.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.PAIR_ACES.title" = "Aces";
+"achievement.PAIR_ACES.description" = "Win a hand with a pair of 'Aces'";
+"achievement.PAIR_ACES.imageLocked" = "locked_sample_card.png";
+"achievement.PAIR_ACES.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.BIG_POT_2.title" = "Big Pot 2x";
+"achievement.BIG_POT_2.description" = "Win a pot worth at least the 2x size of the max buy-in amount";
+"achievement.BIG_POT_2.imageLocked" = "locked_sample_card.png";
+"achievement.BIG_POT_2.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.HAND_STREAK_5.title" = "Win Streak 5x";
+"achievement.HAND_STREAK_5.description" = "Win 5 hands in a row within the same game";
+"achievement.HAND_STREAK_5.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_STREAK_5.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.LOGIN_STREAK_10.title" = "Login Streak 5x";
+"achievement.LOGIN_STREAK_10.description" = "Login in and play for 10 consecutive days";
+"achievement.LOGIN_STREAK_10.imageLocked" = "locked_sample_card.png";
+"achievement.LOGIN_STREAK_10.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.CHATTER_BOX_10.title" = "Chatter Box 10x";
+"achievement.CHATTER_BOX_10.description" = "Send 10 chat messages in one game";
+"achievement.CHATTER_BOX_10.imageLocked" = "locked_sample_card.png";
+"achievement.CHATTER_BOX_10.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.ALL_IN_3.title" = "All-In 3x";
+"achievement.ALL_IN_3.description" = "Go 'All-In' 3 times in one game";
+"achievement.ALL_IN_3.imageLocked" = "locked_sample_card.png";
+"achievement.ALL_IN_3.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.HAND_WIN_TOTAL_25.title" = "Win 25 Hands";
+"achievement.HAND_WIN_TOTAL_25.description" = "Win 25 hands in your career";
+"achievement.HAND_WIN_TOTAL_25.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_WIN_TOTAL_25.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.BUDDIES_5.title" = "Get Around 5x";
+"achievement.BUDDIES_5.description" = "Play with at least 5 different people in your career";
+"achievement.BUDDIES_5.imageLocked" = "locked_sample_card.png";
+"achievement.BUDDIES_5.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.KO_2.title" = "Knock Out 2x";
+"achievement.KO_2.description" = "Knock out two players from a game";
+"achievement.KO_2.imageLocked" = "locked_sample_card.png";
+"achievement.KO_2.imageUnLocked" = "silver_sample_card.png";
+
+"achievement.GAME_WIN_TOTAL_5.title" = "Win 5 Games";
+"achievement.GAME_WIN_TOTAL_5.description" = "Win 5 games in you career";
+"achievement.GAME_WIN_TOTAL_5.imageLocked" = "locked_sample_card.png";
+"achievement.GAME_WIN_TOTAL_5.imageUnLocked" = "silver_sample_card.png";
+
+
+
+
+
+//bronze
+"achievement.BRONZE_BRACELET.title" = "Bronze Bracelets";
+"achievement.BRONZE_BRACELET.description" = "Unlock all bronze cards to unlock a bronze bracelet";
+"achievement.BRONZE_BRACELET.imageLocked" = "locked_bracelet.png";
+"achievement.BRONZE_BRACELET.imageUnLocked" = "bronze_bracelet.png";
+
+"achievement.PAIR_KINGS.title" = "Cowboys";
+"achievement.PAIR_KINGS.description" = "Win a hand with a pair of 'Kings'";
+"achievement.PAIR_KINGS.imageLocked" = "locked_sample_card.png";
+"achievement.PAIR_KINGS.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.ACE_KING.title" = "Big Slick";
+"achievement.ACE_KING.description" = "Win a hand with 'Ace / King'";
+"achievement.ACE_KING.imageLocked" = "locked_sample_card.png";
+"achievement.ACE_KING.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.PAIR_QUEENS.title" = "Ladies";
+"achievement.PAIR_QUEENS.description" = "Win a hand with a pair of 'Queens'";
+"achievement.PAIR_QUEENS.imageLocked" = "locked_sample_card.png";
+"achievement.PAIR_QUEENS.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.BIG_POT_1.title" = "Big Pot";
+"achievement.BIG_POT_1.description" = "Win a pot worth at least the size of the max buy-in amount";
+"achievement.BIG_POT_1.imageLocked" = "locked_sample_card.png";
+"achievement.BIG_POT_1.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.HAND_STREAK_3.title" = "Win Streak 3x";
+"achievement.HAND_STREAK_3.description" = "Win 3 hands in a row within the same game";
+"achievement.HAND_STREAK_3.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_STREAK_3.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.LOGIN_STREAK_3.title" = "Login Streak 3x";
+"achievement.LOGIN_STREAK_3.description" = "Login in and play for 3 consecutive days";
+"achievement.LOGIN_STREAK_3.imageLocked" = "locked_sample_card.png";
+"achievement.LOGIN_STREAK_3.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.CHATTER_BOX_5.title" = "Chatter Box 5x";
+"achievement.CHATTER_BOX_5.description" = "Send 5 chat messages in one game";
+"achievement.CHATTER_BOX_5.imageLocked" = "locked_sample_card.png";
+"achievement.CHATTER_BOX_5.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.ALL_IN_2.title" = "All-In 2x";
+"achievement.ALL_IN_2.description" = "Go 'All-In' two times in one game";
+"achievement.ALL_IN_2.imageLocked" = "locked_sample_card.png";
+"achievement.ALL_IN_2.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.HAND_WIN_TOTAL_5.title" = "Win 5 Hands";
+"achievement.HAND_WIN_TOTAL_5.description" = "Win 5 hands in your career";
+"achievement.HAND_WIN_TOTAL_5.imageLocked" = "locked_sample_card.png";
+"achievement.HAND_WIN_TOTAL_5.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.BUDDIES_3.title" = "Get Around 3x";
+"achievement.BUDDIES_3.description" = "Play with at least 3 different people in your career";
+"achievement.BUDDIES_3.imageLocked" = "locked_sample_card.png";
+"achievement.BUDDIES_3.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.KO_1.title" = "Knock Out";
+"achievement.KO_1.description" = "Knock out one player from a game";
+"achievement.KO_1.imageLocked" = "locked_sample_card.png";
+"achievement.KO_1.imageUnLocked" = "bronze_sample_card.png";
+
+"achievement.GAME_WIN_TOTAL_1.title" = "Win a Game";
+"achievement.GAME_WIN_TOTAL_1.description" = "Win a game ";
+"achievement.GAME_WIN_TOTAL_1.imageLocked" = "locked_sample_card.png";
+"achievement.GAME_WIN_TOTAL_1.imageUnLocked" = "bronze_sample_card.png";
+
+
+
+
+//black
+"achievement.BLACK_BRACELET.title" = "Black Bracelets";
+"achievement.BLACK_BRACELET.description" = "Unlock all black cards to unlock a black bracelet";
+"achievement.BLACK_BRACELET.imageLocked" = "locked_bracelet.png";
+"achievement.BLACK_BRACELET.imageUnLocked" = "black_bracelet.png";
+
+"achievement.LOGIN_DAILY.title" = "Daily Login";
+"achievement.LOGIN_DAILY.description" = "Login at leaset once in a day";
+"achievement.LOGIN_DAILY.imageLocked" = "locked_sample_card.png";
+"achievement.LOGIN_DAILY.imageUnLocked" = "black_sample_card.png";
+
+"achievement.HOST_GAME.title" = "Create a game";
+"achievement.HOST_GAME.description" = "Create a game and invite your friends";
+"achievement.HOST_GAME.imageLocked" = "locked_sample_card.png";
+"achievement.HOST_GAME.imageUnLocked" = "black_sample_card.png";
+
+"achievement.TWEET.title" = "Tweet";
+"achievement.TWEET.description" = "Post a tweet about TTP";
+"achievement.TWEET.imageLocked" = "locked_sample_card.png";
+"achievement.TWEET.imageUnLocked" = "black_sample_card.png";
+
+"achievement.FACEBOOK.title" = "Facebook Post";
+"achievement.FACEBOOK.description" = "Post to Facebook about TTP";
+"achievement.FACEBOOK.imageLocked" = "locked_sample_card.png";
+"achievement.FACEBOOK.imageUnLocked" = "black_sample_card.png";
+
+"achievement.REGISTER.title" = "Welcomet to TTP";
+"achievement.REGISTER.description" = "Congratulations! You've registered for TTP. Check out other achievement and awards in your profile";
+"achievement.REGISTER.imageLocked" = "locked_sample_card.png";
+"achievement.REGISTER.imageUnLocked" = "black_sample_card.png";
+
+"achievement.UPLOAD_AVATAR.title" = "Avatar Uploaded!";
+"achievement.UPLOAD_AVATAR.description" = "Congratulations! You've uploaded an avatar";
+"achievement.UPLOAD_AVATAR.imageLocked" = "locked_sample_card.png";
+"achievement.UPLOAD_AVATAR.imageUnLocked" = "black_sample_card.png";
+
+"achievement.FIRST_HAND_WIN.title" = "First Hand Win!";
+"achievement.FIRST_HAND_WIN.description" = "Congratulations! You've won your first hand. We hope its the first of many";
+"achievement.FIRST_HAND_WIN.imageLocked" = "locked_sample_card.png";
+"achievement.FIRST_HAND_WIN.imageUnLocked" = "black_sample_card.png";
+
+"achievement.FIRST_GAME_WIN.title" = "First Game Win!";
+"achievement.FIRST_GAME_WIN.description" = "Congratulations! You've won your first game. We hope its the first of many";
+"achievement.FIRST_GAME_WIN.imageLocked" = "locked_sample_card.png";
+"achievement.FIRST_GAME_WIN.imageUnLocked" = "black_sample_card.png";
+
+"achievement.POCKETS.title" = "Pockets";
+"achievement.POCKETS.description" = "Win a game with a pocket pair";
+"achievement.POCKETS.imageLocked" = "locked_sample_card.png";
+"achievement.POCKETS.imageUnLocked" = "black_sample_card.png";
+
+"achievement.VIEW_LEADERBOARD.title" = "View LeaderBoard";
+"achievement.VIEW_LEADERBOARD.description" = "Thanks for checking out the leaderboard for the first time, check back often";
+"achievement.VIEW_LEADERBOARD.imageLocked" = "locked_sample_card.png";
+"achievement.VIEW_LEADERBOARD.imageUnLocked" = "black_sample_card.png";
+
+
+//Profile
+"profile.HANDS_PLAYED.title" = "Hands Played";
+"profile.HANDS_PLAYED.description" = "The number of career hands played";
+
+"profile.GAMES_PLAYED.title" = "Total Games Played";
+"profile.GAMES_PLAYED.description" = "The number of career games played";
+
+"profile.CASH_GAMES_PLAYED.title" = "Cash Games Played";
+"profile.CASH_GAMES_PLAYED.description" = "The number of career cash games played";
+
+"profile.TOURNAMENT_GAMES_PLAYED.title" = "Tournament Games Played";
+"profile.TOURNAMENT_GAMES_PLAYED.description" = "The number of career tournament games played";
+
+"profile.FOLD_PRE_FLOP.title" = "Fold before the flop";
+"profile.FOLD_PRE_FLOP.description" = "Number of times cards are folded before the first three community cards are shown";
+
+"profile.SEE_FLOP.title" = "See the Flop";
+"profile.SEE_FLOP.description" = "Number of times a player sees the first three community cards";
+
+"profile.FOLD_PRE_TURN.title" = "Fold before the turn";
+"profile.FOLD_PRE_TURN.description" = "Number of times cards are folded before the fourth community cards is shown";
+
+"profile.SEE_TURN.title" = "See the Turn";
+"profile.SEE_TURN.description" = "Number of times a player sees the fourth community card";
+
+"profile.FOLD_PRE_RIVER.title" = "Fold before the river";
+"profile.FOLD_PRE_RIVER.description" = "Number of times cards are folded before the fifth community cards is shown";
+
+"profile.SEE_RIVER.title" = "See the River";
+"profile.SEE_RIVER.description" = "Number of times a player sees the fifth community card";
+
+"profile.VPIP.title" = "VPIP (Voluntarily Put $ in Pot)";
+"profile.VPIP.description" = "This stat shows the percentage of the time a player calls or raises money in the pot before the flop. Excludes blinds";
+
+"profile.PFR.title" = "PFR (Pre Flop Raise)";
+"profile.PFR.description" = "This indicates how often a player raises before the flop is seen. A high value is one indicator of an aggressive player";
+
+"profile.PFA.title" = "PFA (Post-flop Aggression Factor)";
+"profile.PFA.description" = "Calculated by dividing the number of times that a player bets or raises after the flop by the number of times they call";
+
+"profile.WTSD.title" = "WTSD (Went to Showdown %)";
+"profile.WTSD.description" = "This is a measure of how often you were still in the action when the hand went to showdown. Showdown occurs when the final round of betting is complete and at least two players are still in";
+
+"profile.W$SD.title" = " W$SD (Won $ in Showdown %)";
+"profile.W$SD.description" = "This indicates how often you won a hand in a showdown. It is calculated as a percentage of all hands in which you went to showdown";
+
+"profile.WWSD.title" = "WWSD (Won Without Showdown %)";
+"profile.WWSD.description" = "The percentage of hands won without a showdown i.e. all players folded";
+
+"profile.FOLD.title" = "Fold %";
+"profile.FOLD.description" = "The percentage a player folds per hand";
+
+"profile.BLIND_STEAL.title" = "Blind Steal %";
+"profile.BLIND_STEAL.description" = "The percentage of opportunities to steal the blinds that a player takes. Blinds are stolen pre-flop when no-one else has raised";
+
+"profile.ALL_IN.title" = "All Ins";
+"profile.ALL_IN.description" = "The percentage of all in calls won";
+
+"profile.ALL_IN_WIN.title" = "All in wins";
+"profile.ALL_IN_WIN.description" = "The percentage of all in calls won";
+
+
+"profile.EARNINGS_ALL_GAMES.title" = "All Games";
+"profile.EARNINGS_CASH_GAMES.title" = "Cash Games";
+"profile.EARNINGS_TOURNAMENT_GAMES.title" = "Tournament Games";
+
+
+
+
+
+
+
+
+
+
+
+
+

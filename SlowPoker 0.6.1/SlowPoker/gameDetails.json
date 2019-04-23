@@ -1,0 +1,306 @@
+{
+    "lastActionMessage" : "Jamie raised to $13.50",
+    "gameOwnerID" : "8",
+    "gameSettings" : {
+        "type" : "tournament",
+        "maxBuy" : "40",
+        "bigBlind" : "0.50",
+        "smallBlind" : "0.25",
+        "numOfHands" : "5"
+    },
+    "gameID" : "118",
+    "gameState" : {
+        "gameSummary" : {
+            "8" : "40.00",
+            "6" : "40.00",
+            "10" : "40.00"
+        },
+        "hands" : [
+                   {
+                   "communityCards" : [
+                                       "TC",
+                                       "2S",
+                                       "KC",
+                                       "6H",
+                                       "5C"
+                                       ],
+                   "state" : "5",
+                   "rounds" : [
+                               {
+                               "showCards" : "YES",
+                               "cardOne" : "2D",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "1.00",
+                               "handState" : "4",
+                               "action" : "call",
+                               "callAmount" : "1.00",
+                               "userStack" : "35.50",
+                               "userName" : "Jamie",
+                               "cardTwo" : "AD",
+                               "userID" : "8",
+                               "raiseAmount" : "0.00",
+                               "isDealer" : "YES"
+                               },
+                               {
+                               "isDealer" : "NO",
+                               "cardOne" : "QD",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "1.00",
+                               "handState" : "4",
+                               "action" : "raise",
+                               "callAmount" : "0.00",
+                               "userStack" : "35.50",
+                               "userName" : "alex",
+                               "cardTwo" : "6C",
+                               "userID" : "6",
+                               "raiseAmount" : "1.00",
+                               "showCards" : "YES"
+                               },
+                               {
+                               "HAND_STATE" : "RIVER",
+                               "cardOne" : "2D",
+                               "showCards" : "YES",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "3.00",
+                               "handState" : "3",
+                               "action" : "call",
+                               "callAmount" : "3.00",
+                               "userStack" : "36.50",
+                               "userName" : "Jamie",
+                               "cardTwo" : "AD",
+                               "userID" : "8",
+                               "raiseAmount" : "0.00",
+                               "isDealer" : "YES"
+                               },
+                               {
+                               "isDealer" : "NO",
+                               "cardOne" : "QD",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "3.00",
+                               "handState" : "3",
+                               "action" : "raise",
+                               "callAmount" : "0.00",
+                               "userStack" : "36.50",
+                               "userName" : "alex",
+                               "cardTwo" : "6C",
+                               "userID" : "6",
+                               "raiseAmount" : "3.00",
+                               "showCards" : "YES"
+                               },
+                               {
+                               "HAND_STATE" : "TURN",
+                               "cardOne" : "2D",
+                               "showCards" : "YES",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "0.00",
+                               "handState" : "2",
+                               "action" : "check",
+                               "callAmount" : "0.00",
+                               "userStack" : "39.50",
+                               "userName" : "Jamie",
+                               "cardTwo" : "AD",
+                               "userID" : "8",
+                               "raiseAmount" : "0.00",
+                               "isDealer" : "YES"
+                               },
+                               {
+                               "isDealer" : "NO",
+                               "cardOne" : "QD",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "0.00",
+                               "handState" : "2",
+                               "action" : "check",
+                               "callAmount" : "0.00",
+                               "userStack" : "39.50",
+                               "userName" : "alex",
+                               "cardTwo" : "6C",
+                               "userID" : "6",
+                               "raiseAmount" : "0.00",
+                               "showCards" : "YES"
+                               },
+                               {
+                               "showCards" : "NO",
+                               "cardOne" : "JD",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "0.00",
+                               "handState" : "2",
+                               "action" : "fold",
+                               "callAmount" : "0.00",
+                               "userStack" : "39.50",
+                               "userName" : "TheHaad",
+                               "cardTwo" : "5S",
+                               "userID" : "10",
+                               "raiseAmount" : "0.00",
+                               "isDealer" : "NO"
+                               },
+                               {
+                               "HAND_STATE" : "FLOP",
+                               "cardOne" : "QD",
+                               "isDealer" : "NO",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "0.00",
+                               "handState" : "1",
+                               "action" : "check",
+                               "callAmount" : "0.00",
+                               "userStack" : "39.50",
+                               "userName" : "alex",
+                               "cardTwo" : "6C",
+                               "userID" : "6",
+                               "raiseAmount" : "0.00",
+                               "showCards" : "YES"
+                               },
+                               {
+                               "showCards" : "NO",
+                               "cardOne" : "JD",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "0.25",
+                               "handState" : "1",
+                               "action" : "call",
+                               "callAmount" : "0.25",
+                               "userStack" : "39.50",
+                               "userName" : "TheHaad",
+                               "cardTwo" : "5S",
+                               "userID" : "10",
+                               "raiseAmount" : "0.00",
+                               "isDealer" : "NO"
+                               },
+                               {
+                               "isDealer" : "YES",
+                               "cardOne" : "2D",
+                               "MY_BET_ROUND" : "NO",
+                               "amount" : "0.50",
+                               "handState" : "1",
+                               "action" : "call",
+                               "callAmount" : "0.50",
+                               "userStack" : "39.50",
+                               "userName" : "Jamie",
+                               "cardTwo" : "AD",
+                               "userID" : "8",
+                               "raiseAmount" : "0.00",
+                               "showCards" : "YES"
+                               },
+                               {
+                               "showCards" : "YES",
+                               "cardOne" : "QD",
+                               "amount" : "0.50",
+                               "handState" : "1",
+                               "action" : "bigBlind",
+                               "callAmount" : "0.25",
+                               "userStack" : "39.50",
+                               "userName" : "alex",
+                               "cardTwo" : "6C",
+                               "userID" : "6",
+                               "potSize" : "0",
+                               "raiseAmount" : "0.25",
+                               "isDealer" : "NO"
+                               },
+                               {
+                               "cardOne" : "JD",
+                               "amount" : "0.25",
+                               "handState" : "1",
+                               "action" : "smallBlind",
+                               "callAmount" : "0",
+                               "userStack" : "39.75",
+                               "userName" : "TheHaad",
+                               "cardTwo" : "5S",
+                               "userID" : "10",
+                               "potSize" : "0",
+                               "raiseAmount" : "0.25",
+                               "showCards" : "NO"
+                               },
+                               {
+                               "cardTwo" : "AD",
+                               "cardOne" : "2D",
+                               "userID" : "8",
+                               "amount" : "0",
+                               "isDealer" : "YES",
+                               "action" : "dealer",
+                               "userStack" : "40.00",
+                               "userName" : "Jamie",
+                               "handState" : "1",
+                               "potSize" : "0",
+                               "showCards" : "YES"
+                               }
+                               ],
+                   "number" : "1",
+                   "potSize" : "9.50",
+                   "winners" : [
+                                {
+                                "type" : "ONE_PAIR",
+                                "userID" : "6",
+                                "userName" : "alex",
+                                "amount" : "9.50",
+                                "hand":["AC","AD","3H","2H","9H","JS"],
+                                "handDetails":{"flushSuit":"-1","flushRank":"-1","rankings":["12","8","9","10",""]},
+                                },
+                                {
+                                "type" : "ONE_PAIR",
+                                "userID" : "8",
+                                "userName" : "Jamie",
+                                "amount" : "0.00",
+                                "hand":["JC","JD","3H","2H","9H","JS"],
+                                "handDetails":{"flushSuit":"-1","flushRank":"-1","rankings":["9","12","9","10",""]},
+                                }
+                                ]
+                   }
+                   ]
+    },
+    "turnState" : {
+        "players" : [
+                     {
+                     "status" : "playing",
+                     "userID" : "8",
+                     "playerState" : {
+                     "cardTwo" : "AD",
+                     "isSmallBlind" : "NO",
+                     "cardOne" : "2D",
+                     "lastBetHandState" : "2",
+                     "isBigBlind" : "YES",
+                     "isDealer" : "NO",
+                     "action" : "raise",
+                     "userStack" : "19.50",
+                     "raiseAmount" : "10.50"
+                     },
+                     "userName" : "Jamie",
+                     "order" : "1"
+                     },
+                     {
+                     "status" : "playing",
+                     "userID" : "10",
+                     "playerState" : {
+                     "cardTwo" : "4H",
+                     "isSmallBlind" : "NO",
+                     "cardOne" : "5C",
+                     "lastBetHandState" : "1",
+                     "isBigBlind" : "NO",
+                     "isDealer" : "YES",
+                     "action" : "fold",
+                     "userStack" : "37.00",
+                     "raiseAmount" : "0.00"
+                     },
+                     "userName" : "TheHaad",
+                     "order" : "2"
+                     },
+                     {
+                     "status" : "playing",
+                     "userID" : "6",
+                     "playerState" : {
+                     "cardTwo" : "6C",
+                     "isSmallBlind" : "YES",
+                     "cardOne" : "QD",
+                     "lastBetHandState" : "2",
+                     "isBigBlind" : "NO",
+                     "isDealer" : "NO",
+                     "action" : "raise",
+                     "userStack" : "39.50",
+                     "raiseAmount" : "3.00"
+                     },
+                     "userName" : "alex",
+                     "order" : "3"
+                     }
+                     ]
+    },
+    "lastUpdated" : "2012-05-01 15:14:14 UTC",
+    "status" : "active",
+    "nextActionForUserID" : "8"
+}

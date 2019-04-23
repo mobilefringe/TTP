@@ -1,0 +1,18 @@
+create a new row under users on the home page called 'User Experience'
+*subtitle = Show avg # hands per user for today.
+
+New Users SQL
+select count(*),DATE(players.created_at) from players group by DATE(players.created_at)
+
+Invited to game SQL for new user
+select count(distinct players_games.game_id),DATE(players_games.created_at) from players,players_games where DATE(players.created_at) = DATE(players_games.created_at) and players.id = players_games.`player_id` group by DATE(players.created_at)
+
+
+Bought in Users SQL
+select count(distinct players_games.game_id),DATE(players_games.created_at) from players,players_games where DATE(players.created_at) = DATE(players_games.created_at) and players.id = players_games.`player_id` and players_games.playerState is not null group by DATE(players.created_at)
+
+Dealt at least 1 hand
+select count(distinct players_games.game_id),DATE(players_games.created_at) from players,players_games where DATE(players.created_at) = DATE(players_games.created_at) and players.id = players_games.`player_id` and players_games.playerState is not null and char_length(players_games.playerState) > 100 group by DATE(players.created_at)
+
+Avg Hands Played for new
+select count(stats.stat),DATE(players.created_at) from players,stats where DATE(players.created_at) = DATE(stats.created_at) and players.id = stats.`player_id` and stats.stat = 'HANDS_PLAYED' group by DATE(players.created_at)

@@ -1,0 +1,15 @@
+/*Alltime avg hands played per user*/
+select avg(achievements.count) from achievements,players where achievements.code = 'HANDS_PLAYED' and achievements.`player_id` = players.`id` and players.`is_power_player` = false and players.id > 199
+
+/*todays avg hands played per user*/
+select avg(achievements.count) from achievements,players where achievements.code = 'HANDS_PLAYED' and achievements.`player_id` = players.`id` and players.`is_power_player` = false and  DATE(players.created_at) = DATE(NOW())
+
+/*count new users by date*/
+select count(*),DATE(players.created_at) from players group by DATE(players.created_at)
+
+/*count new playing games  by date for everyone*/
+select count(distinct players_games.game_id),DATE(players_games.created_at) from players,players_games where players.id = players_games.`player_id` and players_games.playerState is not null group by DATE(players_games.created_at)
+
+/*count new playing games by date for users who registered on the same day*/
+select count(distinct players_games.game_id),DATE(players_games.created_at) from players,players_games where DATE(players.created_at) = DATE(players_games.created_at) and players.id = players_games.`player_id` and players_games.playerState is not null group by DATE(players.created_at)
+

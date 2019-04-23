@@ -1,0 +1,32 @@
+[
+  {
+  "code": "BEER",
+  "image": "gift_beer1.png",
+  "purchaseValue": "2"
+  },
+ {
+ "code": "HORSE_SHOE",
+ "image": "gift_horsesho.png",
+ "purchaseValue": "3"
+ },
+ {
+ "code": "SNAIL",
+ "image": "gift_slug.png",
+ "purchaseValue": "3"
+ },
+ {
+ "code": "TISSUE",
+ "image": "gift_tissue.png",
+ "purchaseValue": "3"
+ },
+  {
+  "code": "CHICKEN",
+  "image": "gift_chicken.png",
+  "purchaseValue": "5"
+  },
+  {
+  "code": "TILT",
+  "image": "gift_tilt.png",
+  "purchaseValue": "5"
+  }
+]

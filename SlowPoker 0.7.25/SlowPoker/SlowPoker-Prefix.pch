@@ -1,0 +1,46 @@
+//
+// Prefix header for all source files of the 'SlowPoker' target in the 'SlowPoker' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "FlurryAnalytics.h"
+#endif
+
+#define NO_OF_RANKS 13
+
+/** The number of suits in a deck. */
+#define NO_OF_SUITS 4
+
+#define MAX_NO_OF_PAIRS 2
+#define NO_OF_RANKINGS 6
+
+// The ranks.
+#define ACE 12
+#define KING 11
+#define QUEEN 10
+#define JACK 9
+#define NINE 7
+#define EIGHT 6
+#define SEVEN 5
+#define SIX 4
+#define FIVE 3
+#define FOUR 2
+#define THREE 1
+#define DEUCE 0
+
+// The suits.
+#define SPADES 3
+#define HEARTS 2
+#define CLUBS 1
+#define DIAMONDS 0
+
+#define RANK_SYMBOLS {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"}
+#define SUIT_SYMBOLS = { 'd', 'c', 'h', 's' }

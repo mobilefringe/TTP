@@ -1,0 +1,333 @@
+{
+    "PLATINUM": [
+                 {
+                 "code": "PLATINUM_BRACELET",
+                 "earnedValue": "0",
+                 "purchaseValue": "0",
+                 "canBuy": "NO",
+                 "isPrimary": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "ROYAL_FLUSH",
+                 "earnedValue": "20",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "STRAIGHT_FLUSH",
+                 "earnedValue": "20",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "FOUR_OF_A_KIND",
+                 "earnedValue": "20",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "BIG_POT_4",
+                 "earnedValue": "20",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "LOGIN_STREAK_50",
+                 "earnedValue": "50",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "ALL_IN_5",
+                 "earnedValue": "20",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "HAND_WIN_TOTAL_500",
+                 "earnedValue": "100",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 },
+                 {
+                 "code": "GAME_WIN_TOTAL_100",
+                 "earnedValue": "100",
+                 "purchaseValue": "200",
+                 "canBuy": "YES",
+                 "category": "PLATINUM"
+                 }
+                 ],
+    "GOLD": [
+             {
+             "code": "GOLD_BRACELET",
+             "earnedValue": "0",
+             "purchaseValue": "0",
+             "canBuy": "NO",
+             "isPrimary": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "STRAIGHT",
+             "earnedValue": "10",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "FLUSH",
+             "earnedValue": "10",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "FULL_HOUSE",
+             "earnedValue": "10",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "BIG_POT_3",
+             "earnedValue": "10",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "LOGIN_STREAK_20",
+             "earnedValue": "20",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "ALL_IN_4",
+             "earnedValue": "10",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "HAND_WIN_TOTAL_250",
+             "earnedValue": "50",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             },
+             {
+             "code": "GAME_WIN_TOTAL_50",
+             "earnedValue": "50",
+             "purchaseValue": "100",
+             "canBuy": "YES",
+             "category": "GOLD"
+             }
+             ],
+    "SILVER": [
+               {
+               "code": "SILVER_BRACELET",
+               "earnedValue": "0",
+               "purchaseValue": "0",
+               "canBuy": "NO",
+               "isPrimary": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "TRIPS",
+               "earnedValue": "5",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "TWO_PAIR",
+               "earnedValue": "5",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "PAIR_ACES",
+               "earnedValue": "5",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "BIG_POT_2",
+               "earnedValue": "5",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "LOGIN_STREAK_10",
+               "earnedValue": "10",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "ALL_IN_3",
+               "earnedValue": "5",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "HAND_WIN_TOTAL_125",
+               "earnedValue": "25",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               },
+               {
+               "code": "GAME_WIN_TOTAL_25",
+               "earnedValue": "25",
+               "purchaseValue": "50",
+               "canBuy": "YES",
+               "category": "SILVER"
+               }
+               ],
+    "BRONZE": [
+               {
+               "code": "BRONZE_BRACELET",
+               "earnedValue": "0",
+               "purchaseValue": "0",
+               "canBuy": "NO",
+               "isPrimary": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "PAIR_KINGS",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "ACE_KING",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "PAIR_QUEENS",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "BIG_POT_1",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "LOGIN_STREAK_3",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "ALL_IN_2",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "HAND_WIN_TOTAL_25",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               },
+               {
+               "code": "GAME_WIN_TOTAL_5",
+               "earnedValue": "3",
+               "purchaseValue": "30",
+               "canBuy": "YES",
+               "category": "BRONZE"
+               }
+               ],
+    "BLACK": [
+              {
+              "code": "BLACK_BRACELET",
+              "earnedValue": "0",
+              "purchaseValue": "0",
+              "canBuy": "NO",
+              "isPrimary": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "LOGIN_DAILY",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "HOST_GAME",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "REGISTER",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "UPLOAD_AVATAR",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "FIRST_HAND_WIN",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "POCKETS",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              },
+              {
+              "code": "FIRST_GAME_WIN",
+              "earnedValue": "1",
+              "purchaseValue": "10",
+              "canBuy": "YES",
+              "category": "BLACK"
+              }
+              ],
+    "INVENTORY": [
+                  {
+                  "code": "PLAYER_STATS",
+                  "purchaseValue": "10",
+                  "canBuy": "YES",
+                  "category": "INVENTORY"
+                  }
+                  ]
+}

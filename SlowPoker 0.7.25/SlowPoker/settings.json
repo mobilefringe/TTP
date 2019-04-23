@@ -1,0 +1,14 @@
+{
+    "versions": {
+        "iPhone": {
+            "currentVersion": "0.7.8",
+            "forceVersion": "0.7.5",
+            "appDownloadURL": "http://itunes.apple.com/ca/app/twitter/id333903271?mt=8"
+        },
+        "Android": {
+            "currentVersion": "0",
+            "forceVersion": "0",
+            "appDownloadURL": "http://www.texasturnpoker.com"
+        }
+    }
+}

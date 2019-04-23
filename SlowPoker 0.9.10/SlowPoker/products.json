@@ -1,0 +1,33 @@
+ [
+  {
+  "key": "com.mobilefringe.SlowPoker.prochip.10x",
+  "value": "10",
+  "type": "proChips",
+  "onSale": "YES",
+  "saleMultiplier": "3",
+  },
+  {
+  "key": "com.mobilefringe.SlowPoker.prochip.20x",
+  "value": "20",
+  "type": "proChips",
+  "forSale": "NO"
+  },
+  {
+  "key": "com.mobilefringe.SlowPoker.prochip.65x",
+  "value": "65",
+  "type": "proChips",
+  "forSale": "NO"
+  },
+  {
+  "key": "com.mobilefringe.SlowPoker.prochip.145x",
+  "value": "145",
+  "type": "proChips",
+  "forSale": "NO"
+  },
+  {
+  "key": "com.mobilefringe.SlowPoker.prochip.270x",
+  "value": "270",
+  "type": "proChips",
+  "forSale": "NO"
+  }
+]

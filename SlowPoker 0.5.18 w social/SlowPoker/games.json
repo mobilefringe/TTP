@@ -1,0 +1,225 @@
+[
+    {
+        "gameID": "1",
+        "currentTurnID": "1",
+        "nextActionForUserID": "1",
+        "lastActionMessage": "Steve raised $25",
+        "lastUpdated": "2012-03-20 21:29:27",
+        "status": "active",
+		"gameOwnerID": "1",
+        "gameSettings": {
+            "type": "cash",
+            "smallBlind": "0.25",
+            "bigBlind": "0.50",
+			"minBuy": "20",
+			"maxBuy": "60",
+			"numOfHands": "100"
+        },
+        "turnState": {
+            "players": [
+                {
+                    "status": "playing",
+                    "userName": "Jamie",
+                    "userID": "1",
+                    "order": "4",
+                    "playerState": {
+                        "userStack": "20",
+                        "cardOne": "KS",
+                        "cardTwo": "KC"
+                    }
+                },
+                {
+                    "status": "playing",
+                    "userName": "Steve",
+                    "userID": "2",
+                    "order": "3",
+                    "playerState": {
+                        "userStack": "20",
+                        "cardOne": "QS",
+                        "cardTwo": "QC"
+                    }
+                },
+                {
+                    "status": "playing",
+                    "userName": "Mike",
+                    "userID": "3",
+                    "order": "2",
+                    "playerState": {
+                        "userStack": "20",
+                        "cardOne": "JS",
+                        "cardTwo": "JC"
+                    }
+                },
+                {
+                    "status": "playing",
+                    "userName": "Haad",
+                    "userID": "4",
+                    "order": "1",
+                    "playerState": {
+                        "userStack": "20",
+                        "cardOne": "10S",
+                        "cardTwo": "10C"
+                    }
+                }
+            ]
+        },
+        "gameState": {
+            "hands": [
+                {
+                    "potSize": "1200",
+                    "state": "4",
+                    "number": "4",
+                    "communityCards": [
+                        "7S",
+                        "KS",
+                        "QH",
+                        "AD",
+                        "2H"
+                    ],
+                    "playerCards": {
+                        "1": {
+                            "cardOne": "AH",
+                            "cardTwo": "AC"
+                        },
+                        "2": {
+                            "cardOne": "2H",
+                            "cardTwo": "AD"
+                        },
+                        "3": {
+                            "cardOne": "JH",
+                            "cardTwo": "10D"
+                        },
+                        "4": {
+                            "cardOne": "8H",
+                            "cardTwo": "8D"
+                        }
+                    },
+                    "rounds": [
+                        {
+                            "potSize": "45",
+                            "userID": "2",
+                            "action": "fold",
+                            "amount": "0",
+                            "cardOne": "2H",
+                            "cardTwo": "AD",
+                            "showCards": "YES",
+                            "userName": "Steve",
+                            "userStack": "200"
+                        },
+                        {
+                            "potSize": "45",
+                            "userID": "3",
+                            "action": "raise",
+                            "amount": "20",
+                            "cardOne": "4C",
+                            "cardTwo": "8D",
+                            "showCards": "NO",
+                            "userName": "Mike",
+                            "userStack": "300"
+                        },
+                        {
+                            "potSize": "45",
+                            "userID": "4",
+                            "action": "raise",
+                            "amount": "30",
+                            "cardOne": "JH",
+                            "cardTwo": "10D",
+                            "showCards": "YES",
+                            "userName": "Haad",
+                            "userStack": "400"
+                        }
+                    ]
+                },
+                {
+                    "potSize": "100",
+                    "state": "1",
+                    "number": "3",
+                    "communityCards": [
+                        "7S",
+                        "KS",
+                        "QH",
+                        "AD",
+                        "2H"
+                    ],
+                    "playerCards": {
+                        "1": "3H_4S",
+                        "2": "6D_3C",
+                        "3": "KH_AS"
+                    },
+                    "rounds": [
+                        {
+                            "potSize": "45",
+                            "actionBy": "1",
+                            "action": "raise",
+                            "amount": "10",
+                            "cardOne": "2H",
+                            "cardTwo": "AD",
+                            "showCards": "NO",
+                            "userName": "Jamie",
+                            "userStack": "200"
+                        },
+                        {
+                            "potSize": "45",
+                            "actionBy": "2",
+                            "action": "fold",
+                            "amount": "0",
+                            "cardOne": "2H",
+                            "cardTwo": "AD",
+                            "showCards": "YES",
+                            "userName": "Steve",
+                            "userStack": "300"
+                        },
+                        {
+                            "potSize": "45",
+                            "actionBy": "3",
+                            "action": "raise",
+                            "amount": "40",
+                            "cardOne": "2H",
+                            "cardTwo": "AD",
+                            "showCards": "YES",
+                            "userName": "Mike",
+                            "userStack": "200"
+                        }
+                    ]
+                },
+                {
+                    "potSize": "200",
+                    "state": "3",
+                    "number": "3",
+                    "communityCards": [
+                        "4S",
+                        "5S",
+                        "6H",
+                        "7D",
+                        "8H"
+                    ],
+                    "playerCards": {
+                        "1": "3H_4S",
+                        "2": "6D_3C",
+                        "3": "KH_AS"
+                    },
+                    "rounds": [
+                        {
+                            "potSize": "45",
+                            "actionBy": "1",
+                            "action": "check",
+                            "amount": "10"
+                        },
+                        {
+                            "potSize": "45",
+                            "actionBy": "2",
+                            "action": "check",
+                            "amount": "0"
+                        },
+                        {
+                            "potSize": "45",
+                            "actionBy": "3",
+                            "action": "check",
+                            "amount": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]
