@@ -46,8 +46,9 @@
 -(void)loadView{
     [super loadView];
     
-    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_black.png"]];
-    [self.view addSubview:background];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    [[DataManager sharedInstance] setImageBackground:self.view imageName:@"background_black.png" topbarHeight:topbarHeight];
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicatorView.frame = CGRectMake(140, 70, 40, 40);
@@ -56,18 +57,15 @@
     [activityIndicatorView stopAnimating];
     [self.view addSubview:activityIndicatorView];
     
-    
     self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 85;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-[[DataManager sharedInstance] getBottomPadding]);
     [self.view addSubview:_tableView];
     
-    
-    
-    
-    self.updatingMessage = [[UILabel alloc] initWithFrame:CGRectMake(0, 3, 305, 20)];
+            
+    self.updatingMessage = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 305, 20)];
     //updatingMessage.text = @"Updating";
     updatingMessage.backgroundColor = [UIColor clearColor];
     updatingMessage.textColor = [UIColor whiteColor];

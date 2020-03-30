@@ -132,4 +132,6 @@
 -(double)getPotEntryForUser:(NSString *)userID hand:(NSMutableDictionary *)hand;
 -(NSMutableDictionary *)getPlayerForIDCurrentGame:(NSString *)userID;
 -(BOOL)canPlayerBet:(NSMutableDictionary *)player;
+-(void)setImageBackground: (UIView*)view imageName: (NSString*) imageName topbarHeight: (CGFloat) topbarHeight;
+-(CGFloat)getBottomPadding;
 @end

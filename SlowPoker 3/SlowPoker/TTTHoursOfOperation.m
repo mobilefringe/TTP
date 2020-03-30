@@ -341,11 +341,13 @@ TTTWeekday TTTWeekdayForNSDate(NSDate *date) {
 		NSString *label = nil;
 		if ([groupedHours count] == 7) {
 			label = NSLocalizedString(@"Everyday", nil);
-		} else if ([groupedHours count] == 5 && [[groupedHours lastObject] weekday] == TTTFriday) {
-			label = NSLocalizedString(@"Weekdays", nil);
-		} else if ([groupedHours count] == 2 && [[groupedHours lastObject] weekday] == TTTSunday) {
-			label = NSLocalizedString(@"Weekends", nil);
-		} else {
+		}
+//        else if ([groupedHours count] == 5 && [[groupedHours lastObject] weekday] == TTTFriday) {
+//			label = NSLocalizedString(@"Weekdays", nil);
+//		} else if ([groupedHours count] == 2 && [[groupedHours lastObject] weekday] == TTTSunday) {
+//			label = NSLocalizedString(@"Weekends", nil);
+//		}
+        else {
 			if ([groupedHours count] > 2) {
 				label = [NSString stringWithFormat:NSLocalizedString(@"%@ - %@", @"(weekday range)"), [[groupedHours objectAtIndex:0] weekdaySymbol], [[groupedHours lastObject] weekdaySymbol]];
 			} else {

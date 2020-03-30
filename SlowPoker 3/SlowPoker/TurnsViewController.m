@@ -75,7 +75,8 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 70;
-    _tableView.frame = CGRectMake(0, 0, 320, 416-40);
+    _tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - [[DataManager sharedInstance] getBottomPadding]-40);
+
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
     

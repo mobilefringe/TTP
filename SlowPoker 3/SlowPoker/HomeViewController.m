@@ -35,36 +35,43 @@
 -(void)loadView{
     [super loadView];
     
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    
     int ySpacing = 70;
     
-    UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_black2.png"]];
-    [self.view addSubview:background];
-    
+    [[DataManager sharedInstance] setImageBackground:self.view imageName:@"background_black2.png" topbarHeight:topbarHeight];
     
     self.gamesButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    gamesButton.frame = CGRectMake(20, 40, 280, 50);
+    
+    int buttonWidth = 280;
+    int xCenterView = (self.view.bounds.size.width-buttonWidth)/2;
+    
+    gamesButton.frame = CGRectMake(xCenterView, topbarHeight+40, buttonWidth, 50);
     [gamesButton addTarget:self action:@selector(pressMyGames) forControlEvents:UIControlEventTouchUpInside];
     [gamesButton setTitle:@"My Games" forState:UIControlStateNormal];
+    [gamesButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+
     [self.view addSubview:gamesButton];
     
     self.proPointsButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    proPointsButton.frame = CGRectMake(20, 40+ySpacing, 280, 50);
+    proPointsButton.frame = CGRectMake(xCenterView, topbarHeight+40+ySpacing, buttonWidth, 50);
     [proPointsButton addTarget:self action:@selector(pressHandEval) forControlEvents:UIControlEventTouchUpInside];
     [proPointsButton setTitle:@"Hand Evaluator" forState:UIControlStateNormal];
     [self.view addSubview:proPointsButton];
     
     self.statsButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    statsButton.frame = CGRectMake(20, 40+ySpacing*2, 280, 50);
+    statsButton.frame = CGRectMake(xCenterView, topbarHeight+40+ySpacing*2, buttonWidth, 50);
     [statsButton setTitle:@"My Win / Loss" forState:UIControlStateNormal];
     [self.view addSubview:statsButton];
     
     self.leaderBoardsButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    leaderBoardsButton.frame = CGRectMake(20, 40+ySpacing*3, 280, 50);
+    leaderBoardsButton.frame = CGRectMake(xCenterView, topbarHeight+40+ySpacing*3, buttonWidth, 50);
     [leaderBoardsButton setTitle:@"Leader Boards" forState:UIControlStateNormal];
     [self.view addSubview:leaderBoardsButton];
     
     self.profileButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    profileButton.frame = CGRectMake(20, 40+ySpacing*4, 280, 50);
+    profileButton.frame = CGRectMake(xCenterView, topbarHeight+40+ySpacing*4, buttonWidth, 50);
     [profileButton setTitle:@"My Profile" forState:UIControlStateNormal];
     [self.view addSubview:profileButton];
     
@@ -73,9 +80,7 @@
                                                                  target:self
                                                                  action:@selector(logout)];
     self.navigationItem.leftBarButtonItem = barButton;
-    
-    
-    
+            
 }
 
 -(void)logout{

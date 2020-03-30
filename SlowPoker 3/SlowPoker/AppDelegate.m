@@ -26,9 +26,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound |UIRemoteNotificationTypeAlert)];
+//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound |UIRemoteNotificationTypeAlert)];
     
-    
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+           // iOS 8 Notifications
+           [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+
+           [application registerForRemoteNotifications];
+    }
+    else
+    {
+          // iOS < 8 Notifications
+          [application registerForRemoteNotificationTypes:
+                     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    }
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -37,6 +49,7 @@
     self.navController = [[UINavigationController alloc] initWithRootViewController:registerLoginViewController];
     self.navController.navigationBar.tintColor = [UIColor blackColor];
     [self.window addSubview:navController.view];
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     if([prefs valueForKey:@"userName"] && [prefs valueForKey:@"password"] ){

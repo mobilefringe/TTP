@@ -44,11 +44,12 @@
 - (void)loadView
 {
     [super loadView];
+    
     self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 70;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-[[DataManager sharedInstance] getBottomPadding]);
     [self.view addSubview:_tableView];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Create Game"

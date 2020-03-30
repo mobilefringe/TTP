@@ -1772,9 +1772,27 @@ static BOOL debugMode = NO;
     return maxRaise - lastRaise;
 }*/
 
+-(void)setImageBackground: (UIView*)view imageName: (NSString*) imageName topbarHeight: (CGFloat) topbarHeight{
+    CGSize size = view.frame.size;
+    size.height = size.height;
+    UIGraphicsBeginImageContext(size);
+    CGRect bounds = view.bounds;
+    bounds.origin.y = bounds.origin.y + topbarHeight;
+    bounds.size.height = bounds.size.height - topbarHeight;
+    [[UIImage imageNamed:imageName] drawInRect:bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    view.backgroundColor = [UIColor colorWithPatternImage:image];
+}
 
-
-
+-(CGFloat)getBottomPadding{
+    CGFloat bottomPadding = 0;
+    if (@available(iOS 11.0, *)) {
+       UIWindow *window = UIApplication.sharedApplication.keyWindow;
+       bottomPadding = window.safeAreaInsets.bottom + 40;
+    }
+    return bottomPadding;
+}
 
 
 // See "Creating a Singleton Instance" in the Cocoa Fundamentals Guide for more info

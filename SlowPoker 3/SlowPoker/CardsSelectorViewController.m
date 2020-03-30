@@ -104,8 +104,12 @@
 - (void)loadView
 {
     [super loadView];
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
-    scrollView.contentSize = CGSizeMake(320, 1100);
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    
+
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height - [[DataManager sharedInstance] getBottomPadding])];
+    scrollView.contentSize = CGSizeMake(self.view.bounds.size.width, 1100);
     [self.view addSubview:scrollView];
     
     int x = 28;

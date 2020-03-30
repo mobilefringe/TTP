@@ -46,7 +46,7 @@
 {
     [super loadView];
     
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
     searchBar.placeholder = @"Search by username or email";
     searchBar.delegate = self;
     [self.view addSubview:searchBar];
@@ -55,7 +55,8 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 50;
-    _tableView.frame = CGRectMake(0, 50, 320, 416-50);
+    _tableView.frame = CGRectMake(0, 50, self.view.bounds.size.width, self.view.bounds.size.height - [[DataManager sharedInstance] getBottomPadding]-50);
+
     [self.view addSubview:_tableView];
     
     self.barButton = [[UIBarButtonItem alloc] initWithTitle:@"Create Game"

@@ -10,7 +10,7 @@
 #import "CardsSelectorViewController.h"
 #import "HandTableCell.h"
 #import "Hand.h"
-
+#import "DataManager.h"
 @implementation HandEvaluatorViewController
 
 @synthesize _tableView;
@@ -47,11 +47,21 @@
 
 -(void)loadView{
     [super loadView];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
+    CGFloat bottomPadding = 0;
+    if (@available(iOS 11.0, *)) {
+       UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        bottomPadding = window.safeAreaInsets.bottom + 40;
+    }
+
+    
     self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 85;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-[[DataManager sharedInstance] getBottomPadding]);
     [self.view addSubview:_tableView];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Add Hand"

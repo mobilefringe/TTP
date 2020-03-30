@@ -46,8 +46,12 @@
 - (void)loadView
 {
     [super loadView];
-    int y = -30;
-    self.emailAddress = [[UITextField alloc] initWithFrame:CGRectMake(20, 40+y, 280, 30)];
+    CGFloat y = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    
+    CGFloat textFieldWidth = self.view.bounds.size.width - (20*2);
+    
+    self.emailAddress = [[UITextField alloc] initWithFrame:CGRectMake(20, 40+y, textFieldWidth, 30)];
     emailAddress.borderStyle = UITextBorderStyleRoundedRect;
     emailAddress.placeholder = @"email";
     emailAddress.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -56,7 +60,7 @@
     emailAddress.keyboardType = UIKeyboardTypeEmailAddress;
     [self.view addSubview:emailAddress];
     
-    self.userName = [[UITextField alloc] initWithFrame:CGRectMake(20, 80+y, 280, 30)];
+    self.userName = [[UITextField alloc] initWithFrame:CGRectMake(20, 80+y, textFieldWidth, 30)];
     userName.borderStyle = UITextBorderStyleRoundedRect;
     userName.placeholder = @"userName";
     userName.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -64,7 +68,7 @@
     userName.spellCheckingType = UITextSpellCheckingTypeNo;
     [self.view addSubview:userName];
     
-    self.password = [[UITextField alloc] initWithFrame:CGRectMake(20, 120+y, 280, 30)];
+    self.password = [[UITextField alloc] initWithFrame:CGRectMake(20, 120+y, textFieldWidth, 30)];
     password.borderStyle = UITextBorderStyleRoundedRect;
     password.placeholder = @"password";
     password.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -74,15 +78,18 @@
     [self.view addSubview:password];
     
     self.registerButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    registerButton.frame = CGRectMake(20, 160+y, 135, 40);
+    registerButton.frame = CGRectMake(0, 160+y, self.view.bounds.size.width/2, 40);
+    [registerButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [registerButton setTitle:@"Register" forState:UIControlStateNormal];
     [self.view addSubview:registerButton];
     [registerButton addTarget:self action:@selector(registerUser) forControlEvents:UIControlEventTouchUpInside];
     
     
     self.loginButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    loginButton.frame = CGRectMake(160, 160+y, 135, 40);
+    loginButton.frame = CGRectMake(self.registerButton.bounds.size.width, 160+y, self.registerButton.bounds.size.width, 40);
+    [loginButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     [loginButton setTitle:@"Login" forState:UIControlStateNormal];
+    
     [self.view addSubview:loginButton];
     [loginButton addTarget:self action:@selector(loginUser) forControlEvents:UIControlEventTouchUpInside];
     
