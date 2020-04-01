@@ -596,7 +596,7 @@
 				LastUpgradeCheck = 0430;
 				TargetAttributes = {
 					C87D7D341517D36A00007F95 = {
-						DevelopmentTeam = B66DTGYFS9;
+						DevelopmentTeam = GV8Q529ELE;
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Manual;
 					};
@@ -814,16 +814,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SlowPoker/SlowPoker.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development: Tony Tran (Y5389RYDXV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Tony Tran (Y5389RYDXV)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = B66DTGYFS9;
+				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
 				INFOPLIST_FILE = "SlowPoker/SlowPoker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nus.mobilefringe.slowpoker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.SlowPoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A4D640DA-6BE7-4F82-87C0-B7BD7CDE1A47";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A4D640DA-6BE7-4F82-87C0-B7BD7CDE1A47";
@@ -842,20 +842,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SlowPoker/SlowPoker.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = B66DTGYFS9;
+				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
 				INFOPLIST_FILE = "SlowPoker/SlowPoker-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nus.mobilefringe.slowpoker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.SlowPoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "41E3EEBB-A1FC-4917-88BD-7B3B9912A341";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "41E3EEBB-A1FC-4917-88BD-7B3B9912A341";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "slowpoker-adhoc";
 				SWIFT_OBJC_BRIDGING_HEADER = "SlowPoker/SlowPoker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
