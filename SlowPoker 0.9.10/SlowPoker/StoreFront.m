@@ -232,7 +232,6 @@ static NSString *consumableIndentifier = @"proChip";
      @"PRODUCT_PRICE",
      nil];
     
-    [FlurryAnalytics logEvent:@"IN_APP_PURCHSE" withParameters:dictionary];
     SKPayment *payment = [SKPayment paymentWithProduct:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment]; 
 }
@@ -269,7 +268,6 @@ static NSString *consumableIndentifier = @"proChip";
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:transaction.payment.productIdentifier,
      @"PRODUCT_ID",nil];
     
-    [FlurryAnalytics logEvent:@"IN_APP_PURCHSE_SUCCESS" withParameters:dictionary];    
     // Remove the transaction from the payment queue.
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -285,7 +283,6 @@ static NSString *consumableIndentifier = @"proChip";
     [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:transaction.payment.productIdentifier,@"PRODUCT_ID",nil];
     
-    [FlurryAnalytics logEvent:@"IN_APP_PURCHSE_FAILED" withParameters:dictionary];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate.updatingPopUp hide];
     UIAlertView *failedTransaction = [[UIAlertView alloc] initWithTitle:@"Purchase Failure" message:@"Sorry, We were unable to complete your transaction.  Please try again." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -347,7 +344,6 @@ static NSString *consumableIndentifier = @"proChip";
     //NSLog(@"");
     NSDictionary *results = [self incrementCurrency:jsonString];
     if([[results valueForKey:@"success"] intValue] == 1){
-        [FlurryAnalytics logEvent:@"ADD_PRO_CHIPS" withParameters:userDict];
         [DataManager sharedInstance].myProChips = [[results valueForKey:@"currency"] intValue];
         [DataManager sharedInstance].proChipsIncrement = newValue;
     }
@@ -377,7 +373,6 @@ static NSString *consumableIndentifier = @"proChip";
     //NSLog(@"");
     NSDictionary *results = [self decrementCurrency:jsonString];
     if([[results valueForKey:@"success"] intValue] == 1){
-        [FlurryAnalytics logEvent:@"SPEND_PRO_CHIPS" withParameters:userDict];
         [DataManager sharedInstance].myProChips = [[results valueForKey:@"currency"] intValue];
         [DataManager sharedInstance].proChipsIncrement = -newValue;
     }

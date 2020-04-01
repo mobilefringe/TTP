@@ -68,13 +68,11 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_WELCOME" timed:YES];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"Welcome" showLeft:NO showRight:NO];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_WELCOME" withParameters:nil];
 }
 
 -(void)registerUser{

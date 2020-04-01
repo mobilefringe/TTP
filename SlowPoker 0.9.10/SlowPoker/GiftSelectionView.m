@@ -182,7 +182,6 @@
 }
 
 -(void)show{
-    [FlurryAnalytics endTimedEvent:@"SHOW_GIFTS" withParameters:nil];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];
@@ -191,7 +190,6 @@
 }
 
 -(void)hide{
-    [FlurryAnalytics endTimedEvent:@"SHOW_GIFTS" withParameters:nil];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];

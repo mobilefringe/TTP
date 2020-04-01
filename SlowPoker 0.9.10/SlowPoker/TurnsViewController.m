@@ -321,7 +321,6 @@ static int refreshSeconds = 60;
 
 -(void)viewWillAppear:(BOOL)animated{
     updatingMessage.hidden = YES;
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_IN_GAME" timed:YES];
     [super viewWillAppear:animated];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.buyGamePopUp.delegate = self;
@@ -494,7 +493,6 @@ static int refreshSeconds = 60;
 
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_IN_GAME" withParameters:nil];
     [refreshTimer invalidate];
 }
 
@@ -1269,7 +1267,6 @@ static int refreshSeconds = 60;
     }else{
         self.navigationItem.rightBarButtonItem = betViewButton;
     }*/
-    [FlurryAnalytics endTimedEvent:@"SHOW_CHAT" withParameters:nil];
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
     chatFieldBackground.frame = CGRectMake(0, 416-40, 320, 40);
@@ -1281,7 +1278,6 @@ static int refreshSeconds = 60;
 }
 
 -(void)showChatFull{
-    [FlurryAnalytics logEvent:@"SHOW_CHAT" timed:YES];
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
     //self.navigationItem.rightBarButtonItem = closeChatButton;
     [UIView beginAnimations:@"" context:NULL];
@@ -1295,7 +1291,6 @@ static int refreshSeconds = 60;
 }
 
 -(void)showChatWithKeyboard{
-    [FlurryAnalytics logEvent:@"SHOW_CHAT" timed:YES];
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
     //self.navigationItem.rightBarButtonItem = closeChatButton;
     [UIView beginAnimations:@"" context:NULL];
@@ -1344,7 +1339,6 @@ static int refreshSeconds = 60;
     
     
     if ([woodBackground superview]) {
-        [FlurryAnalytics logEvent:@"PRESS_BET_VIEW"];
         [UIView beginAnimations:nil context:NULL];
         
         [UIView setAnimationDuration:.5];
@@ -1363,7 +1357,6 @@ static int refreshSeconds = 60;
         
     }
     else {
-        [FlurryAnalytics logEvent:@"PRESS_TABLE_VIEW"];
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:.5];
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:flipView
@@ -1412,14 +1405,12 @@ static int refreshSeconds = 60;
 
 
     if(gameStatsViewController.view.frame.origin.y == 0){
-        [FlurryAnalytics endTimedEvent:@"SHOW_GAME_STATS" withParameters:nil];
         [UIView beginAnimations:@"" context:NULL];
         [UIView setAnimationDuration:0.4];
         [gameStatsButton unselectButton:YES];
         gameStatsViewController.view.frame = CGRectMake(0, 416, 320, 416);
         [UIView commitAnimations];
     }else{
-        [FlurryAnalytics logEvent:@"SHOW_GAME_STATS" timed:YES];
         [UIView beginAnimations:@"" context:NULL];
         [UIView setAnimationDuration:0.4];
         gameStatsViewController.view.frame = CGRectMake(0, 0, 320, 416);

@@ -106,7 +106,6 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_PLAYER_STATS" timed:YES];
     isStatsLocked = [[DataManager sharedInstance] isCurrentPlayerProfileStatsLocked];
     //NSLog(@"playerProfile:%@",[DataManager sharedInstance].playerProfile);
     [_tableView reloadData];
@@ -121,7 +120,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_PLAYER_STATS" withParameters:nil];
 }
 
 

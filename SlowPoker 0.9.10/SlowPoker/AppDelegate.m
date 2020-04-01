@@ -61,7 +61,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-    [FlurryAnalytics startSession:@"RRHZ483PX2WSC47RXFDC"];
     
     [[DataManager sharedInstance] addObserver:self forKeyPath:@"showAchievement" options:NSKeyValueObservingOptionOld context:nil];
     [[DataManager sharedInstance] addObserver:self forKeyPath:@"addAchievement" options:NSKeyValueObservingOptionOld context:nil];
@@ -82,7 +81,6 @@
     self.navController = [[UINavigationController alloc] initWithRootViewController:registerLoginViewController];
     self.navController.navigationBar.tintColor = [UIColor blackColor];
     self.gamesViewController = [[GamesViewController alloc] initWithNibName:nil bundle:nil];
-    [FlurryAnalytics logAllPageViews:navController];
     
     self.navBar = [[NavBarView alloc] initWithFrame:CGRectMake(0, 20, 320, 45)];
     [navBar.backButton addTarget:self action:@selector(pressBackButton) forControlEvents:UIControlEventTouchUpInside];
@@ -112,13 +110,14 @@
     self.updatingPopUp = [[UpdatingPopUp alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
     [self.window addSubview:updatingPopUp];
     
+    self.window.rootViewController = self.navController;
+
     [self.window makeKeyAndVisible];
     
     [[StoreFront sharedStore] loadProducts];
     [[Settings sharedInstance] loadRemoteSettings];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
-    facebook = [[Facebook alloc] initWithAppId:@"185368288271540" andDelegate:self];
     
     
     NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:@"YES", @"isTableView", nil];
@@ -476,7 +475,6 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     
-    [facebook extendAccessTokenIfNeeded];
     
     BOOL isAsnych = YES;
     if([navController.visibleViewController isKindOfClass:[RegisterLoginViewController class]]){
@@ -628,7 +626,7 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     NSLog(@"source application is %@ and url is %@", sourceApplication, url);
-    return [facebook handleOpenURL:url]; 
+//    return [facebook handleOpenURL:url];
 }
 
 - (void)fbDidLogin {
@@ -722,7 +720,6 @@
 }
 
 void uncaughtExceptionHandler(NSException *exception) {
-    [FlurryAnalytics logError:@"Uncaught" message:@"Crash!" exception:exception];
 }
 
 @end

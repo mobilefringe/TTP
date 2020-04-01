@@ -265,7 +265,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_REGISTER" timed:YES];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"Register" showLeft:YES showRight:NO];
     //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -275,7 +274,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_REGISTER" withParameters:nil];
 }
 
 -(void)registerUser{

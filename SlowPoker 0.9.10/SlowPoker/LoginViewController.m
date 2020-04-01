@@ -276,7 +276,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_LOGIN" timed:YES];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"Login" showLeft:YES showRight:NO];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -286,7 +285,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_LOGIN" withParameters:nil];
 }
 
 -(void)registerUser{

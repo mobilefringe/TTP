@@ -66,7 +66,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_MY_FRIENDS" timed:YES];
     needsReload = YES;
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"My Friends"];
@@ -78,7 +77,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_MY_FRIENDS" withParameters:nil];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

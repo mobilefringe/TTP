@@ -63,7 +63,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_PLAYER_ACHIEVEMENTS" timed:YES];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:scrollToSection ];
     [_tableView reloadData];
     [self._tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
@@ -71,7 +70,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_PLAYER_ACHIEVEMENTS" withParameters:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

@@ -83,7 +83,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_INVITE_FRIENDS" timed:YES];
     if(isEditPlayers){
         self.navigationItem.rightBarButtonItem = nil;
     }else{
@@ -94,7 +93,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_INVITE_FRIENDS" withParameters:nil];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

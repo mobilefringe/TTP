@@ -103,7 +103,6 @@
     [NSDictionary dictionaryWithObjectsAndKeys:self.urlRequest,
      @"url",
      nil];
-    [FlurryAnalytics logEvent:@"EVENT_NAME" withParameters:dictionary];
     self.urlRequest = [self.urlRequest stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSURL *urlObj = [NSURL URLWithString:[self.urlRequest stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
 	//NSURL *urlObj = [NSURL URLWithString:self.urlRequest];

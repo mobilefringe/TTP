@@ -183,7 +183,6 @@
     if(animated){
         [UIView commitAnimations];
     }
-    [FlurryAnalytics endTimedEvent:@"SHOW_STORE" withParameters:nil];
 }
 
 -(void)closeStoreAnimated{
@@ -193,7 +192,6 @@
 -(void)showStore{
     subTitleLabel.hidden = YES;
     titleLabel.frame = CGRectMake(13, 18, 254, 33);
-    [FlurryAnalytics logEvent:@"SHOW_STORE" timed:YES];
     [_tableView reloadData];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.2];

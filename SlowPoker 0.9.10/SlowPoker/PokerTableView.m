@@ -508,7 +508,7 @@ static BOOL testPlayers = NO;
     NSURL *toneURLRef = [[NSBundle mainBundle] URLForResource:toneFilename
                                                 withExtension:@"wav"];
     SystemSoundID soundID;
-    AudioServicesCreateSystemSoundID( (CFURLRef)objc_unretainedPointer(toneURLRef), &soundID);
+    AudioServicesCreateSystemSoundID( (CFURLRef)(__bridge void *)(toneURLRef), &soundID);
     AudioServicesPlaySystemSound(soundID); 
     
     

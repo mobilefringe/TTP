@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8484D7632434452800E2FA52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7622434452800E2FA52 /* Images.xcassets */; };
+		8484D7652434455000E2FA52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7642434455000E2FA52 /* Launch Screen.storyboard */; };
 		C80423C3157B0DD500B4F372 /* SlowPokerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */; };
 		C80691FA153F8EB7005646C1 /* cell_corner.png in Resources */ = {isa = PBXBuildFile; fileRef = C80691F9153F8EB7005646C1 /* cell_corner.png */; };
 		C80692011541C7CB005646C1 /* gameDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = C80692001541C7CB005646C1 /* gameDetails.json */; };
@@ -27,7 +29,6 @@
 		C80E74A115A6563800FC4BC2 /* new_user_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C80E749F15A6563800FC4BC2 /* new_user_button.png */; };
 		C80E74A515AA65FA00FC4BC2 /* card_dispenser_back.png in Resources */ = {isa = PBXBuildFile; fileRef = C80E74A415AA65F900FC4BC2 /* card_dispenser_back.png */; };
 		C80E74BF15AB3CE100FC4BC2 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C80E74B215AB3CE000FC4BC2 /* FBDialog.bundle */; };
-		C80E74C015AB3CE100FC4BC2 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C80E74B815AB3CE000FC4BC2 /* libfacebook_ios_sdk.a */; };
 		C80E74C315AB3F7800FC4BC2 /* SocialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C80E74C215AB3F7800FC4BC2 /* SocialManager.m */; };
 		C80E74DA15AB3FB400FC4BC2 /* DEEmbossedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C80E74C615AB3FB400FC4BC2 /* DEEmbossedLabel.m */; };
 		C80E74DB15AB3FB400FC4BC2 /* DERuledView.m in Sources */ = {isa = PBXBuildFile; fileRef = C80E74C815AB3FB400FC4BC2 /* DERuledView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -125,7 +126,6 @@
 		C83728731587B6C40072E4F9 /* cell_footer_general.png in Resources */ = {isa = PBXBuildFile; fileRef = C83728721587B6C40072E4F9 /* cell_footer_general.png */; };
 		C83B1DFB1592246E0056A3EA /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = C83B1DFA1592246E0056A3EA /* products.json */; };
 		C83B1DFE15924D3A0056A3EA /* unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = C83B1DFD15924D380056A3EA /* unlock.png */; };
-		C83B1E081593AA480056A3EA /* libFlurryUniversal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C83B1E071593AA470056A3EA /* libFlurryUniversal.a */; };
 		C83B1E0A159634D70056A3EA /* buy_cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C83B1E09159634D20056A3EA /* buy_cell_background.png */; };
 		C83B1E0D159637810056A3EA /* BuyNowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C83B1E0C159637800056A3EA /* BuyNowCell.m */; };
 		C83B1E1015963DEC0056A3EA /* button_buy-now.png in Resources */ = {isa = PBXBuildFile; fileRef = C83B1E0E15963DE40056A3EA /* button_buy-now.png */; };
@@ -401,6 +401,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8484D7622434452800E2FA52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8484D7642434455000E2FA52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C80423C1157B0DD500B4F372 /* SlowPokerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowPokerViewController.h; sourceTree = "<group>"; };
 		C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowPokerViewController.m; sourceTree = "<group>"; };
 		C80691F9153F8EB7005646C1 /* cell_corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_corner.png; sourceTree = "<group>"; };
@@ -956,8 +958,6 @@
 				C87D7D3A1517D36A00007F95 /* UIKit.framework in Frameworks */,
 				C87D7D3C1517D36A00007F95 /* Foundation.framework in Frameworks */,
 				C87D7D3E1517D36A00007F95 /* CoreGraphics.framework in Frameworks */,
-				C83B1E081593AA480056A3EA /* libFlurryUniversal.a in Frameworks */,
-				C80E74C015AB3CE100FC4BC2 /* libfacebook_ios_sdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1395,6 +1395,7 @@
 				C88E0DF315291A2600A34873 /* Managers */,
 				C806920A1542FAC6005646C1 /* Views */,
 				C88E0DF515291A4600A34873 /* ViewControllers */,
+				8484D7622434452800E2FA52 /* Images.xcassets */,
 				C87D7D401517D36A00007F95 /* Supporting Files */,
 			);
 			path = SlowPoker;
@@ -1415,6 +1416,7 @@
 				C87D7DFA151BCDF300007F95 /* Localizable.strings */,
 				C84332C915AC9C9B004B633C /* achievements.json */,
 				C8407E9515B0874700D482A5 /* settings.json */,
+				8484D7642434455000E2FA52 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1760,12 +1762,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					C87D7D341517D36A00007F95 = {
+						DevelopmentTeam = GV8Q529ELE;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = C87D7D2F1517D36A00007F95 /* Build configuration list for PBXProject "SlowPoker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = C87D7D2A1517D36A00007F95;
@@ -1953,7 +1962,9 @@
 				C80E74A015A6563800FC4BC2 /* login_button.png in Resources */,
 				C80E74A115A6563800FC4BC2 /* new_user_button.png in Resources */,
 				C80E74A515AA65FA00FC4BC2 /* card_dispenser_back.png in Resources */,
+				8484D7652434455000E2FA52 /* Launch Screen.storyboard in Resources */,
 				C80E74BF15AB3CE100FC4BC2 /* FBDialog.bundle in Resources */,
+				8484D7632434452800E2FA52 /* Images.xcassets in Resources */,
 				C80E74DD15AB3FB400FC4BC2 /* DETweetComposeView.xib in Resources */,
 				C80E74E915AB3FBF00FC4BC2 /* tclose.png in Resources */,
 				C80E74EA15AB3FBF00FC4BC2 /* ticon.png in Resources */,
@@ -2242,20 +2253,25 @@
 		C87D7D4E1517D36A00007F95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Sorge (8U535SJ578)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Sorge (8U535SJ578)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Development: Tony Tran (Y5389RYDXV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Tony Tran (Y5389RYDXV)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
 				INFOPLIST_FILE = "SlowPoker/SlowPoker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SlowPoker/FlurryUniversal\"",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.SlowPoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9B33ADBB-1BAD-451A-A945-63FC8220DFB3";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B33ADBB-1BAD-451A-A945-63FC8220DFB3";
+				PROVISIONING_PROFILE_SPECIFIER = "slowpoker-dev";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2263,20 +2279,25 @@
 		C87D7D4F1517D36A00007F95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mobile Fringe";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mobile Fringe";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
 				INFOPLIST_FILE = "SlowPoker/SlowPoker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SlowPoker/FlurryUniversal\"",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.SlowPoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A47666C0-685F-479D-B0D1-244E9293626A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A47666C0-685F-479D-B0D1-244E9293626A";
+				PROVISIONING_PROFILE_SPECIFIER = "slowpoker-adhoc";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -363,7 +363,6 @@ static int achivementQueueLimit = 3;
     if([@"1" isEqualToString:[results objectForKey:@"success"]]){
         self.myProfile = results;
         self.myUserID = [NSString stringWithFormat:@"%@",[results objectForKey:@"userID"]];
-        [FlurryAnalytics setUserID:myUserID];
         self.myUserName = [results objectForKey:@"userName"];
         self.myEmail = [results objectForKey:@"email"];
         self.myFriends = [results objectForKey:@"friends"];
@@ -589,7 +588,6 @@ static int achivementQueueLimit = 3;
         
         NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:category,@"CATEGORY",value,@"VALUE",nil];
         
-        [FlurryAnalytics logEvent:@"ADD_INVENTORY" withParameters:dictionary];
         
         NSMutableDictionary *inventoryItem = [[NSMutableDictionary alloc] init];
         [inventoryItem setValue:category forKey:@"category"];
@@ -619,7 +617,6 @@ static int achivementQueueLimit = 3;
     
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:category,@"CATEGORY",value,@"VALUE",nil];
     
-    [FlurryAnalytics logEvent:@"ADD_INVENTORY" withParameters:dictionary];
     
     NSMutableDictionary *inventoryItem = [[NSMutableDictionary alloc] init];
     [inventoryItem setValue:category forKey:@"category"];
@@ -896,7 +893,6 @@ static int achivementQueueLimit = 3;
 }
 
 -(void)postNudgeToCurrentPlayer{
-    [FlurryAnalytics logEvent:@"NUDGE_PLAYER"];
     dispatch_async(kBgQueue, ^{
         NSMutableArray *recipients = [[NSMutableArray alloc] init];
         [recipients addObject:[currentGame valueForKey:@"nextActionForUserID"]];
@@ -2402,7 +2398,6 @@ static int achivementQueueLimit = 3;
     [[game valueForKey:@"gameSettings"] setValue:[[game valueForKey:@"gameSettings"] valueForKey:@"bigBlind"] forKey:@"originalBigBling"];
     [[game valueForKey:@"gameSettings"] setValue:[[game valueForKey:@"gameSettings"] valueForKey:@"smallBlind"] forKey:@"originalSmallBling"];
     
-    [FlurryAnalytics logEvent:@"CREATE_GAME" withParameters:[game valueForKey:@"gameSettings"]];
     NSString *message = [NSString stringWithFormat:@"%@ has invited you to %@ game %@",myUserName,NSLocalizedString([[game valueForKey:@"gameSettings"] valueForKey:@"type"],nil),[game valueForKey:@"gameID"],nil] ;
     NSMutableDictionary *payLoad = [[NSMutableDictionary alloc] init];
     [payLoad setValue:currentGameID forKey:@"gameID"];
@@ -2465,7 +2460,6 @@ static int achivementQueueLimit = 3;
     
     [rematchGame setValue:playersDict forKey:@"turnState"];
     [[rematchGame valueForKey:@"gameSettings"] setValue:[NSString stringWithFormat:@"%d",[players count]] forKey:@"numPlayers"];
-    [FlurryAnalytics logEvent:@"CREATE_GAME" withParameters:[game valueForKey:@"gameSettings"]];
     NSString *message = [NSString stringWithFormat:@"%@ has invited you to a rematch. %@ game %@",myUserName,NSLocalizedString([[rematchGame valueForKey:@"gameSettings"] valueForKey:@"type"],nil),[rematchGame valueForKey:@"gameID"],nil] ;
     NSMutableDictionary *payLoad = [[NSMutableDictionary alloc] init];
     [payLoad setValue:currentGameID forKey:@"gameID"];

@@ -222,7 +222,6 @@
 }
 
 -(void)show{
-    [FlurryAnalytics logEvent:@"SHOW_BUY_GAME" timed:YES];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];
@@ -231,7 +230,6 @@
 }
 
 -(void)hide{
-    [FlurryAnalytics endTimedEvent:@"SHOW_BUY_GAME" withParameters:nil];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];

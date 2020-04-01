@@ -129,7 +129,6 @@
 
 -(void)pressProChip{
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] showStore];
-    [FlurryAnalytics logEvent:@"PRESS_PRO_CHIP"];
 }
 
 

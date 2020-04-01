@@ -243,7 +243,6 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_BET_SCREEN" timed:YES];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:[NSString stringWithFormat:@"Hand #%@",[[DataManager sharedInstance].currentHand valueForKey:@"number"]]];
     
@@ -367,17 +366,10 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"ON_BET_SCREEN" timed:YES];
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_BET_SCREEN" withParameters:nil];
-    [FlurryAnalytics endTimedEvent:@"PROCESS_BET" withParameters:nil];
-    
 }
 
 
 -(void)pressRaise{
-    
-    [FlurryAnalytics logEvent:@"PLAYER_RAISE"];
-    [FlurryAnalytics logEvent:@"PROCESS_BET" timed:YES];
     int numberOfRaises = [[DataManager sharedInstance] getNumberOfRaisesforCurrentRound];
     if(numberOfRaises==0){
         [self doAction:@"bet" callAmount:callValue raiseAmount:raiseValue];
@@ -390,15 +382,11 @@
 
 -(void)pressFold{
     
-    [FlurryAnalytics logEvent:@"PLAYER_FOLD"];
-    [FlurryAnalytics logEvent:@"PROCESS_BET" timed:YES];
     [self doAction:@"fold" callAmount:0 raiseAmount:0];
 }
 
 
 -(void)pressCallCheck{
-    [FlurryAnalytics logEvent:@"PLAYER_CALL_CHECK"];
-    [FlurryAnalytics logEvent:@"PROCESS_BET"];
     if(callValue == 0){
         [self doAction:@"check"  callAmount:0 raiseAmount:0];
     }else{

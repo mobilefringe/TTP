@@ -65,12 +65,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_SETTING" timed:YES];
     [_tableView reloadData];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_SETTING" withParameters:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

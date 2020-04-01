@@ -114,14 +114,12 @@
     //self.navigationItem.rightBarButtonItem = barButton;
     
     self.navController = [[UINavigationController alloc] initWithRootViewController:theNewGameSelectionViewController];
-    [FlurryAnalytics logAllPageViews:navController];
     navController.navigationBar.tintColor = [UIColor blackColor];
     
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadGames) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_GAMES" timed:YES];
     [[DataManager sharedInstance] setProfileToMe];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"My Games"];
@@ -206,7 +204,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_GAMES" withParameters:nil];
     [refreshTimer invalidate];
 }
 

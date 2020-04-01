@@ -78,7 +78,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_CREATE_GAME_SETTINGS" timed:YES];
     [_tableView reloadData];
     /*
     if([@"cash" isEqualToString:gameType]){
@@ -91,7 +90,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_CREATE_GAME_SETTINGS" withParameters:nil];
 }
 
 -(void)createGame{

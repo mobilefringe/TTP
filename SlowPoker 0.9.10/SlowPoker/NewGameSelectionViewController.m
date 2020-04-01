@@ -67,11 +67,9 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_CREATE_GAME_TYPE" timed:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_CREATE_GAME_TYPE" withParameters:nil];
 }
 
 

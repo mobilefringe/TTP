@@ -250,7 +250,6 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_HOME" timed:YES];
     [scroll setContentOffset:CGPointMake(0, 400) animated:NO];
     //scroll.frame = CGRectMake(0, 0, 320, 0);
     [[DataManager sharedInstance] setProfileToMe];
@@ -278,7 +277,6 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_HOME" withParameters:nil];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     //[appDelegate updateHeaderWithTitle:@"Home"];
     [appDelegate.navBar showBackButton];

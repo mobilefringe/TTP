@@ -80,13 +80,11 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [FlurryAnalytics logEvent:@"PAGE_VIEW_GAME_DETAILS" timed:YES];
     _tableView.alpha = 0;
     [[DataManager sharedInstance] loadGameDetails:[game valueForKey:@"gameID"]];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
-    [FlurryAnalytics endTimedEvent:@"PAGE_VIEW_GAME_DETAILS" withParameters:nil];
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
