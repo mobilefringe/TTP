@@ -24,9 +24,9 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        int widthScreen = [UIScreen mainScreen].bounds.size.width;
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 85);
+        background.frame = CGRectMake(-10, 0, widthScreen, 85);
         [self.contentView addSubview:background];
         
         self.categoryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 300, 18)];
@@ -38,7 +38,7 @@
         categoryLabel.font = [UIFont boldSystemFontOfSize:15];
         [self.contentView addSubview:categoryLabel];
         
-        self.topBraceletsLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, 20, 185, 12)];
+        self.topBraceletsLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 20, 185, 12)];
         topBraceletsLabel.backgroundColor = [UIColor clearColor];
         topBraceletsLabel.textColor = [UIColor whiteColor];
         topBraceletsLabel.textAlignment = UITextAlignmentLeft;
@@ -48,7 +48,7 @@
         topBraceletsLabel.text = @"Recent Cards";
         [self.contentView addSubview:topBraceletsLabel];
         
-        self.moreLabel = [[UILabel alloc] initWithFrame:CGRectMake(275, 60, 60, 21)];
+        self.moreLabel = [[UILabel alloc] initWithFrame:CGRectMake(widthScreen-45, 60, 60, 21)];
         moreLabel.backgroundColor = [UIColor clearColor];
         moreLabel.textColor = [UIColor whiteColor];
         moreLabel.textAlignment = UITextAlignmentLeft;
@@ -64,19 +64,19 @@
         primaryAchievement.button.enabled = NO;
         [self.contentView addSubview:primaryAchievement];
         
-        self.secondaryAchievement1 = [[AchievementIcon alloc] initWithFrame:CGRectMake(90+20, 33, 45, 45)];
+        self.secondaryAchievement1 = [[AchievementIcon alloc] initWithFrame:CGRectMake(110+20, 33, 45, 45)];
         secondaryAchievement1.countLabel.hidden = YES;
         secondaryAchievement1.button.enabled = NO;
         secondaryAchievement1.codeLabel.hidden = YES;
         [self.contentView addSubview:secondaryAchievement1];
         
-        self.secondaryAchievement2 = [[AchievementIcon alloc] initWithFrame:CGRectMake(145+20, 33, 45, 45)];
+        self.secondaryAchievement2 = [[AchievementIcon alloc] initWithFrame:CGRectMake(165+20, 33, 45, 45)];
         secondaryAchievement2.countLabel.hidden = YES;
         secondaryAchievement2.button.enabled = NO;
         secondaryAchievement2.codeLabel.hidden = YES;
         [self.contentView addSubview:secondaryAchievement2];
         
-        self.secondaryAchievement3 = [[AchievementIcon alloc] initWithFrame:CGRectMake(200+20, 33, 45, 45)];
+        self.secondaryAchievement3 = [[AchievementIcon alloc] initWithFrame:CGRectMake(220+20, 33, 45, 45)];
         secondaryAchievement3.countLabel.hidden = YES;
         secondaryAchievement3.button.enabled = NO;
         secondaryAchievement3.codeLabel.hidden = YES;

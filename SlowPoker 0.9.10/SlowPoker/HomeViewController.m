@@ -48,25 +48,34 @@
 -(void)loadView{
     [super loadView];
     
+    BOOL hasNotchedDisplay = [[DataManager sharedInstance] hasNotchedDisplay];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0)) + 10;
+    
+    int marginLeft = 20;
+    int buttonWidth = self.view.bounds.size.width - (marginLeft*2);
+    
     int ySpacing = 65;
     
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_background.png"]];
-    background.frame = CGRectMake(0, -20, 320, [UIImage imageNamed:@"home_background.png"].size.height/2);
+    background.frame = CGRectMake(0, topbarHeight-10, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
+    
+    float xCenterView = (self.view.bounds.size.width-[UIImage imageNamed:@"card_dispenser_back.png"].size.width/2+9)/2;
     UIImageView *background2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"card_dispenser_back.png"]];
-    background2.frame = CGRectMake(26, -20, [UIImage imageNamed:@"card_dispenser_back.png"].size.width/2+9, [UIImage imageNamed:@"card_dispenser_back.png"].size.height/2);
+    background2.frame = CGRectMake(xCenterView, topbarHeight, [UIImage imageNamed:@"card_dispenser_back.png"].size.width/2+9, [UIImage imageNamed:@"card_dispenser_back.png"].size.height/2);
     [self.view addSubview:background2];
     
     
-    scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 417)];
+    scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     scroll.backgroundColor = [UIColor clearColor];
-    scroll.contentSize = CGSizeMake(320, 600);
+    scroll.contentSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:scroll];
     
     
     self.facebookButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    facebookButton.frame = CGRectMake(25, 284+112, [UIImage imageNamed:@"home_facebook_button.png"].size.width/2, [UIImage imageNamed:@"home_facebook_button.png"].size.height/2);
+    facebookButton.frame = CGRectMake(xCenterView, topbarHeight+284+112, [UIImage imageNamed:@"home_facebook_button.png"].size.width/2, [UIImage imageNamed:@"home_facebook_button.png"].size.height/2);
     [facebookButton addTarget:self action:@selector(pressFaceBook) forControlEvents:UIControlEventTouchUpInside];
     [facebookButton setTitle:@"TTP Facebook" forState:UIControlStateNormal];
     [facebookButton setImage:[UIImage imageNamed:@"home_facebook_button.png"] forState:UIControlStateNormal];
@@ -81,7 +90,7 @@
     [facebookButton addSubview:facebookLabel];
     
     self.twitterButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    twitterButton.frame = CGRectMake(25, 284+51, [UIImage imageNamed:@"home_twitter_button.png"].size.width/2, [UIImage imageNamed:@"home_twitter_button.png"].size.height/2);
+    twitterButton.frame = CGRectMake(xCenterView, topbarHeight+284+51, [UIImage imageNamed:@"home_twitter_button.png"].size.width/2, [UIImage imageNamed:@"home_twitter_button.png"].size.height/2);
     [twitterButton addTarget:self action:@selector(pressTwitter) forControlEvents:UIControlEventTouchUpInside];
     [twitterButton setTitle:@"TTP Twitter" forState:UIControlStateNormal];
     [twitterButton setImage:[UIImage imageNamed:@"home_twitter_button.png"] forState:UIControlStateNormal];
@@ -97,7 +106,7 @@
     
     
     self.leaderBoardsButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    leaderBoardsButton.frame = CGRectMake(25, 284-10, [UIImage imageNamed:@"home_leader_board_button.png"].size.width/2, [UIImage imageNamed:@"home_leader_board_button.png"].size.height/2);
+    leaderBoardsButton.frame = CGRectMake(xCenterView, topbarHeight+284-10, [UIImage imageNamed:@"home_leader_board_button.png"].size.width/2, [UIImage imageNamed:@"home_leader_board_button.png"].size.height/2);
     [leaderBoardsButton setTitle:@"Leader Boards" forState:UIControlStateNormal];
     [leaderBoardsButton addTarget:self action:@selector(pressLeaderboards) forControlEvents:UIControlEventTouchUpInside];
     [leaderBoardsButton setImage:[UIImage imageNamed:@"home_leader_board_button.png"] forState:UIControlStateNormal];
@@ -112,7 +121,7 @@
     [leaderBoardsButton addSubview:leaderboardLabel];
     
     self.profileButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    profileButton.frame = CGRectMake(25, 223-10, [UIImage imageNamed:@"home_my_profile_button.png"].size.width/2, [UIImage imageNamed:@"home_my_profile_button.png"].size.height/2);
+    profileButton.frame = CGRectMake(xCenterView, topbarHeight+223-10, [UIImage imageNamed:@"home_my_profile_button.png"].size.width/2, [UIImage imageNamed:@"home_my_profile_button.png"].size.height/2);
     [profileButton setTitle:@"My Profile" forState:UIControlStateNormal];
     [profileButton addTarget:self action:@selector(pressMyProfile) forControlEvents:UIControlEventTouchUpInside];
     [profileButton setImage:[UIImage imageNamed:@"home_my_profile_button.png"] forState:UIControlStateNormal];
@@ -128,7 +137,7 @@
     
     self.statsButton = [MFButton buttonWithType:UIButtonTypeCustom];
     [statsButton addTarget:self action:@selector(pressMyFriends) forControlEvents:UIControlEventTouchUpInside];
-    statsButton.frame = CGRectMake(25, 162-10, [UIImage imageNamed:@"home_my_friends_button.png"].size.width/2, [UIImage imageNamed:@"home_my_friends_button.png"].size.height/2);
+    statsButton.frame = CGRectMake(xCenterView, topbarHeight+ 162-10, [UIImage imageNamed:@"home_my_friends_button.png"].size.width/2, [UIImage imageNamed:@"home_my_friends_button.png"].size.height/2);
     [statsButton setTitle:@"My Friends" forState:UIControlStateNormal];
     [statsButton setImage:[UIImage imageNamed:@"home_my_friends_button.png"] forState:UIControlStateNormal];
     [scroll addSubview:statsButton];
@@ -144,7 +153,7 @@
     
     
     self.proPointsButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    proPointsButton.frame = CGRectMake(25, 101-10, [UIImage imageNamed:@"home_pro_chips_button.png"].size.width/2, [UIImage imageNamed:@"home_pro_chips_button.png"].size.height/2);
+    proPointsButton.frame = CGRectMake(xCenterView, topbarHeight+101-10, [UIImage imageNamed:@"home_pro_chips_button.png"].size.width/2, [UIImage imageNamed:@"home_pro_chips_button.png"].size.height/2);
     [proPointsButton addTarget:self action:@selector(pressProChips) forControlEvents:UIControlEventTouchUpInside];
     [proPointsButton setTitle:@"Pro Chips" forState:UIControlStateNormal];
     [proPointsButton setImage:[UIImage imageNamed:@"home_pro_chips_button.png"] forState:UIControlStateNormal];
@@ -172,7 +181,7 @@
     
     
     self.gamesButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    gamesButton.frame = CGRectMake(25, 30, [UIImage imageNamed:@"my_games_button.png"].size.width/2, [UIImage imageNamed:@"my_games_button.png"].size.height/2);
+    gamesButton.frame = CGRectMake(xCenterView, topbarHeight + 20, [UIImage imageNamed:@"my_games_button.png"].size.width/2, [UIImage imageNamed:@"my_games_button.png"].size.height/2);
     [gamesButton addTarget:self action:@selector(pressMyGames) forControlEvents:UIControlEventTouchUpInside];
     //[gamesButton setTitle:@"My Games" forState:UIControlStateNormal];
     [gamesButton setImage:[UIImage imageNamed:@"my_games_button.png"] forState:UIControlStateNormal];
@@ -187,8 +196,10 @@
     gamesButtonLabel.textColor = [UIColor whiteColor];
     [gamesButton addSubview:gamesButtonLabel];
     
+    float xIconCenterView = (self.view.bounds.size.width - [UIImage imageNamed:@"card_holder.png"].size.width/2 +9)/2;
     UIImageView *iconBig = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"card_holder.png"]];
-    iconBig.frame = CGRectMake(0, -40, [UIImage imageNamed:@"card_holder.png"].size.width/2 +9, [UIImage imageNamed:@"card_holder.png"].size.height/2);
+    
+    iconBig.frame = CGRectMake(xIconCenterView, hasNotchedDisplay ? 50 : 30, [UIImage imageNamed:@"card_holder.png"].size.width/2 +9, [UIImage imageNamed:@"card_holder.png"].size.height/2);
     [self.view addSubview:iconBig];
 
 }

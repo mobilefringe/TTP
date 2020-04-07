@@ -53,12 +53,15 @@
 - (void)loadView
 {
     [super loadView];
-    
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+    float searchBarHeight = 50;
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, topbarHeight, self.view.bounds.size.width, searchBarHeight)];
     searchBar.placeholder = @"Search by email";
     searchBar.tintColor = [UIColor blackColor];
     searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -71,7 +74,7 @@
     _tableView.delegate = self;
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.rowHeight = 50;
-    _tableView.frame = CGRectMake(0, 50, 320, 416-50);
+    _tableView.frame = CGRectMake(0, topbarHeight + 50, self.view.bounds.size.width, self.view.bounds.size.height-64-searchBarHeight);
     [self.view addSubview:_tableView];
     
     self.barButton = [[UIBarButtonItem alloc] initWithTitle:@"Create Game"
@@ -330,18 +333,18 @@
     
     if(section == 0){
         if(searchResult){
-            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Search Results (Tap to include)"];
+            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Search Results (Tap to include)"];
             return header;
             
         }else{
             return nil;
         }
     }else if(section == 1){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"This Game"];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0,  self.view.bounds.size.width, 30) title:@"This Game"];
         return header;
     }else if(section == 2){
         if([[DataManager sharedInstance].myFriends count] > 0){
-            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"My Friends"];
+            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0,  self.view.bounds.size.width, 30) title:@"My Friends"];
             return header;
         }else{
             return nil;
@@ -363,7 +366,7 @@
             return nil;
         }
     }
-    CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:@""];
+    CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10,  self.view.bounds.size.width, 40) title:@""];
     return footer;    
 }
 

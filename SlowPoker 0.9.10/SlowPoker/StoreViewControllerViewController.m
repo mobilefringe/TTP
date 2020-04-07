@@ -191,7 +191,7 @@
 
 -(void)showStore{
     subTitleLabel.hidden = YES;
-    titleLabel.frame = CGRectMake(13, 18, 254, 33);
+    titleLabel.frame = CGRectMake(40, 150, 254, 33);
     [_tableView reloadData];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.2];

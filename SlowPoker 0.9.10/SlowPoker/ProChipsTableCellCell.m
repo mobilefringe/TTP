@@ -21,7 +21,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 120);
+        background.frame = CGRectMake(-10, 0, [UIScreen mainScreen].bounds.size.width, 120);
         [self.contentView addSubview:background];
         
         self.title = [[UILabel alloc] initWithFrame:CGRectMake(65, 20, 210, 25)];

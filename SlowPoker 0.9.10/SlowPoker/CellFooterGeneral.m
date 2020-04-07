@@ -15,7 +15,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_footer_general.png"]];
-        background.frame = CGRectMake(0, -9, 320, frame.size.height);
+        background.frame = CGRectMake(0, -9, self.bounds.size.width, frame.size.height);
         [self addSubview:background];
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 2, 280, 17)];

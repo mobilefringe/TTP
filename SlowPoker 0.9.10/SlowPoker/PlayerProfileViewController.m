@@ -54,9 +54,14 @@
 
 -(void)loadView{
     [super loadView];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
     
+    int marginLeft = 20;
+    int buttonWidth = self.view.bounds.size.width - (marginLeft*2);
+    int bottomPadding = 64;
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
     self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -65,7 +70,7 @@
     _tableView.rowHeight = 85;
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, 0, self.view.bounds.size.height, self.view.bounds.size.height-bottomPadding);
     [self.view addSubview:_tableView];
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -95,7 +100,7 @@
     footerView3.backgroundColor = [UIColor clearColor];
     
     favouritesMessageImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"favourites_message.png"]];
-	favouritesMessageImage.frame = CGRectMake(0, -50, 320, 50);
+	favouritesMessageImage.frame = CGRectMake(0, -50, self.view.bounds.size.width, 50);
 	favouritesMessageImage.alpha = 0.95;
 	favouritesMessageLabel = [[UILabel alloc] initWithFrame:favouritesMessageImage.bounds];
 	favouritesMessageLabel.textColor = [UIColor whiteColor];
@@ -154,7 +159,7 @@
 	[UIView setAnimationDelegate: self ];
 	[UIView setAnimationDidStopSelector:@selector(hideFavouritesMessage)];
 	[UIView setAnimationDuration:0.2];
-	favouritesMessageImage.frame = CGRectMake(0, 0, 320, 50);
+	favouritesMessageImage.frame = CGRectMake(0, 0, self.view.bounds.size.width, 50);
 	[UIView commitAnimations];
 	
 	
@@ -164,7 +169,7 @@
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDelay:1];
 	[UIView setAnimationDuration:0.2];
-	favouritesMessageImage.frame = CGRectMake(0, -50, 320, 50);
+	favouritesMessageImage.frame = CGRectMake(0, -50, self.view.bounds.size.width, 50);
 	[UIView commitAnimations];
 	
 }
@@ -328,10 +333,10 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(section == 1){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Player Stats"];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Player Stats"];
         return header;
     }else if(section == 2){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Poker Bracelets"];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Poker Bracelets"];
         return header;
     }
     return nil;
@@ -342,10 +347,10 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     if(section == 1){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"Press for more stats"];
+        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40) title:@"Press for more stats"];
         return header;
     }else if(section == 2){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:@"Press for all bracelets"];
+        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:@"Press for all bracelets"];
         return header;
     }
     return nil;}

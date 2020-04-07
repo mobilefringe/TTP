@@ -21,7 +21,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 50);
+        background.frame = CGRectMake(-10, 0, [UIScreen mainScreen].bounds.size.width, 50);
         [self.contentView addSubview:background];
         
         
@@ -40,7 +40,7 @@
         
         [self.contentView addSubview:avatar];
         
-        self.checkMark = [[UIImageView alloc] initWithFrame:CGRectMake(268, 12.5, 25, 25)];
+        self.checkMark = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-50, 12.5, 25, 25)];
         checkMark.image = [UIImage imageNamed:@"yellow_checkmark.png"];
         [self.contentView addSubview:checkMark];
         checkMark.hidden = YES;

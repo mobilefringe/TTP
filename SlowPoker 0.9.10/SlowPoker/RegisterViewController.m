@@ -60,10 +60,14 @@
 - (void)loadView
 {
     [super loadView];
-    
+
+    BOOL hasNotchedDisplay = [[DataManager sharedInstance]hasNotchedDisplay];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
     background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_background.png"]];
     background.userInteractionEnabled = YES;
-    background.frame = CGRectMake(0, -20, 320, [UIImage imageNamed:@"home_background.png"].size.height/2);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
     
@@ -75,40 +79,41 @@
     segmentControl.selectedSegmentIndex = 0;
     //[self.view addSubview:segmentControl];
     
+    int marginLeft = 20;
+    int buttonWidth = self.view.bounds.size.width - (marginLeft*2);
     
-    int y = -33;
+    int y = hasNotchedDisplay ? 60 : 20;
     
-    self.emailBackground = [[UIImageView alloc] initWithFrame:CGRectMake(20, 170+y, 280, 30)];
+    self.emailBackground = [[UIImageView alloc] initWithFrame:CGRectMake(20, 170+y, buttonWidth, 30)];
     emailBackground.image = [UIImage imageNamed:@"text_background.png"];
     emailBackground.userInteractionEnabled = YES;
     [background addSubview:emailBackground];
-    
-    
-    self.emailAddress = [[UITextField alloc] initWithFrame:CGRectMake(8,3, 266, 23)];
+        
+    self.emailAddress = [[UITextField alloc] initWithFrame:CGRectMake(8,3, buttonWidth-8, 23)];
     emailAddress.delegate = self;
     emailAddress.borderStyle = UITextBorderStyleNone;
     emailAddress.placeholder = @"Email";
-    emailAddress.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.9];
+    emailAddress.textColor = [UIColor whiteColor];
     emailAddress.clearButtonMode = UITextFieldViewModeWhileEditing;
     emailAddress.autocapitalizationType = UITextAutocapitalizationTypeNone;
     emailAddress.autocorrectionType = UITextAutocorrectionTypeNo;
     emailAddress.spellCheckingType = UITextSpellCheckingTypeNo;
     emailAddress.keyboardType = UIKeyboardTypeEmailAddress;
     emailAddress.returnKeyType = UIReturnKeyDone;
+    [emailAddress setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithWhite:0.7 alpha:0.3]}]];
     [emailBackground addSubview:emailAddress];
     
-    
-    
-    
-    self.userNameBackground = [[UIImageView alloc] initWithFrame:CGRectMake(20, 205+y, 280, 30)];
+    self.userNameBackground = [[UIImageView alloc] initWithFrame:CGRectMake(marginLeft, 205+y, buttonWidth, 30)];
     userNameBackground.image = [UIImage imageNamed:@"text_background.png"];
     userNameBackground.userInteractionEnabled = YES;
     [background addSubview:userNameBackground];
     
-    self.userName = [[UITextField alloc] initWithFrame:CGRectMake(8,3, 266, 23)];
+    self.userName = [[UITextField alloc] initWithFrame:CGRectMake(8,3, buttonWidth-8, 23)];
     userName.delegate = self;
     userName.borderStyle = UITextBorderStyleNone;
     userName.placeholder = @"Display Name";
+//    [userName setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+
     userName.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.9];
     userName.clearButtonMode = UITextFieldViewModeWhileEditing;
     userName.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -116,17 +121,17 @@
     userName.spellCheckingType = UITextSpellCheckingTypeNo;
     userName.keyboardType = UIKeyboardTypeEmailAddress;
     userName.returnKeyType = UIReturnKeyDone;
+    [userName setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:@"Display Name" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithWhite:0.7 alpha:0.3]}]];
+
     [userNameBackground addSubview:userName];
+            
     
-    
-    
-    
-    self.passwordBackground = [[UIImageView alloc] initWithFrame:CGRectMake(20, 240+y, 280, 30)];
+    self.passwordBackground = [[UIImageView alloc] initWithFrame:CGRectMake(marginLeft, 240+y, buttonWidth, 30)];
     passwordBackground.image = [UIImage imageNamed:@"text_background.png"];
     passwordBackground.userInteractionEnabled = YES;
     [background addSubview:passwordBackground];
     
-    self.password = [[UITextField alloc] initWithFrame:CGRectMake(8,3, 266, 23)];
+    self.password = [[UITextField alloc] initWithFrame:CGRectMake(8,3, buttonWidth-8, 23)];
     password.delegate = self;
     password.secureTextEntry = YES;
     password.borderStyle = UITextBorderStyleNone;
@@ -138,15 +143,16 @@
     password.spellCheckingType = UITextSpellCheckingTypeNo;
     password.keyboardType = UIKeyboardTypeEmailAddress;
     password.returnKeyType = UIReturnKeyDone;
+    [password setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:@"Password" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithWhite:0.7 alpha:0.3]}]];
     [passwordBackground addSubview:password];
     
     
-    self.retypepasswordBackground = [[UIImageView alloc] initWithFrame:CGRectMake(20, 275+y, 280, 30)];
+    self.retypepasswordBackground = [[UIImageView alloc] initWithFrame:CGRectMake(marginLeft, 275+y, buttonWidth, 30)];
     retypepasswordBackground.image = [UIImage imageNamed:@"text_background.png"];
     retypepasswordBackground.userInteractionEnabled = YES;
     [background addSubview:retypepasswordBackground];
     
-    self.retypePassword = [[UITextField alloc] initWithFrame:CGRectMake(8,3, 266, 23)];
+    self.retypePassword = [[UITextField alloc] initWithFrame:CGRectMake(8,3, buttonWidth-8, 23)];
     retypePassword.delegate = self;
     retypePassword.secureTextEntry = YES;
     retypePassword.borderStyle = UITextBorderStyleNone;
@@ -158,13 +164,12 @@
     retypePassword.spellCheckingType = UITextSpellCheckingTypeNo;
     retypePassword.keyboardType = UIKeyboardTypeEmailAddress;
     retypePassword.returnKeyType = UIReturnKeyDone;
+    [retypePassword setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:@"Re-type Password" attributes:@{NSForegroundColorAttributeName:[UIColor colorWithWhite:0.7 alpha:0.3]}]];
     [retypepasswordBackground addSubview:retypePassword];
-    
-    
-    
+            
     
     self.registerButton = [MFButton buttonWithType:UIButtonTypeRoundedRect];
-    registerButton.frame = CGRectMake(20, 160+y, 180, 40);
+    registerButton.frame = CGRectMake(marginLeft, 160+y, 180, 40);
     [registerButton setTitle:@"Register" forState:UIControlStateNormal];
     //[self.view addSubview:registerButton];
     [registerButton addTarget:self action:@selector(registerUser) forControlEvents:UIControlEventTouchUpInside];
@@ -179,7 +184,7 @@
     
     
     MFButton *buyGiftMFButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    buyGiftMFButton.frame = CGRectMake(85, 275+10, 150, 40);
+    buyGiftMFButton.frame = CGRectMake((self.view.bounds.size.width-150)/2, hasNotchedDisplay ? 330 + 60 : 330+10, 150, 40);
     [buyGiftMFButton setImage:[UIImage imageNamed:@"big_blue_button.png"] forState:UIControlStateNormal];
     //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
     //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -198,53 +203,14 @@
     
     
     switchUser = [[UIActionSheet alloc] initWithTitle:@"Login As:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Jamie",@"Bob",@"Stan",@"Rick",@"Alex",@"Haad",@"Mike",@"Tod", nil];
-    
-    
-    
-    UILabel *or = [[UILabel alloc] initWithFrame:CGRectMake(20, 328, 280, 22)];
-    or.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.8];
-    or.backgroundColor = [UIColor clearColor];
-    or.adjustsFontSizeToFitWidth = YES;
-    or.textAlignment = UITextAlignmentCenter;
-    or.minimumFontSize = 8;
-    or.text = @"OR";
-    or.font = [UIFont boldSystemFontOfSize:18];
-    [background addSubview:or];
-    
-    
-    
-    self.twitterFacebookInstructions = [[UILabel alloc] initWithFrame:CGRectMake(20, 347, 280, 20)];
-    twitterFacebookInstructions.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.8];
-    twitterFacebookInstructions.backgroundColor = [UIColor clearColor];
-    twitterFacebookInstructions.adjustsFontSizeToFitWidth = YES;
-    twitterFacebookInstructions.textAlignment = UITextAlignmentCenter;
-    twitterFacebookInstructions.minimumFontSize = 8;
-    twitterFacebookInstructions.text = @"Register using your Twitter or Facebook accounts";
-    twitterFacebookInstructions.font = [UIFont boldSystemFontOfSize:13];
-    [background addSubview:twitterFacebookInstructions];
-    
-    
-    self.twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    twitterButton.frame = CGRectMake(24, 374, [UIImage imageNamed:@"twitter_button2.png"].size.width/2, [UIImage imageNamed:@"twitter_button2.png"].size.height/2);
-    [twitterButton setImage:[UIImage imageNamed:@"twitter_button2.png"] forState:UIControlStateNormal];
-    [twitterButton addTarget:self action:@selector(twitterLogin) forControlEvents:UIControlEventTouchUpInside];
-    
-    [background addSubview:twitterButton];
-    
-    self.facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    facebookButton.frame = CGRectMake(170, 374, [UIImage imageNamed:@"facebook_button_2.png"].size.width/2, [UIImage imageNamed:@"facebook_button_2.png"].size.height/2);
-    [facebookButton addTarget:self action:@selector(facebookLogin) forControlEvents:UIControlEventTouchUpInside];
-    [facebookButton setImage:[UIImage imageNamed:@"facebook_button_2.png"] forState:UIControlStateNormal];
-    [background addSubview:facebookButton];
-    
-    
-    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
-    background.frame = CGRectMake(0, -20, 320, [UIImage imageNamed:@"home_background.png"].size.height/2);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     
@@ -258,10 +224,9 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
-    background.frame = CGRectMake(0, -125, 320, [UIImage imageNamed:@"home_background.png"].size.height/2);
+    background.frame = CGRectMake(0, 50, self.view.bounds.size.width, self.view.bounds.size.height);
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

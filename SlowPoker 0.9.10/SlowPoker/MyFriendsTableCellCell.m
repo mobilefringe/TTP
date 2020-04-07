@@ -36,7 +36,7 @@
     if (self) {
         
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 70);
+        background.frame = CGRectMake(-10, 0, [UIScreen mainScreen].bounds.size.width, 70);
         [self.contentView addSubview:background];
         
         
@@ -48,7 +48,7 @@
         self.friendTypeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 35, 20, 20)];
         [avatar addSubview:friendTypeImageView];
         
-        self.userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 5, 140, 23)];
+        self.userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 5, 200, 23)];
         userNameLabel.backgroundColor = [UIColor clearColor];
         userNameLabel.adjustsFontSizeToFitWidth = YES;
         userNameLabel.minimumFontSize = 12;
@@ -105,7 +105,7 @@
         [self.contentView addSubview:addFriendTypeImageView];
 
         
-        self.instructions = [[UILabel alloc] initWithFrame:CGRectMake(70, 19, 200, 50)];
+        self.instructions = [[UILabel alloc] initWithFrame:CGRectMake(70, 19, 250, 50)];
         instructions.textColor = [UIColor whiteColor];
         instructions.backgroundColor = [UIColor clearColor];
         //activeGamesLabel.adjustsFontSizeToFitWidth = YES;

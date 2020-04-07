@@ -10,12 +10,14 @@
 
 @implementation SettingsTableCell
 
+
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 50);
+        background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general"]];
+        background.frame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, 50);
         [self.contentView addSubview:background];
         
         self.textLabel.backgroundColor = [UIColor clearColor];
@@ -34,7 +36,7 @@
 	if(highlighted){
 		background.image = [UIImage imageNamed:@"cell_body_general_selected.png"];
 	}else{
-		background.image = [UIImage imageNamed:@"cell_body_general.png"];
+		background.image = [UIImage imageNamed:@"cell_body_general"];
 	}
 }
 

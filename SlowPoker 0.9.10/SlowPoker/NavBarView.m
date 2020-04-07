@@ -30,10 +30,12 @@
         backColor.backgroundColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
         [self addSubview:backColor];
         
-        self.header = [[UILabel alloc] initWithFrame:CGRectMake(75, 10, 170, 30)];
+        int headerWith = 170;
+        int xCenterView = (self.bounds.size.width-headerWith)/2;
+        self.header = [[UILabel alloc] initWithFrame:CGRectMake(xCenterView, 10, headerWith, 30)];
         header.backgroundColor = [UIColor clearColor];
         header.font = [UIFont boldSystemFontOfSize:19];
-        header.textAlignment = UITextAlignmentCenter;
+        [header setTextAlignment:NSTextAlignmentCenter];
         header.text = @"TTP";
         header.textColor = [UIColor whiteColor];
         [self addSubview:header];
@@ -46,7 +48,7 @@
         
         
         UIImage *backgroundImage = [UIImage imageNamed:@"header_background.png"];
-        UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 55)];
+        UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 55)];
         backgroundImageView.userInteractionEnabled = YES;
         backgroundImageView.image = backgroundImage;
         [self addSubview:backgroundImageView];
@@ -76,10 +78,8 @@
         [self addSubview:settingsButton];
         settingsButton.alpha = 0;
         
-        self.proChip = [[ProChip alloc] initWithFrame:CGRectMake(263, 3, 42, 42)];
+        self.proChip = [[ProChip alloc] initWithFrame:CGRectMake(self.bounds.size.width - 62, 3, 42, 42)];
         [self addSubview:proChip];
-        
-        
     }
     return self;
 }

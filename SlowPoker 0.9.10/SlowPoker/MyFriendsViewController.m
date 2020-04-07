@@ -44,12 +44,16 @@
 - (void)loadView
 {
     [super loadView];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
+    int bottomPadding = 64;
     
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
-    self._tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
+    self._tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding) style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;
@@ -109,13 +113,14 @@
     cell.isEmailInstructions = NO;
     NSMutableDictionary *playerData;
     
+//    if(indexPath.row == [[DataManager sharedInstance].myFriends count]){
+//        cell.isFacebookInstructions = YES;
+//        [cell setProfileData:nil];
+//    }else
     if(indexPath.row == [[DataManager sharedInstance].myFriends count]){
-        cell.isFacebookInstructions = YES;
-        [cell setProfileData:nil];
-    }else if(indexPath.row -1 == [[DataManager sharedInstance].myFriends count]){
         cell.isContactsInstructions = YES;
         [cell setProfileData:nil];
-    }else if(indexPath.row -2 == [[DataManager sharedInstance].myFriends count]){
+    }else if(indexPath.row -1 == [[DataManager sharedInstance].myFriends count]){
         cell.isEmailInstructions = YES;
         [cell setProfileData:nil];
     }else{
@@ -138,13 +143,13 @@
     
     
     if(indexPath.row == [[DataManager sharedInstance].myFriends count]){
-        AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        //if (![appDel.facebook isSessionValid]) {
-            NSArray *permissions = [[NSArray alloc] initWithObjects:
-                                    @"user_about_me", 
-                                    @"email",
-                                    nil];
-            [appDel.facebook authorize:permissions];
+//        AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//        //if (![appDel.facebook isSessionValid]) {
+//            NSArray *permissions = [[NSArray alloc] initWithObjects:
+//                                    @"user_about_me",
+//                                    @"email",
+//                                    nil];
+//            [appDel.facebook authorize:permissions];
         //}
     }else{
         NSMutableDictionary *playerData;
@@ -181,7 +186,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
     if(section == 0){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"My Friends"];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"My Friends"];
         return header;
     }
     return nil;
@@ -198,7 +203,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
 
-    CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:@""];
+    CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:@""];
     return header;    
 }
 

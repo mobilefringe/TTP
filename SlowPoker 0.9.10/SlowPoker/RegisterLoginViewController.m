@@ -46,19 +46,25 @@
 {
     [super loadView];
     
+    BOOL hasNotchedDisplay = [[DataManager sharedInstance] hasNotchedDisplay];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_login_background.png"]];
     background.userInteractionEnabled = YES;
-    background.frame = CGRectMake(0, -20, 320, [UIImage imageNamed:@"register_login_background.png"].size.height/2);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height - topbarHeight);
     [self.view addSubview:background];
     
+    float marginTop = hasNotchedDisplay ? topbarHeight + 80 : topbarHeight;
+    float marginLeft = hasNotchedDisplay ? 20 : 0;
     UIButton *loginUser = [UIButton buttonWithType:UIButtonTypeCustom];
-    loginUser.frame = CGRectMake(140, 200, [UIImage imageNamed:@"login_button.png"].size.width/2, [UIImage imageNamed:@"login_button.png"].size.height/2);
+    loginUser.frame = CGRectMake(140+ marginLeft, 230 + marginTop, [UIImage imageNamed:@"login_button.png"].size.width/2, [UIImage imageNamed:@"login_button.png"].size.height/2);
     [loginUser setImage:[UIImage imageNamed:@"login_button.png"] forState:UIControlStateNormal];
     [loginUser addTarget:self action:@selector(loginUser) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginUser];
     
     UIButton *newUser = [UIButton buttonWithType:UIButtonTypeCustom];
-    newUser.frame = CGRectMake(-40, 120, [UIImage imageNamed:@"new_user_button.png"].size.width/2, [UIImage imageNamed:@"new_user_button.png"].size.height/2);
+    newUser.frame = CGRectMake(-40, 170 + marginTop, [UIImage imageNamed:@"new_user_button.png"].size.width/2, [UIImage imageNamed:@"new_user_button.png"].size.height/2);
     [newUser addTarget:self action:@selector(registerUser) forControlEvents:UIControlEventTouchUpInside];
     [newUser setImage:[UIImage imageNamed:@"new_user_button.png"] forState:UIControlStateNormal];
     [self.view addSubview:newUser];

@@ -27,7 +27,7 @@
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.95];
         
         
-        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, -10, 320, 90)];
+        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(0, -10, self.bounds.size.width, 90)];
         background.userInteractionEnabled = YES;
         background.image = [UIImage imageNamed:@"achievement_bar.png"];
         [self addSubview:background];

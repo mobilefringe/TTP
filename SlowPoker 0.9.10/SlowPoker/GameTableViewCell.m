@@ -46,7 +46,7 @@
     if (self) {
         
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 85);
+        background.frame = CGRectMake(-10, 0, [UIScreen mainScreen].bounds.size.width, 85);
         [self.contentView addSubview:background];
         
         

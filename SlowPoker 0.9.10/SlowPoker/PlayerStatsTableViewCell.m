@@ -29,7 +29,7 @@
     if (self) {
         
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 90);
+        background.frame = CGRectMake(-10, 0, [UIScreen mainScreen].bounds.size.width, 90);
         [self.contentView addSubview:background];
         
         self.handsLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 7, 230, 18)];

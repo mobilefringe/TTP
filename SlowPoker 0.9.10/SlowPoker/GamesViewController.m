@@ -60,9 +60,11 @@
 
 -(void)loadView{
     [super loadView];
-    
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
     
@@ -73,7 +75,7 @@
     _tableView.delegate = self;
     _tableView.rowHeight = 85;
     _tableView.backgroundColor = [UIColor clearColor];
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-64);
     [_tableView addPullToRefreshWithActionHandler:^{
         [self loadGames];
         // call [tableView.pullToRefreshView stopAnimating] when done
@@ -324,7 +326,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(section == 0){
         if(!header1){
-            self.header1 = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 35) title:@"Your Turn"];
+            self.header1 = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 35) title:@"Your Turn"];
             if(!headerActivityIndicatorView1){
                 self.headerActivityIndicatorView1 = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
                 headerActivityIndicatorView1.frame = CGRectMake(281, 12, 20, 20);
@@ -337,7 +339,7 @@
         return header1;
     }else if(section == 1){
         if(!header2){
-            self.header2 = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 35) title:@"Their Turn"];
+            self.header2 = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 35) title:@"Their Turn"];
             if(!headerActivityIndicatorView2){
                 self.headerActivityIndicatorView2 = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
                 headerActivityIndicatorView2.frame = CGRectMake(281, 12, 20, 20);
@@ -350,7 +352,7 @@
         return header2;
     }else if(section == 2){
         if(!header3){
-            self.header3 = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 35) title:@"Completed Games"];
+            self.header3 = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 35) title:@"Completed Games"];
             if(!headerActivityIndicatorView3){
                 self.headerActivityIndicatorView3 = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
                 headerActivityIndicatorView3.frame = CGRectMake(281, 12, 20, 20);
@@ -368,13 +370,13 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     if(section == 0){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:[NSString stringWithFormat:@"%d games waiting for you",[[DataManager sharedInstance].yourTurnGames count]]];
+        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40) title:[NSString stringWithFormat:@"%d games waiting for you",[[DataManager sharedInstance].yourTurnGames count]]];
         return header;
     }else if(section == 1){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:[NSString stringWithFormat:@"%d games waiting for opponent ",[[DataManager sharedInstance].theirTurnGames count]]];
+        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:[NSString stringWithFormat:@"%d games waiting for opponent ",[[DataManager sharedInstance].theirTurnGames count]]];
         return header;
     }else if(section == 2){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:[NSString stringWithFormat:@"%d completed games",[[DataManager sharedInstance].completedGames count]]];
+        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:[NSString stringWithFormat:@"%d completed games",[[DataManager sharedInstance].completedGames count]]];
         return header;
     }
     return nil;}

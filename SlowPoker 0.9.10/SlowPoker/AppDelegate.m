@@ -60,6 +60,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [application setStatusBarHidden:YES];
+
     NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
     
     [[DataManager sharedInstance] addObserver:self forKeyPath:@"showAchievement" options:NSKeyValueObservingOptionOld context:nil];
@@ -70,8 +72,20 @@
     [[DataManager sharedInstance] addObserver:self forKeyPath:@"isUpdatingGame" options:NSKeyValueObservingOptionOld context:nil];
     
     
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound |UIRemoteNotificationTypeAlert)];
-    
+//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound |UIRemoteNotificationTypeAlert)];
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
+    {
+           // iOS 8 Notifications
+           [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+
+           [application registerForRemoteNotifications];
+    }
+    else
+    {
+          // iOS < 8 Notifications
+          [application registerForRemoteNotificationTypes:
+                     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    }
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -81,16 +95,13 @@
     self.navController = [[UINavigationController alloc] initWithRootViewController:registerLoginViewController];
     self.navController.navigationBar.tintColor = [UIColor blackColor];
     self.gamesViewController = [[GamesViewController alloc] initWithNibName:nil bundle:nil];
-    
-    self.navBar = [[NavBarView alloc] initWithFrame:CGRectMake(0, 20, 320, 45)];
+
+    self.navBar = [[NavBarView alloc] initWithFrame:CGRectMake(0, 0, self.window.bounds.size.width , 45)];
     [navBar.backButton addTarget:self action:@selector(pressBackButton) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    
-    [navController.view addSubview:navBar];
+        
     self.storeViewControllerViewController = [[StoreViewControllerViewController alloc] initWithNibName:nil bundle:nil];
     [storeViewControllerViewController closeStore:NO];
-    [self.window addSubview:navController.view];
+    [navController.navigationBar addSubview:self.navBar];
     
     self.giftSelectionView = [[GiftSelectionView alloc] initWithFrame:CGRectMake(5, 20, 310, 350) delegate:self];
     [self.window addSubview:giftSelectionView];
@@ -99,12 +110,6 @@
     self.buyGamePopUp = [[BuyGamePopUp alloc] initWithFrame:CGRectMake(5, 20, 310, 350) delegate:self];
     [self.window addSubview:buyGamePopUp];
     [buyGamePopUp hide];
-    
-    
-    
-    
-    
-    
     
     [self.window addSubview:storeViewControllerViewController.view];
     self.updatingPopUp = [[UpdatingPopUp alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
@@ -116,13 +121,14 @@
     
     [[StoreFront sharedStore] loadProducts];
     [[Settings sharedInstance] loadRemoteSettings];
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    
-    
-    
+
     NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:@"YES", @"isTableView", nil];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    
+    if (@available(iOS 13.0, *)) {
+        self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+    }
 
     return YES;
 }
@@ -286,18 +292,18 @@
 -(void)showAchievement:(NSMutableDictionary *)achievement{
     isQueueAnimating = YES;
     if(!achievementEarnedView){
-        self.achievementEarnedView = [[AchievementEarnedView alloc] initWithFrame:CGRectMake(0, 460, 320, 80)];
+        self.achievementEarnedView = [[AchievementEarnedView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height, UIScreen.mainScreen.bounds.size.width, 80)];
         [self.window addSubview:achievementEarnedView];
     }
     [achievementEarnedView setAchievementData:achievement];
-    achievementEarnedView.center = CGPointMake(160, 540);
+    achievementEarnedView.center = CGPointMake(UIScreen.mainScreen.bounds.size.width/2, [UIScreen mainScreen].bounds.size.height+80);
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDelay:0.3];
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(hideAchievement)];
-    achievementEarnedView.center = CGPointMake(160, 440);
+    achievementEarnedView.center = CGPointMake(UIScreen.mainScreen.bounds.size.width/2, [UIScreen mainScreen].bounds.size.height-40);
     [UIView commitAnimations];
 }
 
@@ -307,7 +313,7 @@
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDelay:4];
     [UIView setAnimationDidStopSelector:@selector(doneAnimating)];
-    achievementEarnedView.center = CGPointMake(160, 540);
+    achievementEarnedView.center = CGPointMake(UIScreen.mainScreen.bounds.size.width/2, [UIScreen mainScreen].bounds.size.height+80);
     [UIView commitAnimations];
 }
 
@@ -321,35 +327,37 @@
 
 -(void)emailBug:(UIViewController *)viewController{
     self.tmpViewController = viewController;
-    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
-    picker.mailComposeDelegate = self;
-    
-    NSString *viewMode = @"Table View";
-    if([[[NSUserDefaults standardUserDefaults] valueForKey:@"isTableView"] isEqualToString:@"YES"]){
-        viewMode = @"Bet View";
-    }
-    
-    
-    // Set the subject of email
-    [picker setSubject:[NSString stringWithFormat:@"TTP Feedback",[DataManager sharedInstance].myUserName]];
-    
-    // Add email addresses
-    // Notice three sections: "to" "cc" and "bcc"	
-    [picker setToRecipients:[NSArray arrayWithObjects:@"feedback@texasturnpoker.com",nil]];
-    /*
-    NSError *error;
-    if([DataManager sharedInstance].currentGame){
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[DataManager sharedInstance].currentGame options:NSJSONWritingPrettyPrinted error:&error];
-        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        // Fill out the email body text
-        NSString *emailBody = [NSString stringWithFormat:@"Issue:\n\n\n\nView Mode:%@\n\n\n\nGame State:\n%@",viewMode,jsonString];
-        //NSLog(@"jsonString:%@",jsonString);
+    if([MFMailComposeViewController canSendMail]){
+        MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+        picker.mailComposeDelegate = self;
         
-        // This is not an HTML formatted email
-        [picker setMessageBody:emailBody isHTML:NO];
-    }*/
-    // Show email view	
-    [tmpViewController presentModalViewController:picker animated:YES];
+        NSString *viewMode = @"Table View";
+        if([[[NSUserDefaults standardUserDefaults] valueForKey:@"isTableView"] isEqualToString:@"YES"]){
+            viewMode = @"Bet View";
+        }
+        
+        
+        // Set the subject of email
+        [picker setSubject:[NSString stringWithFormat:@"TTP Feedback",[DataManager sharedInstance].myUserName]];
+        
+        // Add email addresses
+        // Notice three sections: "to" "cc" and "bcc"
+        [picker setToRecipients:[NSArray arrayWithObjects:@"feedback@texasturnpoker.com",nil]];
+        /*
+        NSError *error;
+        if([DataManager sharedInstance].currentGame){
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[DataManager sharedInstance].currentGame options:NSJSONWritingPrettyPrinted error:&error];
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            // Fill out the email body text
+            NSString *emailBody = [NSString stringWithFormat:@"Issue:\n\n\n\nView Mode:%@\n\n\n\nGame State:\n%@",viewMode,jsonString];
+            //NSLog(@"jsonString:%@",jsonString);
+            
+            // This is not an HTML formatted email
+            [picker setMessageBody:emailBody isHTML:NO];
+        }*/
+        // Show email view
+        [tmpViewController presentViewController:picker animated:YES completion:nil];
+    }
 }
 
 -(void)emailLink:(NSString *)link{

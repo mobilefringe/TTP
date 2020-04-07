@@ -21,11 +21,11 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 100);
+        background.frame = CGRectMake(-10, 0, [UIScreen mainScreen].bounds.size.width, 100);
         [self.contentView addSubview:background];
         
         
-        self.title = [[UILabel alloc] initWithFrame:CGRectMake(83, 20, 210, 25)];
+        self.title = [[UILabel alloc] initWithFrame:CGRectMake(83, 15, 250, 25)];
         title.textColor = [UIColor colorWithRed:1 green:1 blue:.3 alpha:1];
         title.font = [UIFont boldSystemFontOfSize:22];
         title.tag = 10;
@@ -36,7 +36,7 @@
         [self.contentView addSubview:title];
         
         
-        self.description = [[UILabel alloc] initWithFrame:CGRectMake(83, 40, 195, 60)];
+        self.description = [[UILabel alloc] initWithFrame:CGRectMake(83, 30, 240, 60)];
         description.textColor = [UIColor whiteColor];
         description.font = [UIFont boldSystemFontOfSize:11];
         description.numberOfLines = 4;

@@ -265,4 +265,8 @@
 -(BOOL)cardsDidChange:(NSMutableDictionary *)game;
 -(int)getNumberOfRaisesforCurrentRound;
 -(void)logAchievements;
+-(void)setImageBackground: (UIView*)view imageName: (NSString*) imageName topbarHeight: (CGFloat) topbarHeight;
+-(CGFloat)getBottomPadding;
+-(BOOL)hasNotchedDisplay;
+-(BOOL)isIphoneXOrPlus;
 @end

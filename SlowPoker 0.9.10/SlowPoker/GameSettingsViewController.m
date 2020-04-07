@@ -52,9 +52,11 @@
 - (void)loadView
 {
     [super loadView];
-    
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
     
@@ -64,7 +66,7 @@
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.rowHeight = 70;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-64);
     [self.view addSubview:_tableView];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Create Game"
@@ -142,11 +144,11 @@
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
         
         UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 70);
+        background.frame = CGRectMake(-10, 0, self.view.bounds.size.width, 70);
         [cell.contentView addSubview:background];
       
         UIImageView *backgroundSelected = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general_2_selected.png"]];
-        backgroundSelected.frame = CGRectMake(0, 0, 320, 70);
+        backgroundSelected.frame = CGRectMake(0, 0, self.view.bounds.size.width, 70);
         
         cell.selectedBackgroundView = backgroundSelected;
         
@@ -352,16 +354,16 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     if(section == 1){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:[NSString stringWithFormat:@"7 Players Maximum",[[DataManager sharedInstance].yourTurnGames count]]];
+        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40) title:[NSString stringWithFormat:@"7 Players Maximum",[[DataManager sharedInstance].yourTurnGames count]]];
         return header;
     }else if(section == 0){
         if([@"cash" isEqualToString:gameType]){
-            CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:[NSString stringWithFormat:@"%d Hands Maximum",[Settings maxHandsCash]]];
+            CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:[NSString stringWithFormat:@"%d Hands Maximum",[Settings maxHandsCash]]];
             return header;
 
             
         }else if([@"tournament" isEqualToString:gameType]){
-            CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:[NSString stringWithFormat:@"%d Hands Maximum",[Settings maxHandsTournament]]];
+            CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:[NSString stringWithFormat:@"%d Hands Maximum",[Settings maxHandsTournament]]];
             return header;
 
         }
@@ -530,18 +532,18 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(section == 1){
         int numOfPlayers = [[[game valueForKey:@"turnState"] valueForKey:@"players"] count];
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:[NSString stringWithFormat:@"%d Players",numOfPlayers]];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:[NSString stringWithFormat:@"%d Players",numOfPlayers]];
         return header;
     }else if(section == 0){
         if([@"cash" isEqualToString:gameType]){
-            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Cash Game Settings"];
+            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Cash Game Settings"];
             return header;
             
         }else if([@"tournament" isEqualToString:gameType]){
-            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Tournament Game Settings"];
+            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Tournament Game Settings"];
             return header;
         }
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Their Turn"];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Their Turn"];
         return header;
     }
     return nil;

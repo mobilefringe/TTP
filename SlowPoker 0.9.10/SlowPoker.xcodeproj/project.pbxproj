@@ -119,7 +119,6 @@
 		C837285E1586C9F40072E4F9 /* header_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C837285D1586C9F40072E4F9 /* header_background.png */; };
 		C83728601586CCF50072E4F9 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = C837285F1586CCF50072E4F9 /* slider.png */; };
 		C837286215879F960072E4F9 /* bricks_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C837286115879F960072E4F9 /* bricks_background.png */; };
-		C83728671587A79F0072E4F9 /* profile_cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C83728661587A79F0072E4F9 /* profile_cell_background.png */; };
 		C83728691587ADEE0072E4F9 /* cell_header_general.png in Resources */ = {isa = PBXBuildFile; fileRef = C83728681587ADEE0072E4F9 /* cell_header_general.png */; };
 		C837286C1587AE290072E4F9 /* CellHeaderGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = C837286B1587AE290072E4F9 /* CellHeaderGeneral.m */; };
 		C83728711587B6570072E4F9 /* CellFooterGeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = C83728701587B6570072E4F9 /* CellFooterGeneral.m */; };
@@ -297,7 +296,6 @@
 		C8C65B0E154F57AB00937212 /* PokerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C65B0D154F57AB00937212 /* PokerTableView.m */; };
 		C8C65B11154F59B800937212 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C65B10154F59B800937212 /* PlayerView.m */; };
 		C8C6A86015F9766900C81949 /* nudge_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C6A85F15F9766900C81949 /* nudge_button2.png */; };
-		C8CCECD81587C3E800B219F1 /* cell_body_general.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CCECD71587C3E800B219F1 /* cell_body_general.png */; };
 		C8CE64BA153B8F0B0069D76D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8CE64B9153B8F0B0069D76D /* MessageUI.framework */; };
 		C8CE64BE153BACA90069D76D /* GameTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CE64BD153BACA90069D76D /* GameTableViewCell.m */; };
 		C8CE64C4153C614A0069D76D /* background_black.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CE64C3153C614A0069D76D /* background_black.png */; };
@@ -403,6 +401,7 @@
 /* Begin PBXFileReference section */
 		8484D7622434452800E2FA52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8484D7642434455000E2FA52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8484D76624379FB900E2FA52 /* SlowPoker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlowPoker.entitlements; sourceTree = "<group>"; };
 		C80423C1157B0DD500B4F372 /* SlowPokerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowPokerViewController.h; sourceTree = "<group>"; };
 		C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowPokerViewController.m; sourceTree = "<group>"; };
 		C80691F9153F8EB7005646C1 /* cell_corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_corner.png; sourceTree = "<group>"; };
@@ -581,7 +580,6 @@
 		C837285D1586C9F40072E4F9 /* header_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_background.png; sourceTree = "<group>"; };
 		C837285F1586CCF50072E4F9 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		C837286115879F960072E4F9 /* bricks_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bricks_background.png; sourceTree = "<group>"; };
-		C83728661587A79F0072E4F9 /* profile_cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_cell_background.png; sourceTree = "<group>"; };
 		C83728681587ADEE0072E4F9 /* cell_header_general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_header_general.png; sourceTree = "<group>"; };
 		C837286A1587AE290072E4F9 /* CellHeaderGeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellHeaderGeneral.h; sourceTree = "<group>"; };
 		C837286B1587AE290072E4F9 /* CellHeaderGeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellHeaderGeneral.m; sourceTree = "<group>"; };
@@ -824,7 +822,6 @@
 		C8C65B0F154F59B800937212 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		C8C65B10154F59B800937212 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		C8C6A85F15F9766900C81949 /* nudge_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nudge_button2.png; sourceTree = "<group>"; };
-		C8CCECD71587C3E800B219F1 /* cell_body_general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_body_general.png; sourceTree = "<group>"; };
 		C8CE64B9153B8F0B0069D76D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		C8CE64BC153BACA90069D76D /* GameTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTableViewCell.h; sourceTree = "<group>"; };
 		C8CE64BD153BACA90069D76D /* GameTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameTableViewCell.m; sourceTree = "<group>"; };
@@ -1272,7 +1269,6 @@
 		C83728631587A4D80072E4F9 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				C83728661587A79F0072E4F9 /* profile_cell_background.png */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -1391,6 +1387,7 @@
 		C87D7D3F1517D36A00007F95 /* SlowPoker */ = {
 			isa = PBXGroup;
 			children = (
+				8484D76624379FB900E2FA52 /* SlowPoker.entitlements */,
 				C84FC2F9152B2E2000285960 /* HandEvaluator */,
 				C88E0DF315291A2600A34873 /* Managers */,
 				C806920A1542FAC6005646C1 /* Views */,
@@ -1515,7 +1512,6 @@
 				C83728681587ADEE0072E4F9 /* cell_header_general.png */,
 				C83728721587B6C40072E4F9 /* cell_footer_general.png */,
 				C8B4BFF615A4C386003B4411 /* cell_body_general_selected.png */,
-				C8CCECD71587C3E800B219F1 /* cell_body_general.png */,
 				C81E9A081589966A003CD35E /* cell_body_general_selected_light_blue.png */,
 				C81E9A1015899972003CD35E /* cell_body_general_2.png */,
 				C81E9A1D1589AD24003CD35E /* yellow_checkmark.png */,
@@ -1871,10 +1867,8 @@
 				C837285E1586C9F40072E4F9 /* header_background.png in Resources */,
 				C83728601586CCF50072E4F9 /* slider.png in Resources */,
 				C837286215879F960072E4F9 /* bricks_background.png in Resources */,
-				C83728671587A79F0072E4F9 /* profile_cell_background.png in Resources */,
 				C83728691587ADEE0072E4F9 /* cell_header_general.png in Resources */,
 				C83728731587B6C40072E4F9 /* cell_footer_general.png in Resources */,
-				C8CCECD81587C3E800B219F1 /* cell_body_general.png in Resources */,
 				C81E9A091589966A003CD35E /* cell_body_general_selected_light_blue.png in Resources */,
 				C81E9A1115899972003CD35E /* cell_body_general_2.png in Resources */,
 				C81E9A1E1589AD24003CD35E /* yellow_checkmark.png in Resources */,
@@ -2254,6 +2248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = SlowPoker/SlowPoker.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Tony Tran (Y5389RYDXV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Tony Tran (Y5389RYDXV)";
 				CODE_SIGN_STYLE = Manual;
@@ -2280,6 +2275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = SlowPoker/SlowPoker.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				CODE_SIGN_STYLE = Manual;

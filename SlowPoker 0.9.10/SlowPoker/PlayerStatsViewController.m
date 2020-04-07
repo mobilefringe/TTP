@@ -40,9 +40,12 @@
 
 -(void)loadView{
     [super loadView];
-    
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    float screenWidth = self.view.bounds.size.width;
+    float screenHeight = self.view.bounds.size.height;
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, 0, screenWidth, screenHeight);
     [self.view addSubview:background];
     
     
@@ -50,7 +53,7 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 85;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, topbarHeight, screenWidth, screenHeight-64);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.scrollsToTop = YES;
     [self.view addSubview:_tableView];

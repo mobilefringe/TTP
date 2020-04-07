@@ -30,17 +30,17 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        BOOL hasNotchedDisplay = [[DataManager sharedInstance] hasNotchedDisplay];
         UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"profile_cell_background.png"]];
-        background.frame = CGRectMake(-10, -10, 320, 110);
+        background.frame = CGRectMake(-10, -10,hasNotchedDisplay ?  [UIScreen mainScreen].bounds.size.width-22 :  [UIScreen mainScreen].bounds.size.width, 110);
         [self.contentView addSubview:background];
         
-        self.avatar = [[Avatar alloc] initWithFrame:CGRectMake(9, 9, 68, 71)];
+        self.avatar = [[Avatar alloc] initWithFrame:CGRectMake(12, 9, 80, 71)];
         avatar.radius = 130;
         avatar.userInteractionEnabled = YES;
         [self.contentView addSubview:avatar];
         
-        self.userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(87, 8, 185, 23)];
+        self.userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 8, 185, 23)];
         userNameLabel.backgroundColor = [UIColor clearColor];
         userNameLabel.adjustsFontSizeToFitWidth = YES;
         userNameLabel.minimumFontSize = 12;
@@ -57,7 +57,7 @@
         userIDLabel.font = [UIFont systemFontOfSize:13];
         //[self.contentView addSubview:userIDLabel];
         
-        self.locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(87, 28, 185, 18)];
+        self.locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 28, 185, 18)];
         locationLabel.textColor = [UIColor whiteColor];
         locationLabel.backgroundColor = [UIColor clearColor];
         locationLabel.adjustsFontSizeToFitWidth = YES;
@@ -65,7 +65,7 @@
         locationLabel.font = [UIFont systemFontOfSize:14];
         [self.contentView addSubview:locationLabel];
         
-        self.playerSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(87, 43, 185, 20)];
+        self.playerSinceLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 43, 185, 20)];
         playerSinceLabel.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
         playerSinceLabel.backgroundColor = [UIColor clearColor];
         playerSinceLabel.adjustsFontSizeToFitWidth = YES;

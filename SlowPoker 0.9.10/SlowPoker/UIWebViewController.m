@@ -8,7 +8,7 @@
 
 #import "UIWebViewController.h"
 #import "AppDelegate.h"
-
+#import "DataManager.h"
 
 @implementation UIWebViewController
 
@@ -29,9 +29,12 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	[super loadView];
-	
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    
+
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_background.png"]];
-    background.frame = CGRectMake(0, -20, 320, [UIImage imageNamed:@"home_background.png"].size.height/2);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
 	backgroundImage = [UIImage imageNamed:@"loading.png"];
 	UIImageView *imageView = [[UIImageView alloc] initWithImage:backgroundImage];
@@ -41,14 +44,14 @@
 	
 	
 	
-	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 416-50)];
+	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-([[DataManager sharedInstance] getBottomPadding] + 50 + 10))];
 	webView.scalesPageToFit = YES;
 	webView.delegate = self;
 	webView.hidden = YES;
 	[self.view addSubview:webView];
 	
 	
-	toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,416-50,320,50)];
+	toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,self.view.bounds.size.height-50,self.view.bounds.size.width,50)];
 	toolBar.barStyle = UIBarStyleBlackTranslucent;
 	//toolBar.tintColor = [UIColor colorWithRed:.5 green:0 blue:0.071 alpha:1];
 	[self.view addSubview:toolBar];

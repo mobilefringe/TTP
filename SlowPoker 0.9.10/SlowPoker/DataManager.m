@@ -3774,12 +3774,45 @@ static int achivementQueueLimit = 3;
     return NO;
 }
 
+-(void)setImageBackground: (UIView*)view imageName: (NSString*) imageName topbarHeight: (CGFloat) topbarHeight{
+    CGSize size = view.frame.size;
+    size.height = size.height;
+    UIGraphicsBeginImageContext(size);
+    CGRect bounds = view.bounds;
+    bounds.origin.y = bounds.origin.y + topbarHeight;
+    bounds.size.height = bounds.size.height - topbarHeight;
+    [[UIImage imageNamed:imageName] drawInRect:bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    view.backgroundColor = [UIColor colorWithPatternImage:image];
+}
 
+-(CGFloat)getBottomPadding{
+    CGFloat bottomPadding = 0;
+    if (@available(iOS 11.0, *)) {
+       UIWindow *window = UIApplication.sharedApplication.keyWindow;
+       bottomPadding = window.safeAreaInsets.bottom + 40;
+    }
+    return bottomPadding;
+}
 
+- (BOOL)hasNotchedDisplay{
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        CGFloat topPadding = window.safeAreaInsets.top;
+        if(topPadding>20) {
+            return YES;
+        }else {
+            return NO;
+        }
+    }else {
+        return NO;
+    }
+}
 
-
-
-
+-(BOOL)isIphoneXOrPlus{
+    return [UIScreen mainScreen].bounds.size.height >=812;
+}
 
 
 
