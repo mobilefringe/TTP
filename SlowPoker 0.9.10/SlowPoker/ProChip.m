@@ -77,16 +77,18 @@
     if([keyPath isEqualToString:@"proChipsTotal"]){
         amountLabel.text = [NSString stringWithFormat:@"%d",[[DataManager sharedInstance] getMyProChips]];
     }else if([keyPath isEqualToString:@"proChipsIncrement"]){
-        if([DataManager sharedInstance].proChipsIncrement > 0){
-            incrementLabel.text = [NSString stringWithFormat:@"+%d",[DataManager sharedInstance].proChipsIncrement];
-            //incrementLabel.textColor = [UIColor colorWithRed:0.3 green:0.7 blue:.3 alpha:1]; 
-        }else{
-            incrementLabel.text = [NSString stringWithFormat:@"%d",[DataManager sharedInstance].proChipsIncrement];
-            //incrementLabel.textColor = [UIColor colorWithRed:0.8 green:0.2 blue:0.2 alpha:1];
-        }
-        if([DataManager sharedInstance].proChipsIncrement != 0){
-            [self animateToIncrement];
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if([DataManager sharedInstance].proChipsIncrement > 0){
+                incrementLabel.text = [NSString stringWithFormat:@"+%d",[DataManager sharedInstance].proChipsIncrement];
+                //incrementLabel.textColor = [UIColor colorWithRed:0.3 green:0.7 blue:.3 alpha:1];
+            }else{
+                incrementLabel.text = [NSString stringWithFormat:@"%d",[DataManager sharedInstance].proChipsIncrement];
+                //incrementLabel.textColor = [UIColor colorWithRed:0.8 green:0.2 blue:0.2 alpha:1];
+            }
+            if([DataManager sharedInstance].proChipsIncrement != 0){
+                [self animateToIncrement];
+            }
+        });
     }
 }
 

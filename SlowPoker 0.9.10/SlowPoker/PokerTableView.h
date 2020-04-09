@@ -28,6 +28,7 @@
     NSMutableDictionary *placements;
     NSMutableDictionary *dealerButtonPlacements;
     UIImageView *background;
+    UIImageView *backgroundTable;
     UILabel *potLabel;
     TurnsViewController *delegate;
     UIButton *betButton;
@@ -46,6 +47,7 @@
 @property(nonatomic,retain)NSMutableDictionary *placements;
 @property(nonatomic,retain)NSMutableDictionary *dealerButtonPlacements;
 @property(nonatomic,retain)UIImageView *background;
+@property(nonatomic,retain)UIImageView *backgroundTable;
 @property (nonatomic,retain) CardView *communityCardOne;
 @property (nonatomic,retain) CardView *communityCardTwo;
 @property (nonatomic,retain) CardView *communityCardThree;

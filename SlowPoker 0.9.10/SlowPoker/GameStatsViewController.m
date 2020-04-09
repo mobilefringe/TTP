@@ -35,10 +35,12 @@
 
 -(void)loadView{
     [super loadView];
-    
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
     UIImage *woodFloor = [UIImage imageNamed:@"wood_floor_background.png"];
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_black.png"]];
-    backgroundView.frame = CGRectMake(0, -40, 320, 480);
+    backgroundView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     backgroundView.image = woodFloor;
     backgroundView.alpha = 0.80;
     [self.view addSubview:backgroundView];
@@ -48,7 +50,7 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 85;
-    _tableView.frame = CGRectMake(0, 0, 320, 420-40);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width,  self.view.bounds.size.height-60-40);
     _tableView.scrollsToTop = YES;
     _tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tableView];
@@ -118,12 +120,13 @@
         [self loadProGameStats];
         [_tableView reloadData];
         [self scrollToTop];
-        [loadingIndicator stopAnimating];
-        [UIView beginAnimations:@"" context:NULL];
-        [UIView setAnimationDuration:0.4];
-        _tableView.alpha = 1;
-        [UIView commitAnimations];
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [loadingIndicator stopAnimating];
+            [UIView beginAnimations:@"" context:NULL];
+            [UIView setAnimationDuration:0.4];
+            _tableView.alpha = 1;
+            [UIView commitAnimations];
+        });        
     }else if([keyPath isEqualToString:@"myInventory"]){
         [self loadProGameStats];
         [_tableView reloadData];
@@ -687,7 +690,7 @@
     int i = 1;
     
     if(section == 0){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 30) title:@"Chip Leaders"];
+        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Chip Leaders"];
         UILabel *handLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 106, 40)];
         handLabel.backgroundColor = [UIColor clearColor];
         handLabel.font = [UIFont boldSystemFontOfSize:13];
@@ -707,53 +710,53 @@
         return header;
         
     }else if(section == 1 +i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"HANDS_WON"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"HANDS_WON"];
         [header setHeaderCode:@"HANDS_WON"];
         return header;
         
     }else if(section == 2+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"VPIP"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"VPIP"];
         [header setHeaderCode:@"VPIP"];
         return header;
         
     }else if(section == 3+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"PFR"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"PFR"];
         [header setHeaderCode:@"PFR"];
         return header;
     }else if(section == 4+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"PFA"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"PFA"];
         [header setHeaderCode:@"PFA"];
         return header;
     }else if(section == 5+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"WTSD"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"WTSD"];
         [header setHeaderCode:@"WTSD"];
         return header;
     }else if(section == 6+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"W$SD"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"W$SD"];
         [header setHeaderCode:@"W$SD"];
         return header;
     }else if(section == 7+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"WWSD"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"WWSD"];
         [header setHeaderCode:@"WWSD"];
         return header;
         
     }else if(section == 8+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"Fold %"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"Fold %"];
         [header setHeaderCode:@"FOLD"];
         return header;
         
     }else if(section == 9+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"See Flop %"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"See Flop %"];
         [header setHeaderCode:@"SEE_FLOP"];
         return header;
         
     }else if(section == 10+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"See Turn %"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"See Turn %"];
         [header setHeaderCode:@"SEE_TURN"];
         return header;
         
     }else if(section == 11+i){
-        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 50) title:@"See River %"];
+        GameStatCellHeader *header = [[GameStatCellHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50) title:@"See River %"];
         [header setHeaderCode:@"SEE_RIVER"];
         return header;
     }
@@ -768,7 +771,7 @@
         return nil;
     }
     
-    CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, 320, 40) title:@""];
+    CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:@""];
     if(section == 0){
         
         UIImage *greenChip = [UIImage imageNamed:@"green_chip.png"];

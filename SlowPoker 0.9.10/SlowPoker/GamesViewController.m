@@ -93,7 +93,7 @@
     
     
     loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	loadingIndicator.frame = CGRectMake(150, 170, 20, 20);
+	loadingIndicator.frame = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2-topbarHeight, 25, 25);
 	loadingIndicator.hidesWhenStopped = YES;
 	[loadingIndicator startAnimating];
 	[self.view addSubview:loadingIndicator];

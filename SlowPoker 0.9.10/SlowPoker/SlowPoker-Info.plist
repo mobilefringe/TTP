@@ -63,6 +63,8 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>apiURL</key>
 	<string>http://159.203.1.211:3000</string>
 </dict>

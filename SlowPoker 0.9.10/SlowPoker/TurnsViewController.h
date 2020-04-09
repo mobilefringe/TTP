@@ -79,7 +79,8 @@
     UIActivityIndicatorView *loadingIndicator;
     BOOL userWantsToDelete;
     UIAlertView *cantDeleletGame;
-    
+    CGFloat topbarHeight;
+    CGFloat keyboardHeight;
 }
 
 @property(nonatomic,retain)UITableView *_tableView;
@@ -130,9 +131,8 @@
 @property (nonatomic,retain)UIAlertView *gameOverAlertWithRematch;
 @property (nonatomic,retain)UIAlertView *cantDeleletGame;
 @property (readwrite)BOOL userWantsToDelete;
-
-
-
+@property (readwrite)CGFloat topbarHeight;
+@property (readwrite)CGFloat keyboardHeight;
 
 -(void)updateGameData;
 -(void)showBuyInAlertIfNeeded;

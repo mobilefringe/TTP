@@ -72,6 +72,8 @@
 @synthesize userWantsToDelete;
 @synthesize noOneLeftAlert;
 @synthesize cantDeleletGame;
+@synthesize topbarHeight;
+@synthesize keyboardHeight;
 
 static int refreshSeconds = 60;
 
@@ -89,10 +91,14 @@ static int refreshSeconds = 60;
 
 -(void)loadView{
     [super loadView];
+    if(topbarHeight == 0){
+        topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+        (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    }
     self.title = @"Game";
     self.view.backgroundColor = [UIColor whiteColor];
     self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_black.png"]];
-    background.frame = CGRectMake(0, -40, 320, 480);
+    background.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     /*
     UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"felt_full.png"]];
@@ -101,7 +107,7 @@ static int refreshSeconds = 60;
     
     
     
-    self.flipView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 440)];
+    self.flipView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-40)];
     flipView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:flipView];
     
@@ -110,7 +116,7 @@ static int refreshSeconds = 60;
     _tableView.delegate = self;
     _tableView.rowHeight = 72;
     _tableView.scrollsToTop = YES;
-    _tableView.frame = CGRectMake(0, 0, 320, 416-40);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-40);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorColor = [UIColor blackColor];
     [_tableView addPullToRefreshWithActionHandler:^{
@@ -122,19 +128,19 @@ static int refreshSeconds = 60;
     _tableView.pullToRefreshView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
         
     loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	loadingIndicator.frame = CGRectMake(150, 170, 20, 20);
-	loadingIndicator.hidesWhenStopped = YES;
-	[loadingIndicator startAnimating];
-	[self.view addSubview:loadingIndicator];
+    loadingIndicator.frame = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2-topbarHeight, 25, 25);
+    loadingIndicator.hidesWhenStopped = YES;
+    [loadingIndicator startAnimating];
+    [self.view addSubview:loadingIndicator];
     
-    UIImage *woodFloor = [UIImage imageNamed:@"wood_floor_background.png"];
+    UIImage *woodFloor = [UIImage imageNamed:@"wood_floor_background"];
     self.woodBackground = [[UIImageView alloc] initWithImage:woodFloor];
     woodBackground.userInteractionEnabled = YES;
-    woodBackground.frame = CGRectMake(0, 0, woodFloor.size.width/2, woodFloor.size.height/2);
+    woodBackground.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [woodBackground addSubview:_tableView];
     [flipView addSubview:woodBackground];
     
-    self.updatingMessage = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 30)];
+    self.updatingMessage = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, self.view.bounds.size.width, 30)];
     updatingMessage.text = @"No betting data yet";
     updatingMessage.backgroundColor = [UIColor clearColor];
     updatingMessage.textColor = [UIColor whiteColor];
@@ -143,7 +149,7 @@ static int refreshSeconds = 60;
     [woodBackground addSubview:updatingMessage];
 
     
-    self.pokerTableView = [[PokerTableView alloc] initWithFrame:CGRectMake(0, -45, 320, 416)];
+    self.pokerTableView = [[PokerTableView alloc] initWithFrame:CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height)];
     pokerTableView.handSummaryDelegate = self;
     pokerTableView.delegate = self;
     
@@ -154,20 +160,20 @@ static int refreshSeconds = 60;
     
     
     self.messageBubblesViewController = [[MessageBubblesViewController alloc] initWithNibName:nil bundle:nil];
-    messageBubblesViewController.view.frame = CGRectMake(0, 416-40, 320, 416-40);
+    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height-topbarHeight-40, self.view.bounds.size.width, self.view.bounds.size.height-topbarHeight-40);
     [self.view addSubview:messageBubblesViewController.view];
     
     
-    self.chatFieldBackground = [[UIImageView alloc] initWithFrame:CGRectMake(0, 416-40, 320, 40)];
+    self.chatFieldBackground = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40)];
     chatFieldBackground.userInteractionEnabled = YES;
     chatFieldBackground.image = [UIImage imageNamed:@"tool_bar_background.png"];
     [self.view addSubview:chatFieldBackground];
     
-    self.betOrTableViewButton = [[BetTableViewButton alloc] initWithFrame:CGRectMake(3, 5, 130,30)];
+    self.betOrTableViewButton = [[BetTableViewButton alloc] initWithFrame:CGRectMake(3, 5, 140,30)];
     [betOrTableViewButton.button addTarget:self action:@selector(flipTable) forControlEvents:UIControlEventTouchUpInside];
     [chatFieldBackground addSubview:betOrTableViewButton];
     
-    self.gameStatsButton = [[GameStatsButton alloc] initWithFrame:CGRectMake(138, 5, 130,30)];
+    self.gameStatsButton = [[GameStatsButton alloc] initWithFrame:CGRectMake(148, 5, 140,30)];
     [gameStatsButton.button addTarget:self action:@selector(pressGameStats) forControlEvents:UIControlEventTouchUpInside];
     [chatFieldBackground addSubview:gameStatsButton];
     
@@ -179,7 +185,7 @@ static int refreshSeconds = 60;
     chatField.placeholder = @"Game Chat";
     [chatFieldBackground addSubview:chatField];
     
-    self.chatButton = [[ChatButton alloc] initWithFrame:CGRectMake(273, 5, 42, 30)];
+    self.chatButton = [[ChatButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width-50, 5, 42, 30)];
     //[chatButton setTitle:@"Send" forState:UIControlStateNormal];
     [chatButton.button addTarget:self action:@selector(pressChat) forControlEvents:UIControlEventTouchUpInside];
     [chatFieldBackground addSubview:chatButton];
@@ -265,11 +271,11 @@ static int refreshSeconds = 60;
     
     //self.navigationItem.rightBarButtonItem = bugButton;
     
-    self.navHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    self.navHeader = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40)];
     navHeader.backgroundColor = [UIColor clearColor];
    // self.navigationItem.titleView = navHeader;
     
-    self.navLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 130, 23)];
+    self.navLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 140, 23)];
     [navHeader addSubview:navLabel1];
     navLabel1.textColor = [UIColor whiteColor];
     navLabel1.adjustsFontSizeToFitWidth = YES;
@@ -278,7 +284,7 @@ static int refreshSeconds = 60;
     navLabel1.textAlignment = UITextAlignmentCenter;
     navLabel1.font = [UIFont boldSystemFontOfSize:18];
     
-    self.navLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 21, 130, 17)];
+    self.navLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 21, 140, 17)];
     [navHeader addSubview:navLabel2];
     navLabel2.textColor = [UIColor whiteColor];
     navLabel2.adjustsFontSizeToFitWidth = YES;
@@ -320,6 +326,11 @@ static int refreshSeconds = 60;
 
 
 -(void)viewWillAppear:(BOOL)animated{
+    
+    if(topbarHeight == 0){
+        topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+        (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    }
     updatingMessage.hidden = YES;
     [super viewWillAppear:animated];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -331,10 +342,10 @@ static int refreshSeconds = 60;
     showhandOver = YES;
     isGameComplete = NO;
     showAlerts = YES;
-    chatFieldBackground.frame = CGRectMake(0, 416-40, 320, 40);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.height, 40);
     chatField.frame = CGRectMake(268, 3, 0,32);
-    messageBubblesViewController.view.frame = CGRectMake(0, 416-40, 320, 416-40);
-    [gameStatsButton unselectButton:YES];    
+    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, self.view.bounds.size.height-40);
+    [gameStatsButton unselectButton:YES];
     _tableView.alpha = 0;
     [loadingIndicator startAnimating];
     [pokerTableView clearGame];
@@ -360,7 +371,7 @@ static int refreshSeconds = 60;
 }
 
 -(void)resetGameStats{
-    gameStatsViewController.view.frame = CGRectMake(0, 416, 320, 416);
+    gameStatsViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height);
 }
 
 -(void)loadGame{
@@ -496,12 +507,6 @@ static int refreshSeconds = 60;
     [refreshTimer invalidate];
 }
 
-
-
-
-
-
-
 -(void)decreaseBuyIn{
     if(buyIn > 0.25){
         buyIn = buyIn - 0.25;
@@ -530,7 +535,7 @@ static int refreshSeconds = 60;
         buyIn = buyIn + 0.05;
     }else if(buyIn >= 0.01){
         buyIn = buyIn + 0.01;
-    }    
+    }
     double maxBuy = [[[[DataManager sharedInstance].currentGame objectForKey:@"gameSettings"] objectForKey:@"maxBuy"] doubleValue];
     
     if(buyIn > maxBuy){
@@ -583,7 +588,7 @@ static int refreshSeconds = 60;
     if(alertView == buyInAlert){
         if(buttonIndex == 1){
             //join game
-            [self joinCashGame];            
+            [self joinCashGame];
         }else if(buttonIndex == 2){
             //leave game
             [leaveGameAlert show];
@@ -1064,24 +1069,24 @@ static int refreshSeconds = 60;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *MyIdentifier = @"MyIdentifier";
-	
-	// Try to retrieve from the table view a now-unused cell with the given identifier
-	TurnTableViewCell *cell = (TurnTableViewCell *)[tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-	UIButton *betButton;
-	// If no cell is available, create a new one using the given identifier
-	if (cell == nil) {
-		cell = [[TurnTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
+    
+    // Try to retrieve from the table view a now-unused cell with the given identifier
+    TurnTableViewCell *cell = (TurnTableViewCell *)[tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    UIButton *betButton;
+    // If no cell is available, create a new one using the given identifier
+    if (cell == nil) {
+        cell = [[TurnTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
         betButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         betButton.frame = CGRectMake(250, 5, 60, 50);
         [betButton setTitle:@"Bet" forState:UIControlStateNormal];
         betButton.tag = 1;
         [betButton addTarget:self action:@selector(pressBet) forControlEvents:UIControlEventTouchUpInside];
         //[cell addSubview:betButton];
-	}else {
+    }else {
         betButton = (UIButton *) [cell viewWithTag:1];
     }
-	
-	NSMutableArray *hands = [[DataManager sharedInstance] getHandsForCurrentGame];
+    
+    NSMutableArray *hands = [[DataManager sharedInstance] getHandsForCurrentGame];
     NSMutableDictionary *hand = [hands objectAtIndex:indexPath.section];
     NSMutableArray *rounds = [[DataManager sharedInstance] getRoundsForHand:hand];
     NSMutableDictionary *round = [rounds objectAtIndex:indexPath.row];
@@ -1095,7 +1100,7 @@ static int refreshSeconds = 60;
     
     int chipState = [[DataManager sharedInstance] getChipStackState:[round valueForKey:@"userID"]];
     
-    [cell setCellData:round chipStackState:chipState];    
+    [cell setCellData:round chipStackState:chipState];
     cell.accessoryType = UITableViewCellAccessoryNone;
     [cell.betButton addTarget:self action:@selector(pressBet) forControlEvents:UIControlEventTouchUpInside];
     [cell.nudgeButton addTarget:self action:@selector(pressNudge) forControlEvents:UIControlEventTouchUpInside];
@@ -1113,7 +1118,7 @@ static int refreshSeconds = 60;
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    TurnSectionHeader *sectionHeader2 = [[TurnSectionHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 90)];
+    TurnSectionHeader *sectionHeader2 = [[TurnSectionHeader alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 90)];
     sectionHeader2.delegate = self;
     if(section == 0){
         sectionHeader2.guiState = 1;
@@ -1136,7 +1141,7 @@ static int refreshSeconds = 60;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	NSMutableArray *hands = [[DataManager sharedInstance] getHandsForCurrentGame];
+    NSMutableArray *hands = [[DataManager sharedInstance] getHandsForCurrentGame];
     NSMutableDictionary *hand = [hands objectAtIndex:indexPath.section];
     NSMutableArray *rounds = [[DataManager sharedInstance] getRoundsForHand:hand];
     NSMutableDictionary *round = [rounds objectAtIndex:indexPath.row];
@@ -1145,11 +1150,11 @@ static int refreshSeconds = 60;
         [round setValue:@"" forKey:@"HAND_STATE"];
     }*/
 
-	if([round valueForKey:@"HAND_STATE"] && [[round valueForKey:@"HAND_STATE"] length] > 0 ){
+    if([round valueForKey:@"HAND_STATE"] && [[round valueForKey:@"HAND_STATE"] length] > 0 ){
         return 97;
     }
     
-	return 72;
+    return 72;
 }
 
 
@@ -1159,7 +1164,7 @@ static int refreshSeconds = 60;
     NSMutableDictionary *hand = [hands objectAtIndex:section];
     //NSLog(@"hand:%@",hand);
     NSMutableArray *rounds = [[DataManager sharedInstance] getRoundsForHand:hand];
-    return [rounds count]; 
+    return [rounds count];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -1197,7 +1202,7 @@ static int refreshSeconds = 60;
     [self showBuyInAlertIfNeeded];
     /*
     if(refreshTimer){
-        [refreshTimer invalidate]; 
+        [refreshTimer invalidate];
     }
     self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:refreshSeconds target:self selector:@selector(loadGame) userInfo:nil repeats:YES];
     [refreshTimer fire];*/
@@ -1229,8 +1234,18 @@ static int refreshSeconds = 60;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
-    [self showChatWithKeyboard];
-    [messageBubblesViewController reloadMessage];
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self
+               selector:@selector(keyboardWillShow:)
+                   name:UIKeyboardWillShowNotification
+                 object:nil];
+    [center addObserver:self
+               selector:@selector(keyboardWillHide:)
+                   name:UIKeyboardWillHideNotification
+                 object:nil];
+    
+//    [self showChatWithKeyboard];
+//    [messageBubblesViewController reloadMessage];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
@@ -1269,9 +1284,9 @@ static int refreshSeconds = 60;
     }*/
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
-    chatFieldBackground.frame = CGRectMake(0, 416-40, 320, 40);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
     listTableButton.alpha = 1;
-    messageBubblesViewController.view.frame = CGRectMake(0, 416-40, 320, 416-40);
+    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, self.view.bounds.size.height);
     chatField.frame = CGRectMake(268, 3, 0,32);
     [UIView commitAnimations];
     [chatField resignFirstResponder];
@@ -1282,23 +1297,24 @@ static int refreshSeconds = 60;
     //self.navigationItem.rightBarButtonItem = closeChatButton;
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
-    chatField.frame = CGRectMake(2, 3, 320-54,32);
+    chatField.frame = CGRectMake(2, 3, self.view.bounds.size.width-54,32);
     listTableButton.alpha = 0;
-    chatFieldBackground.frame = CGRectMake(0, 416-40, 320, 40);
-    messageBubblesViewController.view.frame = CGRectMake(0, 0, 320, 416-40);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
+    messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight , self.view.bounds.size.width, self.view.bounds.size.height-40-topbarHeight);
     [UIView commitAnimations];
     [messageBubblesViewController scrollToBottom];
 }
 
 -(void)showChatWithKeyboard{
+
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
     //self.navigationItem.rightBarButtonItem = closeChatButton;
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
-    
+            
     listTableButton.alpha = 0;
-    chatFieldBackground.frame = CGRectMake(0, 416-255, 320, 40);
-    messageBubblesViewController.view.frame = CGRectMake(0, 0, 320, 416-255);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-keyboardHeight-40, self.view.bounds.size.width, 40);
+    messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-keyboardHeight-40-topbarHeight);
     [UIView commitAnimations];
     [messageBubblesViewController scrollToBottom];
 }
@@ -1306,7 +1322,7 @@ static int refreshSeconds = 60;
 -(void)pressChat{
     chatButton.buttonLabel.text = @"";
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
-    if(messageBubblesViewController.view.frame.origin.y == 416-40){
+    if(messageBubblesViewController.view.frame.origin.y == self.view.bounds.size.height-40){
         [messageBubblesViewController reloadMessage];
         [self showChatFull];
     }else{
@@ -1316,8 +1332,8 @@ static int refreshSeconds = 60;
             
             [UIView beginAnimations:@"" context:NULL];
             [UIView setAnimationDuration:0.2];
-            chatFieldBackground.frame = CGRectMake(0, 416-40, 320, 40);
-            messageBubblesViewController.view.frame = CGRectMake(0, 0, 320, 416-40);
+            chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
+            messageBubblesViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-40);
             chatField.text = @"";
             [UIView commitAnimations];
             [messageBubblesViewController scrollToBottom];
@@ -1344,7 +1360,7 @@ static int refreshSeconds = 60;
         [UIView setAnimationDuration:.5];
         
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:flipView
-                                 cache:YES]; 
+                                 cache:YES];
         [woodBackground removeFromSuperview];
         [flipView  insertSubview:pokerTableView belowSubview:activityIndicatorView];
         [UIView setAnimationDelegate:self];
@@ -1360,7 +1376,7 @@ static int refreshSeconds = 60;
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:.5];
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:flipView
-                                 cache:YES]; 
+                                 cache:YES];
         [pokerTableView removeFromSuperview];
         [flipView  insertSubview:woodBackground belowSubview:activityIndicatorView];
         navLabel1.text = @"Bet View";
@@ -1402,18 +1418,16 @@ static int refreshSeconds = 60;
 
 
 -(void)pressGameStats{
-
-
-    if(gameStatsViewController.view.frame.origin.y == 0){
+    if(gameStatsViewController.view.frame.origin.y == topbarHeight){
         [UIView beginAnimations:@"" context:NULL];
         [UIView setAnimationDuration:0.4];
         [gameStatsButton unselectButton:YES];
-        gameStatsViewController.view.frame = CGRectMake(0, 416, 320, 416);
+        gameStatsViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height);
         [UIView commitAnimations];
     }else{
         [UIView beginAnimations:@"" context:NULL];
         [UIView setAnimationDuration:0.4];
-        gameStatsViewController.view.frame = CGRectMake(0, 0, 320, 416);
+        gameStatsViewController.view.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
         [gameStatsButton selectButton:YES];
         [UIView commitAnimations];
         [gameStatsViewController loadGameStats];
@@ -1461,4 +1475,43 @@ static int refreshSeconds = 60;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - Other methods
+
+- (void)keyboardWillShow:(BOOL)show height:(CGFloat)height duration:(CGFloat)duration {
+    NSLog(@"Keyboard will show: %@; Height: %1.2f; Duration: %1.2f;", show ? @"Yes" : @"No", height, duration);
+    keyboardHeight = height;
+    if (@available(iOS 11.0, *)) {
+        CGFloat bottomSafeAreaInset = self.view.safeAreaInsets.bottom;
+        keyboardHeight -= bottomSafeAreaInset;
+    } else {
+        // Fallback on earlier versions
+    }
+    if (show) {
+        [self showChatWithKeyboard];
+        [messageBubblesViewController reloadMessage];
+    }else{
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center removeObserver:self
+                          name:UIKeyboardWillShowNotification
+                        object:nil];
+        [center removeObserver:self
+                          name:UIKeyboardWillHideNotification
+                        object:nil];
+    }
+}
+
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    CGFloat height = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    [self keyboardWillShow:YES height:height duration:duration];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    CGFloat height = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
+    CGFloat duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] floatValue];
+    [self keyboardWillShow:NO height:height duration:duration];
+}
+
 @end
+

@@ -269,4 +269,5 @@
 -(CGFloat)getBottomPadding;
 -(BOOL)hasNotchedDisplay;
 -(BOOL)isIphoneXOrPlus;
+-(BOOL)isIphonePlus;
 @end

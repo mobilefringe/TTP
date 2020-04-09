@@ -281,9 +281,12 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:.3];
-    background.frame = CGRectMake(0, 50, self.view.bounds.size.width, self.view.bounds.size.height);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     

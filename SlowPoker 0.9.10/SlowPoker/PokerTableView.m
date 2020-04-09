@@ -21,6 +21,7 @@
 @synthesize placements;
 @synthesize dealerButtonPlacements;
 @synthesize background;
+@synthesize backgroundTable;
 @synthesize communityCardOne;
 @synthesize communityCardTwo;
 @synthesize communityCardThree;
@@ -44,45 +45,50 @@ static BOOL testPlayers = NO;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        float widthScreen = self.bounds.size.width;
+        float heightScreen = self.bounds.size.height;
         [[DataManager sharedInstance] addObserver:self forKeyPath:@"buyGift" options:NSKeyValueObservingOptionOld context:nil];
         self.backgroundColor = [UIColor clearColor];
-        self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_table_view.png"]];
-        background.frame = CGRectMake(0, -25, 320, 480);
+        self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wood_floor_background.png"]];
+        background.frame = CGRectMake(0, 0, widthScreen, heightScreen);
         [self addSubview:background];
-
         
-        self.showDownView = [[UIView alloc] initWithFrame:CGRectMake(0, -25, 320, 480)];
+        self.backgroundTable = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_table_view"]];
+        backgroundTable.frame = CGRectMake((widthScreen-320)/2, (heightScreen-40-480)/2, 320, 480);
+        [self addSubview: backgroundTable];
+        
+        self.showDownView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
         showDownView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         [self addSubview:showDownView];
+            
         
         
         
         self.placements = [[NSMutableDictionary alloc] init];
         self.dealerButtonPlacements = [[NSMutableDictionary alloc] init];
         int youPlayerX = 140;
-        int xoffset = -13;
-        int yOffset = 50;
+        int xoffset = 16;
+        int yOffset = [[DataManager sharedInstance] isIphoneXOrPlus] ? ([[DataManager sharedInstance] hasNotchedDisplay] ? 260 : 170) : 145;
         //1
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)], nil] forKey:@"1"];
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)], nil] forKey:@"1"];
         
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(youPlayerX, 315+yOffset)], nil] forKey:@"1"];
         
         //2
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)],[NSValue valueWithCGPoint:CGPointMake(160, 53+yOffset)], nil] forKey:@"2"];
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 53+yOffset)], nil] forKey:@"2"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],[NSValue valueWithCGPoint:CGPointMake(45,125)],nil] forKey:@"2"];
         
         //3
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)],
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(105+xoffset, 53+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(245+xoffset, 53+yOffset)], nil] forKey:@"3"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],
-                                           [NSValue valueWithCGPoint:CGPointMake(45,125)],[NSValue valueWithCGPoint:CGPointMake(45,125)],
+                                           [NSValue valueWithCGPoint:CGPointMake( 45,125)],[NSValue valueWithCGPoint:CGPointMake(45,125)],
                                            nil] forKey:@"3"];
         
         //4
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)],
-                               [NSValue valueWithCGPoint:CGPointMake(52+xoffset, 175+yOffset)],[NSValue valueWithCGPoint:CGPointMake(160, 53+yOffset)],
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
+                               [NSValue valueWithCGPoint:CGPointMake(52+xoffset, 175+yOffset)],[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 53+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(293+xoffset, 175+yOffset)],
                                nil] forKey:@"4"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],
@@ -91,7 +97,7 @@ static BOOL testPlayers = NO;
         
         
         //5
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)],
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(52+xoffset, 175+yOffset)],[NSValue valueWithCGPoint:CGPointMake(125+xoffset, 53+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(225+xoffset, 53+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 175+yOffset)],
                                nil] forKey:@"5"];
@@ -100,36 +106,45 @@ static BOOL testPlayers = NO;
                                            nil] forKey:@"5"];
         
         //6
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)],
-                               [NSValue valueWithCGPoint:CGPointMake(52+xoffset, 290+yOffset)],[NSValue valueWithCGPoint:CGPointMake(52+xoffset, 85+40+yOffset)],[NSValue valueWithCGPoint:CGPointMake(160, 53+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 85+40+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 290+yOffset)],
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
+                               [NSValue valueWithCGPoint:CGPointMake(52+xoffset, 290+yOffset)],[NSValue valueWithCGPoint:CGPointMake(52+xoffset, 85+40+yOffset)],[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 53+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 85+40+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 290+yOffset)],
                                nil] forKey:@"6"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],
                                            [NSValue valueWithCGPoint:CGPointMake(87, 18)],[NSValue valueWithCGPoint:CGPointMake(65,125)],[NSValue valueWithCGPoint:CGPointMake(45, 125)],[NSValue valueWithCGPoint:CGPointMake(33, 125)],[NSValue valueWithCGPoint:CGPointMake(-1, 10)],
                                            nil] forKey:@"6"];
         
         //7
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(160, 301+yOffset)],
+        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(52+xoffset, 290+yOffset)],[NSValue valueWithCGPoint:CGPointMake(52+xoffset, 85+40+yOffset)],[NSValue valueWithCGPoint:CGPointMake(130+xoffset, 53+yOffset)],[NSValue valueWithCGPoint:CGPointMake(213+xoffset, 53+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 85+40+yOffset)],[NSValue valueWithCGPoint:CGPointMake(293+xoffset, 290+yOffset)],
                                nil] forKey:@"7"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],
                                [NSValue valueWithCGPoint:CGPointMake(87, 18)],[NSValue valueWithCGPoint:CGPointMake(65,125)],[NSValue valueWithCGPoint:CGPointMake(45, 125)],[NSValue valueWithCGPoint:CGPointMake(45, 125)],[NSValue valueWithCGPoint:CGPointMake(12, 128)],[NSValue valueWithCGPoint:CGPointMake(-1, 10)],
                                nil] forKey:@"7"];
         
-        int xOffset = 35;
-        communityCardsY = 194;
-        self.communityCardOne = [[CardView alloc] initWithFrame:CGRectMake(88, communityCardsY, 25, 37)];
+        float cardWidth = 25;
+        float cardHeight = 37;
+        float cardSpace = 29;
+        float totalCard = 5;
+        float marginHorizontal = [[DataManager sharedInstance] isIphoneXOrPlus] ? 20*2 : 20;
+        float bottomBar = 40;
+        float xOffset = self.bounds.size.width - (cardWidth*totalCard) - (cardSpace*(totalCard-1)) - (marginHorizontal);
+        
+        communityCardsY = (self.bounds.size.height-bottomBar-cardHeight)/2-2;
+//        float xOffset = self.bounds.size.width - (cardWidth*totalCard) - (cardSpace*(totalCard-1)) - (marginHorizontal*2);
+//        communityCardsY = (self.bounds.size.height-bottomBar-cardHeight)/2;
+        self.communityCardOne = [[CardView alloc] initWithFrame:CGRectMake(xOffset, communityCardsY, cardWidth, cardHeight)];
         [self addSubview:communityCardOne];
         
-        self.communityCardTwo = [[CardView alloc] initWithFrame:CGRectMake(88+29, communityCardsY, 25, 37)];
+        self.communityCardTwo = [[CardView alloc] initWithFrame:CGRectMake(xOffset+cardSpace, communityCardsY, cardWidth, cardHeight)];
         [self addSubview:communityCardTwo];
         
-        self.communityCardThree = [[CardView alloc] initWithFrame:CGRectMake(88+29*2, communityCardsY, 25, 37)];
+        self.communityCardThree = [[CardView alloc] initWithFrame:CGRectMake(xOffset+cardSpace*2, communityCardsY, cardWidth, cardHeight)];
         [self addSubview:communityCardThree];
         
-        self.communityCardFour = [[CardView alloc] initWithFrame:CGRectMake(88+29*3, communityCardsY, 25, 37)];
+        self.communityCardFour = [[CardView alloc] initWithFrame:CGRectMake(xOffset+cardSpace*3, communityCardsY, cardWidth, cardHeight)];
         [self addSubview:communityCardFour];
         
-        self.communityCardFive = [[CardView alloc] initWithFrame:CGRectMake(88+29*4, communityCardsY, 25, 37)];
+        self.communityCardFive = [[CardView alloc] initWithFrame:CGRectMake(xOffset+cardSpace*4, communityCardsY, cardWidth, cardHeight)];
         [self addSubview:communityCardFive];
         
         
@@ -139,7 +154,7 @@ static BOOL testPlayers = NO;
         
 
         
-        self.winnerType = [[UILabel alloc] initWithFrame:CGRectMake(80, 235, 160, 15)];
+        self.winnerType = [[UILabel alloc] initWithFrame:CGRectMake(80, 235, widthScreen/2, 15)];
         winnerType.textAlignment = UITextAlignmentCenter;
         winnerType.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         winnerType.font = [UIFont boldSystemFontOfSize:13];
@@ -149,7 +164,10 @@ static BOOL testPlayers = NO;
         //[self addSubview:winnerType];
 
         
-        self.potLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 174, 120, 15)];
+//        self.potLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 174, 120, 15)];
+        float potLabelWidth = 120;
+        float cardMarginTop = 25;
+        self.potLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.bounds.size.width-potLabelWidth)/2, communityCardsY-cardMarginTop, potLabelWidth, 15)];
         potLabel.textAlignment = UITextAlignmentCenter;
         potLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         potLabel.font = [UIFont boldSystemFontOfSize:14];
@@ -164,7 +182,8 @@ static BOOL testPlayers = NO;
         UIImage *actionButtonImage = [UIImage imageNamed:@"blue_wide.png"];
         self.betButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [betButton setImage:actionButtonImage forState:UIControlStateNormal];
-        betButton.frame = CGRectMake(80, 235, actionButtonImage.size.width/2+34, actionButtonImage.size.height/2+12);
+        float betButtonWidth = actionButtonImage.size.width/2+34;
+        betButton.frame = CGRectMake((self.bounds.size.width-betButtonWidth)/2, communityCardsY+cardHeight+5, betButtonWidth, actionButtonImage.size.height/2+12);
         [betButton addTarget:delegate action:@selector(pressBet) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:betButton];
         

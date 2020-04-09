@@ -3811,11 +3811,12 @@ static int achivementQueueLimit = 3;
 }
 
 -(BOOL)isIphoneXOrPlus{
-    return [UIScreen mainScreen].bounds.size.height >=812;
+    return [UIScreen mainScreen].bounds.size.height >=736;
 }
 
-
-
+-(BOOL)isIphonePlus{
+    return [UIScreen mainScreen].bounds.size.height ==736;
+}
 
 
 

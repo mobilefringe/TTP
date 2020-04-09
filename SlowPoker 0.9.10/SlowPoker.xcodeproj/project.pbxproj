@@ -209,7 +209,6 @@
 		C87D7E05151CBDD600007F95 /* BetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C87D7E04151CBDD600007F95 /* BetViewController.m */; };
 		C8841652153510E600F77087 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = C8841651153510E600F77087 /* icon_114.png */; };
 		C8841655153511BA00F77087 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = C8841654153511BA00F77087 /* icon_57.png */; };
-		C8875F5C157B18F20090C2C5 /* background_table_view.png in Resources */ = {isa = PBXBuildFile; fileRef = C8875F5B157B18F20090C2C5 /* background_table_view.png */; };
 		C8875F5E157B21DB0090C2C5 /* tool_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C8875F5D157B21DB0090C2C5 /* tool_bar_background.png */; };
 		C8875F60157B239B0090C2C5 /* bet_view_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C8875F5F157B239B0090C2C5 /* bet_view_button.png */; };
 		C8875F63157B24360090C2C5 /* BetTableViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C8875F62157B24360090C2C5 /* BetTableViewButton.m */; };
@@ -246,7 +245,6 @@
 		C897AB31159E1096004F88E2 /* games_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C897AB30159E1096004F88E2 /* games_button.png */; };
 		C897AB33159E11F9004F88E2 /* pro_chips_button_home.png in Resources */ = {isa = PBXBuildFile; fileRef = C897AB32159E11F9004F88E2 /* pro_chips_button_home.png */; };
 		C897AB35159E12C7004F88E2 /* my_friends_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C897AB34159E12C7004F88E2 /* my_friends_button.png */; };
-		C89B1F5A1581BDF4001F9957 /* wood_floor_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C89B1F591581BDF4001F9957 /* wood_floor_background.png */; };
 		C89B1F5D1581C1C6001F9957 /* bet_cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C89B1F5C1581C1C6001F9957 /* bet_cell_background.png */; };
 		C89B1F611581C9C6001F9957 /* hand_state_background.png in Resources */ = {isa = PBXBuildFile; fileRef = C89B1F601581C9C6001F9957 /* hand_state_background.png */; };
 		C89B1F6A1581E892001F9957 /* NudgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C89B1F691581E892001F9957 /* NudgeButton.m */; };
@@ -713,7 +711,6 @@
 		C87D7E04151CBDD600007F95 /* BetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetViewController.m; sourceTree = "<group>"; };
 		C8841651153510E600F77087 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
 		C8841654153511BA00F77087 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
-		C8875F5B157B18F20090C2C5 /* background_table_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_table_view.png; sourceTree = "<group>"; };
 		C8875F5D157B21DB0090C2C5 /* tool_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tool_bar_background.png; sourceTree = "<group>"; };
 		C8875F5F157B239B0090C2C5 /* bet_view_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet_view_button.png; sourceTree = "<group>"; };
 		C8875F61157B24360090C2C5 /* BetTableViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetTableViewButton.h; sourceTree = "<group>"; };
@@ -758,7 +755,6 @@
 		C897AB30159E1096004F88E2 /* games_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games_button.png; sourceTree = "<group>"; };
 		C897AB32159E11F9004F88E2 /* pro_chips_button_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pro_chips_button_home.png; sourceTree = "<group>"; };
 		C897AB34159E12C7004F88E2 /* my_friends_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_friends_button.png; sourceTree = "<group>"; };
-		C89B1F591581BDF4001F9957 /* wood_floor_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_floor_background.png; sourceTree = "<group>"; };
 		C89B1F5C1581C1C6001F9957 /* bet_cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet_cell_background.png; sourceTree = "<group>"; };
 		C89B1F601581C9C6001F9957 /* hand_state_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_state_background.png; sourceTree = "<group>"; };
 		C89B1F681581E892001F9957 /* NudgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NudgeButton.h; sourceTree = "<group>"; };
@@ -1326,7 +1322,6 @@
 				C8AABBF71581F6180066A0C3 /* blue_felt.png */,
 				C8AABBF81581F6180066A0C3 /* green_felt.png */,
 				C8AABBF91581F6180066A0C3 /* red_felt.png */,
-				C8875F5B157B18F20090C2C5 /* background_table_view.png */,
 				C857C099157E2053000B27CB /* player_view_player_background.png */,
 				C857C09B157E208A000B27CB /* player_view_player_background_blue.png */,
 				C857C091157E0584000B27CB /* player_view_gray_bar.png */,
@@ -1504,7 +1499,6 @@
 				C83B1DFD15924D380056A3EA /* unlock.png */,
 				C83B1E12159735AB0056A3EA /* lock.png */,
 				C8A8812F1580170D0091FC73 /* red_chip.png */,
-				C89B1F591581BDF4001F9957 /* wood_floor_background.png */,
 				C837285D1586C9F40072E4F9 /* header_background.png */,
 				C837285F1586CCF50072E4F9 /* slider.png */,
 				C83B1E09159634D20056A3EA /* buy_cell_background.png */,
@@ -1761,6 +1755,7 @@
 				TargetAttributes = {
 					C87D7D341517D36A00007F95 = {
 						DevelopmentTeam = GV8Q529ELE;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -1830,7 +1825,6 @@
 				C8A38B361565FA3300A41BD5 /* forward_enabled.png in Resources */,
 				C88D9AEE156A1E8100F69A02 /* pop_up_background.png in Resources */,
 				C836177A1578490C00E49F3C /* bar_graph2.png in Resources */,
-				C8875F5C157B18F20090C2C5 /* background_table_view.png in Resources */,
 				C8875F5E157B21DB0090C2C5 /* tool_bar_background.png in Resources */,
 				C8875F60157B239B0090C2C5 /* bet_view_button.png in Resources */,
 				C8875F67157B29290090C2C5 /* table_view_button.png in Resources */,
@@ -1849,7 +1843,6 @@
 				C8A881321580170F0091FC73 /* black_chip.png in Resources */,
 				C8A881331580170F0091FC73 /* yellow_chip.png in Resources */,
 				C8A881341580170F0091FC73 /* red_chip.png in Resources */,
-				C89B1F5A1581BDF4001F9957 /* wood_floor_background.png in Resources */,
 				C89B1F5D1581C1C6001F9957 /* bet_cell_background.png in Resources */,
 				C89B1F611581C9C6001F9957 /* hand_state_background.png in Resources */,
 				C89B1F6D1581EB75001F9957 /* bet_button.png in Resources */,
@@ -2262,11 +2255,11 @@
 					"\"$(SRCROOT)/SlowPoker/FlurryUniversal\"",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.SlowPoker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.texasturnpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9B33ADBB-1BAD-451A-A945-63FC8220DFB3";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B33ADBB-1BAD-451A-A945-63FC8220DFB3";
-				PROVISIONING_PROFILE_SPECIFIER = "slowpoker-dev";
+				PROVISIONING_PROFILE_SPECIFIER = TTP_Dev;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2289,11 +2282,11 @@
 					"\"$(SRCROOT)/SlowPoker/FlurryUniversal\"",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.SlowPoker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.texasturnpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A47666C0-685F-479D-B0D1-244E9293626A";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A47666C0-685F-479D-B0D1-244E9293626A";
-				PROVISIONING_PROFILE_SPECIFIER = "slowpoker-adhoc";
+				PROVISIONING_PROFILE_SPECIFIER = TTP_AppStore;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
