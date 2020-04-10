@@ -2241,10 +2241,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SlowPoker/SlowPoker.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Tony Tran (Y5389RYDXV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Tony Tran (Y5389RYDXV)";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
@@ -2255,6 +2257,7 @@
 					"\"$(SRCROOT)/SlowPoker/FlurryUniversal\"",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.texasturnpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9B33ADBB-1BAD-451A-A945-63FC8220DFB3";
@@ -2268,10 +2271,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SlowPoker/SlowPoker.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
@@ -2282,6 +2287,7 @@
 					"\"$(SRCROOT)/SlowPoker/FlurryUniversal\"",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.texasturnpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A47666C0-685F-479D-B0D1-244E9293626A";
