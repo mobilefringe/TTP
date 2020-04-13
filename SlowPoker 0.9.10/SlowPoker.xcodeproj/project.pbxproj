@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842FF99024441F1D007ECDBD /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842FF98F24441F1D007ECDBD /* UserNotifications.framework */; };
 		8484D7632434452800E2FA52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7622434452800E2FA52 /* Images.xcassets */; };
 		8484D7652434455000E2FA52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7642434455000E2FA52 /* Launch Screen.storyboard */; };
 		C80423C3157B0DD500B4F372 /* SlowPokerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */; };
@@ -397,6 +398,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842FF98F24441F1D007ECDBD /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8484D7622434452800E2FA52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8484D7642434455000E2FA52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8484D76624379FB900E2FA52 /* SlowPoker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlowPoker.entitlements; sourceTree = "<group>"; };
@@ -941,6 +943,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842FF99024441F1D007ECDBD /* UserNotifications.framework in Frameworks */,
 				C8407EA515B0AFEA00D482A5 /* SystemConfiguration.framework in Frameworks */,
 				C80E754F15AB416E00FC4BC2 /* Twitter.framework in Frameworks */,
 				C80E754D15AB416100FC4BC2 /* Accounts.framework in Frameworks */,
@@ -1372,6 +1375,7 @@
 		C87D7D381517D36A00007F95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				842FF98F24441F1D007ECDBD /* UserNotifications.framework */,
 				C87D7D391517D36A00007F95 /* UIKit.framework */,
 				C87D7D3B1517D36A00007F95 /* Foundation.framework */,
 				C87D7D3D1517D36A00007F95 /* CoreGraphics.framework */,

@@ -315,12 +315,12 @@ static int refreshSeconds = 60;
 
 -(void)viewDidAppear:(BOOL)animated{
      [super viewDidAppear:animated];
-    /*
+    
     if(refreshTimer){
         [refreshTimer invalidate];
     }
     self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:refreshSeconds target:self selector:@selector(loadGame) userInfo:nil repeats:YES];
-    [refreshTimer fire];*/
+    [refreshTimer fire];
     [self loadGame];
 }
 
@@ -615,12 +615,12 @@ static int refreshSeconds = 60;
     }else if(alertView == cashGameStartAlert){
         if(buttonIndex == 1){
             [[DataManager sharedInstance] startCurrentGame];
-            /*
+            
             if(refreshTimer){
                 [refreshTimer invalidate];
             }
             self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:refreshSeconds target:self selector:@selector(loadGame) userInfo:nil repeats:YES];
-            [refreshTimer fire];*/
+            [refreshTimer fire];
 
             [[DataManager sharedInstance] addBettingRoundIfNeeded];
             [self updateGameData];
@@ -1200,12 +1200,12 @@ static int refreshSeconds = 60;
     [pokerTableView loadGame:YES];
     navLabel2.text = [NSString stringWithFormat:@"Hand #%@",[pokerTableView.showHand valueForKey:@"number"]];
     [self showBuyInAlertIfNeeded];
-    /*
+    
     if(refreshTimer){
         [refreshTimer invalidate];
     }
     self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:refreshSeconds target:self selector:@selector(loadGame) userInfo:nil repeats:YES];
-    [refreshTimer fire];*/
+    [refreshTimer fire];
     [handSummaryPopUp hide];
 }
 

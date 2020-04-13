@@ -125,12 +125,12 @@
     [[DataManager sharedInstance] setProfileToMe];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"My Games"];
-    /*
+    
     if(refreshTimer){
         [refreshTimer invalidate];
     }
     self.refreshTimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(loadGames) userInfo:nil repeats:YES];
-    [refreshTimer fire];*/
+    [refreshTimer fire];
     [self loadGames];
     _tableView.alpha = 0;
     [activityIndicatorView startAnimating];
