@@ -31,7 +31,7 @@
 #import "LoginViewController.h"
 #import "GamesViewController.h"
 #import "GamesViewController.h"
-
+#import <UserNotifications/UserNotifications.h>
 
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
@@ -72,20 +72,16 @@
     [[DataManager sharedInstance] addObserver:self forKeyPath:@"isUpdatingGame" options:NSKeyValueObservingOptionOld context:nil];
     
     
-//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound |UIRemoteNotificationTypeAlert)];
-    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)])
-    {
-           // iOS 8 Notifications
-           [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-
-           [application registerForRemoteNotifications];
-    }
-    else
-    {
-          // iOS < 8 Notifications
-          [application registerForRemoteNotificationTypes:
-                     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
-    }
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error){
+        if(!error){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            });
+        }else{
+            NSLog(@"error notification %@", error);
+        }
+    }];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -133,10 +129,40 @@
     return YES;
 }
 
+- (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings{
+    
+    if (notificationSettings.types != UIUserNotificationTypeNone){
+        [application registerForRemoteNotifications];
+    }
+    else{
+        
+        
+    }
+}
+
+- (NSString *)stringFromDeviceToken:(NSData *)deviceToken {
+    NSUInteger length = deviceToken.length;
+    if (length == 0) {
+        return nil;
+    }
+    const unsigned char *buffer = deviceToken.bytes;
+    NSMutableString *hexString  = [NSMutableString stringWithCapacity:(length * 2)];
+    for (int i = 0; i < length; ++i) {
+        [hexString appendFormat:@"%02x", buffer[i]];
+    }
+    return [hexString copy];
+}
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken 
 {
-    [DataManager sharedInstance].deviceTok = [[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]stringByReplacingOccurrencesOfString: @">" withString: @""]stringByReplacingOccurrencesOfString: @" " withString: @""];
+    [DataManager sharedInstance].deviceTok = [self stringFromDeviceToken:deviceToken];
+        NSLog(@"deviceToken : %@", [DataManager sharedInstance].deviceTok);
     [[DataManager sharedInstance] registerForAPN];
+}
+
+- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
+{
+    NSLog(@"Failed to get token, error: %@", error);
 }
 
 -(void)pushToPlayersProfile:(NSString *)userID{
