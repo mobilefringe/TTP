@@ -74,22 +74,6 @@
     scroll.contentSize = CGSizeMake(self.view.bounds.size.width,self.view.bounds.size.height);
     [self.view addSubview:scroll];
     
-    
-    self.facebookButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    facebookButton.frame = CGRectMake(xCenterView,hasNotchedDisplay? topbarHeight+284+112-20 : topbarHeight+284+112-20, [UIImage imageNamed:@"home_facebook_button.png"].size.width/2, [UIImage imageNamed:@"home_facebook_button.png"].size.height/2);
-    [facebookButton addTarget:self action:@selector(pressFaceBook) forControlEvents:UIControlEventTouchUpInside];
-    [facebookButton setTitle:@"TTP Facebook" forState:UIControlStateNormal];
-    [facebookButton setImage:[UIImage imageNamed:@"home_facebook_button.png"] forState:UIControlStateNormal];
-    [scroll addSubview:facebookButton];
-    
-    UILabel *facebookLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 122, 170, 50)];
-    facebookLabel.backgroundColor = [UIColor clearColor];
-    facebookLabel.font = [UIFont boldSystemFontOfSize:25];
-    facebookLabel.textAlignment = UITextAlignmentLeft;
-    facebookLabel.text = @"Facebook";
-    facebookLabel.textColor = [UIColor whiteColor];
-    [facebookButton addSubview:facebookLabel];
-    
     self.twitterButton = [MFButton buttonWithType:UIButtonTypeCustom];
     twitterButton.frame = CGRectMake(xCenterView, hasNotchedDisplay ? topbarHeight+284+51-10 : topbarHeight+284+51-20, [UIImage imageNamed:@"home_twitter_button.png"].size.width/2, [UIImage imageNamed:@"home_twitter_button.png"].size.height/2);
     [twitterButton addTarget:self action:@selector(pressTwitter) forControlEvents:UIControlEventTouchUpInside];
