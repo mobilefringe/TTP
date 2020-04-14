@@ -267,17 +267,6 @@
         }
         return cell;
     }else if(indexPath.section == 1){
-        static NSString *MyIdentifier = @"PlayerStatsTableViewCell";
-        PlayerStatsTableViewCell *cell = (PlayerStatsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:MyIdentifier];
-        // If no cell is available, create a new one using the given identifier
-        if (cell == nil) {
-            cell = [[PlayerStatsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
-        }
-        [cell setStatData:[DataManager sharedInstance].playerProfile];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
-        return cell;
-    }else if(indexPath.section == 2){
         static NSString *MyIdentifier = @"PlayerBraceletsTableViewCell";
         PlayerBraceletsTableViewCell *cell = (PlayerBraceletsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:MyIdentifier];
         // If no cell is available, create a new one using the given identifier
@@ -316,16 +305,16 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.section == 1){
-        return 90;
-    }else if(indexPath.section == 2){
+    if(indexPath.section == 0){
+        return 85;
+    }else if(indexPath.section == 1){
         return 85;
     }
     return 85;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if(section == 1 || section == 2){
+    if(section == 1){
         return 30;
     }
     return 10;
@@ -333,9 +322,6 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(section == 1){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Player Stats"];
-        return header;
-    }else if(section == 2){
         CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"Poker Bracelets"];
         return header;
     }
@@ -347,16 +333,13 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     if(section == 1){
-        CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 40) title:@"Press for more stats"];
-        return header;
-    }else if(section == 2){
         CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:@"Press for all bracelets"];
         return header;
     }
     return nil;}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if(section == 1 || section == 2){
+    if(section == 1){
         return 40;
     }
     return 10;
@@ -384,8 +367,6 @@
     if(section == 0){
         return 1;
     }if(section == 1){
-        return 1;
-    }else if(section == 2){
         return 5;
     }
     return 0;
@@ -403,11 +384,6 @@
         
         
     }else if(indexPath.section == 1){
-        if(!playerStatsViewController){
-            self.playerStatsViewController = [[PlayerStatsViewController alloc] initWithNibName:nil bundle:nil];
-        }
-        [self.navigationController pushViewController:playerStatsViewController animated:YES];
-    }else if(indexPath.section == 2){
         if(!achievementsViewController){
             self.achievementsViewController = [[AchievementsViewController alloc] initWithNibName:nil bundle:nil];
         }

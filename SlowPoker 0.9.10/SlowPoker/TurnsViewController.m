@@ -175,9 +175,9 @@ static float bottomBarHeight = 40;
     [betOrTableViewButton.button addTarget:self action:@selector(flipTable) forControlEvents:UIControlEventTouchUpInside];
     [chatFieldBackground addSubview:betOrTableViewButton];
     
-    self.gameStatsButton = [[GameStatsButton alloc] initWithFrame:CGRectMake(148, 5, 140,30)];
-    [gameStatsButton.button addTarget:self action:@selector(pressGameStats) forControlEvents:UIControlEventTouchUpInside];
-    [chatFieldBackground addSubview:gameStatsButton];
+//    self.gameStatsButton = [[GameStatsButton alloc] initWithFrame:CGRectMake(148, 5, 140,30)];
+//    [gameStatsButton.button addTarget:self action:@selector(pressGameStats) forControlEvents:UIControlEventTouchUpInside];
+//    [chatFieldBackground addSubview:gameStatsButton];
     
     self.chatField = [[UITextField alloc] initWithFrame:CGRectMake(268, 3, 0,32)];
     chatField.delegate = self;
@@ -686,7 +686,7 @@ static float bottomBarHeight = 40;
         }
     }else if(alertView == gameOverAlert){
         if (buttonIndex == 1) {
-            [self pressGameStats];
+//            [self pressGameStats];
         }
     }else if(alertView == gameOverAlertWithRematch){
         if (buttonIndex == 1) {
@@ -711,7 +711,7 @@ static float bottomBarHeight = 40;
             
             
         }else if(buttonIndex == 2){
-            [self pressGameStats];
+//            [self pressGameStats];
         }
     }else if(alertView == noOneLeftAlert){
         if(buttonIndex == 1){
