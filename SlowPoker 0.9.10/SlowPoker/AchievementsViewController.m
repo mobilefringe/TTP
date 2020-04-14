@@ -40,26 +40,29 @@
 
 -(void)loadView{
     [super loadView];
+    CGFloat topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+    (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    float widthScreen = self.view.bounds.size.width;
     
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bricks_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 480);
+    background.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:background];
     
     self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 85;
-    _tableView.frame = CGRectMake(0, 0, 320, 416);
+    _tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-64);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.scrollsToTop = YES;
     [self.view addSubview:_tableView];
     
-        
-    self.achievementPlatinumHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, 280, 106)];
-    self.achievementGoldView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, 280, 106)];
-    self.achievementSilverHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, 280, 106)];
-    self.achievementBronzeHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, 280, 106)];
-    self.achievementBlackHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, 280, 106)];
+    float achievementWidth = widthScreen;
+    self.achievementPlatinumHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, achievementWidth, 106)];
+    self.achievementGoldView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, achievementWidth, 106)];
+    self.achievementSilverHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, achievementWidth, 106)];
+    self.achievementBronzeHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, achievementWidth, 106)];
+    self.achievementBlackHeaderView = [[AchievementHeaderView alloc] initWithFrame:CGRectMake(0, 0, achievementWidth, 106)];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -214,23 +217,24 @@
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    float widthScreen = self.view.bounds.size.width;
     if(section == 0){
-        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"Collect each to unlock the Platinum bracelet"];
+        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, widthScreen, 40) title:@"Collect each to unlock the Platinum bracelet"];
         return footer;
     }else if(section == 1){
-        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"Collect each to unlock the Gold bracelet"];
+        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, widthScreen, 40) title:@"Collect each to unlock the Gold bracelet"];
         return footer;        
         
     }else if(section == 2){
-        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"Collect each to unlock the Silver bracelet"];
+        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, widthScreen, 40) title:@"Collect each to unlock the Silver bracelet"];
         return footer;        
         
     }else if(section == 3){
-        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"Collect each to unlock the Bronze bracelet"];
+        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, widthScreen, 40) title:@"Collect each to unlock the Bronze bracelet"];
         return footer;        
         
     }else if(section == 4){
-        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, 320, 40) title:@"Collect each to unlock the Black bracelet"];
+        CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, 0, widthScreen, 40) title:@"Collect each to unlock the Black bracelet"];
         return footer;        
         
     }

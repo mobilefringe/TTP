@@ -70,7 +70,7 @@
     _tableView.rowHeight = 85;
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.frame = CGRectMake(0, 0, self.view.bounds.size.height, self.view.bounds.size.height-bottomPadding);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.height, self.view.bounds.size.height-bottomPadding);
     [self.view addSubview:_tableView];
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];

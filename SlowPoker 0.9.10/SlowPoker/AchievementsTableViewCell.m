@@ -19,23 +19,27 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    int xOffset = 72;
+    float screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    float achieventWidth = 65;
+    float achieventSpace = 20;
+    int xOffset = screenWidth-(achieventWidth*4+achieventSpace*3);
+    float marginHorizontal = xOffset/2;
     int yOffset = 5;
     if (self) {
         background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
-        background.frame = CGRectMake(-10, 0, 320, 97);
+        background.frame = CGRectMake(0, 0, screenWidth, 97);
         [self.contentView addSubview:background];
         
-        self.achievement1 = [[AchievementIcon alloc] initWithFrame:CGRectMake(10, 10+yOffset, 65, 65)];
+        self.achievement1 = [[AchievementIcon alloc] initWithFrame:CGRectMake(marginHorizontal, 10+yOffset, achieventWidth, 65)];
         [self.contentView addSubview:achievement1];
         
-        self.achievement2 = [[AchievementIcon alloc] initWithFrame:CGRectMake(10+xOffset, 10+yOffset, 65, 65)];
+        self.achievement2 = [[AchievementIcon alloc] initWithFrame:CGRectMake(achieventSpace+marginHorizontal+achieventWidth, 10+yOffset, achieventWidth, 65)];
         [self.contentView addSubview:achievement2];
         
-        self.achievement3 = [[AchievementIcon alloc] initWithFrame:CGRectMake(10+2*xOffset, 10+yOffset, 65, 65)];
+        self.achievement3 = [[AchievementIcon alloc] initWithFrame:CGRectMake(2*achieventSpace+marginHorizontal+2*achieventWidth, 10+yOffset, achieventWidth, 65)];
         [self.contentView addSubview:achievement3];
         
-        self.achievement4 = [[AchievementIcon alloc] initWithFrame:CGRectMake(10+3*xOffset, 10+yOffset, 65, 65)];
+        self.achievement4 = [[AchievementIcon alloc] initWithFrame:CGRectMake(3*achieventSpace+marginHorizontal+3*achieventWidth, 10+yOffset, achieventWidth, 65)];
         [self.contentView addSubview:achievement4];
     }
     return self;

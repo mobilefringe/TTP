@@ -26,10 +26,10 @@
         UIImage *backgroundImage = [[UIImage imageNamed:@"cell_header_general.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:8];
         
         UIImageView *background = [[UIImageView alloc] initWithImage:backgroundImage];
-        background.frame = CGRectMake(6.5, 7, 307, frame.size.height);
+        background.frame = CGRectMake(6.5, 7, [UIScreen mainScreen].bounds.size.width-6.5*2, frame.size.height);
         [self addSubview:background];
         
-        self.codeLabel = [[UILabel alloc] initWithFrame:CGRectMake(75, 85, 170, 15)];
+        self.codeLabel = [[UILabel alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-170)/2, 85, 170, 15)];
         codeLabel.backgroundColor = [UIColor clearColor];
         codeLabel.adjustsFontSizeToFitWidth = YES;
         codeLabel.minimumFontSize = 6;
@@ -38,7 +38,7 @@
         codeLabel.textColor = [UIColor blackColor];
         [self addSubview:codeLabel];
         
-        self.achivementImage = [[UIImageView alloc] initWithFrame:CGRectMake(70, -17, 140*1.3, 100*1.3)];
+        self.achivementImage = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-140*1.3)/2, -17, 140*1.3, 100*1.3)];
         achivementImage.userInteractionEnabled = YES;
         [self addSubview:achivementImage];
 
