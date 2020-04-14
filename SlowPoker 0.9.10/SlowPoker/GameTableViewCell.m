@@ -106,10 +106,10 @@
         [self.contentView addSubview:gameIDLabel];
         
         self.chatIndicator = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"purple.png"]];
-        chatIndicator.frame = CGRectMake(280, 57, 34, 27);
+        chatIndicator.frame = CGRectMake(280, 60, 34, 25);
         [self addSubview:chatIndicator];
         
-        self.chatCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 2, 25, 20)];
+        self.chatCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 25, 20)];
         chatCountLabel.textColor = [UIColor whiteColor];
         chatCountLabel.textAlignment = UITextAlignmentCenter;
         chatCountLabel.font = [UIFont boldSystemFontOfSize:14];
