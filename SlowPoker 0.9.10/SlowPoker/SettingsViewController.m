@@ -178,7 +178,9 @@
             
         }else if(indexPath.row == 1){
             AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-            NSString* escapedUrlString =[@"http://www.texasturnpoker.com/faq" stringByAddingPercentEscapesUsingEncoding:
+            NSString *urlString = [NSString stringWithFormat:@"%@/faq",(NSString *)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"apiURL"]];
+
+            NSString* escapedUrlString =[urlString stringByAddingPercentEscapesUsingEncoding:
                                          NSUTF8StringEncoding];
             [appDelegate goToWebViewControllerWithURL:escapedUrlString withTitle:@"FAQ"];
         }else if(indexPath.row == 2){

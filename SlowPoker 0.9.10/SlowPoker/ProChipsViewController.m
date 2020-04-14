@@ -128,7 +128,9 @@
         [appDelegate showStore];
     }else if(indexPath.row == 2){
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        NSString* escapedUrlString =[@"http://www.texasturnpoker.com/faq/proChips" stringByAddingPercentEscapesUsingEncoding:
+        NSString *urlString = [NSString stringWithFormat:@"%@/faq/proChips",(NSString *)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"apiURL"]];
+
+        NSString* escapedUrlString =[urlString stringByAddingPercentEscapesUsingEncoding:
                                      NSUTF8StringEncoding];
 
         [appDelegate goToWebViewControllerWithURL:escapedUrlString withTitle:@"Pro Chips"];

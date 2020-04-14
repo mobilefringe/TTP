@@ -43,8 +43,8 @@
 	
 	
 	
-	
-	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-([[DataManager sharedInstance] getBottomPadding] + 50 + 10))];
+    float bottomBar = 40;
+	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, topbarHeight+10, self.view.bounds.size.width, self.view.bounds.size.height-([[DataManager sharedInstance] getBottomPadding] + 50 + 10+bottomBar))];
 	webView.scalesPageToFit = YES;
 	webView.delegate = self;
 	webView.hidden = YES;

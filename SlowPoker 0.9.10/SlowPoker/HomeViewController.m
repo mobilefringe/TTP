@@ -229,7 +229,9 @@
 
 -(void)pressLeaderboards{
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate goToWebViewControllerWithURL:@"http://159.203.1.211:3000/leaderboards" withTitle:@"Leaderboards"];
+            NSString *urlString = [NSString stringWithFormat:@"%@/leaderboards",(NSString *)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"apiURL"]];
+
+    [appDelegate goToWebViewControllerWithURL:urlString withTitle:@"Leaderboards"];
     
 }
 

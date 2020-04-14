@@ -40,8 +40,9 @@ static NSString *deviceKey = @"iPhone";
 -(void)loadRemoteSettings{
     dispatch_async(kBgQueue, ^{
         
-        
-        NSURL *url = [NSURL URLWithString:@"http://www.texasturnpoker.com/settings.json"];    
+        NSString *urlString = [NSString stringWithFormat:@"%@/settings.json",(NSString *)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"apiURL"]];
+
+        NSURL *url = [NSURL URLWithString:urlString];
         NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url
                                                                cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
                                                            timeoutInterval:180.0];
