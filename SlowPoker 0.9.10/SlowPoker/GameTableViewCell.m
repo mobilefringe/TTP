@@ -79,7 +79,7 @@
         gameTypeLabel.minimumFontSize = 10;
         [self.contentView addSubview:gameTypeLabel];
         
-        self.vsLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, 170, 30)];
+        self.vsLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, 220, 30)];
         vsLabel.backgroundColor = [UIColor clearColor];
         vsLabel.adjustsFontSizeToFitWidth = YES;
         vsLabel.font = [UIFont systemFontOfSize:15];
@@ -96,7 +96,7 @@
         playersTurn.minimumFontSize = 10;
         [self.contentView addSubview:playersTurn];
         
-        self.gameIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, 295, 18)];
+        self.gameIDLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, self.bounds.size.width-10, 18)];
         gameIDLabel.backgroundColor = [UIColor clearColor];
         gameIDLabel.adjustsFontSizeToFitWidth = YES;
         gameIDLabel.font = [UIFont systemFontOfSize:13];
@@ -109,7 +109,7 @@
         chatIndicator.frame = CGRectMake(275, 57, 34, 27);
         [self addSubview:chatIndicator];
         
-        self.chatCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(2, 2, 25, 20)];
+        self.chatCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 2, 25, 20)];
         chatCountLabel.textColor = [UIColor whiteColor];
         chatCountLabel.textAlignment = UITextAlignmentCenter;
         chatCountLabel.font = [UIFont boldSystemFontOfSize:14];

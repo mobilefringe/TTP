@@ -143,6 +143,11 @@
 	if (cell == nil) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MyIdentifier];
         
+        float cellWidth = cell.contentView.bounds.size.width;
+        float marginLeft = 20;
+        float marginRight = 25;
+        float buttonSettingWidth = 70;
+        
         UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_body_general.png"]];
         background.frame = CGRectMake(-10, 0, self.view.bounds.size.width, 70);
         [cell.contentView addSubview:background];
@@ -153,7 +158,7 @@
         cell.selectedBackgroundView = backgroundSelected;
         
         
-        settingLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 10, 120, 20)];
+        settingLabel = [[UILabel alloc] initWithFrame:CGRectMake((cellWidth-120)/2+marginRight, 10, 120, 20)];
         settingLabel.textColor = [UIColor colorWithRed:1 green:1 blue:.3 alpha:1];
         settingLabel.font = [UIFont boldSystemFontOfSize:17];
         settingLabel.tag = 2;
@@ -163,7 +168,7 @@
         settingLabel.textAlignment = UITextAlignmentCenter;
         [cell addSubview:settingLabel];
         
-        settingValue = [[UILabel alloc] initWithFrame:CGRectMake(100, 20, 120, 50)];
+        settingValue = [[UILabel alloc] initWithFrame:CGRectMake((cellWidth-120)/2+marginRight, 20, 120, 50)];
         settingValue.textColor = [UIColor whiteColor];
         settingValue.font = [UIFont boldSystemFontOfSize:22];
         settingValue.tag = 3;
@@ -183,7 +188,7 @@
         [cell addSubview:decreaseSmallBling];
         
         increaseSmallBling = [UIButton buttonWithType:UIButtonTypeCustom];
-        increaseSmallBling.frame = CGRectMake(230, 5, 70, 60);
+        increaseSmallBling.frame = CGRectMake(cellWidth-20*2, 5, 70, 60);
         [increaseSmallBling setImage:[UIImage imageNamed:@"blue_plus.png"] forState:UIControlStateNormal];
         [increaseSmallBling setTitle:@"+" forState:UIControlStateNormal];
         increaseSmallBling.tag = 4;
@@ -202,7 +207,7 @@
         [cell addSubview:decreaseBigBling];
         
         increaseBigBling = [UIButton buttonWithType:UIButtonTypeCustom];
-        increaseBigBling.frame = CGRectMake(230, 5, 70, 60);
+        increaseBigBling.frame = CGRectMake(cellWidth-20*2, 5, 70, 60);
         [increaseBigBling setImage:[UIImage imageNamed:@"blue_plus.png"] forState:UIControlStateNormal];
         [increaseBigBling setTitle:@"+" forState:UIControlStateNormal];
         increaseBigBling.tag = 6;
@@ -222,7 +227,7 @@
         [cell addSubview:decreaseNumOfHands];
         
         increaseNumOfHands = [UIButton buttonWithType:UIButtonTypeCustom];
-        increaseNumOfHands.frame = CGRectMake(230, 5, 70, 60);
+        increaseNumOfHands.frame = CGRectMake(cellWidth-20*2, 5, 70, 60);
         [increaseNumOfHands setImage:[UIImage imageNamed:@"blue_plus.png"] forState:UIControlStateNormal];
         [increaseNumOfHands setTitle:@"+" forState:UIControlStateNormal];
         increaseNumOfHands.tag = 8;
