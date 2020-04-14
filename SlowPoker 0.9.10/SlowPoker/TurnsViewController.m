@@ -74,9 +74,9 @@
 @synthesize cantDeleletGame;
 @synthesize topbarHeight;
 @synthesize keyboardHeight;
-
+@synthesize bottomPadding;
 static int refreshSeconds = 60;
-
+static float bottomBarHeight = 40;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -95,6 +95,7 @@ static int refreshSeconds = 60;
         topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
         (self.navigationController.navigationBar.frame.size.height ?: 0.0));
     }
+    
     self.title = @"Game";
     self.view.backgroundColor = [UIColor whiteColor];
     self.background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background_black.png"]];
@@ -136,7 +137,7 @@ static int refreshSeconds = 60;
     UIImage *woodFloor = [UIImage imageNamed:@"wood_floor_background"];
     self.woodBackground = [[UIImageView alloc] initWithImage:woodFloor];
     woodBackground.userInteractionEnabled = YES;
-    woodBackground.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height);
+    woodBackground.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding-topbarHeight-bottomBarHeight);
     [woodBackground addSubview:_tableView];
     [flipView addSubview:woodBackground];
     
@@ -157,10 +158,11 @@ static int refreshSeconds = 60;
     [self.view addSubview:gameStatsViewController.view];
     [self resetGameStats];
     
-    
+    float bottomPadding =  (float)[[DataManager sharedInstance] getBottomPadding];
+    float topPadding =  (float)[[DataManager sharedInstance] getTopPadding];
     
     self.messageBubblesViewController = [[MessageBubblesViewController alloc] initWithNibName:nil bundle:nil];
-    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height-topbarHeight-40, self.view.bounds.size.width, self.view.bounds.size.height-topbarHeight-40);
+    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height-topbarHeight-bottomBarHeight-bottomPadding-topPadding);
     [self.view addSubview:messageBubblesViewController.view];
     
     
@@ -300,7 +302,7 @@ static int refreshSeconds = 60;
     [activityIndicatorView stopAnimating];
     [flipView addSubview:activityIndicatorView];
     
-    self.handSummaryPopUp = [[HandSummaryPopUp alloc] initWithFrame:CGRectMake(5, 5, 310, 350) delegate:self];
+    self.handSummaryPopUp = [[HandSummaryPopUp alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-310)/2, (self.view.bounds.size.height-350)/2, 310, 350) delegate:self];
     [self.view addSubview:handSummaryPopUp];
     
     
@@ -331,6 +333,9 @@ static int refreshSeconds = 60;
         topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
         (self.navigationController.navigationBar.frame.size.height ?: 0.0));
     }
+    float bottomPadding =  (float)[[DataManager sharedInstance] getBottomPadding];
+    float topPadding = (float) [[DataManager sharedInstance] getTopPadding];
+    woodBackground.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding-topbarHeight-bottomBarHeight);
     updatingMessage.hidden = YES;
     [super viewWillAppear:animated];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -342,9 +347,10 @@ static int refreshSeconds = 60;
     showhandOver = YES;
     isGameComplete = NO;
     showAlerts = YES;
-    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.height, 40);
+    
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-bottomBarHeight-bottomPadding, self.view.bounds.size.width, bottomBarHeight);
     chatField.frame = CGRectMake(268, 3, 0,32);
-    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, self.view.bounds.size.height-40);
+    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height-topbarHeight-bottomBarHeight-bottomPadding-topPadding);
     [gameStatsButton unselectButton:YES];
     _tableView.alpha = 0;
     [loadingIndicator startAnimating];
@@ -1282,58 +1288,74 @@ static int refreshSeconds = 60;
     }else{
         self.navigationItem.rightBarButtonItem = betViewButton;
     }*/
+    float bottomPadding =  (float)[[DataManager sharedInstance] getBottomPadding];
+    float topPadding =  (float)[[DataManager sharedInstance] getTopPadding];
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
-    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
+//    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-bottomBarHeight-bottomPadding, self.view.bounds.size.width, bottomBarHeight);
+
     listTableButton.alpha = 1;
-    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, self.view.bounds.size.height);
+    messageBubblesViewController.view.frame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height-topbarHeight-bottomBarHeight-bottomPadding-topPadding);
     chatField.frame = CGRectMake(268, 3, 0,32);
     [UIView commitAnimations];
     [chatField resignFirstResponder];
 }
 
 -(void)showChatFull{
+    float bottomPadding =  (float)[[DataManager sharedInstance] getBottomPadding];
+    float topPadding =  (float)[[DataManager sharedInstance] getTopPadding];
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
     //self.navigationItem.rightBarButtonItem = closeChatButton;
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
     chatField.frame = CGRectMake(2, 3, self.view.bounds.size.width-54,32);
     listTableButton.alpha = 0;
-    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
-    messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight , self.view.bounds.size.width, self.view.bounds.size.height-40-topbarHeight);
+//    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-bottomBarHeight-bottomPadding, self.view.bounds.size.width, bottomBarHeight);
+
+    if(topbarHeight == 0){
+        topbarHeight = ([UIApplication sharedApplication].statusBarFrame.size.height +
+        (self.navigationController.navigationBar.frame.size.height ?: 0.0));
+    }
+    messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight+topPadding , self.view.bounds.size.width, self.view.bounds.size.height-topbarHeight-bottomBarHeight-bottomPadding-topPadding);
     [UIView commitAnimations];
     [messageBubblesViewController scrollToBottom];
 }
 
 -(void)showChatWithKeyboard{
-
+    float bottomPadding =  (float)[[DataManager sharedInstance] getBottomPadding];
+    float topPadding =  (float)[[DataManager sharedInstance] getTopPadding];
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
     //self.navigationItem.rightBarButtonItem = closeChatButton;
     [UIView beginAnimations:@"" context:NULL];
     [UIView setAnimationDuration:0.2];
             
     listTableButton.alpha = 0;
-    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-keyboardHeight-40, self.view.bounds.size.width, 40);
-    messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-keyboardHeight-40-topbarHeight);
+    chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-keyboardHeight-bottomPadding-bottomBarHeight, self.view.bounds.size.width, 40);
+    messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight+topPadding, self.view.bounds.size.width, self.view.bounds.size.height-keyboardHeight-bottomBarHeight-topbarHeight-bottomPadding-topPadding);
     [UIView commitAnimations];
     [messageBubblesViewController scrollToBottom];
 }
 
 -(void)pressChat{
+    float topPadding =  (float)[[DataManager sharedInstance] getTopPadding];
     chatButton.buttonLabel.text = @"";
     [[DataManager sharedInstance] setMessagesAsReadForCurrentGame];
-    if(messageBubblesViewController.view.frame.origin.y == self.view.bounds.size.height-40){
+    if(messageBubblesViewController.view.frame.origin.y == self.view.bounds.size.height || messageBubblesViewController.view.frame.origin.y == self.view.bounds.size.height-topbarHeight-topPadding){
         [messageBubblesViewController reloadMessage];
         [self showChatFull];
     }else{
         if(chatField.text && chatField.text.length > 0){
+            float bottomPadding =  (float)[[DataManager sharedInstance] getBottomPadding];
+            
             [[DataManager sharedInstance] postMessageForCurrentGame:chatField.text];
             [messageBubblesViewController reloadMessage];
             
             [UIView beginAnimations:@"" context:NULL];
             [UIView setAnimationDuration:0.2];
-            chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-40, self.view.bounds.size.width, 40);
-            messageBubblesViewController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-40);
+            chatFieldBackground.frame = CGRectMake(0, self.view.bounds.size.height-bottomBarHeight-bottomPadding, self.view.bounds.size.width, 40);
+            messageBubblesViewController.view.frame = CGRectMake(0, topbarHeight+topPadding, self.view.bounds.size.width, self.view.bounds.size.height-bottomBarHeight-topbarHeight-bottomPadding-topPadding);
             chatField.text = @"";
             [UIView commitAnimations];
             [messageBubblesViewController scrollToBottom];

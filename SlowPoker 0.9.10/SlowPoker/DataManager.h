@@ -267,6 +267,7 @@
 -(void)logAchievements;
 -(void)setImageBackground: (UIView*)view imageName: (NSString*) imageName topbarHeight: (CGFloat) topbarHeight;
 -(CGFloat)getBottomPadding;
+-(CGFloat)getTopPadding;
 -(BOOL)hasNotchedDisplay;
 -(BOOL)isIphoneXOrPlus;
 -(BOOL)isIphonePlus;

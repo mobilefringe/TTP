@@ -3791,10 +3791,21 @@ static int achivementQueueLimit = 3;
     CGFloat bottomPadding = 0;
     if (@available(iOS 11.0, *)) {
        UIWindow *window = UIApplication.sharedApplication.keyWindow;
-       bottomPadding = window.safeAreaInsets.bottom + 40;
+       bottomPadding = window.safeAreaInsets.bottom;
     }
     return bottomPadding;
 }
+
+-(CGFloat)getTopPadding{
+    CGFloat topPadding = 0;
+    if (@available(iOS 11.0, *)) {
+       UIWindow *window = UIApplication.sharedApplication.keyWindow;
+       topPadding = window.safeAreaInsets.top;
+    }
+    return topPadding;
+}
+
+
 
 - (BOOL)hasNotchedDisplay{
     if (@available(iOS 11.0, *)) {

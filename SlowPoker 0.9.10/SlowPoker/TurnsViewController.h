@@ -81,6 +81,7 @@
     UIAlertView *cantDeleletGame;
     CGFloat topbarHeight;
     CGFloat keyboardHeight;
+    CGFloat bottomPadding;
 }
 
 @property(nonatomic,retain)UITableView *_tableView;
@@ -133,6 +134,7 @@
 @property (readwrite)BOOL userWantsToDelete;
 @property (readwrite)CGFloat topbarHeight;
 @property (readwrite)CGFloat keyboardHeight;
+@property (readwrite)CGFloat bottomPadding;
 
 -(void)updateGameData;
 -(void)showBuyInAlertIfNeeded;
