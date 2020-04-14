@@ -68,7 +68,7 @@ static BOOL testPlayers = NO;
         self.dealerButtonPlacements = [[NSMutableDictionary alloc] init];
         int youPlayerX = 140;
         int xoffset = 16;
-        int yOffset = [[DataManager sharedInstance] isIphoneXOrPlus] ? ([[DataManager sharedInstance] hasNotchedDisplay] ? 260 : 170) : 145;
+        int yOffset = [[DataManager sharedInstance] isIphoneXOrPlus] ? ([[DataManager sharedInstance] hasNotchedDisplay] ? 260 : 180) : 145;
         //1
         [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)], nil] forKey:@"1"];
         
@@ -209,7 +209,7 @@ static BOOL testPlayers = NO;
         
         self.dealNewHandButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [dealNewHandButton setImage:actionButtonImage forState:UIControlStateNormal];
-        dealNewHandButton.frame = CGRectMake(98.5, 243, actionButtonImage.size.width/2+0.5, actionButtonImage.size.height/2);
+        dealNewHandButton.frame = CGRectMake((self.bounds.size.width-(actionButtonImage.size.width/2+0.5))/2, communityCardsY+cardHeight+5, actionButtonImage.size.width/2+0.5, actionButtonImage.size.height/2+12);
         [dealNewHandButton addTarget:self action:@selector(newHand) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:dealNewHandButton];
         
@@ -221,7 +221,7 @@ static BOOL testPlayers = NO;
         [self addSubview:handSummaryButton];
 
         
-        UILabel *newHandLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 4, actionButtonImage.size.width/2-20, actionButtonImage.size.height/2-10)];
+        UILabel *newHandLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 4, actionButtonImage.size.width/2, actionButtonImage.size.height/2)];
         newHandLabel.font = [UIFont boldSystemFontOfSize:18];
         newHandLabel.textColor = [UIColor whiteColor];
         newHandLabel.textAlignment = UITextAlignmentCenter;
@@ -552,11 +552,6 @@ static BOOL testPlayers = NO;
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(resetDeck)];
-    communityCardOne.frame = CGRectMake(88, 194, 25, 37);
-    communityCardTwo.frame = CGRectMake(88, 194, 25, 37);
-    communityCardThree.frame = CGRectMake(88, 194, 25, 37);
-    communityCardFour.frame = CGRectMake(88, 194, 25, 37);
-    communityCardFive.frame = CGRectMake(88, 194, 25, 37);
     [UIView commitAnimations];
     
 }
@@ -571,12 +566,6 @@ static BOOL testPlayers = NO;
     [UIView setAnimationDuration:.3];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationDidStopSelector:@selector(updateDeck)];
-    communityCardOne.frame = CGRectMake(88, 194, 25, 37);
-    communityCardTwo.frame = CGRectMake(88+29, 194, 25, 37);
-    communityCardThree.frame = CGRectMake(88+29*2, 194, 25, 37);
-    communityCardFour.frame = CGRectMake(88+29*3, 194, 25, 37);
-    communityCardFive.frame = CGRectMake(88+29*4, 194, 25, 37);
-
     
     [UIView commitAnimations];
     

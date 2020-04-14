@@ -27,9 +27,15 @@
         self.viewHandButton = [[Button alloc] initWithFrame:CGRectMake(45, 275+35, 110, 40) title:@"View Hand" red:0.5 green:0.5 blue:0.5 alpha:1];
         [viewHandButton.button addTarget:delegate action:@selector(pressViewHand) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:viewHandButton];*/
+        float heightView = 350;
+        float topPaddingView = (self.bounds.size.height-heightView)/2;
+        float buttonHeight = 40;
+        float yButtonOffset = topPaddingView + heightView - buttonHeight*2;
+        
+        float xViewHandButton = (self.bounds.size.width-2*120-20)/2;
         
         self.viewHandButton = [MFButton buttonWithType:UIButtonTypeCustom];
-        viewHandButton.frame = CGRectMake(35, 275+15, 120, 40);
+        viewHandButton.frame = CGRectMake(xViewHandButton, yButtonOffset+15, 120, 40);
         [viewHandButton setImage:[[UIImage imageNamed:@"gray_button.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:15] forState:UIControlStateNormal];
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -46,9 +52,8 @@
         viewHandLabel.text = @"View Hand";
         [viewHandButton addSubview:viewHandLabel];
         
-        
         self.dealNewHandButton = [MFButton buttonWithType:UIButtonTypeCustom];
-        dealNewHandButton.frame = CGRectMake(165, 275+15, 120, 40);
+        dealNewHandButton.frame = CGRectMake(xViewHandButton+120+20, yButtonOffset+15, 120, 40);
         [dealNewHandButton setImage:[[UIImage imageNamed:@"gray_button.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:15] forState:UIControlStateNormal];
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -70,10 +75,11 @@
         self.closeButton = [[Button alloc] initWithFrame:CGRectMake(45, 275+35, 230, 40) title:@"Close Hand Summary" red:0.5 green:0.5 blue:0.5 alpha:1];
         [closeButton.button addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:closeButton];*/
-        
+        float buttonWidth = 170;
+        float xButtonOffset = (self.bounds.size.width-buttonWidth)/2;
         
         self.closeButton = [MFButton buttonWithType:UIButtonTypeCustom];
-        closeButton.frame = CGRectMake(75, 275+15, 170, 40);
+        closeButton.frame = CGRectMake(xButtonOffset, yButtonOffset+15, 170, buttonHeight);
         [closeButton setImage:[[UIImage imageNamed:@"gray_button.png"] stretchableImageWithLeftCapWidth:24 topCapHeight:15] forState:UIControlStateNormal];
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -118,7 +124,7 @@
     if(handsScroll){
         [handsScroll removeFromSuperview]; 
     }
-    handsScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(20, 20,280,271 )];
+    handsScroll = [[UIScrollView alloc] initWithFrame:CGRectMake((self.bounds.size.width-280)/2, (self.bounds.size.height-271)/2-20,280,271 )];
     handsScroll.backgroundColor = [UIColor clearColor];
     handsScroll.pagingEnabled = YES;
     handsScroll.delegate = self;
