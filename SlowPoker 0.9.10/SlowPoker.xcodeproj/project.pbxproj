@@ -588,14 +588,6 @@
 		C83728721587B6C40072E4F9 /* cell_footer_general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_footer_general.png; sourceTree = "<group>"; };
 		C83B1DFA1592246E0056A3EA /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		C83B1DFD15924D380056A3EA /* unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock.png; sourceTree = "<group>"; };
-		C83B1E001593AA470056A3EA /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
-		C83B1E011593AA470056A3EA /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
-		C83B1E021593AA470056A3EA /* FlurryAppCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAppCircle.h; sourceTree = "<group>"; };
-		C83B1E031593AA470056A3EA /* FlurryClips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryClips.h; sourceTree = "<group>"; };
-		C83B1E041593AA470056A3EA /* FlurryOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryOffer.h; sourceTree = "<group>"; };
-		C83B1E051593AA470056A3EA /* FlurryReEngage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryReEngage.h; sourceTree = "<group>"; };
-		C83B1E061593AA470056A3EA /* FlurryVideoOffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryVideoOffer.h; sourceTree = "<group>"; };
-		C83B1E071593AA470056A3EA /* libFlurryUniversal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryUniversal.a; sourceTree = "<group>"; };
 		C83B1E09159634D20056A3EA /* buy_cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buy_cell_background.png; sourceTree = "<group>"; };
 		C83B1E0B159637800056A3EA /* BuyNowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyNowCell.h; sourceTree = "<group>"; };
 		C83B1E0C159637800056A3EA /* BuyNowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyNowCell.m; sourceTree = "<group>"; };
@@ -1272,21 +1264,6 @@
 			name = Profile;
 			sourceTree = "<group>";
 		};
-		C83B1DFF1593AA470056A3EA /* FlurryUniversal */ = {
-			isa = PBXGroup;
-			children = (
-				C83B1E001593AA470056A3EA /* FlurryAdDelegate.h */,
-				C83B1E011593AA470056A3EA /* FlurryAnalytics.h */,
-				C83B1E021593AA470056A3EA /* FlurryAppCircle.h */,
-				C83B1E031593AA470056A3EA /* FlurryClips.h */,
-				C83B1E041593AA470056A3EA /* FlurryOffer.h */,
-				C83B1E051593AA470056A3EA /* FlurryReEngage.h */,
-				C83B1E061593AA470056A3EA /* FlurryVideoOffer.h */,
-				C83B1E071593AA470056A3EA /* libFlurryUniversal.a */,
-			);
-			path = FlurryUniversal;
-			sourceTree = "<group>";
-		};
 		C84FC2F9152B2E2000285960 /* HandEvaluator */ = {
 			isa = PBXGroup;
 			children = (
@@ -1582,7 +1559,6 @@
 				C80E74EC15AB3FDE00FC4BC2 /* OAuth */,
 				C80E74C415AB3F9C00FC4BC2 /* Twitter */,
 				C80E74AE15AB3CC900FC4BC2 /* Facebook */,
-				C83B1DFF1593AA470056A3EA /* FlurryUniversal */,
 				C81E9A32158A676A003CD35E /* SBTableAlert.h */,
 				C81E9A33158A676A003CD35E /* SBTableAlert.m */,
 				C81E9A34158A676A003CD35E /* StoreFront.h */,
