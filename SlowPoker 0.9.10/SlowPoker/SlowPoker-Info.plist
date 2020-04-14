@@ -8,6 +8,8 @@
 	<string>TTP</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict/>
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
@@ -19,7 +21,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -32,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>0.9.07</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -50,6 +52,12 @@
 			</dict>
 		</dict>
 	</dict>
+    <key>NSCameraUsageDescription</key>
+    <string>Allowing the app to take pictures, allows you to keep and show pictures of your customers within the app. Your photos are never shared without your permission.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App would like to access your photo gallery to store and retrieve pictures you want displayed in the app for yourself. Your photos are never shared without your permission.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App would like to access your photo gallery to store and retrieve pictures you want displayed in the app for yourself. Your photos are never shared without your permission.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIPrerenderedIcon</key>
@@ -66,6 +74,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>apiURL</key>
-	<string>http://159.203.1.211:3000</string>
+	<string>http://159.203.1.211</string>
 </dict>
 </plist>
