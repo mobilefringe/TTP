@@ -72,13 +72,25 @@
 - (void)loadView
 {
     [super loadView];
+    float widthScreen = self.view.bounds.size.width;
+    float heightScreen = self.view.bounds.size.height;
+    float yOffset = 220;
+    
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bet_view_background.png"]];
-    background.frame = CGRectMake(0, 0, 320, 456);
+    background.frame = CGRectMake(0, 0, widthScreen, heightScreen);
+    
+    UIImage *potTableImg = [UIImage imageNamed:@"bet_table_yellow.png"];
+    UIImageView *potTable = [[UIImageView alloc] initWithImage:potTableImg];
+    potTable.frame = CGRectMake((widthScreen-320)/2, heightScreen/2-yOffset, 320,147);
+    
     [self.view addSubview:background];
-    self.turnSectionHeader = [[TurnSectionHeader alloc] initWithFrame:CGRectMake(0, 0, 320, 90)];
+    [self.view addSubview:potTable];
+    
+//    self.turnSectionHeader = [[TurnSectionHeader alloc] initWithFrame:CGRectMake(0, 0, widthScreen, 90)];
     //[self.view addSubview:turnSectionHeader];
     
-    self.potLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 8, 320, 20)];
+    
+    self.potLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, heightScreen/2-yOffset+5, widthScreen, 20)];
     potLabel.textAlignment = UITextAlignmentCenter;
     potLabel.font = [UIFont boldSystemFontOfSize:18];
     potLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
@@ -86,37 +98,47 @@
     [self.view addSubview:potLabel];
 
     
-    int xOffset = 60;
-    self.communityCardOne = [[UIImageView alloc] initWithFrame:CGRectMake(15, 35, 35*1.5, 49*1.5)];
+    float cardWidth = 35*1.5;
+    float cardHeight = 49*1.5;
+    float cardSpace = 10;
+    float totalCard = 5;
+    float marginHorizontal = 35;
+    float bottomBar = 40;
+    float xCardOffset = widthScreen - (cardWidth*totalCard) - (cardSpace*(totalCard-1)) - (marginHorizontal);
+    if([[DataManager sharedInstance]isIphoneXOrPlus]){
+        xCardOffset -=20;
+    }
+    float yCardOffset = heightScreen/2-190;
+//    int xOffset = 60;
+    self.communityCardOne = [[UIImageView alloc] initWithFrame:CGRectMake(xCardOffset, yCardOffset, cardWidth, cardHeight)];
     [self.view addSubview:communityCardOne];
     
-    self.communityCardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(15+xOffset, 35, 35*1.5, 49*1.5)];
+    self.communityCardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(xCardOffset+cardWidth+cardSpace, yCardOffset, cardWidth, cardHeight)];
     [self.view addSubview:communityCardTwo];
     
-    self.communityCardThree = [[UIImageView alloc] initWithFrame:CGRectMake(15+xOffset*2, 35, 35*1.5, 49*1.5)];
+    self.communityCardThree = [[UIImageView alloc] initWithFrame:CGRectMake(xCardOffset+2*cardSpace+2*cardWidth, yCardOffset, cardWidth, cardHeight)];
     [self.view addSubview:communityCardThree];
     
-    self.communityCardFour = [[UIImageView alloc] initWithFrame:CGRectMake(15+xOffset*3, 35, 35*1.5, 49*1.5)];
+    self.communityCardFour = [[UIImageView alloc] initWithFrame:CGRectMake(xCardOffset+3*cardSpace+3*cardWidth, yCardOffset, cardWidth, cardHeight)];
     [self.view addSubview:communityCardFour];
     
-    self.communityCardFive = [[UIImageView alloc] initWithFrame:CGRectMake(15+xOffset*4, 35, 35*1.5, 49*1.5)];
+    self.communityCardFive = [[UIImageView alloc] initWithFrame:CGRectMake(xCardOffset+4*cardSpace+4*cardWidth, yCardOffset, cardWidth, cardHeight)];
     [self.view addSubview:communityCardFive];
 
 
-
+    int yButtonOffset = -50;
+    float buttonWidth = 135;
+    float buttonSpace = 20;
+    float buttonMarginLeft =(widthScreen-buttonWidth*2-buttonSpace)/2;
+    float xButtonOffset = buttonMarginLeft;
     
-    self.cardOne = [[UIImageView alloc] initWithFrame:CGRectMake(105, 320, 35*1.5, 50*1.5)];
+    self.cardOne = [[UIImageView alloc] initWithFrame:CGRectMake(widthScreen/2-cardWidth-10, heightScreen/2+yButtonOffset+ 200-25, cardWidth, 50*1.5)];
     [self.view addSubview:cardOne];
-    self.cardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(165, 320, 35*1.5, 50*1.5)];
+    self.cardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(widthScreen/2+10, heightScreen/2+yButtonOffset+ 200-25, cardWidth, 50*1.5)];
     [self.view addSubview:cardTwo];
     
-    
-    
-    
-    int yoffset = -100;
-    
     self.foldButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    foldButton.frame = CGRectMake(20, 258+yoffset, 135, 50);
+    foldButton.frame = CGRectMake(buttonMarginLeft, heightScreen/2+yButtonOffset, buttonWidth, 50);
     [foldButton setTitle:@"Fold" forState:UIControlStateNormal];
     [foldButton setImage:[UIImage imageNamed:@"red_button.png"] forState:UIControlStateNormal];
     //[foldButton setBackgroundColor:[UIColor colorWithRed:0.5 green:0.1 blue:0.1 alpha:1]];
@@ -134,7 +156,7 @@
     [foldButton addSubview:foldLabel];
     
     self.checkCallButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    checkCallButton.frame = CGRectMake(165, 258+yoffset, 135, 49);
+    checkCallButton.frame = CGRectMake(buttonMarginLeft+buttonWidth+buttonSpace, heightScreen/2+yButtonOffset, buttonWidth, 49);
     [checkCallButton setImage:[UIImage imageNamed:@"gray_button.png"] forState:UIControlStateNormal];
     [checkCallButton setTitle:@"Check" forState:UIControlStateNormal];
     //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -150,10 +172,11 @@
     callLabel.minimumFontSize = 12;
     [checkCallButton addSubview:callLabel];
     
-    
-
+    float widthSmallButton = 40;
+    float widthRaiseButton = 180;
+    float xSmallButtonOffset = (widthScreen-widthSmallButton*2-10*2-widthRaiseButton)/2;
     self.decreaseBuyIn = [UIButton buttonWithType:UIButtonTypeCustom];
-    decreaseBuyIn.frame = CGRectMake(20, 325+yoffset, 40, 40);
+    decreaseBuyIn.frame = CGRectMake(xSmallButtonOffset, heightScreen/2+yButtonOffset+ 70 + 2, 40, 40);
     //[decreaseBuyIn setTitle:@"-" forState:UIControlStateNormal];
     [decreaseBuyIn setImage:[UIImage imageNamed:@"blue_minus.png"] forState:UIControlStateNormal];
     decreaseBuyIn.tag = 1;
@@ -162,7 +185,7 @@
     [self.view addSubview:decreaseBuyIn];
     
     self.raiseButton = [MFButton buttonWithType:UIButtonTypeCustom];
-    raiseButton.frame = CGRectMake(70, 320+yoffset, 180, 50);
+    raiseButton.frame = CGRectMake(xSmallButtonOffset+10+widthSmallButton, heightScreen/2+yButtonOffset+ 70, widthRaiseButton, 50);
     [raiseButton setTitle:@"Raise -" forState:UIControlStateNormal];
     [raiseButton setImage:[UIImage imageNamed:@"big_blue_button.png"] forState:UIControlStateNormal];
     //[raiseButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.5 blue:0.1 alpha:1]];
@@ -180,7 +203,7 @@
     
 
     self.increaseBuyIn = [UIButton buttonWithType:UIButtonTypeCustom];
-    increaseBuyIn.frame = CGRectMake(260, 325+yoffset, 40, 40);
+    increaseBuyIn.frame = CGRectMake(xSmallButtonOffset+20+widthRaiseButton+widthSmallButton, heightScreen/2+yButtonOffset+ 70 + 2, 40, 40);
     //[increaseBuyIn setTitle:@"+" forState:UIControlStateNormal];
     increaseBuyIn.tag = 4;
     [increaseBuyIn setImage:[UIImage imageNamed:@"blue_plus.png"] forState:UIControlStateNormal];
@@ -188,7 +211,7 @@
     increaseBuyIn.titleLabel.font = [UIFont boldSystemFontOfSize:30];
     [self.view addSubview:increaseBuyIn];
     
-    self.raiseSlider = [[UISlider alloc] initWithFrame:CGRectMake(20, 385+yoffset, 280, 20)];
+    self.raiseSlider = [[UISlider alloc] initWithFrame:CGRectMake((widthScreen-280)/2, heightScreen/2+yButtonOffset+ 140, 280, 20)];
     [self.view addSubview:raiseSlider];
     [raiseSlider addTarget:self action:@selector(sliderValueChanged:) 
           forControlEvents:UIControlEventValueChanged];
@@ -210,31 +233,36 @@
     
     
     
-    UIImage *userBar = [UIImage imageNamed:@"bet_cell_background.png"];
+    UIImage *userBar = [UIImage imageNamed:@"bet_cell_background"];
     UIImageView *userBarView = [[UIImageView alloc] initWithImage:userBar];
-    userBarView.frame = CGRectMake(0, 344, userBar.size.width/2, userBar.size.height/2);
+    userBarView.frame = CGRectMake((widthScreen-widthScreen)/2, heightScreen/2+yButtonOffset+ 240, widthScreen, userBar.size.height/2);
     userBarView.userInteractionEnabled = YES;
     [self.view addSubview:userBarView];
     
-    self.userStackLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 42, 280, 30)];
+    self.userStackLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, widthScreen-60, 30)];
     userStackLabel.textColor = [UIColor blackColor];
     userStackLabel.font = [UIFont boldSystemFontOfSize:21];
     userStackLabel.textAlignment = UITextAlignmentRight;
     userStackLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
     [userBarView addSubview:userStackLabel];
     
-    self.avatar = [[Avatar alloc] initWithFrame:CGRectMake(9, 7, 56, 56)];
+    UIImage *userPlaceHolder = [UIImage imageNamed:@"bet_cell_avatar"];
+    UIImageView *userPlaceHolderView = [[UIImageView alloc] initWithImage:userPlaceHolder];
+    userPlaceHolderView.frame = CGRectMake(19, -40, 60, 65);
+    
+    self.avatar = [[Avatar alloc] initWithFrame:CGRectMake(20, -40, 56, 56)];
     avatar.radius = 150;
+    [userBarView addSubview:userPlaceHolderView];
     [userBarView addSubview:avatar];
     
-    self.dealerButton = [[UIImageView alloc] initWithFrame:CGRectMake(248, 330, 40, 40)];
+    self.dealerButton = [[UIImageView alloc] initWithFrame:CGRectMake(widthScreen/2+100, heightScreen/2+yButtonOffset+ 200-15, 40, 40)];
     [dealerButton setImage:[UIImage imageNamed:@"dealer_button.png"]];
     [self.view addSubview:dealerButton];
     
     self.greenChip = [UIImage imageNamed:@"green_chip.png"];
     self.yellowChip = [UIImage imageNamed:@"yellow_chip.png"];
     self.redChip = [UIImage imageNamed:@"red_chip.png"];
-    self.chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(283, 39, 32, 32)];
+    self.chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(widthScreen-50, -5, 32, 32)];
     chipImageView.image = yellowChip;
     [userBarView addSubview:chipImageView];
     
