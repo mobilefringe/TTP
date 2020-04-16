@@ -68,7 +68,12 @@ static BOOL testPlayers = NO;
         self.dealerButtonPlacements = [[NSMutableDictionary alloc] init];
         int youPlayerX = 140;
         int xoffset = 16;
-        int yOffset = [[DataManager sharedInstance] isIphoneXOrPlus] ? ([[DataManager sharedInstance] hasNotchedDisplay] ? 260 : 180) : 145;
+        int yOffset;
+        if([[DataManager sharedInstance] isIPhone11Pro]){
+            yOffset = 220;
+        }else{
+            yOffset = ([[DataManager sharedInstance] isIphoneXOrPlus] ? ([[DataManager sharedInstance] hasNotchedDisplay] ? 260 : 180) : 145);
+        }
         //1
         [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)], nil] forKey:@"1"];
         
@@ -125,7 +130,12 @@ static BOOL testPlayers = NO;
         float cardHeight = 37;
         float cardSpace = 29;
         float totalCard = 5;
-        float marginHorizontal = [[DataManager sharedInstance] isIphoneXOrPlus] ? 20*2 : 20;
+        float marginHorizontal;
+        if([[DataManager sharedInstance]isIPhone11Pro]){
+            marginHorizontal = 20;
+        }else{
+            marginHorizontal = [[DataManager sharedInstance] isIphoneXOrPlus] ? 20*2 : 20;
+        }
         float bottomBar = 40;
         float xOffset = self.bounds.size.width - (cardWidth*totalCard) - (cardSpace*(totalCard-1)) - (marginHorizontal);
         
