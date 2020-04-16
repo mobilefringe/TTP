@@ -28,7 +28,7 @@
 
 - (id)initWithFrame:(CGRect)frame delegate:(id)delegate
 {
-    self = [super initWithFrame:CGRectMake(0, 66, 320, 490)];
+    self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     if (self) {
         
         
@@ -37,13 +37,24 @@
         [popupBackgroundImage setImage:[UIImage imageNamed:@"gifts_background.png"]];
         [self addSubview:popupBackgroundImage];
         
-        
+//        self.buyGamePopUp = [[BuyGamePopUp alloc] initWithFrame:CGRectMake(5, 20, 310, 350) delegate:self];
+
+        float xOffset = ([UIScreen mainScreen].bounds.size.width-310)/2 +10;
+        float yOffset = ([UIScreen mainScreen].bounds.size.height-350)/2 + 10;
         UIImage *buyNowImage = [UIImage imageNamed:@"button_buy-now.png"];
-        UIImageView *chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15,30,85,85)];
+        UIImageView *chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset,yOffset,85,85)];
         chipImageView.image = buyNowImage;
         [self addSubview:chipImageView];
         
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, 180, 60)];
+        self.closeButton = [MFButton buttonWithType:UIButtonTypeCustom];
+        closeButton.frame = CGRectMake(xOffset+270, frame.origin.y, 40, 40);
+        [closeButton setImage:[UIImage imageNamed:@"close_button_x.png"] forState:UIControlStateNormal];
+        //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
+        //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
+        [closeButton addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:closeButton];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(xOffset + 100, yOffset+10, 180, 60)];
         titleLabel.textAlignment = UITextAlignmentCenter;
         titleLabel.font = [UIFont boldSystemFontOfSize:26];
         titleLabel.backgroundColor = [UIColor clearColor];
@@ -52,7 +63,7 @@
         titleLabel.text = @"Unlock Game?";
         [self addSubview:titleLabel];
         //[self addSubview:winnerLabel];
-        UILabel *subTitle = [[UILabel alloc] initWithFrame:CGRectMake(105, 150, 180, 85)];
+        UILabel *subTitle = [[UILabel alloc] initWithFrame:CGRectMake(xOffset + 90, yOffset + 120, 180, 85)];
         subTitle.textAlignment = UITextAlignmentCenter;
         subTitle.font = [UIFont boldSystemFontOfSize:12];
         subTitle.backgroundColor = [UIColor clearColor];
@@ -99,7 +110,7 @@
         
         
         
-        UIImageView *proChipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(23, 150, 70, 70)];
+        UIImageView *proChipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(chipImageView.frame.origin.x+10, chipImageView.frame.origin.y+130, 70, 70)];
         proChipImageView.image = [UIImage imageNamed:@"pro_chip_front.png"];
         [self addSubview:proChipImageView];
         
@@ -115,7 +126,7 @@
         
         
         MFButton *buyGiftMFButton = [MFButton buttonWithType:UIButtonTypeCustom];
-        buyGiftMFButton.frame = CGRectMake(60, 255, 200, 40);
+        buyGiftMFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-200)/2, frame.origin.y + frame.size.height - 120, 200, 40);
         [buyGiftMFButton setImage:[UIImage imageNamed:@"big_blue_button.png"] forState:UIControlStateNormal];
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -134,7 +145,7 @@
         
         
         MFButton *buyForTableMFButton = [MFButton buttonWithType:UIButtonTypeCustom];
-        buyForTableMFButton.frame = CGRectMake(60, 275+30, 200, 40);
+        buyForTableMFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-200)/2, frame.origin.y + frame.size.height - 70, 200, 40);
         [buyForTableMFButton setImage:[UIImage imageNamed:@"gray_button.png"] forState:UIControlStateNormal];
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
@@ -157,18 +168,6 @@
         pageControl.hidesForSinglePage = YES;
         [self addSubview:pageControl];
         self.alpha = 0;
-        
-        self.closeButton = [MFButton buttonWithType:UIButtonTypeCustom];
-        closeButton.frame = CGRectMake(270, 20, 40, 40);
-        [closeButton setImage:[UIImage imageNamed:@"close_button_x.png"] forState:UIControlStateNormal];
-        //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
-        //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
-        [closeButton addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:closeButton];
-        
-        
-        
-        
     }
     return self;
 }
@@ -184,6 +183,8 @@
             [delegate joinTournament];
         }
         
+        [self hide];
+    }else{
         [self hide];
     }
 }

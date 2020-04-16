@@ -97,22 +97,24 @@
         
     self.storeViewControllerViewController = [[StoreViewControllerViewController alloc] initWithNibName:nil bundle:nil];
     [storeViewControllerViewController closeStore:NO];
+    
     [navController.navigationBar addSubview:self.navBar];
     
     self.giftSelectionView = [[GiftSelectionView alloc] initWithFrame:CGRectMake(5, 20, 310, 350) delegate:self];
-    [self.window addSubview:giftSelectionView];
+    [navController.view addSubview:giftSelectionView];
+
     [giftSelectionView hide];
     
-    self.buyGamePopUp = [[BuyGamePopUp alloc] initWithFrame:CGRectMake(5, 20, 310, 350) delegate:self];
-    [self.window addSubview:buyGamePopUp];
+    self.buyGamePopUp = [[BuyGamePopUp alloc] initWithFrame:CGRectMake((self.window.bounds.size.width-310)/2, (self.window.bounds.size.height-350)/2, 310, 350) delegate:self];
+    [navController.view addSubview:buyGamePopUp];
     [buyGamePopUp hide];
     
-    [self.window addSubview:storeViewControllerViewController.view];
+    [navController.view addSubview:storeViewControllerViewController.view];
+    
     self.updatingPopUp = [[UpdatingPopUp alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
-    [self.window addSubview:updatingPopUp];
+    [navController.view addSubview:updatingPopUp];
     
     self.window.rootViewController = self.navController;
-
     [self.window makeKeyAndVisible];
     
     [[StoreFront sharedStore] loadProducts];
