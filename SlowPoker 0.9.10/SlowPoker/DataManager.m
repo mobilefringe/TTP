@@ -916,7 +916,7 @@ static int achivementQueueLimit = 3;
         // NSLog(@"loadNewMessages Request:%@",jsonString);
         NSMutableDictionary *results = [[APIDataManager sharedInstance] getLastMessage:jsonString];
         
-        // NSLog(@"loadNewMessages Results:%@",results);
+         NSLog(@"loadNewMessages Results:%@",results);
         
         [self performSelectorOnMainThread:@selector(fetchedNewMessages:) 
                                withObject:results waitUntilDone:YES];
@@ -3829,7 +3829,9 @@ static int achivementQueueLimit = 3;
     return [UIScreen mainScreen].bounds.size.height ==736;
 }
 
-
+-(BOOL)isIPhone11Pro{
+    return [[UIScreen mainScreen] nativeBounds].size.height==2436;
+}
 
 /*
 -(double)getCallValueForCurrentPlayer{

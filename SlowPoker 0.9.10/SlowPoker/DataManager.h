@@ -271,4 +271,5 @@
 -(BOOL)hasNotchedDisplay;
 -(BOOL)isIphoneXOrPlus;
 -(BOOL)isIphonePlus;
+-(BOOL)isIPhone11Pro;
 @end
