@@ -41,6 +41,8 @@ static BOOL showAllCards = NO;
 {
     self = [super initWithFrame:frame];
     if (self) {
+        float widthScreen = self.bounds.size.width;
+        float heightScreen = self.bounds.size.height;
         // Initialization code
         self.whiteBlock = [[UIView alloc] initWithFrame:CGRectMake(90, 0, 320, 90)];
         whiteBlock.backgroundColor = [UIColor whiteColor];
@@ -59,29 +61,34 @@ static BOOL showAllCards = NO;
         self.blueFelt = [UIImage imageNamed:@"blue_felt.png"];
         self.redFelt = [UIImage imageNamed:@"red_felt.png"];
         self.background = [[UIImageView alloc] initWithImage:greenFelt];
-        background.frame = CGRectMake(0, 0, greenFelt.size.width/2, greenFelt.size.height/2);
+        background.frame = CGRectMake((widthScreen-greenFelt.size.width/2)/2, 0, greenFelt.size.width/2, greenFelt.size.height/2);
         [self addSubview:background];
         
-        int xOffset = 35;
-        self.communityCardOne = [[UIImageView alloc] initWithFrame:CGRectMake(73, 34, 30, 43)];
+        int cardSpace = 35;
+        int cardWidth = 30;
+        int cardHeight = 43;
+        float xCenter = widthScreen/2;
+        int xOffset = xCenter+cardWidth/2-2*cardSpace-cardWidth;
+        
+        self.communityCardOne = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset, 34, cardWidth, cardHeight)];
         [self addSubview:communityCardOne];
         
-        self.communityCardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(73+xOffset, 34, 30, 43)];
+        self.communityCardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset+cardSpace, 34, cardWidth, cardHeight)];
         [self addSubview:communityCardTwo];
         
-        self.communityCardThree = [[UIImageView alloc] initWithFrame:CGRectMake(73+xOffset*2, 34, 30, 43)];
+        self.communityCardThree = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset+2*cardSpace, 34, cardWidth, cardHeight)];
         [self addSubview:communityCardThree];
         
-        self.communityCardFour = [[UIImageView alloc] initWithFrame:CGRectMake(73+xOffset*3, 34, 30, 43)];
+        self.communityCardFour = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset+3*cardSpace, 34, cardWidth, cardHeight)];
         [self addSubview:communityCardFour];
         
-        self.communityCardFive = [[UIImageView alloc] initWithFrame:CGRectMake(73+xOffset*4, 34, 30, 43)];
+        self.communityCardFive = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset+4*cardSpace, 34, cardWidth, cardHeight)];
         [self addSubview:communityCardFive];
         
         //self.backgroundColor = [UIColor clearColor];
         
         
-        self.handNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 111, 320, 15)];
+        self.handNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 111, widthScreen, 15)];
         handNumberLabel.font = [UIFont boldSystemFontOfSize:10];
         handNumberLabel.textAlignment = UITextAlignmentCenter;
         handNumberLabel.backgroundColor = [UIColor clearColor];
@@ -99,7 +106,7 @@ static BOOL showAllCards = NO;
         potLabel.textColor = [UIColor whiteColor];
         [self addSubview:potLabel];*/
         
-        self.winnerLabel = [[UILabel alloc] initWithFrame:CGRectMake(98-22, 10, 124+44, 21)];
+        self.winnerLabel = [[UILabel alloc] initWithFrame:CGRectMake((widthScreen-(124+44))/2, 10, 124+44, 21)];
         winnerLabel.textAlignment = UITextAlignmentCenter;
         winnerLabel.font = [UIFont boldSystemFontOfSize:15];
         winnerLabel.backgroundColor = [UIColor clearColor];
@@ -108,7 +115,7 @@ static BOOL showAllCards = NO;
         winnerLabel.textColor = [UIColor whiteColor];
         [self addSubview:winnerLabel];
         
-        self.winnerType = [[UILabel alloc] initWithFrame:CGRectMake(74, 83, 170, 15)];
+        self.winnerType = [[UILabel alloc] initWithFrame:CGRectMake((widthScreen-170)/2, 83, 170, 15)];
         winnerType.textAlignment = UITextAlignmentCenter;
         winnerType.font = [UIFont boldSystemFontOfSize:14];
         winnerType.adjustsFontSizeToFitWidth = YES;
@@ -126,7 +133,7 @@ static BOOL showAllCards = NO;
         
         self.handSummaryButton = [UIButton buttonWithType:UIButtonTypeCustom];
         handSummaryButton.backgroundColor = [UIColor clearColor];
-        handSummaryButton.frame = CGRectMake(0, 0, 320, 110);
+        handSummaryButton.frame = CGRectMake(0, 0, widthScreen, 110);
         [handSummaryButton addTarget:self action:@selector(pressHandSummary) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:handSummaryButton];
 

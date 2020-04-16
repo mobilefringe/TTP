@@ -112,12 +112,13 @@ static float bottomBarHeight = 40;
     flipView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:flipView];
     
-    self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+//    self._tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    self._tableView = [[UITableView alloc] initWithFrame: CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding-topbarHeight-bottomBarHeight) style:(UITableViewStyle)UITableViewStylePlain];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.rowHeight = 72;
     _tableView.scrollsToTop = YES;
-    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-40);
+    _tableView.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding-topbarHeight-bottomBarHeight);
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.separatorColor = [UIColor blackColor];
     [_tableView addPullToRefreshWithActionHandler:^{
@@ -337,6 +338,7 @@ static float bottomBarHeight = 40;
     float topPadding = (float) [[DataManager sharedInstance] getTopPadding];
     woodBackground.frame = CGRectMake(0, topbarHeight, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding-topbarHeight-bottomBarHeight);
     updatingMessage.hidden = YES;
+    self._tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-bottomPadding-topbarHeight-bottomBarHeight) ;
     [super viewWillAppear:animated];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.buyGamePopUp.delegate = self;

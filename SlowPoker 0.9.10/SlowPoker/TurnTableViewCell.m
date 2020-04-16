@@ -57,18 +57,18 @@
         
         
         
-        self.roundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 70)];
+        self.roundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 70)];
         roundView.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:roundView];
         
-        int y = 90;
-        self.cardOne = [[UIImageView alloc] initWithFrame:CGRectMake(y, 3, 35, 50)];
+        int xOffset = [UIScreen mainScreen].bounds.size.width/2-35/2-40/2;
+        self.cardOne = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset, 3, 35, 50)];
         [roundView addSubview:cardOne];
-        self.cardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(y+40, 3, 35, 50)];
+        self.cardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(xOffset+40, 3, 35, 50)];
         [roundView addSubview:cardTwo];
 
         
-        UIImage *background = [UIImage imageNamed:@"bet_cell_background.png"];
+        UIImage *background = [UIImage imageNamed:@"bet_table_cell_background.png"];
         UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:background];
         backgroundImage.frame = CGRectMake(0, 0, background.size.width/2, background.size.height/2);
         backgroundImage.userInteractionEnabled = YES;
@@ -90,7 +90,7 @@
         userNameLabel.backgroundColor = [UIColor clearColor];
         [roundView addSubview:userNameLabel];
         
-        self.chipStackLabel = [[UILabel alloc] initWithFrame:CGRectMake(215, 45, 74, 25)];
+        self.chipStackLabel = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-30-75, 45, 74, 25)];
         chipStackLabel.font = [UIFont boldSystemFontOfSize:16];
         chipStackLabel.adjustsFontSizeToFitWidth = YES;
         chipStackLabel.minimumFontSize = 10;
@@ -102,12 +102,12 @@
         self.greenChip = [UIImage imageNamed:@"green_chip.png"];
         self.yellowChip = [UIImage imageNamed:@"yellow_chip.png"];
         self.redChip = [UIImage imageNamed:@"red_chip.png"];
-        self.chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(290, 46, greenChip.size.width/2+2, greenChip.size.height/2+2)];
+        self.chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-30, 46, greenChip.size.width/2+2, greenChip.size.height/2+2)];
         chipImageView.image = yellowChip;
         [roundView addSubview:chipImageView];
         
-        self.actionName = [[UILabel alloc] initWithFrame:CGRectMake(180, 0, 126, 45)];
-        actionName.font = [UIFont boldSystemFontOfSize:20];
+        self.actionName = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-140, 0, 130, 45)];
+        actionName.font = [UIFont boldSystemFontOfSize:19];
         actionName.textAlignment = UITextAlignmentRight;
         actionName.numberOfLines = 2;
         actionName.textColor = [UIColor whiteColor];
@@ -118,12 +118,12 @@
         
         UIImage *handStateImage = [UIImage imageNamed:@"hand_state_background.png"];
         self.handStateBackground = [[UIImageView alloc] initWithImage:handStateImage];
-        handStateBackground.frame = CGRectMake(0, 0, handStateImage.size.width/2, handStateImage.size.height/2);
+        handStateBackground.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width-handStateImage.size.width/2)/2, 0, handStateImage.size.width/2, handStateImage.size.height/2);
         [self.contentView addSubview:handStateBackground];
         
-        self.handState = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 25)];
+        self.handState = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, handStateBackground.bounds.size.width, 25)];
         handState.font = [UIFont boldSystemFontOfSize:15];
-        handState.textAlignment = UITextAlignmentCenter;
+        handState.textAlignment = NSTextAlignmentCenter;
         handState.textColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
         handState.backgroundColor = [UIColor clearColor];
         [handStateBackground addSubview:handState];
@@ -144,12 +144,12 @@
 
         
         self.betButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        betButton.frame = CGRectMake(180, 2, 132, 42);
+        betButton.frame = CGRectMake( [UIScreen mainScreen].bounds.size.width-140, 2, 132, 42);
         [betButton setImage:[UIImage imageNamed:@"blue_wide.png"] forState:UIControlStateNormal];
         [roundView addSubview:betButton];
         
         self.nudgeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        nudgeButton.frame = CGRectMake(180, 2, 132, 42);
+        nudgeButton.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-140, 2, 132, 42);
         [nudgeButton setImage:[UIImage imageNamed:@"nudge_button2.png"] forState:UIControlStateNormal];
 
         [roundView addSubview:nudgeButton];
@@ -185,7 +185,7 @@
         betButtonLabel.textAlignment = UITextAlignmentCenter;
         betButtonLabel.textColor = [UIColor whiteColor];
         betButtonLabel.adjustsFontSizeToFitWidth = YES;
-        betButtonLabel.minimumFontSize = 8;
+        betButtonLabel.minimumFontSize = 6;
         betButtonLabel.text = @"";
         betButtonLabel.backgroundColor = [UIColor clearColor];
         [betButton addSubview:betButtonLabel];
@@ -224,10 +224,10 @@
     }
     
     if([dataDict valueForKey:@"HAND_STATE"] && [[dataDict valueForKey:@"HAND_STATE"] length] > 0){
-       roundView.frame = CGRectMake(0, 25, 320, 72);
+       roundView.frame = CGRectMake(0, 25, [UIScreen mainScreen].bounds.size.width, 72);
         handStateBackground.hidden = NO;
     }else{
-       roundView.frame = CGRectMake(0, 0, 320, 72);
+       roundView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 72);
         handStateBackground.hidden = YES;
     }
     
