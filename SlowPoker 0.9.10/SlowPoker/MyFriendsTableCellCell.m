@@ -62,7 +62,7 @@
         
         
         
-        self.activeGamesLabel = [[UILabel alloc] initWithFrame:CGRectMake(215, 8, 60, 30)];
+        self.activeGamesLabel = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-30-60, 8, 60, 30)];
         activeGamesLabel.textColor = [UIColor colorWithRed:1 green:1 blue:.3 alpha:1];
         activeGamesLabel.backgroundColor = [UIColor clearColor];
         //activeGamesLabel.adjustsFontSizeToFitWidth = YES;
@@ -72,7 +72,7 @@
         activeGamesLabel.font = [UIFont boldSystemFontOfSize:12];
         [self.contentView addSubview:activeGamesLabel];
         
-        self.activeGamesValue = [[UILabel alloc] initWithFrame:CGRectMake(215, 37, 60, 30)];
+        self.activeGamesValue = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-30-60, 37, 60, 30)];
         activeGamesValue.textColor = [UIColor whiteColor];
         activeGamesValue.backgroundColor = [UIColor clearColor];
         activeGamesValue.adjustsFontSizeToFitWidth = YES;
