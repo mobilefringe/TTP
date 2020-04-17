@@ -693,34 +693,37 @@ static int achivementQueueLimit = 3;
 
 - (void)fetchedGameDetails:(NSMutableDictionary *)game{
     //isGameDetailsUpdating = NO;
-    self.currentGame = game;
-    self.currentGameID = [currentGame valueForKey:@"gameID"];
-    self.currentTurnUserID = [currentGame valueForKey:@"nextActionForUserID"];
-    NSMutableDictionary *currentPlayer = [[DataManager sharedInstance] getCurrentPlayerForCurrentGame];
-    self.currentTurnUserName = [currentPlayer valueForKey:@"userName"];
-    //NSLog(@"currentGame:%@",currentGame);
-    self.lastUpdatedDate = [utcFormatter dateFromString:[currentGame valueForKey:@"lastUpdated"]];
-   
-    
-    
-    
-    /*
-    self.gameMessages = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:gameMessagesKey]];
-    if(!gameMessages){
-        self.gameMessages = [[NSMutableArray alloc] initWithCapacity:0];
-    }*/
-   // NSLog(@"game:%@",game);
-    NSMutableArray *hands = [[currentGame objectForKey:@"gameState"] objectForKey:@"hands"];
-    if([hands count] > 0){
-        self.currentHand = [hands objectAtIndex:0];
-    }else{
-        self.currentHand = nil;
-    }
-    self.gameDetailsUpdates = YES;
-    if([self isMyTurn:currentGame]){
-        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
-    }else{
-        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+//    NSLog(@"Dictionary: %@", [game description]);
+    if(game && [game count] > 0){
+        self.currentGame = game;
+         self.currentGameID = [currentGame valueForKey:@"gameID"];
+         self.currentTurnUserID = [currentGame valueForKey:@"nextActionForUserID"];
+         NSMutableDictionary *currentPlayer = [[DataManager sharedInstance] getCurrentPlayerForCurrentGame];
+         self.currentTurnUserName = [currentPlayer valueForKey:@"userName"];
+         //NSLog(@"currentGame:%@",currentGame);
+         self.lastUpdatedDate = [utcFormatter dateFromString:[currentGame valueForKey:@"lastUpdated"]];
+        
+         
+         
+         
+         /*
+         self.gameMessages = [NSMutableArray arrayWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:gameMessagesKey]];
+         if(!gameMessages){
+             self.gameMessages = [[NSMutableArray alloc] initWithCapacity:0];
+         }*/
+        // NSLog(@"game:%@",game);
+         NSMutableArray *hands = [[currentGame objectForKey:@"gameState"] objectForKey:@"hands"];
+         if([hands count] > 0){
+             self.currentHand = [hands objectAtIndex:0];
+         }else{
+             self.currentHand = nil;
+         }
+         self.gameDetailsUpdates = YES;
+         if([self isMyTurn:currentGame]){
+             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+         }else{
+             [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+         }
     }
 }
 
