@@ -17,7 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
-        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(60, 160, 200, 150)];
+        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-200)/2, ([UIScreen mainScreen].bounds.size.height-150)/2, 200, 150)];
         background.image = [UIImage imageNamed:@"updating_overlay.png"];
         [self addSubview:background];
         
