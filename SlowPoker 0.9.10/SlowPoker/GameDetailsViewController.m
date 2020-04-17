@@ -49,7 +49,7 @@
     [super loadView];
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityIndicatorView.frame = CGRectMake(140, 70, 40, 40);
+    activityIndicatorView.frame = CGRectMake((self.view.bounds.size.width-40)/2, 70, 40, 40);
     //[self.view addSubview:activityIndicatorView];
     activityIndicatorView.hidesWhenStopped = YES;
     [activityIndicatorView stopAnimating];

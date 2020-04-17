@@ -74,7 +74,7 @@
     [self.view addSubview:_tableView];
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-	activityIndicatorView.frame = CGRectMake(150, 170, 20, 20);
+	activityIndicatorView.frame = CGRectMake((self.view.bounds.size.width-20)/2, (self.view.bounds.size.height-20)/2, 20, 20);
     activityIndicatorView.hidesWhenStopped = YES;
     [activityIndicatorView stopAnimating];
     [self.view addSubview:activityIndicatorView];

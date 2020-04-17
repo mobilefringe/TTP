@@ -17,7 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
-        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-200)/2, ([UIScreen mainScreen].bounds.size.height-150)/2, 200, 150)];
+        UIImageView *background = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-220)/2, ([UIScreen mainScreen].bounds.size.height-150)/2, 220, 150)];
         background.image = [UIImage imageNamed:@"updating_overlay.png"];
         [self addSubview:background];
         
@@ -28,7 +28,7 @@
         [activityIndicatorView startAnimating];
         [background addSubview:activityIndicatorView];
         
-        self.message = [[UILabel alloc] initWithFrame:CGRectMake(15, 35, 170, 40)];
+        self.message = [[UILabel alloc] initWithFrame:CGRectMake(10, 35, 200, 40)];
         message.backgroundColor = [UIColor clearColor];
         message.textColor = [UIColor whiteColor];
         message.numberOfLines = 2;
