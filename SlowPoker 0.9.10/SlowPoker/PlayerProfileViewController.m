@@ -122,11 +122,11 @@
 -(void)viewWillAppear:(BOOL)animated{
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate updateHeaderWithTitle:@"Player Profile"];
-    //if(needsReload){
+    if(needsReload){
         [[DataManager sharedInstance] loadPlayerProfile:userID];
         [activityIndicatorView startAnimating];
         _tableView.alpha = 0;
-    //}
+    }
     
     if([Settings isFavoritePlayer:userID]){
 		self.favoritesButton.image = self.favoritesImageSelected;
@@ -238,6 +238,7 @@
         [[DataManager sharedInstance] incrementAchievement:earnedAchievement forUser:[DataManager sharedInstance] .myUserID];
     }
     [[DataManager sharedInstance].avatars removeAllObjects];
+    [self._tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
     [self dismissModalViewControllerAnimated:YES];
 }
 
