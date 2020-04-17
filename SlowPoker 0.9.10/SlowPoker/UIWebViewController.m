@@ -40,11 +40,9 @@
 	UIImageView *imageView = [[UIImageView alloc] initWithImage:backgroundImage];
 	//imageView.frame = CGRectMake(0, 50, 320, 350);
 	[self.view addSubview:imageView];
-	
-	
-	
-    float bottomBar = 40;
-	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, topbarHeight+10, self.view.bounds.size.width, self.view.bounds.size.height-([[DataManager sharedInstance] getBottomPadding] + 50 + 10+bottomBar))];
+	float bottomBar = 50;
+	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, topbarHeight+10, self.view.bounds.size.width, self.view.bounds.size.height-bottomBar-topbarHeight-10)];
+    
 	webView.scalesPageToFit = YES;
 	webView.delegate = self;
 	webView.hidden = YES;
