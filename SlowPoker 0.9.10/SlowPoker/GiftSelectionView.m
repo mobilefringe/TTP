@@ -25,20 +25,23 @@
 
 - (id)initWithFrame:(CGRect)frame delegate:(id)delegate
 {
-    self = [super initWithFrame:CGRectMake(0, 66, 320, 490)];
+    self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     if (self) {
         
-        
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+        UIView *blackbackground = [[UIView alloc] initWithFrame:CGRectMake((self.bounds.size.width-320)/2, (self.bounds.size.height-490)/2, self.bounds.size.width, self.bounds.size.height)];
+
+//        blackbackground.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
+        [self addSubview: blackbackground];
         self.popupBackgroundImage = [[UIImageView alloc] initWithFrame:frame];
         [popupBackgroundImage setImage:[UIImage imageNamed:@"gifts_background.png"]];
-        [self addSubview:popupBackgroundImage];
+        [blackbackground addSubview:popupBackgroundImage];
         
         
         UIImage *buyNowImage = [UIImage imageNamed:@"button_buy-now.png"];
         UIImageView *chipImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15,30,85,85)];
         chipImageView.image = buyNowImage;
-        [self addSubview:chipImageView];
+        [blackbackground addSubview:chipImageView];
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 40, 180, 28)];
         titleLabel.textAlignment = UITextAlignmentCenter;
@@ -46,7 +49,7 @@
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = [UIColor colorWithRed:1 green:1 blue:.3 alpha:1];
         titleLabel.text = @"Gift Shop";
-        [self addSubview:titleLabel];
+        [blackbackground addSubview:titleLabel];
         //[self addSubview:winnerLabel];
         UILabel *subTitle = [[UILabel alloc] initWithFrame:CGRectMake(105, 65, 180, 45)];
         subTitle.textAlignment = UITextAlignmentLeft;
@@ -57,12 +60,12 @@
         subTitle.numberOfLines = 3;
         subTitle.text = @"Buy a gift for players to let'em know how you really feel!";
         subTitle.textColor = [UIColor whiteColor];
-        [self addSubview:subTitle];
+        [blackbackground addSubview:subTitle];
 
         
         self.scroll = [[UIScrollView alloc] initWithFrame:CGRectMake(19, 139,282,215 )];
         scroll.backgroundColor = [UIColor clearColor];//[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-        [self addSubview:scroll];
+        [blackbackground addSubview:scroll];
         
         
         int x = 0;
@@ -100,7 +103,7 @@
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
         [buyGiftMFButton addTarget:self action:@selector(buyGiftForUser) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:buyGiftMFButton];
+        [blackbackground addSubview:buyGiftMFButton];
         
         UILabel *buyGiftLabel = [[UILabel alloc] initWithFrame:buyGiftMFButton.bounds];
         buyGiftLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -119,7 +122,7 @@
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
         [buyForTableMFButton addTarget:self action:@selector(buyGiftForTable) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:buyForTableMFButton];
+        [blackbackground addSubview:buyForTableMFButton];
         
         UILabel *buyForTableLabel = [[UILabel alloc] initWithFrame:buyForTableMFButton.bounds];
         buyForTableLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -135,7 +138,7 @@
         
         self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(45, 255, 230, 20)];
         pageControl.hidesForSinglePage = YES;
-        [self addSubview:pageControl];
+        [blackbackground addSubview:pageControl];
         self.alpha = 0;
         
         self.closeButton = [MFButton buttonWithType:UIButtonTypeCustom];
@@ -144,7 +147,7 @@
         //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
         //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
         [closeButton addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:closeButton];
+        [blackbackground addSubview:closeButton];
         
     
         
