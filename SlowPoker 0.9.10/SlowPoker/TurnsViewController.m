@@ -687,9 +687,9 @@ static float bottomBarHeight = 40;
             [self pressNudge];
         }
     }else if(alertView == gameOverAlert){
-        if (buttonIndex == 1) {
+//        if (buttonIndex == 0) {
 //            [self pressGameStats];
-        }
+//        }
     }else if(alertView == gameOverAlertWithRematch){
         if (buttonIndex == 1) {
             
@@ -712,9 +712,10 @@ static float bottomBarHeight = 40;
             
             
             
-        }else if(buttonIndex == 2){
-//            [self pressGameStats];
         }
+//        else if(buttonIndex == 2){
+//            [self pressGameStats];
+//        }
     }else if(alertView == noOneLeftAlert){
         if(buttonIndex == 1){
             [[DataManager sharedInstance] leaveCurrentGame];
@@ -982,11 +983,11 @@ static float bottomBarHeight = 40;
     }
     if([[DataManager sharedInstance] isCurrentGameComplete] || [[[[DataManager sharedInstance] getPlayerMeForCurrentGame] valueForKey:@"status"] isEqualToString:@"out"]){
         if(!gameOverAlert){
-            self.gameOverAlert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Game Stats", nil];
+            self.gameOverAlert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
         }
         
         if(!gameOverAlertWithRematch){
-            self.gameOverAlertWithRematch = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Rematch",@"Game Stats", nil];
+            self.gameOverAlertWithRematch = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Rematch", nil];
         }
         
         NSArray *gameWinners = [[DataManager sharedInstance] determinGameWinnerForCurrentGame];
