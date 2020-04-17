@@ -56,7 +56,7 @@
         self.value = [[UILabel alloc] initWithFrame:CGRectMake(9.5, 11.5, 22, 16)];
         value.font = [UIFont boldSystemFontOfSize:16];
         value.adjustsFontSizeToFitWidth = YES;
-        value.minimumFontSize = 12;
+        value.minimumFontSize = 11;
         value.textAlignment = UITextAlignmentCenter;
         value.backgroundColor = [UIColor clearColor];
         value.textColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
