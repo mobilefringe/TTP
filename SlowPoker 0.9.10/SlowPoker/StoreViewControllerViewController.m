@@ -37,15 +37,13 @@
 
 -(void)loadView{
     [super loadView];
-    self.view.backgroundColor = [UIColor clearColor];
-    
-    UIView *blackbackground = [[UIView alloc] initWithFrame:CGRectMake(0, 47, 320, 450)];
+    self.view.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.9];
+    UIView *blackbackground = [[UIView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-320)/2, (self.view.bounds.size.height-490)/2, self.view.bounds.size.width, self.view.bounds.size.height)];
     blackbackground.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.9];
     [self.view addSubview:blackbackground];
-    
     UIImageView *background = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"store_background.png"]];
     background.frame = CGRectMake(20, 50, 280, 393);
-    [self.view addSubview:background];
+    [blackbackground addSubview:background];
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(13, 11, 254, 33)];
     titleLabel.font = [UIFont boldSystemFontOfSize:30];
@@ -75,13 +73,13 @@
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.frame = CGRectMake(32.5, 143, 255, 242);
     _tableView.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:_tableView];
+    [blackbackground addSubview:_tableView];
     
     loadingIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     loadingIndicator.frame = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/2-40, 25, 25);
 	loadingIndicator.hidesWhenStopped = YES;
 	[loadingIndicator startAnimating];
-	[self.view addSubview:loadingIndicator];
+	[blackbackground addSubview:loadingIndicator];
     
     
     self.cancelButton = [MFButton buttonWithType:UIButtonTypeCustom];
@@ -90,7 +88,7 @@
     //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
     //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
     [cancelButton addTarget:self action:@selector(closeStoreAnimated) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:cancelButton];
+    [blackbackground addSubview:cancelButton];
     
     self.cancelLabel = [[UILabel alloc] initWithFrame:cancelButton.bounds];
     cancelLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -109,7 +107,7 @@
     //[canclelButton setTitle:@"Check" forState:UIControlStateNormal];
     //[checkCallButton setBackgroundColor:[UIColor colorWithRed:0.1 green:0.3 blue:0.5 alpha:1]];
     [learnMoreButton addTarget:self action:@selector(learnMore) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:learnMoreButton];
+    [blackbackground addSubview:learnMoreButton];
     
     UILabel *learnMoreLabel = [[UILabel alloc] initWithFrame:cancelButton.bounds];
     learnMoreLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -213,7 +211,8 @@
     
     [self closeStore:YES];
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSString* escapedUrlString =[@"http://www.texasturnpoker.com/faq/proChips" stringByAddingPercentEscapesUsingEncoding:
+    NSString *urlString = [NSString stringWithFormat:@"%@/faq/proChips",(NSString *)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"apiURL"]];
+    NSString* escapedUrlString =[urlString stringByAddingPercentEscapesUsingEncoding:
                                  NSUTF8StringEncoding];
     [appDelegate goToWebViewControllerWithURL:escapedUrlString withTitle:@"Pro Chips"];
 }
