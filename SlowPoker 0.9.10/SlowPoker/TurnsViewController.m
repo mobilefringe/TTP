@@ -747,6 +747,11 @@ static float bottomBarHeight = 40;
     if([joinTournamentAlert isVisible] || [buyInAlert isVisible] || ![[DataManager sharedInstance] hasMoreThanOnePlayerForCurrentGame] || [leaveGameAlert isVisible] || [cantDeleletGame isVisible]){
         return;
     }
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    if([appDelegate buyGamePopUp].alpha == 1){
+        return;
+    }
+    
     NSMutableDictionary *currentPlayer = [[DataManager sharedInstance] getPlayerMeForCurrentGame];
     if([[DataManager sharedInstance] isCurrentGameTypeCash]){
         if([@"pending" isEqualToString:[currentPlayer objectForKey:@"status"]]){
