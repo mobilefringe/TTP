@@ -120,24 +120,32 @@
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate updateHeaderWithTitle:@"Player Profile"];
+    [super viewWillAppear:animated];
     if(needsReload){
-        [[DataManager sharedInstance] loadPlayerProfile:userID];
         [activityIndicatorView startAnimating];
         _tableView.alpha = 0;
     }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate updateHeaderWithTitle:@"Player Profile"];
     
     if([Settings isFavoritePlayer:userID]){
-		self.favoritesButton.image = self.favoritesImageSelected;
-	}else{
-		self.favoritesButton.image = self.favoritesImageUnSelected;
-	}
+        self.favoritesButton.image = self.favoritesImageSelected;
+    }else{
+        self.favoritesButton.image = self.favoritesImageUnSelected;
+    }
     
     if([userID isEqualToString:[DataManager sharedInstance].myUserID]){
         self.navigationItem.rightBarButtonItem = nil;
     }else{
         self.navigationItem.rightBarButtonItem = favoritesButton;
+    }
+    if(needsReload){
+        [[DataManager sharedInstance] loadPlayerProfile:userID];
+        [_tableView reloadData];
     }
 }
 
