@@ -47,7 +47,7 @@
         titleLabel.font = [UIFont boldSystemFontOfSize:17];
         [self addSubview:titleLabel];
         
-        self.descriptionLabel = [[UITextView alloc] initWithFrame:CGRectMake(80, 18, 170, 50)];
+        self.descriptionLabel = [[UITextView alloc] initWithFrame:CGRectMake(80, 18, 170, 60)];
         descriptionLabel.editable = NO;
         descriptionLabel.backgroundColor = [UIColor clearColor];
         descriptionLabel.textAlignment = UITextAlignmentCenter;
@@ -147,7 +147,7 @@
         proChipImageView.hidden = NO;
         proChipsLabel.hidden = NO;
         titleLabel.frame = CGRectMake(80, 5, 170, 20);
-        descriptionLabel.frame = CGRectMake(80, 18, 170, 50);
+        descriptionLabel.frame = CGRectMake(80, 18, 170, 60);
     }
 }
 
