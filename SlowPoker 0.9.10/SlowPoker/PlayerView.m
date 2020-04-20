@@ -68,8 +68,8 @@
     self.backgroundBlue = [UIImage imageNamed:@"player_view_player_background_blue.png"];
     
     self.dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"dd:HH:mm:ss"];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 
     
     
@@ -420,15 +420,13 @@
 }
 
 -(void)updateLastMoveTimer{
-    
     dispatch_async(kBgQueue, ^{
         NSDate *currentDate = [NSDate date];
         NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:[DataManager sharedInstance].lastUpdatedDate];
         // NSLog(@"currentDate:%@   lastUpdatedDate:%@",currentDate,[DataManager sharedInstance].lastUpdatedDate);
         NSDate *timerDate = [NSDate dateWithTimeIntervalSince1970:timeInterval];
-        
-        NSString *timeString=[dateFormatter stringFromDate:timerDate];
-        
+        int daysAgo = timeInterval / 86400;
+        NSString *timeString=[[NSString alloc]initWithFormat:@"%i:%@",daysAgo, [dateFormatter stringFromDate:timerDate]];
         [actionLabel performSelectorOnMainThread:@selector(setText:) 
                                      withObject:timeString waitUntilDone:NO];
     });    
