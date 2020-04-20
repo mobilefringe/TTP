@@ -41,10 +41,10 @@
 	//imageView.frame = CGRectMake(0, 50, 320, 350);
 	[self.view addSubview:imageView];
 	float bottomBar = 50;
-	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, topbarHeight+10, self.view.bounds.size.width, self.view.bounds.size.height-bottomBar-topbarHeight-10)];
+	webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, topbarHeight+10, self.view.bounds.size.width, self.view.bounds.size.height-bottomBar-topbarHeight-10)];
     
-	webView.scalesPageToFit = YES;
-	webView.delegate = self;
+//	webView.scalesPageToFit = YES;    
+    webView.navigationDelegate = self;
 	webView.hidden = YES;
 	[self.view addSubview:webView];
 	
@@ -125,39 +125,34 @@
 	self.urlRequest = fileName;
 }
 
-
-
-
-- (void)webViewDidStartLoad:(UIWebView *)webView2{
-	[loadingIndicator startAnimating];
-	
-	
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    [loadingIndicator startAnimating];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView2{
-	webView.hidden = NO;
-	[loadingIndicator stopAnimating];
-	if([webView canGoBack]){
-		backButton.image = backEnabled;
-		backButton.enabled = YES;
-	}else{
-		backButton.image = backDisabled;
-		backButton.enabled = NO;
-		
-	}
-	
-	if([webView canGoForward]){
-		forwardButton.image = forwardEnabled;
-		forwardButton.enabled = YES;
-	}else{
-		forwardButton.image = forwardDisabled;
-		forwardButton.enabled = NO;
-	}
-	
-	
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
+    NSLog(@" did  fail naviagtion web %@", error);
 }
 
-
+- (void) webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    webView.hidden = NO;
+    [loadingIndicator stopAnimating];
+    if([webView canGoBack]){
+        backButton.image = backEnabled;
+        backButton.enabled = YES;
+    }else{
+        backButton.image = backDisabled;
+        backButton.enabled = NO;
+        
+    }
+    
+    if([webView canGoForward]){
+        forwardButton.image = forwardEnabled;
+        forwardButton.enabled = YES;
+    }else{
+        forwardButton.image = forwardDisabled;
+        forwardButton.enabled = NO;
+    }
+}
 
 
 -(void)shareContent{

@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
 @class AppDelegate;
 
-@interface UIWebViewController : UIViewController<UIWebViewDelegate,UIActionSheetDelegate> {
+@interface UIWebViewController : UIViewController<WKNavigationDelegate,UIActionSheetDelegate> {
 	UIImage *backgroundImage;
-	UIWebView *webView;
+	WKWebView *webView;
 	UIActivityIndicatorView *loadingIndicator;
 	NSURLRequest *requestObj;
 	NSString *urlRequest;

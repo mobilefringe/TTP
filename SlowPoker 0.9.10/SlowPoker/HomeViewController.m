@@ -241,8 +241,7 @@
 }
 
 -(void)pressFaceBook{
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate goToWebViewControllerWithURL:@"http://www.facebook.com/TexasTurnPoker" withTitle:@"Facebook"];
+    
 }
 
 

@@ -16,6 +16,7 @@
 		842FF99024441F1D007ECDBD /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842FF98F24441F1D007ECDBD /* UserNotifications.framework */; };
 		8484D7632434452800E2FA52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7622434452800E2FA52 /* Images.xcassets */; };
 		8484D7652434455000E2FA52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7642434455000E2FA52 /* Launch Screen.storyboard */; };
+		84C51809244D817D00838A6A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C51808244D817D00838A6A /* WebKit.framework */; };
 		C80423C3157B0DD500B4F372 /* SlowPokerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */; };
 		C80691FA153F8EB7005646C1 /* cell_corner.png in Resources */ = {isa = PBXBuildFile; fileRef = C80691F9153F8EB7005646C1 /* cell_corner.png */; };
 		C80692011541C7CB005646C1 /* gameDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = C80692001541C7CB005646C1 /* gameDetails.json */; };
@@ -362,6 +363,7 @@
 		8484D7622434452800E2FA52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8484D7642434455000E2FA52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8484D76624379FB900E2FA52 /* SlowPoker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlowPoker.entitlements; sourceTree = "<group>"; };
+		84C51808244D817D00838A6A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		C80423C1157B0DD500B4F372 /* SlowPokerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowPokerViewController.h; sourceTree = "<group>"; };
 		C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowPokerViewController.m; sourceTree = "<group>"; };
 		C80691F9153F8EB7005646C1 /* cell_corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_corner.png; sourceTree = "<group>"; };
@@ -804,6 +806,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C51809244D817D00838A6A /* WebKit.framework in Frameworks */,
 				842FF99024441F1D007ECDBD /* UserNotifications.framework in Frameworks */,
 				C8407EA515B0AFEA00D482A5 /* SystemConfiguration.framework in Frameworks */,
 				C81E9A31158A673C003CD35E /* StoreKit.framework in Frameworks */,
@@ -1096,6 +1099,7 @@
 		C87D7D381517D36A00007F95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C51808244D817D00838A6A /* WebKit.framework */,
 				842FF98F24441F1D007ECDBD /* UserNotifications.framework */,
 				C87D7D391517D36A00007F95 /* UIKit.framework */,
 				C87D7D3B1517D36A00007F95 /* Foundation.framework */,
