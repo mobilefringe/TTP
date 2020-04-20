@@ -88,7 +88,7 @@
     if([keyPath isEqualToString:@"profileStatues"]){
         //NSLog(@"playerProfile:%@",[DataManager sharedInstance].playerProfile);
         [activityIndicatorView stopAnimating];
-        [_tableView reloadData];        [_tableView reloadData];
+        [_tableView reloadData];
         [UIView beginAnimations:@"" context:NULL];
         [UIView setAnimationDuration:0.3];
         _tableView.alpha = 1;
@@ -108,21 +108,11 @@
         cell = [[MyFriendsTableCellCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:MyIdentifier];
     }  
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.isFacebookInstructions = NO;
-    cell.isContactsInstructions = NO;
-    cell.isEmailInstructions = NO;
     NSMutableDictionary *playerData;
-    
-//    if(indexPath.row == [[DataManager sharedInstance].myFriends count]){
-//        cell.isFacebookInstructions = YES;
-//        [cell setProfileData:nil];
-//    }else
+
     if(indexPath.row == [[DataManager sharedInstance].myFriends count]){
-        cell.isContactsInstructions = YES;
-        [cell setProfileData:nil];
-    }else if(indexPath.row -1 == [[DataManager sharedInstance].myFriends count]){
-        cell.isEmailInstructions = YES;
-        [cell setProfileData:nil];
+    cell.isEmailInstructions = YES;
+    [cell setProfileData:nil];
     }else{
         playerData = [[DataManager sharedInstance].myFriends objectAtIndex:indexPath.row];
     }
@@ -143,14 +133,7 @@
     
     
     if(indexPath.row == [[DataManager sharedInstance].myFriends count]){
-//        AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//        //if (![appDel.facebook isSessionValid]) {
-//            NSArray *permissions = [[NSArray alloc] initWithObjects:
-//                                    @"user_about_me",
-//                                    @"email",
-//                                    nil];
-//            [appDel.facebook authorize:permissions];
-        //}
+
     }else{
         NSMutableDictionary *playerData;
         playerData = [[DataManager sharedInstance].myFriends objectAtIndex:indexPath.row];
@@ -169,7 +152,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if(section == 0){
-        if([[DataManager sharedInstance].favPlayers count] > 0){
+        if([[DataManager sharedInstance].myFriends count] > 0){
             return @"My Friends";
         }else{
             return @"";
@@ -186,8 +169,10 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     
     if(section == 0){
-        CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"My Friends"];
-        return header;
+        if([[DataManager sharedInstance].myFriends count] > 0){
+            CellHeaderGeneral *header = [[CellHeaderGeneral alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 30) title:@"My Friends"];
+            return header;
+        }
     }
     return nil;
 }
@@ -195,16 +180,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(section == 0){
-        return [[DataManager sharedInstance].myFriends count]+1;
+        return [[DataManager sharedInstance].myFriends count];
     }
     return 0;
 }
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-
-    CellFooterGeneral *header = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:@""];
-    return header;    
+    if(section == 0){
+        if([[DataManager sharedInstance].myFriends count] > 0){
+            CellFooterGeneral *footer = [[CellFooterGeneral alloc] initWithFrame:CGRectMake(0, -10, self.view.bounds.size.width, 40) title:@""];
+            return footer;
+        }
+    }
+    return nil;    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
