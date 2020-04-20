@@ -93,7 +93,10 @@ static NSString *deviceKey = @"iPhone";
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(alertView == updateAppAlert){
-        [[UIApplication sharedApplication] openURL: [NSURL URLWithString:[[[settings valueForKey:@"versions"] valueForKey:deviceKey] valueForKey:@"appDownloadURL"]]];
+        NSURL *url = [NSURL URLWithString:[[[settings valueForKey:@"versions"] valueForKey:deviceKey] valueForKey:@"appDownloadURL"]] ;
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+        }
     }
     
     

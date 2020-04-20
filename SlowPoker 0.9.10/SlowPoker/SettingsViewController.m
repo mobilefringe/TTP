@@ -13,7 +13,6 @@
 #import "CellHeaderGeneral.h"
 #import "CellFooterGeneral.h"
 #import "SettingsTableCell.h"
-#import "Facebook.h"
 
 @implementation SettingsViewController
 @synthesize handEvaluatorViewController;
@@ -212,9 +211,9 @@
     if(alertView == confirmLogout && buttonIndex == 1){
         AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         
-        if ([appDel.facebook isSessionValid]) {
-            [appDel.facebook logout];
-        }
+//        if ([appDel.facebook isSessionValid]) {
+//            [appDel.facebook logout];
+//        }
         
         [self.navigationController popToRootViewControllerAnimated:YES];
     }else if(alertView == resetProChips && buttonIndex == 1){

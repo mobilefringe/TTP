@@ -14,7 +14,6 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "Settings.h"
 #import "StoreFront.h"
-#import "SocialManager.h"
 
 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1
@@ -424,7 +423,7 @@ static int achivementQueueLimit = 3;
             }
             
         }
-        [[SocialManager sharedInstance] getFacebookFriends];
+//        [[SocialManager sharedInstance] getFacebookFriends];
     }
 }
 
@@ -700,9 +699,9 @@ static int achivementQueueLimit = 3;
          self.currentTurnUserID = [currentGame valueForKey:@"nextActionForUserID"];
          NSMutableDictionary *currentPlayer = [[DataManager sharedInstance] getCurrentPlayerForCurrentGame];
          self.currentTurnUserName = [currentPlayer valueForKey:@"userName"];
-         //NSLog(@"currentGame:%@",currentGame);
+         NSLog(@"currentGame:%@",currentGame);
          self.lastUpdatedDate = [utcFormatter dateFromString:[currentGame valueForKey:@"lastUpdated"]];
-        
+        NSLog(@"currentGame:%@",lastUpdatedDate);
          
          
          

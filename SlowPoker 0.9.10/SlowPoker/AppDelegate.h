@@ -9,9 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
-#import "FBConnect.h"
-#import "OAuth.h"
-#import "TwitterDialog.h"
 
 @class HomeViewController;
 @class RegisterLoginViewController;
@@ -25,7 +22,7 @@
 @class UpdatingPopUp;
 @class GamesViewController;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,MFMailComposeViewControllerDelegate,TwitterDialogDelegate,TwitterLoginDialogDelegate>{
+@interface AppDelegate : UIResponder <UIApplicationDelegate,MFMailComposeViewControllerDelegate>{
     UINavigationController *navController;
     HomeViewController *homeViewController;
     RegisterLoginViewController *registerLoginViewController;
@@ -39,8 +36,6 @@
     StoreViewControllerViewController *storeViewControllerViewController;
     GiftSelectionView *giftSelectionView;
     BuyGamePopUp *buyGamePopUp;
-    Facebook *facebook;
-    OAuth *twitter;
     UIAlertView *achievementAlert;
     UIAlertView *emailAlert;
     UpdatingPopUp *updatingPopUp;
@@ -62,8 +57,6 @@
 @property(nonatomic,retain)NavBarView *navBar;
 @property(nonatomic,retain)GiftSelectionView *giftSelectionView;
 @property(nonatomic,retain)BuyGamePopUp *buyGamePopUp;
-@property (nonatomic, retain) Facebook *facebook;
-@property (nonatomic, retain) OAuth *twitter;
 @property (nonatomic, retain)UpdatingPopUp *updatingPopUp;
 
 -(void)goToHomViewController:(BOOL)animated;

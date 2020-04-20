@@ -11,11 +11,6 @@
 #import "APIDataManager.h"
 #import "DataManager.h"
 #import "AppDelegate.h"
-#import "OAuth.h"
-#import "OAuth+DEExtensions.h"
-#import "OAuthConsumerCredentials.h"
-#import "SocialManager.h"
-#import "TwitterDialog.h"
 
 @implementation RegisterViewController
 
@@ -355,51 +350,17 @@
 }
 
 -(void)facebookLogin
-{
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    if (![appDel.facebook isSessionValid]) {
-        NSArray *permissions = [[NSArray alloc] initWithObjects:
-                                @"user_about_me", 
-                                @"email",
-                                nil];
-        [appDel.facebook authorize:permissions];
-    }
-    
+{        
 }
 
 -(void)twitterLogin
 {
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    if (![OAuth isTwitterAuthorized])
-    {
-        
-        appDel.twitter = [[OAuth alloc] initWithConsumerKey:kDEConsumerKey andConsumerSecret:kDEConsumerSecret];
-        TwitterDialog *td = [[TwitterDialog alloc] init] ;
-        td.twitterOAuth = appDel.twitter;
-        td.delegate = self;
-        td.logindelegate = self;
-        [td show];
-        
-    }
-    else
-    {
-        appDel.twitter = [[OAuth alloc] initWithConsumerKey:kDEConsumerKey andConsumerSecret:kDEConsumerSecret];
-        [appDel.twitter loadOAuthContext];
-        [appDel getTwitterUser];
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] goToHomViewController:YES];
-        
-    }
     
 }
 
 - (void)twitterDidLogin
 {
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [appDel.twitter saveOAuthContext];
-    [appDel getTwitterUser];
     
 }
 

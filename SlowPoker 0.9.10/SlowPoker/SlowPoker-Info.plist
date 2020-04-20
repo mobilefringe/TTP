@@ -24,15 +24,6 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb185368288271540</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -43,7 +34,7 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>gamecentre.vps1172.speedyrails.ca</key>
+			<key>http://159.203.1.211</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
@@ -52,8 +43,8 @@
 			</dict>
 		</dict>
 	</dict>
-    <key>NSCameraUsageDescription</key>
-    <string>Allowing the app to take pictures, allows you to keep and show pictures of your customers within the app. Your photos are never shared without your permission.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allowing the app to take pictures, allows you to keep and show pictures of your customers within the app. Your photos are never shared without your permission.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>App would like to access your photo gallery to store and retrieve pictures you want displayed in the app for yourself. Your photos are never shared without your permission.</string>
 	<key>NSPhotoLibraryUsageDescription</key>

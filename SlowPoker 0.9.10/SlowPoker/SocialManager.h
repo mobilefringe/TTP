@@ -29,7 +29,6 @@
 -(void)shareFacebook:(NSMutableDictionary *)params;
 
 //Twitter share
--(void)shareTwitter:(UIViewController*)usingController;
 + (SocialManager *)sharedInstance;
 
 @end

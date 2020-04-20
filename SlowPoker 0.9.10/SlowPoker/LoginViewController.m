@@ -11,11 +11,6 @@
 #import "APIDataManager.h"
 #import "DataManager.h"
 #import "AppDelegate.h"
-#import "OAuth.h"
-#import "OAuth+DEExtensions.h"
-#import "OAuthConsumerCredentials.h"
-#import "SocialManager.h"
-#import "TwitterDialog.h"
 
 @implementation LoginViewController
 
@@ -221,48 +216,6 @@
     buyGiftLabel.text = @"Login";
     [buyGiftMFButton addSubview:buyGiftLabel];
     
-    
-//    switchUser = [[UIActionSheet alloc] initWithTitle:@"Login As:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Jamie",@"Bob",@"Stan",@"Rick",@"Alex",@"Haad",@"Mike",@"Tod", nil];
-    
-    
-    
-//    UILabel *or = [[UILabel alloc] initWithFrame:CGRectMake(20, 328, 280, 22)];
-//    or.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.8];
-//    or.backgroundColor = [UIColor clearColor];
-//    or.adjustsFontSizeToFitWidth = YES;
-//    or.textAlignment = UITextAlignmentCenter;
-//    or.minimumFontSize = 8;
-//    or.text = @"OR";
-//    or.font = [UIFont boldSystemFontOfSize:18];
-//    [background addSubview:or];
-//
-//
-//
-//    self.twitterFacebookInstructions = [[UILabel alloc] initWithFrame:CGRectMake(20, 347, 280, 20)];
-//    twitterFacebookInstructions.textColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.8];
-//    twitterFacebookInstructions.backgroundColor = [UIColor clearColor];
-//    twitterFacebookInstructions.adjustsFontSizeToFitWidth = YES;
-//    twitterFacebookInstructions.textAlignment = UITextAlignmentCenter;
-//    twitterFacebookInstructions.minimumFontSize = 8;
-//    twitterFacebookInstructions.text = @"Login using your Twitter or Facebook accounts";
-//    twitterFacebookInstructions.font = [UIFont boldSystemFontOfSize:13];
-//    [background addSubview:twitterFacebookInstructions];
-//
-//
-//    self.twitterButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    twitterButton.frame = CGRectMake(24, 374, [UIImage imageNamed:@"twitter_button2.png"].size.width/2, [UIImage imageNamed:@"twitter_button2.png"].size.height/2);
-//    [twitterButton setImage:[UIImage imageNamed:@"twitter_button2.png"] forState:UIControlStateNormal];
-//    [twitterButton addTarget:self action:@selector(twitterLogin) forControlEvents:UIControlEventTouchUpInside];
-//    [background addSubview:twitterButton];
-//
-//    self.facebookButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [facebookButton addTarget:self action:@selector(facebookLogin) forControlEvents:UIControlEventTouchUpInside];
-//    facebookButton.frame = CGRectMake(170, 374, [UIImage imageNamed:@"facebook_button_2.png"].size.width/2, [UIImage imageNamed:@"facebook_button_2.png"].size.height/2);
-//    [facebookButton setImage:[UIImage imageNamed:@"facebook_button_2.png"] forState:UIControlStateNormal];
-//    [background addSubview:facebookButton];
-    
-    
-    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -412,17 +365,7 @@
 }
 
 -(void)facebookLogin
-{
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    if (![appDel.facebook isSessionValid]) {
-        NSArray *permissions = [[NSArray alloc] initWithObjects:
-                                @"user_about_me", 
-                                @"email",
-                                nil];
-        [appDel.facebook authorize:permissions];
-    }
-    
+{    
 }
 
 -(BOOL) NSStringIsValidEmail:(NSString *)checkString
@@ -437,37 +380,12 @@
 
 -(void)twitterLogin
 {
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    if (![OAuth isTwitterAuthorized])
-    {
-        
-        appDel.twitter = [[OAuth alloc] initWithConsumerKey:kDEConsumerKey andConsumerSecret:kDEConsumerSecret];
-        TwitterDialog *td = [[TwitterDialog alloc] init] ;
-        td.twitterOAuth = appDel.twitter;
-        td.delegate = self;
-        td.logindelegate = self;
-        [td show];
-        
-    }
-    else
-    {
-        appDel.twitter = [[OAuth alloc] initWithConsumerKey:kDEConsumerKey andConsumerSecret:kDEConsumerSecret];
-        [appDel.twitter loadOAuthContext];
-        [appDel getTwitterUser];
-        [(AppDelegate *)[[UIApplication sharedApplication] delegate] goToHomViewController:YES];
-        
-    }
     
 }
 
 - (void)twitterDidLogin
 {
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    [appDel.twitter saveOAuthContext];
-    [appDel getTwitterUser];
-    
+
 }
 
 - (void)twitterDidNotLogin:(BOOL)cancelled

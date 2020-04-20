@@ -19,12 +19,8 @@
 #import "StoreFront.h"
 #import "GiftSelectionView.h"
 #import "BuyGamePopUp.h"
-#import "OAuth.h"
-#import "OAuth+DEExtensions.h"
-#import "OAuthConsumerCredentials.h"
 #import "Settings.h"
 #import "UpdatingPopUp.h"
-#import "SocialManager.h"
 #import "TurnsViewController.h"
 #import "GamesViewController.h"
 #import "RegisterViewController.h"
@@ -52,8 +48,6 @@
 @synthesize storeViewControllerViewController;
 @synthesize giftSelectionView;
 @synthesize buyGamePopUp;
-@synthesize facebook;
-@synthesize twitter;
 @synthesize updatingPopUp;
 @synthesize gamesViewController;
 
@@ -284,13 +278,13 @@
         NSMutableDictionary *emailDict = [[NSMutableDictionary alloc] init];
         [emailDict setValue: [alertView textFieldAtIndex:0].text forKey:@"email"];
         [emailDict setValue: [DataManager sharedInstance].myUserID forKey:@"userID"];
-        [emailDict setValue:twitter.user_id forKey:@"twitter_id"];
-        [emailDict setValue:twitter.screen_name forKey:@"userName"];
+//        [emailDict setValue:twitter.user_id forKey:@"twitter_id"];
+//        [emailDict setValue:twitter.screen_name forKey:@"userName"];
         NSMutableDictionary *results = [[DataManager sharedInstance] registerTwitterPlayer:emailDict];
         
         if([@"1" isEqualToString:[results objectForKey:@"success"]]){
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            [defaults setObject:twitter.user_id forKey:@"twitter_id"];
+//            [defaults setObject:twitter.user_id forKey:@"twitter_id"];
             [defaults synchronize];
             
             [(AppDelegate *)[[UIApplication sharedApplication] delegate] goToHomViewController:YES];
@@ -522,56 +516,6 @@
     }
     [self autoLogin:isAsnych];
     
-    
-    
-    
-    
-   // [updatingPopUp showWithMessage:[NSString stringWithFormat:@"Logging in %@",[prefs1 valueForKey:@"userName"]]];
-    
-        /*
-     
-     
-     
-     
-    
-    
-    if([prefs valueForKey:@"userName"] && [prefs valueForKey:@"password"] ){
-        NSMutableDictionary *registerDict = [[NSMutableDictionary alloc] init];
-        [registerDict setValue:[prefs valueForKey:@"userName"] forKey:@"login"];
-        //[registerDict setValue:emailAddress.text forKey:@"login"];
-        [registerDict setValue:[prefs valueForKey:@"password"] forKey:@"password"];
-        NSMutableDictionary *results = [[DataManager sharedInstance] loginPlayer:registerDict];
-        //NSLog(@"sucess:%@",[results objectForKey:@"success"]);
-        if([@"1" isEqualToString:[results objectForKey:@"success"]]){
-            [self goToHomViewController:NO];
-        }
-    }else if (facebook.accessToken != nil)
-    {
-        NSMutableDictionary *loginDict = [[NSMutableDictionary alloc] init];
-        [loginDict setValue:facebook.accessToken forKey:@"token"];
-        NSMutableDictionary *results = [[DataManager sharedInstance] loginFacebookPlayer:loginDict];
-        if([@"1" isEqualToString:[results objectForKey:@"success"]]){
-            [self goToHomViewController:NO];
-        }
-    }else if([OAuth isTwitterAuthorized] && [prefs objectForKey:@"twitter_id"])
-    {
-        twitter = [[OAuth alloc] initWithConsumerKey:kDEConsumerKey andConsumerSecret:kDEConsumerSecret];
-        [twitter loadOAuthContext];
-        
-        NSMutableDictionary *loginDict = [[NSMutableDictionary alloc] init];
-        [loginDict setValue:[prefs objectForKey:@"twitter_id"] forKey:@"twitter_id"];
-        NSMutableDictionary *results = [[DataManager sharedInstance] loginTwitterPlayer:loginDict];
-        if([@"1" isEqualToString:[results objectForKey:@"success"]]){
-            [self goToHomViewController:NO];
-        }
-    }*/
-
-    /*
-    [self performSelectorOnMainThread:@selector(finishAutoLogin:) 
-                           withObject:results waitUntilDone:YES];*/
-
-    
-    
 }
 
 
@@ -582,15 +526,6 @@
     if(asynchronous){
         dispatch_async(kBgQueue, ^{
             NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-            if ([prefs objectForKey:@"FBAccessTokenKey"] 
-                && [prefs objectForKey:@"FBExpirationDateKey"]) {
-                facebook.accessToken = [prefs objectForKey:@"FBAccessTokenKey"];
-                facebook.expirationDate = [prefs objectForKey:@"FBExpirationDateKey"];
-                //NSLog(@"facebook.expirationDate:%@",facebook.expirationDate);
-            }
-            
-            
-            
             NSMutableDictionary *loginDict = [[NSMutableDictionary alloc] init];
             
             [loginDict setValue:[prefs valueForKey:@"email"] forKey:@"email"];
@@ -606,14 +541,6 @@
 
     }else{
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-        if ([prefs objectForKey:@"FBAccessTokenKey"] 
-            && [prefs objectForKey:@"FBExpirationDateKey"]) {
-            facebook.accessToken = [prefs objectForKey:@"FBAccessTokenKey"];
-            facebook.expirationDate = [prefs objectForKey:@"FBExpirationDateKey"];
-            //NSLog(@"facebook.expirationDate:%@",facebook.expirationDate);
-        }
-        
-        
         
         NSMutableDictionary *loginDict = [[NSMutableDictionary alloc] init];
         
@@ -641,9 +568,7 @@
             [self goToHomViewController:NO];        
         }
     }else{
-        if(facebook){
-            [facebook logout];
-        }
+        
         [navController popToRootViewControllerAnimated:YES];
     }
     
@@ -658,37 +583,12 @@
      */
 }
 
-#pragma mark Facebook
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    NSLog(@"source application is %@ and url is %@", sourceApplication, url);
-//    return [facebook handleOpenURL:url];
-}
-
-- (void)fbDidLogin {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
-    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
-    [defaults synchronize];
-    
-    [self getFacebookUser];
-    
-}
-
--(void)fbDidExtendToken:(NSString *)accessToken expiresAt:(NSDate *)expiresAt {
-    //NSLog(@"token extended");
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:accessToken forKey:@"FBAccessTokenKey"];
-    [defaults setObject:expiresAt forKey:@"FBExpirationDateKey"];
-    [defaults synchronize];
-}
-
 -(void)getFacebookUser
 {
     AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     NSMutableDictionary *registerDict = [[NSMutableDictionary alloc] init];
-    [registerDict setValue:appDel.facebook.accessToken forKey:@"token"];
+//    [registerDict setValue:appDel.facebook.accessToken forKey:@"token"];
     //NSLog(@"registerDict:%@",registerDict);
     NSMutableDictionary *results = [[DataManager sharedInstance] registerFacebookPlayer:registerDict];
     //NSLog(@"results:%@",results);
@@ -703,27 +603,6 @@
 
 -(void)getTwitterUser
 {
-    
-    
-    NSMutableDictionary *registerDict = [[NSMutableDictionary alloc] init];
-    NSString *twitterID = [NSString stringWithFormat:@"%@",twitter.user_id];
-    [registerDict setValue:twitterID forKey:@"twitter_id"];
-    
-    NSMutableDictionary *results = [[DataManager sharedInstance] doesTwitterPlayerExist:registerDict];
-    if([@"1" isEqualToString:[results objectForKey:@"success"]]){
-        [self goToHomViewController:YES];
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:twitter.user_id forKey:@"twitter_id"];
-        [defaults synchronize];
-    }
-    else if([@"2" isEqualToString:[results objectForKey:@"success"]]){
-        [self askForEmail:@"Please Enter Your Email Address"];
-    }
-    else
-    {
-        UIAlertView *errorMessage = [[UIAlertView alloc] initWithTitle:@"Error" message:[results objectForKey:@"error"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [errorMessage show];
-    }
 }
 
 -(void)askForEmail:(NSString *)msg
@@ -743,16 +622,6 @@
                           cancelButtonTitle:@"OK" 
                           otherButtonTitles:nil];
     //[alert show];
-}
-
-#pragma mark TwitterDialog Delegate Methods
-- (void)twitterDidLogin
-{
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    [appDel.twitter saveOAuthContext];
-    [self getTwitterUser];
-    
 }
 
 void uncaughtExceptionHandler(NSException *exception) {

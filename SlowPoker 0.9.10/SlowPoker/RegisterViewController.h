@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TwitterDialog.h"
 
 @class MFButton;
 
-@interface RegisterViewController : UIViewController<UIActionSheetDelegate,UITextFieldDelegate,TwitterDialogDelegate,TwitterLoginDialogDelegate>{
+@interface RegisterViewController : UIViewController<UIActionSheetDelegate,UITextFieldDelegate>{
     UIImageView *background;
     UITextField *emailAddress;
     UITextField *userName;
