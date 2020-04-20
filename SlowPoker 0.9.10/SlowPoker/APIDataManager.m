@@ -533,10 +533,9 @@ static inline CGSize swapWidthAndHeight(CGSize size)
                           options:NSJSONReadingMutableContainers 
                           error:&error];
     }else{
-        NSLog(@"requestAPIData error:%@",error);
-        /*
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Cannot Connect" message:@"Please make sure you have a valid internet connection" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alertView show];*/
+//        NSLog(@"requestAPIData error:%@",error);
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Cannot Connect" message:@"There is a network error" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alertView show];
         return nil;
         
     }
