@@ -534,8 +534,8 @@ static inline CGSize swapWidthAndHeight(CGSize size)
                           error:&error];
     }else{
 //        NSLog(@"requestAPIData error:%@",error);
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Cannot Connect" message:@"There is a network error" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alertView show];
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Cannot Connect" message:@"There is a network error" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+//        [alertView show];
         return nil;
         
     }
