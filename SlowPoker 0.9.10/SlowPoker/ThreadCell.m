@@ -88,7 +88,7 @@
   txtLabel.text            = msgText;
   txtLabel.textColor = [UIColor blackColor];
   txtLabel.backgroundColor = [UIColor clearColor];
-  txtLabel.font            = [UIFont systemFontOfSize:14.0];
+  txtLabel.font            = [UIFont systemFontOfSize:24.0];
   txtLabel.tag             = 42;
   [txtLabel sizeToFit];
   
@@ -111,7 +111,7 @@
 + (CGSize) calcTextHeight:(NSString *)str withinWidth:(CGFloat)width {
     
   CGSize textSize = {width, 20000.0};
-  CGSize size     = [str sizeWithFont:[UIFont systemFontOfSize:14.0] 
+  CGSize size     = [str sizeWithFont:[UIFont systemFontOfSize:24.0]
                     constrainedToSize:textSize];
   
   return size;
