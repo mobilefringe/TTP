@@ -12,6 +12,7 @@
 
 @interface PlayerProfileTableViewCell : UITableViewCell{
     Avatar *avatar;
+    Avatar *avatarWithoutRadius;
     UILabel *userNameLabel;
     UILabel *locationLabel;
     UILabel *playerSinceLabel;
@@ -31,6 +32,7 @@
 }
 
 @property (nonatomic,retain)Avatar *avatar;
+@property (nonatomic,retain)Avatar *avatarWithoutRadius;
 @property (nonatomic,retain)UILabel *userNameLabel;
 @property (nonatomic,retain)UILabel *locationLabel;
 @property (nonatomic,retain)UILabel *playerSinceLabel;

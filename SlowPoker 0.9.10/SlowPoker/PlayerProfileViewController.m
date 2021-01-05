@@ -150,6 +150,8 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self removeImage];
 }
 
 -(void)pressFavorites{
@@ -382,13 +384,44 @@
     
 }
 
+-(void)removeImage {
+    
+    UIImageView *imgView = (UIImageView*)[self.view viewWithTag:100];
+    if (imgView){
+        [UIView animateWithDuration:0.25 animations:^{
+            imgView.alpha = 0;
+            [imgView removeFromSuperview];
+        }];
+        self.navigationController.navigationBar.hidden = NO;
+    }
+}
+
+-(void)addImageViewWithImage:(UIImage*)image {
+    self.navigationController.navigationBar.hidden = YES;
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    imgView.contentMode = UIViewContentModeScaleAspectFit;
+    imgView.backgroundColor = [UIColor blackColor];
+    imgView.image = image;
+    imgView.tag = 100;
+    
+    UITapGestureRecognizer *dismissTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeImage)];
+    dismissTap.numberOfTapsRequired = 1;
+    [imgView setUserInteractionEnabled:YES];
+    [imgView addGestureRecognizer:dismissTap];
+    imgView.alpha = 0;
+    [self.view addSubview:imgView];
+    [UIView animateWithDuration:0.25 animations:^{
+        imgView.alpha = 1;
+    }];
+}
+
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
         if([[[DataManager sharedInstance].playerProfile valueForKey:@"userID"] isEqualToString:[DataManager sharedInstance].myUserID]){
             [self showImagePicker];
         }else{
-            //[self pressFavorites];
-            [tableView reloadData];
+            PlayerProfileTableViewCell *cell = (PlayerProfileTableViewCell*)[tableView cellForRowAtIndexPath:indexPath];
+            [self addImageViewWithImage:cell.avatarWithoutRadius.imageView.image];
         }
         
         

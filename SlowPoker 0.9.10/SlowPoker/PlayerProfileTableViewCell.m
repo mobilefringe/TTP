@@ -25,6 +25,7 @@
 @synthesize addFriendsLabel;
 @synthesize addFriendButton;
 @synthesize removeButton;
+@synthesize avatarWithoutRadius;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -39,6 +40,9 @@
         avatar.radius = 130;
         avatar.userInteractionEnabled = YES;
         [self.contentView addSubview:avatar];
+        
+        self.avatarWithoutRadius = [[Avatar alloc] initWithFrame:CGRectMake(12, 9, 80, 71)];
+        avatarWithoutRadius.userInteractionEnabled = YES;
         
         self.userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(110, 8, 185, 23)];
         userNameLabel.backgroundColor = [UIColor clearColor];
@@ -109,6 +113,8 @@
 
 -(void)setProfileData:(NSMutableDictionary *)playerProfieDict isFriend:(BOOL)isFriend{
     [avatar loadAvatar:[playerProfieDict valueForKey:@"userID"]];
+    [avatarWithoutRadius loadAvatar:[playerProfieDict valueForKey:@"userID"]];
+    
     userNameLabel.text = [playerProfieDict valueForKey:@"userName"];
     userIDLabel.text = [NSString stringWithFormat:@"User ID: %@",[playerProfieDict valueForKey:@"userID"]];
     
