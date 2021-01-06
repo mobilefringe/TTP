@@ -387,10 +387,12 @@
 -(void)removeImage {
     
     UIImageView *imgView = (UIImageView*)[self.view viewWithTag:100];
+    UIButton *btnClose = (UIButton*)[self.view viewWithTag:101];
     if (imgView){
         [UIView animateWithDuration:0.25 animations:^{
             imgView.alpha = 0;
             [imgView removeFromSuperview];
+            [btnClose removeFromSuperview];
         }];
         self.navigationController.navigationBar.hidden = NO;
     }
@@ -403,13 +405,22 @@
     imgView.backgroundColor = [UIColor blackColor];
     imgView.image = image;
     imgView.tag = 100;
-    
-    UITapGestureRecognizer *dismissTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeImage)];
-    dismissTap.numberOfTapsRequired = 1;
-    [imgView setUserInteractionEnabled:YES];
-    [imgView addGestureRecognizer:dismissTap];
     imgView.alpha = 0;
+    [imgView setUserInteractionEnabled:YES];
+
+    UIButton *btnClose = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    btnClose.frame = CGRectMake(self.view.bounds.size.width - 60, 20, 50, 50 );
+    btnClose.backgroundColor = [UIColor clearColor];
+    [btnClose setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    btnClose.tag = 101;
+    [btnClose setTitle:@"x" forState:UIControlStateNormal];
+    btnClose.titleLabel.font = [UIFont boldSystemFontOfSize:35];
+
+    [btnClose addTarget:self action:@selector(removeImage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:imgView];
+    [self.view addSubview: btnClose];
+    
     [UIView animateWithDuration:0.25 animations:^{
         imgView.alpha = 1;
     }];
