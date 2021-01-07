@@ -145,7 +145,8 @@
   CGFloat widthForText ;
   
   UIInterfaceOrientation orient = [self interfaceOrientation];
-  
+    BOOL isIphoneXOrPlus = [[DataManager sharedInstance] isIphoneXOrPlus];
+
   if (UIInterfaceOrientationIsPortrait(orient)) {
     widthForText = 260.f;
   } else {
@@ -158,7 +159,7 @@
 	
 	CGFloat height = (size.height < 36) ? 36 : size.height;
 	
-	return height+28;
+    return (isIphoneXOrPlus && size.height > 65) ? height : height + 28 ;
 }
 
 #pragma mark - Memory management
