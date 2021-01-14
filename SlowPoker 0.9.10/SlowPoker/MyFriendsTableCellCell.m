@@ -185,16 +185,19 @@
     
     
     
+    if (playerProfieDict != NULL){
+//        NSLog(@"playerProfieDict:%@",[playerProfieDict valueForKey:@"lastLoginDate"]);
+        [avatar loadAvatar:[playerProfieDict valueForKey:@"userID"]];
+        userNameLabel.text = [playerProfieDict valueForKey:@"userName"];
+
+        activeGamesLabel.text = @"Active Games";
+        activeGamesValue.text = [playerProfieDict valueForKey:@"numberOfActiveGames"];
     
-    //NSLog(@"playerProfieDict:%@",playerProfieDict);
-    [avatar loadAvatar:[playerProfieDict valueForKey:@"userID"]];
-    userNameLabel.text = [playerProfieDict valueForKey:@"userName"];
-    
-    activeGamesLabel.text = @"Active Games";
-    activeGamesValue.text = [playerProfieDict valueForKey:@"numberOfActiveGames"];
-    NSDate *lastLoggedInDate = [utcFormatter dateFromString:[playerProfieDict valueForKey:@"lastLoginDate"]];
-    lastLoggedInLabel.text = [NSString stringWithFormat:@"Online: %@",[timeIntervalFormatter stringForTimeIntervalFromDate:[NSDate date] toDate:lastLoggedInDate]];
-    
+        if ([playerProfieDict valueForKey:@"lastLoginDate"] != nil){
+            NSDate *lastLoggedInDate = [utcFormatter dateFromString:[playerProfieDict valueForKey:@"lastLoginDate"]];
+            lastLoggedInLabel.text = [NSString stringWithFormat:@"Online: %@",[timeIntervalFormatter stringForTimeIntervalFromDate:[NSDate date] toDate:lastLoggedInDate]];
+        }
+    }
 }
 
 

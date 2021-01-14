@@ -75,7 +75,9 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if([keyPath isEqualToString:@"proChipsTotal"]){
-        amountLabel.text = [NSString stringWithFormat:@"%d",[[DataManager sharedInstance] getMyProChips]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            amountLabel.text = [NSString stringWithFormat:@"%d",[[DataManager sharedInstance] getMyProChips]];
+        });
     }else if([keyPath isEqualToString:@"proChipsIncrement"]){
         dispatch_async(dispatch_get_main_queue(), ^{
             if([DataManager sharedInstance].proChipsIncrement > 0){

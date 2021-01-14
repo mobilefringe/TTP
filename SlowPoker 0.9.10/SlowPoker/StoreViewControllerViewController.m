@@ -124,13 +124,15 @@
 }
 
 - (void)didRetrieveProducts:(NSMutableArray*)products{
-    [loadingIndicator stopAnimating];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:.2];
-    [UIView setAnimationDelegate:self];
-    _tableView.alpha = 1;
-    [UIView commitAnimations];
-    [_tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [loadingIndicator stopAnimating];
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:.2];
+        [UIView setAnimationDelegate:self];
+        _tableView.alpha = 1;
+        [UIView commitAnimations];
+        [_tableView reloadData];
+    });
 }
 
 -(void)isLoadingProducts{

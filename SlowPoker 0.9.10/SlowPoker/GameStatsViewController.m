@@ -129,11 +129,11 @@
         });        
     }else if([keyPath isEqualToString:@"myInventory"]){
         [self loadProGameStats];
-        [_tableView reloadData];
-        buyCell.isPurchasedBOOL = YES;
-        [buyCell updateData:YES];
-        
-        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_tableView reloadData];
+            buyCell.isPurchasedBOOL = YES;
+            [buyCell updateData:YES];
+        });
     }
     
 }
