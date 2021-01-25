@@ -151,6 +151,7 @@
 -(void)pressNudge;
 -(void)pressNewHand;
 -(void)pressViewHand;
+-(void)pressShowYourHand;
 -(void)pressBet;
 -(void)showHandSummaryForHand:(NSMutableDictionary *)hand;
 -(void)resetGameStats;

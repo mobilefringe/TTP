@@ -701,7 +701,7 @@ static int achivementQueueLimit = 3;
          self.currentTurnUserName = [currentPlayer valueForKey:@"userName"];
          NSLog(@"currentGame:%@",currentGame);
          self.lastUpdatedDate = [utcFormatter dateFromString:[currentGame valueForKey:@"lastUpdated"]];
-        NSLog(@"currentGame:%@",lastUpdatedDate);
+//        NSLog(@"currentGame:%@",lastUpdatedDate);
          
          
          
@@ -1221,7 +1221,7 @@ static int achivementQueueLimit = 3;
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:currentGame options:NSJSONWritingPrettyPrinted error:&error];
         
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        //NSLog(@"updateGame JSON:%@",jsonString);
+        NSLog(@"updateGame JSON:%@",jsonString);
         NSMutableDictionary *results = [[APIDataManager sharedInstance] updateGame:jsonString];
         
         [self performSelectorOnMainThread:@selector(didFinishUpdate:) 
@@ -1641,8 +1641,55 @@ static int achivementQueueLimit = 3;
     return nil;
 }
 
+-(void)showYourCard{
+//    int handState = [[currentHand objectForKey:@"state"] intValue];
+    NSMutableArray *hands = [[currentGame objectForKey:@"gameState"] objectForKey:@"hands"];
+    if([hands count] > 0){
+        self.currentHand = [hands objectAtIndex:0];
+    }
+    NSMutableDictionary *hand = [[NSMutableDictionary alloc] init];
+    hand = self.currentHand;
+
+    NSMutableArray *showCard = [[NSMutableArray alloc] init];
+    NSMutableDictionary *handToShow = [[NSMutableDictionary alloc] init];
+
+//    NSMutableDictionary *currentHand = [DataManager sharedInstance].currentHand;
+    NSString *cardOne;
+    NSString *cardTwo;
+    showCard = [hand objectForKey:@"showCard"];
+    
+    for (NSMutableDictionary *card in showCard){
+        if( [[card valueForKey:@"userID"] isEqualToString:[DataManager sharedInstance].myUserID]){
+            NSLog(@"DA SHOW");
+            return;
+        }
+    }
+    for (NSMutableDictionary *round in [hand valueForKey:@"rounds"]) {
+        if([[round valueForKey:@"userID"] isEqualToString:myUserID]){
+            cardOne = [round valueForKey:@"cardOne"];
+            cardTwo = [round valueForKey:@"cardTwo"];
+            break;
+        }
+    }
+    
+    [handToShow setValue: myUserName forKey:@"userName"];
+    [handToShow setValue: myUserID forKey:@"userID"];
+    [handToShow setValue: cardTwo forKey:@"cardTwo"];
+    [handToShow setValue: cardOne forKey:@"cardOne"];
+    
+    if (!showCard){
+        showCard = [[NSMutableArray alloc] init];
+    }
+    [showCard addObject:handToShow];
+    
+    [hand setValue: showCard forKey:@"showCard"];
+    NSLog(@" showYourCard lkdjsf klfsdjf %@", hand);
+    self.currentHand = hand;
+    [self updateCurrentGame];
+}
+
 -(void)postRound:(NSMutableDictionary *)round{
-    //NSLog(@"round:%@",round);
+    NSLog(@"postRound   round:%@",round);
     [self.currentGame setValue:@"" forKey:@"lastActionMessage"];
     int handState = [[currentHand objectForKey:@"state"] intValue];
     NSMutableDictionary *currentPlayerState = [[[DataManager sharedInstance] getCurrentPlayerForCurrentGame] objectForKey:@"playerState"];
@@ -2830,7 +2877,7 @@ static int achivementQueueLimit = 3;
     
     [(NSMutableArray *)[[currentGame valueForKey:@"gameState"] valueForKey:@"hands"] insertObject:hand atIndex:0];
     self.currentHand = hand;
-    //[self addBettingRoundIfNeeded];
+    [self addBettingRoundIfNeeded];
     [self updateCurrentGame];
     [self sendAchievements:YES];
     

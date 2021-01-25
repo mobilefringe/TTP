@@ -303,7 +303,7 @@ static float bottomBarHeight = 40;
     [activityIndicatorView stopAnimating];
     [flipView addSubview:activityIndicatorView];
     
-    self.handSummaryPopUp = [[HandSummaryPopUp alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-310)/2, (self.view.bounds.size.height-350)/2, 310, 350) delegate:self];
+    self.handSummaryPopUp = [[HandSummaryPopUp alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-310)/2, (self.view.bounds.size.height-500)/2, 310, 500) delegate:self];
     [self.view addSubview:handSummaryPopUp];
     
     
@@ -1225,6 +1225,11 @@ static float bottomBarHeight = 40;
 
 -(void)pressViewHand{
     [pokerTableView viewHand];
+    [handSummaryPopUp hide];
+}
+
+-(void)pressShowYourHand{
+    [[DataManager sharedInstance] showYourCard];
     [handSummaryPopUp hide];
 }
 

@@ -13,6 +13,7 @@
 #import "CardView.h"
 #import "TurnsViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "CardPlayerView.h"
 
 @implementation PokerTableView
 
@@ -62,7 +63,7 @@ static BOOL testPlayers = NO;
         [self addSubview:showDownView];
             
         
-        
+        NSLog(@"pressHandSummary");
         
         self.placements = [[NSMutableDictionary alloc] init];
         self.dealerButtonPlacements = [[NSMutableDictionary alloc] init];
@@ -75,18 +76,26 @@ static BOOL testPlayers = NO;
             yOffset = ([[DataManager sharedInstance] isIphoneXOrPlus] ? ([[DataManager sharedInstance] hasNotchedDisplay] ? 260 : 180) : 145);
         }
         //1
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)], nil] forKey:@"1"];
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)], nil]
+                       forKey:@"1"
+         ];
         
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(youPlayerX, 315+yOffset)], nil] forKey:@"1"];
         
         //2
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 53+yOffset)], nil] forKey:@"2"];
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
+                               [NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 53+yOffset)], nil]
+                       forKey:@"2"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],[NSValue valueWithCGPoint:CGPointMake(45,125)],nil] forKey:@"2"];
         
         //3
-        [placements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(widthScreen/2, 301+yOffset)],
                                [NSValue valueWithCGPoint:CGPointMake(105+xoffset, 53+yOffset)],
-                               [NSValue valueWithCGPoint:CGPointMake(245+xoffset, 53+yOffset)], nil] forKey:@"3"];
+                               [NSValue valueWithCGPoint:CGPointMake(245+xoffset, 53+yOffset)], nil]
+                       forKey:@"3"];
         [dealerButtonPlacements setObject:[NSMutableArray arrayWithObjects:[NSValue valueWithCGPoint:CGPointMake(87, 18)],
                                            [NSValue valueWithCGPoint:CGPointMake( 45,125)],[NSValue valueWithCGPoint:CGPointMake(45,125)],
                                            nil] forKey:@"3"];

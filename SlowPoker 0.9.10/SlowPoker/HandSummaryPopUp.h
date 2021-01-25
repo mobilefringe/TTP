@@ -15,6 +15,7 @@
 @interface HandSummaryPopUp : PopUpView<UIScrollViewDelegate>{
     MFButton *viewHandButton;
     MFButton *dealNewHandButton;
+    MFButton *showYourHandButton;
     MFButton *closeButton;
     UIScrollView *handsScroll;
     UIPageControl *pageControl;
@@ -22,6 +23,7 @@
 
 @property(nonatomic,retain)MFButton *viewHandButton;
 @property(nonatomic,retain)MFButton *dealNewHandButton;
+@property(nonatomic,retain)MFButton *showYourHandButton;
 @property(nonatomic,retain)MFButton *closeButton;
 @property(nonatomic,retain)UIScrollView *handsScroll;
 @property(nonatomic,retain)UIPageControl *pageControl;

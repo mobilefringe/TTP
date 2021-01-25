@@ -19,6 +19,14 @@
    # apiURL - Info.plist must have a value called "apiURL", which has the address of the API Server
 */
  
+
+-(id)showYourCard:(NSString *)jsonData{
+    NSString *urlAddress = [NSString stringWithFormat:@"%@/showCard",(NSString *)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"apiURL"]];
+    
+    return [self requestAPIData:jsonData url:urlAddress];
+
+}
+
 #pragma mark PlayerAPI
 
 /* registerPlayer - registers a new Player on the Server
@@ -522,8 +530,8 @@ static inline CGSize swapWidthAndHeight(CGSize size)
                                             returningResponse:&response error:&error];
     
     
-    //NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    //NSLog(@"response data from: %@:%@",postUrl,jsonString);
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSLog(@"response data from: %@:%@",postUrl,jsonString);
     
     //NSMutableDictionary *jsonDictionary;
     if(error == nil) {

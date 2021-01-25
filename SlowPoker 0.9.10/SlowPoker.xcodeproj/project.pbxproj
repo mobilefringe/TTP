@@ -14,9 +14,11 @@
 		841AA999244818AA00FC40CB /* hand_state_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 841AA998244818AA00FC40CB /* hand_state_background.png */; };
 		841AA99D244838B900FC40CB /* bet_table_cell_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 841AA99C244838B900FC40CB /* bet_table_cell_background.png */; };
 		842FF99024441F1D007ECDBD /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842FF98F24441F1D007ECDBD /* UserNotifications.framework */; };
+		843C6DBF25BD2A2E00B6AE15 /* CardPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843C6DBE25BD2A2E00B6AE15 /* CardPlayerView.m */; };
 		8484D7632434452800E2FA52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7622434452800E2FA52 /* Images.xcassets */; };
 		8484D7652434455000E2FA52 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8484D7642434455000E2FA52 /* Launch Screen.storyboard */; };
 		84C51809244D817D00838A6A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C51808244D817D00838A6A /* WebKit.framework */; };
+		84F2152125A80E2700EFDC5C /* win_hand_background_extend.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F2152025A80E2600EFDC5C /* win_hand_background_extend.png */; };
 		C80423C3157B0DD500B4F372 /* SlowPokerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */; };
 		C80691FA153F8EB7005646C1 /* cell_corner.png in Resources */ = {isa = PBXBuildFile; fileRef = C80691F9153F8EB7005646C1 /* cell_corner.png */; };
 		C80692011541C7CB005646C1 /* gameDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = C80692001541C7CB005646C1 /* gameDetails.json */; };
@@ -360,10 +362,13 @@
 		841AA998244818AA00FC40CB /* hand_state_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_state_background.png; sourceTree = "<group>"; };
 		841AA99C244838B900FC40CB /* bet_table_cell_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bet_table_cell_background.png; sourceTree = "<group>"; };
 		842FF98F24441F1D007ECDBD /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		843C6DBD25BD2A2E00B6AE15 /* CardPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardPlayerView.h; sourceTree = "<group>"; };
+		843C6DBE25BD2A2E00B6AE15 /* CardPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardPlayerView.m; sourceTree = "<group>"; };
 		8484D7622434452800E2FA52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8484D7642434455000E2FA52 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8484D76624379FB900E2FA52 /* SlowPoker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlowPoker.entitlements; sourceTree = "<group>"; };
 		84C51808244D817D00838A6A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		84F2152025A80E2600EFDC5C /* win_hand_background_extend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = win_hand_background_extend.png; sourceTree = "<group>"; };
 		C80423C1157B0DD500B4F372 /* SlowPokerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlowPokerViewController.h; sourceTree = "<group>"; };
 		C80423C2157B0DD500B4F372 /* SlowPokerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlowPokerViewController.m; sourceTree = "<group>"; };
 		C80691F9153F8EB7005646C1 /* cell_corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_corner.png; sourceTree = "<group>"; };
@@ -855,6 +860,8 @@
 				C8407E9915B0911000D482A5 /* UpdatingPopUp.m */,
 				C8C3AB3D15DABD7900938F75 /* CardView.h */,
 				C8C3AB3E15DABD7900938F75 /* CardView.m */,
+				843C6DBD25BD2A2E00B6AE15 /* CardPlayerView.h */,
+				843C6DBE25BD2A2E00B6AE15 /* CardPlayerView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1148,6 +1155,7 @@
 				C85D55D415F6729E00C464FD /* blue_wide.png */,
 				C8C6A85F15F9766900C81949 /* nudge_button2.png */,
 				C835BE6015C08F1500F2B287 /* emailicon.png */,
+				84F2152025A80E2600EFDC5C /* win_hand_background_extend.png */,
 				C82A82CE15ED200400F7AE3C /* email_icon.png */,
 				C835BE6215C08FBF00F2B287 /* facebookicon.png */,
 				C835BE5D15C0855C00F2B287 /* facebook-logo.png */,
@@ -1627,6 +1635,7 @@
 				C870FE03159E2A7300A608B8 /* win_hand_background.png in Resources */,
 				C8C0E41915A37BE000111547 /* gifts_background.png in Resources */,
 				C848E3AC15A38B1A00C701F6 /* gifts.json in Resources */,
+				84F2152125A80E2700EFDC5C /* win_hand_background_extend.png in Resources */,
 				C848E3B015A38DC600C701F6 /* gift_button_background_selected.png in Resources */,
 				C848E3B115A38DC600C701F6 /* gift_button_background_regular.png in Resources */,
 				C848E3BB15A39A4100C701F6 /* gift_beer1.png in Resources */,
@@ -1782,6 +1791,7 @@
 				C8E31A0D1538ECF00007D81B /* ThreadCell.m in Sources */,
 				C8CE64BE153BACA90069D76D /* GameTableViewCell.m in Sources */,
 				C8CE64E5153F15500069D76D /* TTTTimeIntervalFormatter.m in Sources */,
+				843C6DBF25BD2A2E00B6AE15 /* CardPlayerView.m in Sources */,
 				C8CE64E8153F15660069D76D /* TTTUnitOfInformationFormatter.m in Sources */,
 				C8CE64EB153F15730069D76D /* TTTOrdinalNumberFormatter.m in Sources */,
 				C8CE64EE153F15800069D76D /* TTTLocationFormatter.m in Sources */,
@@ -1928,7 +1938,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Tony Tran (Y5389RYDXV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Tony Tran (Y5389RYDXV)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0.1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
@@ -1938,7 +1948,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.texasturnpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9B33ADBB-1BAD-451A-A945-63FC8220DFB3";
@@ -1957,7 +1967,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0.1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
@@ -1967,7 +1977,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/SlowPoker\"",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.5.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilefringe.texasturnpoker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "A47666C0-685F-479D-B0D1-244E9293626A";

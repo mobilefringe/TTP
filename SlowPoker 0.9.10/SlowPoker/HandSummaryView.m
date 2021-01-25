@@ -9,6 +9,8 @@
 #import "HandSummaryView.h"
 #import "Avatar.h"
 #import "DataManager.h"
+#import "PlayerView.h"
+#import "CardPlayerView.h"
 
 @implementation HandSummaryView
 
@@ -23,13 +25,23 @@
 @synthesize cardThree;
 @synthesize cardFour;
 @synthesize cardFive;
-@synthesize playerCardOne;
-@synthesize playerCardTwo;
+@synthesize playerWinCardOne;
+@synthesize playerWinCardTwo;
+
+@synthesize players;
+@synthesize placements;
+@synthesize playerViews;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        if(!playerViews){
+            self.playerViews = [[NSMutableArray alloc] init];
+        }
+        [playerViews removeAllObjects];
+        
         self.avatar = [[Avatar alloc] initWithFrame:CGRectMake(3, 3, 85, 85)];
         avatar.radius = 70;
         avatar.userInteractionEnabled = YES;
@@ -104,11 +116,60 @@
         self.cardFive = [[UIImageView alloc] initWithFrame:CGRectMake(xStart+xOffset*4, yOffSet, 43, 60)];
         [self addSubview:cardFive];
         
-        self.playerCardOne = [[UIImageView alloc] initWithFrame:CGRectMake(185, 124, 40, 55)];
-        [self addSubview:playerCardOne];
+        self.playerWinCardOne = [[UIImageView alloc] initWithFrame:CGRectMake(185, 124, 40, 55)];
+
+        [self addSubview:playerWinCardOne];
         
-        self.playerCardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(227, 124, 40, 55)];
-        [self addSubview:playerCardTwo];
+        self.playerWinCardTwo = [[UIImageView alloc] initWithFrame:CGRectMake(227, 124, 40, 55)];
+
+        [self addSubview:playerWinCardTwo];
+
+        float widthScreen = self.bounds.size.width;
+        float heightScreen = self.bounds.size.height;
+
+        
+        NSMutableArray *players = [[DataManager sharedInstance] getPlayersInTableArangement];
+
+        self.placements = [[NSMutableDictionary alloc] init];
+        
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset, 110+yOffSet)], nil]
+                       forKey:@"1"];
+
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+90, 110+yOffSet)], nil]
+                       forKey:@"2"];
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+90, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+190, 110+yOffSet)], nil]
+                       forKey:@"3"];
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+90, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+190, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+120, 200+yOffSet)], nil]
+
+                       forKey:@"4"];
+        [placements setObject:[NSMutableArray arrayWithObjects:
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+90, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+190, 110+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+60, 180+yOffSet)],
+                               [NSValue valueWithCGPoint:CGPointMake(xOffset+150, 180+yOffSet)], nil]
+                       forKey:@"5"];
+        NSMutableArray *playerPlacements = [placements objectForKey:[NSString stringWithFormat:@"%lu", (unsigned long)[players count]]];
+        int i = 0;
+        for (NSMutableDictionary *player in players) {
+            CGPoint playerCenter = [[playerPlacements objectAtIndex:i] CGPointValue];
+            CardPlayerView *playerView;
+            playerView = [[CardPlayerView alloc] initWithFrame:CGRectMake(0, yOffSet, 80, 60)];
+            playerView.center = playerCenter;
+            i++;
+            [self addSubview:playerView];
+            [playerViews addObject:playerView];
+        }
     }
     return self;
 }
@@ -126,12 +187,21 @@
     self.cardFour.frame = CGRectMake(xStart+xOffset*3, yOffSet, 43, 60);
     self.cardFive.frame = CGRectMake(xStart+xOffset*4, yOffSet, 43, 60);
 
+    
+//    NSMutableArray *hands = [[currentGame objectForKey:@"gameState"] objectForKey:@"hands"];
+    
+    NSMutableArray *showCard = [hand valueForKey:@"showCard"];
+    int i = 0;
+    for (NSMutableDictionary *card in showCard) {
+        if(![[card valueForKey:@"userID"] isEqualToString:[DataManager sharedInstance].myUserID]){
+            [playerViews[i] setPlayerData: card];
+            i++;
+        }
+    }
 
-    
-    
     [avatar loadAvatar:[winner valueForKey:@"userID"]];
-    //NSLog(@"winner:%@",winner);
-    //NSLog(@"hand:%@",hand);
+//    NSLog(@"I winner:%@",winner);
+//    NSLog(@"hand:%@",hand);
     if([[winner valueForKey:@"userID"] isEqualToString:[DataManager sharedInstance].myUserID]){
        winnerName.text = @"You Won!!";
     }else{
@@ -157,28 +227,27 @@
     }else{
         handDetailsLabel.text = [NSString stringWithFormat:NSLocalizedString(detailsKey, nil), NSLocalizedString(ranking1,nil), NSLocalizedString(ranking2,nil), NSLocalizedString(ranking3,nil), NSLocalizedString(ranking4,nil), NSLocalizedString(ranking5,nil)];
     }
-
     
     NSMutableArray *cards = [winner valueForKey:@"hand"];
     NSMutableArray *communityCards = [winner valueForKey:@"communityCards"];
     //NSLog(@"winner:%@",winner);
     //NSLog(@"hand:%@",hand);
-    playerCardOne.alpha = 1;
-    playerCardTwo.alpha = 1;
+    playerWinCardOne.alpha = 1;
+    playerWinCardTwo.alpha = 1;
     BOOL isFold = [[winner objectForKey:@"type"] hasSuffix:@"USER_FOLD"];
     if(isFold && ![[winner valueForKey:@"userID"] isEqualToString:[DataManager sharedInstance].myUserID]){
-        [self.playerCardOne setImage:[[DataManager sharedInstance].cardImages objectForKey:@"?"]];
-        [self.playerCardTwo setImage:[[DataManager sharedInstance].cardImages objectForKey:@"?"]];
+        [self.playerWinCardOne setImage:[[DataManager sharedInstance].cardImages objectForKey:@"?"]];
+        [self.playerWinCardTwo setImage:[[DataManager sharedInstance].cardImages objectForKey:@"?"]];
     }else{
         
-        [self.playerCardOne setImage:[[DataManager sharedInstance].cardImages objectForKey:[winner valueForKey:@"cardOne"]]];
-        [self.playerCardTwo setImage:[[DataManager sharedInstance].cardImages objectForKey:[winner valueForKey:@"cardTwo"]]];
+        [self.playerWinCardOne setImage:[[DataManager sharedInstance].cardImages objectForKey:[winner valueForKey:@"cardOne"]]];
+        [self.playerWinCardTwo setImage:[[DataManager sharedInstance].cardImages objectForKey:[winner valueForKey:@"cardTwo"]]];
         
         if(![self isCardInWinningHand:cards  card:[winner valueForKey:@"cardOne"]]){
-            playerCardOne.alpha = 0.7;
+            playerWinCardOne.alpha = 0.7;
         }
         if(![self isCardInWinningHand:cards  card:[winner valueForKey:@"cardTwo"]]){
-            playerCardTwo.alpha = 0.7;
+            playerWinCardTwo.alpha = 0.7;
         }
     }
     
@@ -229,8 +298,8 @@
         self.cardFour.frame = CGRectMake(xStart+xOffset*3, yOffSet, 43, 60);
         self.cardFive.frame = CGRectMake(xStart+xOffset*4, yOffSet, 43, 60);
     }else{
-        playerCardOne.alpha = 1;
-        playerCardTwo.alpha = 2;
+        playerWinCardOne.alpha = 1;
+        playerWinCardTwo.alpha = 2;
         self.cardOne.alpha = 1;
         self.cardTwo.alpha = 1;
         self.cardThree.alpha = 1;

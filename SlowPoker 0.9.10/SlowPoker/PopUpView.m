@@ -18,7 +18,7 @@
     if (self) {
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.8];
         self.popupBackgroundImage = [[UIImageView alloc] initWithFrame:frame];
-        [popupBackgroundImage setImage:[UIImage imageNamed:@"win_hand_background.png"]];
+        [popupBackgroundImage setImage:[UIImage imageNamed:@"win_hand_background_extend.png"]];
         [self addSubview:popupBackgroundImage];
     }
     [self hide];

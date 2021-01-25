@@ -22,8 +22,12 @@
     UIImageView *cardThree;
     UIImageView *cardFour;
     UIImageView *cardFive;
-    UIImageView *playerCardOne;
-    UIImageView *playerCardTwo;
+    UIImageView *playerWinCardOne;
+    UIImageView *playerWinCardTwo;
+    
+    NSMutableArray *players;
+    NSMutableDictionary *placements;
+    NSMutableArray *playerViews;
 
 }
 
@@ -40,7 +44,10 @@
 @property (nonatomic,retain)UIImageView *cardThree;
 @property (nonatomic,retain)UIImageView *cardFour;
 @property (nonatomic,retain)UIImageView *cardFive;
-@property (nonatomic,retain)UIImageView *playerCardOne;
-@property (nonatomic,retain)UIImageView *playerCardTwo;
+@property (nonatomic,retain)UIImageView *playerWinCardOne;
+@property (nonatomic,retain)UIImageView *playerWinCardTwo;
 
+@property(nonatomic,retain)NSMutableArray *players;
+@property(nonatomic,retain)NSMutableDictionary *placements;
+@property (nonatomic,retain) NSMutableArray *playerViews;
 @end

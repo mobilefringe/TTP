@@ -145,6 +145,7 @@
 -(NSMutableArray *)getHandsForCurrentGame;
 -(NSMutableArray *)getRoundsForHand:(NSMutableDictionary *)hand;
 -(BOOL)isCurrentGameMyTurn;
+-(void)showYourCard;
 -(void)postRound:(NSMutableDictionary *)round;
 -(NSMutableDictionary *)getNextTurnPlayerFromCurrentGame:(BOOL)isFirstActor;
 -(void)arrangeUserGames;
