@@ -530,8 +530,8 @@ static inline CGSize swapWidthAndHeight(CGSize size)
                                             returningResponse:&response error:&error];
     
     
-    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    NSLog(@"response data from: %@:%@",postUrl,jsonString);
+    //NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    //NSLog(@"response data from: %@:%@",postUrl,jsonString);
     
     //NSMutableDictionary *jsonDictionary;
     if(error == nil) {

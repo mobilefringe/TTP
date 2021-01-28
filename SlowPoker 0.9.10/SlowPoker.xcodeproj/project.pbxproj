@@ -1938,7 +1938,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development: Tony Tran (Y5389RYDXV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: Tony Tran (Y5389RYDXV)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";
@@ -1967,7 +1967,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution: Mobile Fringe (GV8Q529ELE)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = GV8Q529ELE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SlowPoker/SlowPoker-Prefix.pch";

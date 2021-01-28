@@ -284,7 +284,8 @@
         
         //chipStackLabel.textColor = [UIColor whiteColor];
         
-        if([[DataManager sharedInstance] isCurrentGameMyTurn]){
+        if([[DataManager sharedInstance] isCurrentGameMyTurn] && ([[dataDict valueForKey:@"userID"] isEqualToString:[DataManager sharedInstance].myUserID])){
+
 
             actionName.text = @"";
             betButton.hidden = NO;
